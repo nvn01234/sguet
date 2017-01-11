@@ -1,10 +1,9 @@
-<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"/>
-<p align="center"><img src="http://sguet.com/sites/default/files/SGUET.png"></p>
+<p align="center"><a href="http://sguet.com/"><img src="http://sguet.com/sites/default/files/SGUET.png"></a></p>
 
 <p align="center">
-<a href="http://sguet.com/"><i class="fa fa-globe"></i></a>
-<a href="https://www.facebook.com/SupportGroupUET/"><i class="fa fa-facebook-official"></i></a>
-<a href="https://www.facebook.com/groups/sguet/"><i class="fa fa-facebook-official"></i></a>
+<a href="http://sguet.com/">Website</a> |
+<a href="https://www.facebook.com/SupportGroupUET/">Fanpage</a> |
+<a href="https://www.facebook.com/groups/sguet/">Group</a>
 </p>
 
 ## About Laravel
