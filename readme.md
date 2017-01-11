@@ -42,9 +42,9 @@ PHP 7+
 
 ## Deployment
 
-1. Create database 'sguet'
+Step 1: Create database 'sguet'
 
-2. Config .env (see [.env.example](https://github.com/nvn01234/sguet/blob/master/.env.example))
+Step 2: Config .env (see [.env.example](https://github.com/nvn01234/sguet/blob/master/.env.example))
 
 - Config DB_*    
 
@@ -52,7 +52,7 @@ PHP 7+
 
         $ php artisan key:generate
 
-3. Install
+Step 3: Install
 
         $ composer update
         $ composer install
@@ -64,12 +64,12 @@ PHP 7+
     
 ## Development
 
-1. Step 1: Install composer
+Step 1: Install composer
 
         $ composer update
         $ composer install
 
-2. Step 2: Database & migrations
+Step 2: Database & migrations
 
 - Create database 'sguet'
 
@@ -88,11 +88,11 @@ PHP 7+
             $ yes
         $ php artisan ide-helper:meta
         
-3. Step 3: Configurations
+Step 3: Configurations
   
         $ php artisan key:generate
     
-4. Step 4: Serve
+Step 4: Serve
   
         $ php artisan serve
 
@@ -100,7 +100,7 @@ PHP 7+
     
 ## Common problem
 
-1. Cannot seed migrate
+#### Cannot seed migrate
 
 - edit '.env': set CACHE_DRIVER=array
 
@@ -110,7 +110,7 @@ PHP 7+
         $ composer dump-autoload
         $ php artisan migrate:refresh --seed
     
-2. Form cannot post data
+#### Form cannot post data
 
 - Use {{Form::open(...)}} or {{Form::model(...)}} instead of form html tag 
 
