@@ -131,9 +131,16 @@ Step 4: Serve
 
 > [composer.json](https://github.com/nvn01234/sguet/blob/master/composer.json)
 
-        {
+        "require": {
+            ...
             "barryvdh/laravel-debugbar": "^2.3",  
             "barryvdh/laravel-ide-helper": "^2.2",
+            "Amranidev/scaffold-interface": "v1.6.*",
+            "infyomlabs/laravel-generator": "5.3.x-dev",
+            "laravelcollective/html": "^5.3.0",
+            "infyomlabs/adminlte-templates": "5.3.x-dev",
+            "infyomlabs/swagger-generator": "dev-master",
+            "jlapp/swaggervel": "dev-master",
             "doctrine/dbal": "^2.5",
         }
     
