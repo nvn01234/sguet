@@ -6,34 +6,142 @@
 <a href="https://www.facebook.com/groups/sguet/">Group</a>
 </p>
 
-## About Laravel
+## About SGUET
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+> Deploy sguet.com website
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Version
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb combination of simplicity, elegance, and innovation give you tools you need to build any application with which you are tasked.
+Status: Developing
 
-## Learning Laravel
+Start date: 10/01/2017
 
-Laravel has the most extensive and thorough documentation and video tutorial library of any modern web application framework. The [Laravel documentation](https://laravel.com/docs) is thorough, complete, and makes it a breeze to get started learning the framework.
+Submission date: --/01/2017
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 900 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
+## Structure
 
-## Contributing
+Resource doc: /sguet-resource-doc
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+## Documents
 
-## Security Vulnerabilities
+Detailed guides in /sguet-resource-doc folder.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+[Wire frame](https://docs.google.com/document/d/1y9t4rCHEjLX9YyTqoe1lS81bljDGS3qCd3NLwv76lfs/edit)
 
-## License
+## Technology overview
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+Bootstrap
+
+Jquery
+
+Laravel 5
+
+## Requirement system
+
+PHP 7+
+
+## Deployment
+
+1. Create database 'sguet'
+
+2. Config .env (see [.env.example](https://github.com/nvn01234/sguet/blob/master/.env.example))
+
+    Config DB_*
+    
+    Generate key: $ php artisan key:generate
+
+3. Install
+
+    $ composer update
+    
+    $ composer install
+    
+    $ php artisan key:generate
+    
+    $ php artisan migrate --seed
+    
+    $ php artisan serve
+    
+    Open localhost:8000
+    
+## Development
+
+1. Step 1: Install composer
+
+    $ composer update
+    
+    $ composer install
+
+2. Step 2: Database & migrations
+
+    Create database 'sguet'
+    
+    Clone [.env.example](https://github.com/nvn01234/sguet/blob/master/.env.example) > .env
+    
+    Config .env: DB_*
+    
+    $ php artisan migrate --seed
+    
+    Generate ide-helper:
+    
+        $ php artisan ide-helper:generate
+        
+        $ php artisan ide-helper:models
+        
+            Select 'yes'
+            
+        $ php artisan ide-helper:meta
+        
+3. Step 3: Configurations
+  
+    $ php artisan key:generate
+    
+4. Step 4: Serve
+  
+    $ php artisan serve
+    
+    Open localhost:8000
+    
+## Common problem
+
+1. Cannot seed migrate
+
+    edit '.env': set CACHE_DRIVER=array
+    
+    $ php artisan config:cache
+      
+    $ composer dump-autoload
+    
+    $ php artisan migrate:refresh --seed
+    
+2. Form cannot post data
+
+    Use {{Form::open(...)}} or {{Form::model(...)}} instead of form html tag 
+
+    Or add {{Form::token()}} or {{csrf_token()}} in form body
+    
+    (see [Forms & HTML](https://laravel.com/docs/4.2/html))
+    
+## PhpStorm plugin instructions
+
+    Settings > Plugins > Browse repositories... > find 'Laravel' > Install
+    
+    Settings > Languages and Frameworks > Php > Laravel > Tick on 'Enable plugin for this project'
+    
+## Composer library
+
+[composer.json](https://github.com/nvn01234/sguet/blob/master/composer.json)
+
+     {
+     
+        "barryvdh/laravel-debugbar": "^2.3",
+        
+        "barryvdh/laravel-ide-helper": "^2.2",
+        
+        "doctrine/dbal": "^2.5",
+        
+    }
+    
+## Developers
+
+    Nguyen Van Nhat - UET - nguyenvanhat152@gmail.com - +84.166.3077313
