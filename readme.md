@@ -64,10 +64,11 @@ Step 3: Install
     
 ## Development
 
-Step 1: Install composer
+Step 1: Install composer, npm
 
         $ composer update
         $ composer install
+        $ npm install
 
 Step 2: Database & migrations
 
@@ -82,6 +83,8 @@ Step 2: Database & migrations
         $ php artisan migrate --seed
         
 - Generate ide-helper:
+
+> see [laravel ide-helper](https://github.com/barryvdh/laravel-ide-helper)
 
         $ php artisan ide-helper:generate
         $ php artisan ide-helper:models
@@ -112,11 +115,11 @@ Step 4: Serve
     
 #### Form cannot post data
 
+> see [Laravel Forms & HTML](https://laravel.com/docs/4.2/html)
+
 - Use {{Form::open(...)}} or {{Form::model(...)}} instead of form html tag 
 
 - Or add {{Form::token()}} or {{csrf_token()}} in form body
-
-(see [Forms & HTML](https://laravel.com/docs/4.2/html))
     
 ## PhpStorm plugin instructions
 
@@ -126,7 +129,7 @@ Step 4: Serve
     
 ## Composer library
 
-[composer.json](https://github.com/nvn01234/sguet/blob/master/composer.json)
+> [composer.json](https://github.com/nvn01234/sguet/blob/master/composer.json)
 
         {
             "barryvdh/laravel-debugbar": "^2.3",  
