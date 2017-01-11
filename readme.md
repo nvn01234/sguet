@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"/>
 <p align="center"><img src="http://sguet.com/sites/default/files/SGUET.png"></p>
 
 <p align="center">
