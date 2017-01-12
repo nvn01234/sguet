@@ -14,7 +14,7 @@ class Scaffoldinterfaces extends Migration
     {
         Schema::create('scaffoldinterfaces', function (Blueprint $table) {
             $table->increments('id');
-            $table->String('package');
+            $table->String('package')->default('Laravel');
             $table->String('migration');
             $table->String('model');
             $table->String('controller');
