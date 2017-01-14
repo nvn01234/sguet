@@ -11,8 +11,8 @@
 |
 */
 
-Auth::routes();
+//Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
-Route::get('/tin-tuc-hoat-dong', function (){})->name('news');
-Route::get('/gioi-thieu', function (){})->name('about');
+Route::get('/tin-tuc-hoat-dong', 'HomeController@news')->name('news');
+Route::get('/gioi-thieu', 'HomeController@about')->name('about');

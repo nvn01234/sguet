@@ -2,9 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
-use Illuminate\Http\Request;
-
 class HomeController extends Controller
 {
     /**
@@ -23,5 +20,20 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+    }
+
+    public function news()
+    {
+        return view('news');
+    }
+
+    public function about()
+    {
+        return view('about');
+    }
+
+    public function abort404()
+    {
+        abort(404);
     }
 }
