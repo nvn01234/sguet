@@ -137,11 +137,11 @@ Step 4: Serve
             "barryvdh/laravel-ide-helper": "^2.2",
             "Amranidev/scaffold-interface": "v1.6.*",
             "infyomlabs/laravel-generator": "5.3.x-dev",
-            "laravelcollective/html": "^5.3.0",
             "infyomlabs/adminlte-templates": "5.3.x-dev",
             "infyomlabs/swagger-generator": "dev-master",
             "jlapp/swaggervel": "dev-master",
             "doctrine/dbal": "^2.5",
+            "kalnoy/nestedset": "^4.2",
         }
     
 ## Developers

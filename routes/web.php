@@ -13,4 +13,6 @@
 
 Auth::routes();
 
-Route::get('/', 'HomeController@index');
+Route::get('/', 'HomeController@index')->name('home');
+Route::get('/tin-tuc-hoat-dong', function (){})->name('news');
+Route::get('/gioi-thieu', function (){})->name('about');

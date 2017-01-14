@@ -171,12 +171,11 @@ return [
         Amranidev\Ajaxis\AjaxisServiceProvider::class,
         Spatie\Permission\PermissionServiceProvider::class,
         Vinkla\Pusher\PusherServiceProvider::class,
-        Collective\Html\HtmlServiceProvider::class,
         Laracasts\Flash\FlashServiceProvider::class,
         Prettus\Repository\Providers\RepositoryServiceProvider::class,
         \InfyOm\Generator\InfyOmGeneratorServiceProvider::class,
         \InfyOm\AdminLTETemplates\AdminLTETemplatesServiceProvider::class,
-
+        Collective\Html\HtmlServiceProvider::class,
         //
 
         /*
@@ -202,7 +201,6 @@ return [
     */
 
     'aliases' => [
-
         'App' => Illuminate\Support\Facades\App::class,
         'Artisan' => Illuminate\Support\Facades\Artisan::class,
         'Auth' => Illuminate\Support\Facades\Auth::class,
@@ -235,10 +233,10 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-        //
-        'Form'      => Collective\Html\FormFacade::class,
-        'Html'      => Collective\Html\HtmlFacade::class,
-        'Flash'     => Laracasts\Flash\Flash::class,
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
+        'Flash' => Laracasts\Flash\Flash::class,
+        'NestedSet' => \Kalnoy\Nestedset\NestedSet::class,
     ],
 
 ];
