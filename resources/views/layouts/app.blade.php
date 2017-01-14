@@ -1,6 +1,11 @@
 @extends('layouts.base_app')
 
+@section('page_level_plugins.styles')
+    {!! Html::style('metronic/global/plugins/bootstrap-toastr/toastr.min.css') !!}
+@endsection
+
 @section('body.class', 'page-sidebar-closed-hide-logo page-content-white page-full-width page-md page-header-fixed')
+
 
 @section('body.inner')
     @include('partials.header')
@@ -18,7 +23,19 @@
     </div>
     <!-- END CONTAINER -->
 
-    <div class="scroll-to-top" style="display: block;">
+    <div class="scroll-to-top" style="display: none;">
         <i class="icon-arrow-up"></i>
     </div>
+@endsection
+
+@section('page_level_plugins.scripts')
+    {!! Html::script('metronic/global/plugins/bootstrap-toastr/toastr.min.js') !!}
+@endsection
+
+@section('page_level_scripts')
+    {!! Html::script('metronic/pages/scripts/ui-toastr.min.js') !!}
+@endsection
+
+@section('scripts')
+    @include('vendor.flash.toastr')
 @endsection

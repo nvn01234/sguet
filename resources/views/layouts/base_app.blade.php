@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+<!--[if IE 8]>
+<html lang="vi" class="ie8 no-js">
+<![endif]-->
+<!--[if IE 9]>
+<html lang="vi" class="ie9 no-js">
+<![endif]-->
+<!--[if !IE]><!-->
 <html lang="vi">
 <head>
     @section('meta')
@@ -30,6 +37,8 @@
         {!! Html::style('metronic/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css') !!}
     @show
 
+    @yield('page_level_plugins.styles')
+
     @section('theme_global_styles')
         {!! Html::style('metronic/global/css/components-md.min.css', ['id' => 'style_components']) !!}
         {!! Html::style('metronic/global/css/plugins-md.min.css') !!}
@@ -50,6 +59,11 @@
 
 @yield('body.inner')
 
+<!--[if lt IE 9]>
+{!! Html::script('metronic/global/plugins/respond.min.js') !!}
+{!! Html::script('metronic/global/plugins/excanvas.min.js') !!}
+<![endif]-->
+
 @section('core_plugins')
     {!! Html::script('metronic/global/plugins/jquery.min.js') !!}
     {!! Html::script('metronic/global/plugins/bootstrap/js/bootstrap.min.js') !!}
@@ -61,11 +75,13 @@
     {!! Html::script('metronic/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js') !!}
 @show
 
-@yield('page_level_scripts')
+@yield('page_level_plugins.scripts')
 
 @section('theme_global_scripts')
     {!! Html::script('metronic/global/scripts/app.min.js') !!}
 @show
+
+@yield('page_level_scripts')
 
 @section('theme_layout_scripts')
     {!! Html::script('metronic/layouts/layout/scripts/layout.min.js') !!}
