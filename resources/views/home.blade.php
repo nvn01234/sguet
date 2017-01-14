@@ -1,10 +1,7 @@
 @extends('layouts.app')
 
-@section('content')
-<div class="container">
-    <div class="row">
+@section('menu.home', 'active')
 
+@section('page_content')
 
-    </div>
-</div>
 @endsection
