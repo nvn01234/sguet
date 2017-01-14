@@ -3,21 +3,35 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
+use \Illuminate\Database\Query\Builder;
 
 /**
  * Class Category.
  *
- * @author  The scaffold-interface created at 2017-01-12 04:59:16pm
- * @link  https://github.com/amranidev/scaffold-interface
+ * @property int $id
+ * @property string $name
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Article[] $articles
+ * @method static Builder|Category whereId($value)
+ * @method static Builder|Category whereName($value)
+ * @mixin \Eloquent
  */
 class Category extends Model
 {
-	
-	
+    /**
+     * @var bool
+     */
     public $timestamps = false;
-    
+
+    /**
+     * @var string
+     */
     protected $table = 'categories';
 
-	
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function articles()
+    {
+        return $this->hasMany('App\Article');
+    }
 }

@@ -3,28 +3,40 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Query\Builder;
 
 /**
  * Class Position.
  *
- * @author  The scaffold-interface created at 2017-01-11 04:50:00pm
- * @link  https://github.com/amranidev/scaffold-interface
+ * @property int $id
+ * @property string $name
+ * @property int $priority
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Member[] $members
+ * @method static Builder|Position whereId($value)
+ * @method static Builder|Position whereName($value)
+ * @method static Builder|Position wherePriority($value)
+ * @mixin \Eloquent
  */
 class Position extends Model
 {
-	
-	
+
+
+    /**
+     * @var bool
+     */
     public $timestamps = false;
-    
+
+    /**
+     * @var string
+     */
     protected $table = 'positions';
 
-	
 
-	/**
+    /**
      * member.
      *
-     * @return  \Illuminate\Support\Collection;
+     * @return BelongsToMany;
      */
     public function members()
     {
@@ -34,18 +46,18 @@ class Position extends Model
     /**
      * Assign a member.
      *
-     * @param  $member
-     * @return  mixed
+     * @param Member $member
      */
     public function assignMember($member)
     {
-        return $this->members()->attach($member);
+        $this->members()->attach($member);
     }
+
     /**
      * Remove a member.
      *
-     * @param  $member
-     * @return  mixed
+     * @param Member $member
+     * @return int
      */
     public function removeMember($member)
     {

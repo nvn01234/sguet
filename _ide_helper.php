@@ -12898,6 +12898,11 @@ namespace {
     }
 
 
+    class NestedSet extends \Kalnoy\Nestedset\NestedSet{
+        
+    }
+
+
     class AppController extends \App\Http\Controllers\Controller{
         
     }

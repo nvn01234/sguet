@@ -17,6 +17,7 @@
     "infyomlabs/laravel-generator": "5.3.x-dev",
     "infyomlabs/swagger-generator": "dev-master",
     "jlapp/swaggervel": "dev-master",
+    "kalnoy/nestedset": "^4.2",
     "laravel/framework": "5.3.*",
     "laravelcollective/html": "^5.3.0"
   },

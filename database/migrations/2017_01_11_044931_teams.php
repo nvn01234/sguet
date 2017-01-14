@@ -32,7 +32,7 @@ class Teams extends Migration
 
 
             // type your addition here
-
+            NestedSet::columns($table);
         });
     }
 

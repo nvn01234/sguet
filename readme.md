@@ -141,6 +141,7 @@ Step 4: Serve
             "infyomlabs/swagger-generator": "dev-master",
             "jlapp/swaggervel": "dev-master",
             "doctrine/dbal": "^2.5",
+            "kalnoy/nestedset": "^4.2",
         }
     
 ## Developers
