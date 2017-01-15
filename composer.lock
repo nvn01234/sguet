@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "2b4cf00f84e7e182078811746b9aeee4",
+    "content-hash": "7b8db67801be68adba5242cefdcc5020",
     "packages": [
         {
             "name": "algolia/algoliasearch-client-php",
@@ -1160,7 +1160,7 @@
                 "swagger",
                 "templates"
             ],
-            "time": "2016-02-14 10:41:03"
+            "time": "2016-02-14T10:41:03+00:00"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -1350,7 +1350,7 @@
                 "laravel",
                 "swagger"
             ],
-            "time": "2016-01-25 15:38:17"
+            "time": "2016-01-25T15:38:17+00:00"
         },
         {
             "name": "kalnoy/nestedset",
@@ -2260,16 +2260,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.8.0",
+            "version": "v0.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "4a8860e13aa68a4bbf2476c014f8a1f14f1bf991"
+                "reference": "701e8a1cc426ee170f1296f5d9f6b8a26ad25c4a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/4a8860e13aa68a4bbf2476c014f8a1f14f1bf991",
-                "reference": "4a8860e13aa68a4bbf2476c014f8a1f14f1bf991",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/701e8a1cc426ee170f1296f5d9f6b8a26ad25c4a",
+                "reference": "701e8a1cc426ee170f1296f5d9f6b8a26ad25c4a",
                 "shasum": ""
             },
             "require": {
@@ -2299,7 +2299,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-develop": "0.8.x-dev"
+                    "dev-develop": "0.9.x-dev"
                 }
             },
             "autoload": {
@@ -2329,7 +2329,7 @@
                 "interactive",
                 "shell"
             ],
-            "time": "2016-12-07T17:15:07+00:00"
+            "time": "2017-01-15T17:54:13+00:00"
         },
         {
             "name": "pusher/pusher-php-server",
@@ -3402,34 +3402,34 @@
         },
         {
             "name": "vinkla/pusher",
-            "version": "2.5.0",
+            "version": "2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vinkla/laravel-pusher.git",
-                "reference": "6c431cad0a0b44599aeddf77bceda8035de0607b"
+                "reference": "5e7777095f9eac33bcc2a0abcafede37ea9232f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vinkla/laravel-pusher/zipball/6c431cad0a0b44599aeddf77bceda8035de0607b",
-                "reference": "6c431cad0a0b44599aeddf77bceda8035de0607b",
+                "url": "https://api.github.com/repos/vinkla/laravel-pusher/zipball/5e7777095f9eac33bcc2a0abcafede37ea9232f5",
+                "reference": "5e7777095f9eac33bcc2a0abcafede37ea9232f5",
                 "shasum": ""
             },
             "require": {
-                "graham-campbell/manager": "^2.5",
-                "illuminate/contracts": "5.3.* || 5.4.*",
-                "illuminate/support": "5.3.* || 5.4.*",
-                "php": "^7.0",
-                "pusher/pusher-php-server": "^2.6"
+                "graham-campbell/manager": "^2.4",
+                "illuminate/contracts": "5.1.* || 5.2.* || 5.3.*",
+                "illuminate/support": "5.1.* || 5.2.* || 5.3.*",
+                "php": "^5.6.4 || ^7.0",
+                "pusher/pusher-php-server": "^2.2.1"
             },
             "require-dev": {
-                "graham-campbell/testbench": "^3.3",
+                "graham-campbell/testbench": "^3.2",
                 "mockery/mockery": "^0.9.5",
-                "phpunit/phpunit": "^5.7"
+                "phpunit/phpunit": "^5.4"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.5-dev"
+                    "dev-master": "2.4-dev"
                 }
             },
             "autoload": {
@@ -3444,8 +3444,7 @@
             "authors": [
                 {
                     "name": "Vincent Klaiber",
-                    "email": "hello@vinkla.com",
-                    "homepage": "https://vinkla.com"
+                    "email": "hello@vinkla.com"
                 }
             ],
             "description": "A Pusher bridge for Laravel",
@@ -3461,7 +3460,7 @@
                 "rest",
                 "trigger"
             ],
-            "time": "2017-01-01T13:46:34+00:00"
+            "time": "2016-07-11T19:13:22+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -5156,8 +5155,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "infyomlabs/adminlte-templates": 20,
         "infyomlabs/laravel-generator": 20,
+        "infyomlabs/adminlte-templates": 20,
         "infyomlabs/swagger-generator": 20,
         "jlapp/swaggervel": 20
     },

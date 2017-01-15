@@ -9,19 +9,19 @@
   "type": "project",
   "require": {
     "php": ">=5.6.4",
-    "Amranidev/scaffold-interface": "v1.6.*",
     "algolia/algoliasearch-client-php": "^1.13",
     "barryvdh/laravel-debugbar": "^2.3",
     "barryvdh/laravel-ide-helper": "^2.2",
-    "doctrine/dbal": "^2.5",
-    "infyomlabs/adminlte-templates": "5.3.x-dev",
-    "infyomlabs/laravel-generator": "5.3.x-dev",
-    "infyomlabs/swagger-generator": "dev-master",
-    "jlapp/swaggervel": "dev-master",
     "kalnoy/nestedset": "^4.2",
     "laravel/framework": "5.3.*",
     "laravel/scout": "^2.0",
-    "laravelcollective/html": "^5.3.0"
+	"infyomlabs/laravel-generator": "5.3.x-dev",
+    "laravelcollective/html": "^5.3.0",
+    "infyomlabs/adminlte-templates": "5.3.x-dev",
+	"infyomlabs/swagger-generator": "dev-master",
+    "jlapp/swaggervel": "dev-master",
+	"doctrine/dbal": "~2.3",
+	"Amranidev/scaffold-interface": "v1.6.*"
   },
   "require-dev": {
     "fzaninotto/faker": "~1.4",
