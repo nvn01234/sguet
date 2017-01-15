@@ -125,24 +125,7 @@ Step 4: Serve
 
 - Settings > Plugins > Browse repositories... > find 'Laravel' > Install
 
-- Settings > Languages and Frameworks > Php > Laravel > Tick on 'Enable plugin for this project'
-    
-## Composer library
-
-> [composer.json](https://github.com/nvn01234/sguet/blob/master/composer.json)
-
-        "require": {
-            ...
-            "barryvdh/laravel-debugbar": "^2.3",  
-            "barryvdh/laravel-ide-helper": "^2.2",
-            "Amranidev/scaffold-interface": "v1.6.*",
-            "infyomlabs/laravel-generator": "5.3.x-dev",
-            "infyomlabs/adminlte-templates": "5.3.x-dev",
-            "infyomlabs/swagger-generator": "dev-master",
-            "jlapp/swaggervel": "dev-master",
-            "doctrine/dbal": "^2.5",
-            "kalnoy/nestedset": "^4.2",
-        }
+- Settings > Languages and Frameworks > Php > Laravel > Tick on 'Enable plugin for this project'    
     
 ## Developers
 

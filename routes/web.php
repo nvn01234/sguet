@@ -16,3 +16,5 @@
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/tin-tuc-hoat-dong', 'HomeController@news')->name('news');
 Route::get('/gioi-thieu', 'HomeController@about')->name('about');
+
+Route::get('/faq', 'ArticleController@searchQnA')->name('search');

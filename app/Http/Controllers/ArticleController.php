@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use Illuminate\Support\Facades\App;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -17,6 +18,15 @@ use URL;
  */
 class ArticleController extends Controller
 {
+    public function searchQnA(Request $request)
+    {
+        /**
+         * @var Category $qna
+         */
+        $result = Article::search($request['q'])->where('category_id', 3)->get();
+        return $result;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -26,7 +36,7 @@ class ArticleController extends Controller
     {
         $title = 'Index - article';
         $articles = Article::paginate(6);
-        return view('article.index',compact('articles','title'));
+        return view('article.index', compact('articles', 'title'));
     }
 
     /**
@@ -37,34 +47,33 @@ class ArticleController extends Controller
     public function create()
     {
         $title = 'Create - article';
-        
+
         return view('article.create');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param    \Illuminate\Http\Request  $request
+     * @param    \Illuminate\Http\Request $request
      * @return  \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
         $article = new Article();
 
-        
+
         $article->title = $request->title;
 
-        
+
         $article->body = $request->body;
 
-        
+
         $article->image_url = $request->image_url;
 
-        
+
         $article->short_description = $request->short_description;
 
-        
-        
+
         $article->save();
 
         $pusher = App::make('pusher');
@@ -74,8 +83,8 @@ class ArticleController extends Controller
         //Here is a pusher notification example when you create a new resource in storage.
         //you can modify anything you want or use it wherever.
         $pusher->trigger('test-channel',
-                         'test-event',
-                        ['message' => 'A new article has been created !!']);
+            'test-event',
+            ['message' => 'A new article has been created !!']);
 
         return redirect('article');
     }
@@ -83,62 +92,60 @@ class ArticleController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param    \Illuminate\Http\Request  $request
-     * @param    int  $id
+     * @param    \Illuminate\Http\Request $request
+     * @param    int $id
      * @return  \Illuminate\Http\Response
      */
-    public function show($id,Request $request)
+    public function show($id, Request $request)
     {
         $title = 'Show - article';
 
-        if($request->ajax())
-        {
-            return URL::to('article/'.$id);
+        if ($request->ajax()) {
+            return URL::to('article/' . $id);
         }
 
         $article = Article::findOrfail($id);
-        return view('article.show',compact('title','article'));
+        return view('article.show', compact('title', 'article'));
     }
 
     /**
      * Show the form for editing the specified resource.
-     * @param    \Illuminate\Http\Request  $request
-     * @param    int  $id
+     * @param    \Illuminate\Http\Request $request
+     * @param    int $id
      * @return  \Illuminate\Http\Response
      */
-    public function edit($id,Request $request)
+    public function edit($id, Request $request)
     {
         $title = 'Edit - article';
-        if($request->ajax())
-        {
-            return URL::to('article/'. $id . '/edit');
+        if ($request->ajax()) {
+            return URL::to('article/' . $id . '/edit');
         }
 
-        
+
         $article = Article::findOrfail($id);
-        return view('article.edit',compact('title','article'  ));
+        return view('article.edit', compact('title', 'article'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param    \Illuminate\Http\Request  $request
-     * @param    int  $id
+     * @param    \Illuminate\Http\Request $request
+     * @param    int $id
      * @return  \Illuminate\Http\Response
      */
-    public function update($id,Request $request)
+    public function update($id, Request $request)
     {
         $article = Article::findOrfail($id);
-    	
+
         $article->title = $request->title;
-        
+
         $article->body = $request->body;
-        
+
         $article->image_url = $request->image_url;
-        
+
         $article->short_description = $request->short_description;
-        
-        
+
+
         $article->save();
 
         return redirect('article');
@@ -148,15 +155,14 @@ class ArticleController extends Controller
      * Delete confirmation message by Ajaxis.
      *
      * @link      https://github.com/amranidev/ajaxis
-     * @param    \Illuminate\Http\Request  $request
+     * @param    \Illuminate\Http\Request $request
      * @return  String
      */
-    public function DeleteMsg($id,Request $request)
+    public function DeleteMsg($id, Request $request)
     {
-        $msg = Ajaxis::MtDeleting('Warning!!','Would you like to remove This?','/article/'. $id . '/delete');
+        $msg = Ajaxis::MtDeleting('Warning!!', 'Would you like to remove This?', '/article/' . $id . '/delete');
 
-        if($request->ajax())
-        {
+        if ($request->ajax()) {
             return $msg;
         }
     }
@@ -169,8 +175,8 @@ class ArticleController extends Controller
      */
     public function destroy($id)
     {
-     	$article = Article::findOrfail($id);
-     	$article->delete();
+        $article = Article::findOrfail($id);
+        $article->delete();
         return URL::to('article');
     }
 }
