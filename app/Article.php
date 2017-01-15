@@ -40,6 +40,17 @@ class Article extends Model
     use Searchable;
 
     /**
+     * @var array
+     */
+    protected $fillable = [
+        'title',
+        'body',
+        'image_url',
+        'short_description',
+        'updated_at',
+    ];
+
+    /**
      * @return array
      */
     public function toSearchableArray()

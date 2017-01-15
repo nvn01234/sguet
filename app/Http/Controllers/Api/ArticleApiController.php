@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Article;
+use App\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -18,7 +19,8 @@ class ArticleApiController extends Controller
      */
     public function searchFaq(Request $request)
     {
-        $result = Article::search($request['q'])->where('category_id', 3)->get();
+        $faq_id = Category::whereName('Q&A')->first(['id'])->id;
+        $result = Article::search($request['q'])->where('category_id', $faq_id)->get();
         return response($result, 200);
     }
 }
