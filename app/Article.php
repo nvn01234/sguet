@@ -49,7 +49,10 @@ class Article extends Model
         $array['short_description'] = $this->short_description;
         $array['category_id'] = $this->category_id;
         $array['tags'] = $this->tags->toArray();
-        return $array;
+        return response($array, 200, [
+            'Content-Type' => 'application/json; charset=utf-8',
+            'Data-Type' => 'json'
+        ]);
     }
 
     /**

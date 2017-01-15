@@ -18,15 +18,6 @@ use URL;
  */
 class ArticleController extends Controller
 {
-    public function searchQnA(Request $request)
-    {
-        /**
-         * @var Category $qna
-         */
-        $result = Article::search($request['q'])->where('category_id', 3)->get();
-        return $result;
-    }
-
     /**
      * Display a listing of the resource.
      *

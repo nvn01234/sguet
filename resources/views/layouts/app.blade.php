@@ -6,7 +6,6 @@
 
 @section('body.class', 'page-sidebar-closed-hide-logo page-content-white page-full-width page-md page-header-fixed')
 
-
 @section('body.inner')
     @include('partials.header')
 
