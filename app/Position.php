@@ -40,7 +40,7 @@ class Position extends Model
      */
     public function members()
     {
-        return $this->belongsToMany('App\Member', 'members_positions');
+        return $this->belongsToMany('App\Member');
     }
 
     /**

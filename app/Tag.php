@@ -32,7 +32,7 @@ class Tag extends Model
      */
     public function articles()
     {
-        return $this->belongsToMany('App\Article', 'articles_tags');
+        return $this->belongsToMany('App\Article');
     }
 
     /**

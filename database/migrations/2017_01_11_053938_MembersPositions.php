@@ -12,16 +12,16 @@ class MembersPositions extends Migration
      */
     public function up()
     {
-        Schema::create('members_positions',function (Blueprint $table){
-			$table->increments('id')->unique()->index()->unsigned();
-			$table->integer('member_id')->unsigned()->index();
-			$table->foreign('member_id')->references('id')->on('members')->onDelete('cascade');
-			$table->integer('position_id')->unsigned()->index();
-			$table->foreign('position_id')->references('id')->on('positions')->onDelete('cascade');
-			/**
-			 * Type your addition here
-			 *
-			 */
+        Schema::create('member_position', function (Blueprint $table) {
+            $table->increments('id')->unique()->index()->unsigned();
+            $table->integer('member_id')->unsigned()->index();
+            $table->foreign('member_id')->references('id')->on('members')->onDelete('cascade');
+            $table->integer('position_id')->unsigned()->index();
+            $table->foreign('position_id')->references('id')->on('positions')->onDelete('cascade');
+            /**
+             * Type your addition here
+             *
+             */
         });
     }
 
@@ -32,6 +32,6 @@ class MembersPositions extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('members_positions');
+        Schema::dropIfExists('member_position');
     }
 }

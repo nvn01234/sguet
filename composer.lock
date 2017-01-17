@@ -4,194 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "7b8db67801be68adba5242cefdcc5020",
+    "content-hash": "7949a300eda66eedc20f5b54600220e9",
     "packages": [
-        {
-            "name": "algolia/algoliasearch-client-php",
-            "version": "1.13.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/algolia/algoliasearch-client-php.git",
-                "reference": "dd0f04de8e33b091f546fd02e0d54311473c1e1f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/algolia/algoliasearch-client-php/zipball/dd0f04de8e33b091f546fd02e0d54311473c1e1f",
-                "reference": "dd0f04de8e33b091f546fd02e0d54311473c1e1f",
-                "shasum": ""
-            },
-            "require": {
-                "ext-mbstring": "*",
-                "php": ">=5.3"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^4.8 || ^5.0",
-                "satooshi/php-coveralls": "0.6.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "AlgoliaSearch": "src/",
-                    "AlgoliaSearch\\Tests": "tests/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Algolia Team",
-                    "email": "contact@algolia.com"
-                },
-                {
-                    "name": "Ryan T. Catlin",
-                    "email": "ryan.catlin@gmail.com"
-                },
-                {
-                    "name": "Jonathan H. Wage",
-                    "email": "jonwage@gmail.com"
-                }
-            ],
-            "description": "Algolia Search API Client for PHP",
-            "homepage": "https://github.com/algolia/algoliasearch-client-php",
-            "time": "2016-12-21T14:12:19+00:00"
-        },
-        {
-            "name": "amranidev/ajaxis",
-            "version": "v3.0.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/amranidev/ajaxis.git",
-                "reference": "5dd95b708c81f9272fca6f974fa823bc6a979107"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/amranidev/ajaxis/zipball/5dd95b708c81f9272fca6f974fa823bc6a979107",
-                "reference": "5dd95b708c81f9272fca6f974fa823bc6a979107",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.5.0"
-            },
-            "require-dev": {
-                "orchestra/testbench": "~3.0",
-                "phpunit/phpunit": "~4.0|~5.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Amranidev\\Ajaxis\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Amrani Houssain",
-                    "email": "amranidev@gmail.com"
-                }
-            ],
-            "description": "To manage your crud in laravel 5.1",
-            "homepage": "http://github.com/amranidev/ajaxis",
-            "keywords": [
-                "Ajaxis",
-                "Amrani Houssain",
-                "Laravel ajax get",
-                "ajax",
-                "amranidev",
-                "amrnaihoussain",
-                "files",
-                "framework",
-                "laravel",
-                "laravel ajax modal",
-                "laravel ajax post",
-                "laravel ajax reqeust",
-                "laravel ajax token",
-                "laravel bootstrap",
-                "laravel materialize",
-                "laravel modals"
-            ],
-            "time": "2016-08-27T13:05:06+00:00"
-        },
-        {
-            "name": "amranidev/scaffold-interface",
-            "version": "v1.6.35",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/amranidev/scaffold-interface.git",
-                "reference": "fd5df90d07837b087847b86ceda9c37214d366eb"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/amranidev/scaffold-interface/zipball/fd5df90d07837b087847b86ceda9c37214d366eb",
-                "reference": "fd5df90d07837b087847b86ceda9c37214d366eb",
-                "shasum": ""
-            },
-            "require": {
-                "amranidev/ajaxis": "3.0.*",
-                "gajus/dindent": "2.0.*",
-                "php": ">=5.5.9",
-                "spatie/laravel-permission": "^1.5",
-                "vinkla/pusher": "^2.4"
-            },
-            "require-dev": {
-                "orchestra/testbench": "~3.0",
-                "phpunit/phpunit": "~4.0|~5.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.7.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Amranidev\\ScaffoldInterface\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Amrani Houssain",
-                    "email": "amranidev@gmail.com"
-                }
-            ],
-            "description": "A Smart CRUD Generator For Laravel",
-            "homepage": "http://github.com/amranidev/scaffold-interface",
-            "keywords": [
-                "Amrani Houssain",
-                "Laravel 5.1",
-                "Laravel 5.2",
-                "amranidev",
-                "amrnaihoussain",
-                "crud",
-                "crud generator",
-                "crud generators",
-                "files",
-                "framework",
-                "laravel",
-                "laravel bootstrap",
-                "laravel materialize",
-                "scaffod",
-                "scaffold",
-                "scaffolding",
-                "scaffoldinterface",
-                "smart crud generator",
-                "smart generator"
-            ],
-            "time": "2016-12-30T23:46:57+00:00"
-        },
         {
             "name": "barryvdh/laravel-debugbar",
             "version": "v2.3.1",
@@ -245,121 +59,6 @@
                 "webprofiler"
             ],
             "time": "2017-01-05T08:53:44+00:00"
-        },
-        {
-            "name": "barryvdh/laravel-ide-helper",
-            "version": "v2.2.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/barryvdh/laravel-ide-helper.git",
-                "reference": "105f14a50d0959a0e80004a15b3350fdf78f9623"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/barryvdh/laravel-ide-helper/zipball/105f14a50d0959a0e80004a15b3350fdf78f9623",
-                "reference": "105f14a50d0959a0e80004a15b3350fdf78f9623",
-                "shasum": ""
-            },
-            "require": {
-                "barryvdh/reflection-docblock": "^2.0.4",
-                "illuminate/console": "^5.0,<5.4",
-                "illuminate/filesystem": "^5.0,<5.4",
-                "illuminate/support": "^5.0,<5.4",
-                "php": ">=5.4.0",
-                "symfony/class-loader": "^2.3|^3.0"
-            },
-            "require-dev": {
-                "doctrine/dbal": "~2.3",
-                "phpunit/phpunit": "4.*",
-                "scrutinizer/ocular": "~1.1",
-                "squizlabs/php_codesniffer": "~2.3"
-            },
-            "suggest": {
-                "doctrine/dbal": "Load information from the database about models for phpdocs (~2.3)"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.2-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Barryvdh\\LaravelIdeHelper\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Barry vd. Heuvel",
-                    "email": "barryvdh@gmail.com"
-                }
-            ],
-            "description": "Laravel IDE Helper, generates correct PHPDocs for all Facade classes, to improve auto-completion.",
-            "keywords": [
-                "autocomplete",
-                "codeintel",
-                "helper",
-                "ide",
-                "laravel",
-                "netbeans",
-                "phpdoc",
-                "phpstorm",
-                "sublime"
-            ],
-            "time": "2016-11-15T08:21:23+00:00"
-        },
-        {
-            "name": "barryvdh/reflection-docblock",
-            "version": "v2.0.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/barryvdh/ReflectionDocBlock.git",
-                "reference": "3dcbd98b5d9384a5357266efba8fd29884458e5c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/barryvdh/ReflectionDocBlock/zipball/3dcbd98b5d9384a5357266efba8fd29884458e5c",
-                "reference": "3dcbd98b5d9384a5357266efba8fd29884458e5c",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.0,<4.5"
-            },
-            "suggest": {
-                "dflydev/markdown": "~1.0",
-                "erusev/parsedown": "~1.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Barryvdh": [
-                        "src/"
-                    ]
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Mike van Riel",
-                    "email": "mike.vanriel@naenius.com"
-                }
-            ],
-            "time": "2016-06-13T19:28:20+00:00"
         },
         {
             "name": "classpreloader/classpreloader",
@@ -918,251 +617,6 @@
             "time": "2014-09-09T13:34:57+00:00"
         },
         {
-            "name": "gajus/dindent",
-            "version": "2.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/gajus/dindent.git",
-                "reference": "d81c3a6f78fbe1ab26f5e753098bbbef6b6a9f3c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/gajus/dindent/zipball/d81c3a6f78fbe1ab26f5e753098bbbef6b6a9f3c",
-                "reference": "d81c3a6f78fbe1ab26f5e753098bbbef6b6a9f3c",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3"
-            },
-            "require-dev": {
-                "satooshi/php-coveralls": "dev-master"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Gajus\\Dindent\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Gajus Kuizinas",
-                    "email": "gk@anuary.com"
-                }
-            ],
-            "description": "HTML indentation library for development and testing.",
-            "homepage": "https://github.com/gajus/dindent",
-            "keywords": [
-                "format",
-                "html",
-                "indent"
-            ],
-            "time": "2014-10-08T10:03:04+00:00"
-        },
-        {
-            "name": "graham-campbell/manager",
-            "version": "v2.5.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/GrahamCampbell/Laravel-Manager.git",
-                "reference": "e6ab47a8971da6fd18bc7ced546f0d24cb7ebe3a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Manager/zipball/e6ab47a8971da6fd18bc7ced546f0d24cb7ebe3a",
-                "reference": "e6ab47a8971da6fd18bc7ced546f0d24cb7ebe3a",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/contracts": "5.1.*|5.2.*|5.3.*|5.4.*",
-                "illuminate/support": "5.1.*|5.2.*|5.3.*|5.4.*",
-                "php": ">=5.5.9"
-            },
-            "require-dev": {
-                "graham-campbell/testbench-core": "^1.1",
-                "mockery/mockery": "^0.9.4",
-                "phpunit/phpunit": "^4.8|^5.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.5-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "GrahamCampbell\\Manager\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Graham Campbell",
-                    "email": "graham@alt-three.com"
-                }
-            ],
-            "description": "Manager Provides Some Manager Functionality For Laravel 5",
-            "keywords": [
-                "Graham Campbell",
-                "GrahamCampbell",
-                "Laravel Manager",
-                "Laravel-Manager",
-                "connector",
-                "framework",
-                "interface",
-                "laravel",
-                "manager"
-            ],
-            "time": "2017-01-01T13:08:54+00:00"
-        },
-        {
-            "name": "infyomlabs/adminlte-templates",
-            "version": "5.3.x-dev",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/InfyOmLabs/adminlte-templates.git",
-                "reference": "f0d01636f993554b23835a698272c7e7623db081"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/InfyOmLabs/adminlte-templates/zipball/f0d01636f993554b23835a698272c7e7623db081",
-                "reference": "f0d01636f993554b23835a698272c7e7623db081",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/support": "~5.0",
-                "php": ">=5.5.9"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "InfyOm\\AdminLTETemplates\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Mitul Golakiya",
-                    "email": "me@mitul.me"
-                }
-            ],
-            "description": "AdminLTE templates for InfyOm Laravel Generator",
-            "keywords": [
-                "AdminLTE",
-                "bootstrap",
-                "generator",
-                "infyom",
-                "laravel",
-                "templates"
-            ],
-            "time": "2016-09-24T11:41:12+00:00"
-        },
-        {
-            "name": "infyomlabs/laravel-generator",
-            "version": "5.3.x-dev",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/InfyOmLabs/laravel-generator.git",
-                "reference": "323447882e53990a39bb54bd0ee69d79aa67e1ba"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/InfyOmLabs/laravel-generator/zipball/323447882e53990a39bb54bd0ee69d79aa67e1ba",
-                "reference": "323447882e53990a39bb54bd0ee69d79aa67e1ba",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/support": "~5.0",
-                "laracasts/flash": "~2.0",
-                "php": ">=5.5.9",
-                "prettus/l5-repository": "~2.1"
-            },
-            "require-dev": {
-                "mockery/mockery": "~0.9",
-                "phpunit/phpunit": "~5.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "InfyOm\\Generator\\": "src/"
-                },
-                "files": [
-                    "src/helpers.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Mitul Golakiya",
-                    "email": "me@mitul.me"
-                }
-            ],
-            "description": "InfyOm Laravel Generator",
-            "keywords": [
-                "api",
-                "crud",
-                "generator",
-                "laravel",
-                "migration",
-                "model",
-                "repository",
-                "request",
-                "swagger",
-                "test",
-                "view"
-            ],
-            "time": "2016-12-24T10:17:29+00:00"
-        },
-        {
-            "name": "infyomlabs/swagger-generator",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/InfyOmLabs/swagger-generator.git",
-                "reference": "a0d85f22acd100f73515d98901d6f23efc1d2443"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/InfyOmLabs/swagger-generator/zipball/a0d85f22acd100f73515d98901d6f23efc1d2443",
-                "reference": "a0d85f22acd100f73515d98901d6f23efc1d2443",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.5.9"
-            },
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Mitul Golakiya",
-                    "email": "me@mitul.me"
-                }
-            ],
-            "description": "Swagger Generator for InfyOm Laravel Generator",
-            "keywords": [
-                "generator",
-                "laravel",
-                "swagger",
-                "templates"
-            ],
-            "time": "2016-02-14T10:41:03+00:00"
-        },
-        {
             "name": "jakub-onderka/php-console-color",
             "version": "0.1",
             "source": {
@@ -1308,51 +762,6 @@
             "time": "2016-12-07T09:37:55+00:00"
         },
         {
-            "name": "jlapp/swaggervel",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/slampenny/Swaggervel.git",
-                "reference": "e026d72cacec8b2db8b2510179d73042f5e87bb9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/slampenny/Swaggervel/zipball/e026d72cacec8b2db8b2510179d73042f5e87bb9",
-                "reference": "e026d72cacec8b2db8b2510179d73042f5e87bb9",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0",
-                "zircote/swagger-php": "*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Jlapp\\Swaggervel": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "jlapp",
-                    "email": "jordan@jordanlapp.com"
-                }
-            ],
-            "description": "A great way to integrate Swagger into Laravel",
-            "keywords": [
-                "L4",
-                "api",
-                "documentation",
-                "l5",
-                "laravel",
-                "swagger"
-            ],
-            "time": "2016-01-25T15:38:17+00:00"
-        },
-        {
             "name": "kalnoy/nestedset",
             "version": "v4.2.0",
             "source": {
@@ -1405,49 +814,6 @@
                 "nsm"
             ],
             "time": "2016-12-19T08:36:51+00:00"
-        },
-        {
-            "name": "laracasts/flash",
-            "version": "2.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laracasts/flash.git",
-                "reference": "03eec812fd6ae948664ff51b4320785f6d15ee5d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/laracasts/flash/zipball/03eec812fd6ae948664ff51b4320785f6d15ee5d",
-                "reference": "03eec812fd6ae948664ff51b4320785f6d15ee5d",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/support": "~5.0",
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "mockery/mockery": "dev-master"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Laracasts\\Flash": "src/"
-                },
-                "files": [
-                    "src/Laracasts/Flash/functions.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jeffrey Way",
-                    "email": "jeffrey@laracasts.com"
-                }
-            ],
-            "description": "Easy flash notifications",
-            "time": "2016-07-11T20:46:02+00:00"
         },
         {
             "name": "laravel/framework",
@@ -1576,68 +942,6 @@
                 "laravel"
             ],
             "time": "2017-01-06T14:33:56+00:00"
-        },
-        {
-            "name": "laravel/scout",
-            "version": "v2.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laravel/scout.git",
-                "reference": "2400432a48ec5d87eb39c08ee78dfa1bcfadefe6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/laravel/scout/zipball/2400432a48ec5d87eb39c08ee78dfa1bcfadefe6",
-                "reference": "2400432a48ec5d87eb39c08ee78dfa1bcfadefe6",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/bus": "~5.3",
-                "illuminate/contracts": "~5.3",
-                "illuminate/database": "~5.3",
-                "illuminate/pagination": "~5.3",
-                "illuminate/queue": "~5.3",
-                "illuminate/support": "~5.3",
-                "php": ">=5.6.4"
-            },
-            "require-dev": {
-                "algolia/algoliasearch-client-php": "^1.10",
-                "mockery/mockery": "~0.9",
-                "phpunit/phpunit": "~5.0"
-            },
-            "suggest": {
-                "algolia/algoliasearch-client-php": "Required to use the Algolia engine (^1.10).",
-                "elasticsearch/elasticsearch": "Required to use the Elasticsearch engine (^2.2)."
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Laravel\\Scout\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Taylor Otwell",
-                    "email": "taylor@laravel.com"
-                }
-            ],
-            "description": "Laravel Scout provides a driver based solution to searching your Eloquent models.",
-            "keywords": [
-                "algolia",
-                "elasticsearch",
-                "laravel",
-                "search"
-            ],
-            "time": "2016-12-16T17:17:36+00:00"
         },
         {
             "name": "laravelcollective/html",
@@ -2112,106 +1416,6 @@
             "time": "2016-11-07T23:38:38+00:00"
         },
         {
-            "name": "prettus/l5-repository",
-            "version": "2.6.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/andersao/l5-repository.git",
-                "reference": "05945e652bfdacd456128d69bcae91701ccc9e32"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/andersao/l5-repository/zipball/05945e652bfdacd456128d69bcae91701ccc9e32",
-                "reference": "05945e652bfdacd456128d69bcae91701ccc9e32",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/config": "~5.0",
-                "illuminate/console": "~5.0",
-                "illuminate/database": "~5.0",
-                "illuminate/filesystem": "~5.0",
-                "illuminate/http": "~5.0",
-                "illuminate/pagination": "~5.0",
-                "illuminate/support": "~5.0",
-                "prettus/laravel-validation": "1.1.*"
-            },
-            "suggest": {
-                "league/fractal": "Required to use the Fractal Presenter (0.12.*).",
-                "robclancy/presenter": "Required to use the Presenter Model (1.3.*)"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-develop": "2.2-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Prettus\\Repository\\": "src/Prettus/Repository/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Anderson Andrade",
-                    "email": "contato@andersonandra.de",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Laravel 5 - Repositories to  the database layer",
-            "keywords": [
-                "cache",
-                "eloquent",
-                "laravel",
-                "model",
-                "repository"
-            ],
-            "time": "2016-06-27T10:43:22+00:00"
-        },
-        {
-            "name": "prettus/laravel-validation",
-            "version": "1.1.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/andersao/laravel-validator.git",
-                "reference": "c3501ba6b6312b8e98098783901060c0aff2b29d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/andersao/laravel-validator/zipball/c3501ba6b6312b8e98098783901060c0aff2b29d",
-                "reference": "c3501ba6b6312b8e98098783901060c0aff2b29d",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/support": "~5.0|~5.1",
-                "illuminate/validation": "~5.0|~5.1",
-                "php": ">=5.4.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Prettus\\Validator\\": "src/Prettus/Validator/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "authors": [
-                {
-                    "name": "Anderson Andrade",
-                    "email": "contato@andersonandra.de"
-                }
-            ],
-            "description": "Laravel Validation Service",
-            "keywords": [
-                "laravel",
-                "service",
-                "validation"
-            ],
-            "time": "2015-06-08T23:53:46+00:00"
-        },
-        {
             "name": "psr/log",
             "version": "1.0.2",
             "source": {
@@ -2330,50 +1534,6 @@
                 "shell"
             ],
             "time": "2017-01-15T17:54:13+00:00"
-        },
-        {
-            "name": "pusher/pusher-php-server",
-            "version": "2.6.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/pusher/pusher-http-php.git",
-                "reference": "7101edc482d1b1de027abadd7a80a0d00222ef08"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/pusher/pusher-http-php/zipball/7101edc482d1b1de027abadd7a80a0d00222ef08",
-                "reference": "7101edc482d1b1de027abadd7a80a0d00222ef08",
-                "shasum": ""
-            },
-            "require": {
-                "ext-curl": "*",
-                "php": ">=5.2"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4"
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "lib/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Library for interacting with the Pusher REST API",
-            "homepage": "https://github.com/pusher/pusher-php-server",
-            "keywords": [
-                "events",
-                "php-pusher-server",
-                "publish",
-                "pusher",
-                "realtime",
-                "rest",
-                "trigger"
-            ],
-            "time": "2016-12-22T10:46:28+00:00"
         },
         {
             "name": "ramsey/uuid",
@@ -2563,62 +1723,6 @@
                 "mailer"
             ],
             "time": "2016-12-29T10:02:40+00:00"
-        },
-        {
-            "name": "symfony/class-loader",
-            "version": "v3.2.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/class-loader.git",
-                "reference": "0152f7a47acd564ca62c652975c2b32ac6d613a6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/class-loader/zipball/0152f7a47acd564ca62c652975c2b32ac6d613a6",
-                "reference": "0152f7a47acd564ca62c652975c2b32ac6d613a6",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.5.9"
-            },
-            "require-dev": {
-                "symfony/finder": "~2.8|~3.0",
-                "symfony/polyfill-apcu": "~1.1"
-            },
-            "suggest": {
-                "symfony/polyfill-apcu": "For using ApcClassLoader on HHVM"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.2-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\ClassLoader\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony ClassLoader Component",
-            "homepage": "https://symfony.com",
-            "time": "2017-01-10T14:14:38+00:00"
         },
         {
             "name": "symfony/console",
@@ -3401,68 +2505,6 @@
             "time": "2017-01-02T20:31:54+00:00"
         },
         {
-            "name": "vinkla/pusher",
-            "version": "2.4.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/vinkla/laravel-pusher.git",
-                "reference": "5e7777095f9eac33bcc2a0abcafede37ea9232f5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/vinkla/laravel-pusher/zipball/5e7777095f9eac33bcc2a0abcafede37ea9232f5",
-                "reference": "5e7777095f9eac33bcc2a0abcafede37ea9232f5",
-                "shasum": ""
-            },
-            "require": {
-                "graham-campbell/manager": "^2.4",
-                "illuminate/contracts": "5.1.* || 5.2.* || 5.3.*",
-                "illuminate/support": "5.1.* || 5.2.* || 5.3.*",
-                "php": "^5.6.4 || ^7.0",
-                "pusher/pusher-php-server": "^2.2.1"
-            },
-            "require-dev": {
-                "graham-campbell/testbench": "^3.2",
-                "mockery/mockery": "^0.9.5",
-                "phpunit/phpunit": "^5.4"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.4-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Vinkla\\Pusher\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Vincent Klaiber",
-                    "email": "hello@vinkla.com"
-                }
-            ],
-            "description": "A Pusher bridge for Laravel",
-            "keywords": [
-                "api",
-                "events",
-                "http",
-                "laravel",
-                "php-pusher-server",
-                "publish",
-                "pusher",
-                "realtime",
-                "rest",
-                "trigger"
-            ],
-            "time": "2016-07-11T19:13:22+00:00"
-        },
-        {
             "name": "vlucas/phpdotenv",
             "version": "v2.4.0",
             "source": {
@@ -3511,71 +2553,124 @@
                 "environment"
             ],
             "time": "2016-09-01T10:05:43+00:00"
-        },
-        {
-            "name": "zircote/swagger-php",
-            "version": "2.0.8",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/zircote/swagger-php.git",
-                "reference": "39f4c30692a4925597e7d4280fc58794fb4f3730"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/zircote/swagger-php/zipball/39f4c30692a4925597e7d4280fc58794fb4f3730",
-                "reference": "39f4c30692a4925597e7d4280fc58794fb4f3730",
-                "shasum": ""
-            },
-            "require": {
-                "doctrine/annotations": "*",
-                "php": ">=5.4.0",
-                "symfony/finder": "*"
-            },
-            "require-dev": {
-                "phpunit/phpunit": ">=4.8",
-                "squizlabs/php_codesniffer": ">=2.7",
-                "zendframework/zend-form": "<2.8"
-            },
-            "bin": [
-                "bin/swagger"
-            ],
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Swagger\\": "src"
-                },
-                "files": [
-                    "src/functions.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache2"
-            ],
-            "authors": [
-                {
-                    "name": "Robert Allen",
-                    "email": "zircote@gmail.com",
-                    "homepage": "http://www.zircote.com"
-                },
-                {
-                    "name": "Bob Fanger",
-                    "email": "bfanger@gmail.com",
-                    "homepage": "http://bfanger.nl"
-                }
-            ],
-            "description": "Swagger-PHP - Generate interactive documentation for your RESTful API using phpdoc annotations",
-            "homepage": "https://github.com/zircote/swagger-php/",
-            "keywords": [
-                "api",
-                "json",
-                "rest",
-                "service discovery"
-            ],
-            "time": "2016-12-16T12:39:03+00:00"
         }
     ],
     "packages-dev": [
+        {
+            "name": "barryvdh/laravel-ide-helper",
+            "version": "v2.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/barryvdh/laravel-ide-helper.git",
+                "reference": "105f14a50d0959a0e80004a15b3350fdf78f9623"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/barryvdh/laravel-ide-helper/zipball/105f14a50d0959a0e80004a15b3350fdf78f9623",
+                "reference": "105f14a50d0959a0e80004a15b3350fdf78f9623",
+                "shasum": ""
+            },
+            "require": {
+                "barryvdh/reflection-docblock": "^2.0.4",
+                "illuminate/console": "^5.0,<5.4",
+                "illuminate/filesystem": "^5.0,<5.4",
+                "illuminate/support": "^5.0,<5.4",
+                "php": ">=5.4.0",
+                "symfony/class-loader": "^2.3|^3.0"
+            },
+            "require-dev": {
+                "doctrine/dbal": "~2.3",
+                "phpunit/phpunit": "4.*",
+                "scrutinizer/ocular": "~1.1",
+                "squizlabs/php_codesniffer": "~2.3"
+            },
+            "suggest": {
+                "doctrine/dbal": "Load information from the database about models for phpdocs (~2.3)"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Barryvdh\\LaravelIdeHelper\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Barry vd. Heuvel",
+                    "email": "barryvdh@gmail.com"
+                }
+            ],
+            "description": "Laravel IDE Helper, generates correct PHPDocs for all Facade classes, to improve auto-completion.",
+            "keywords": [
+                "autocomplete",
+                "codeintel",
+                "helper",
+                "ide",
+                "laravel",
+                "netbeans",
+                "phpdoc",
+                "phpstorm",
+                "sublime"
+            ],
+            "time": "2016-11-15T08:21:23+00:00"
+        },
+        {
+            "name": "barryvdh/reflection-docblock",
+            "version": "v2.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/barryvdh/ReflectionDocBlock.git",
+                "reference": "3dcbd98b5d9384a5357266efba8fd29884458e5c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/barryvdh/ReflectionDocBlock/zipball/3dcbd98b5d9384a5357266efba8fd29884458e5c",
+                "reference": "3dcbd98b5d9384a5357266efba8fd29884458e5c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0,<4.5"
+            },
+            "suggest": {
+                "dflydev/markdown": "~1.0",
+                "erusev/parsedown": "~1.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Barryvdh": [
+                        "src/"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mike van Riel",
+                    "email": "mike.vanriel@naenius.com"
+                }
+            ],
+            "time": "2016-06-13T19:28:20+00:00"
+        },
         {
             "name": "doctrine/instantiator",
             "version": "1.0.5",
@@ -4938,6 +4033,62 @@
             "time": "2016-10-03T07:35:21+00:00"
         },
         {
+            "name": "symfony/class-loader",
+            "version": "v3.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/class-loader.git",
+                "reference": "0152f7a47acd564ca62c652975c2b32ac6d613a6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/class-loader/zipball/0152f7a47acd564ca62c652975c2b32ac6d613a6",
+                "reference": "0152f7a47acd564ca62c652975c2b32ac6d613a6",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "require-dev": {
+                "symfony/finder": "~2.8|~3.0",
+                "symfony/polyfill-apcu": "~1.1"
+            },
+            "suggest": {
+                "symfony/polyfill-apcu": "For using ApcClassLoader on HHVM"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\ClassLoader\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony ClassLoader Component",
+            "homepage": "https://symfony.com",
+            "time": "2017-01-10T14:14:38+00:00"
+        },
+        {
             "name": "symfony/css-selector",
             "version": "v3.1.9",
             "source": {
@@ -5154,12 +4305,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "infyomlabs/laravel-generator": 20,
-        "infyomlabs/adminlte-templates": 20,
-        "infyomlabs/swagger-generator": 20,
-        "jlapp/swaggervel": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

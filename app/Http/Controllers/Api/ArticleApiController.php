@@ -20,7 +20,7 @@ class ArticleApiController extends Controller
     public function searchFaq(Request $request)
     {
         $faq_id = Category::whereName('Q&A')->first(['id'])->id;
-        $result = Article::search($request['q'])->where('category_id', $faq_id)->get();
+        $result = Article::whereCategoryId($faq_id)->get();
         return response($result, 200);
     }
 }

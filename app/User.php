@@ -30,6 +30,11 @@ use \Illuminate\Database\Query\Builder;
 class User extends Authenticatable
 {
     /**
+     * @var string
+     */
+    protected $table = 'users';
+
+    /**
      * The attributes that are mass assignable.
      *
      * @var array

@@ -12,7 +12,7 @@ class MembersTeams extends Migration
      */
     public function up()
     {
-        Schema::create('members_teams',function (Blueprint $table){
+        Schema::create('member_team', function (Blueprint $table) {
             $table->increments('id')->unique()->index()->unsigned();
             $table->integer('member_id')->unsigned()->index();
             $table->foreign('member_id')->references('id')->on('members')->onDelete('cascade');
@@ -32,6 +32,6 @@ class MembersTeams extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('members_teams');
+        Schema::dropIfExists('member_team');
     }
 }

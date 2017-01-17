@@ -4,7 +4,6 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Query\Builder;
-use Laravel\Scout\Searchable;
 
 /**
  * Class Article.
@@ -37,24 +36,6 @@ use Laravel\Scout\Searchable;
  */
 class Article extends Model
 {
-    use Searchable;
-
-    /**
-     * @return array
-     */
-    public function toSearchableArray()
-    {
-        $array = [];
-        $array['title'] = $this->title;
-        $array['short_description'] = $this->short_description;
-        $array['category_id'] = $this->category_id;
-        $array['tags'] = $this->tags->toArray();
-        return response($array, 200, [
-            'Content-Type' => 'application/json; charset=utf-8',
-            'Data-Type' => 'json'
-        ]);
-    }
-
     /**
      * @var string
      */
@@ -65,7 +46,7 @@ class Article extends Model
      */
     public function tags()
     {
-        return $this->belongsToMany('App\Tag', 'articles_tags');
+        return $this->belongsToMany('App\Tag');
     }
 
     /**

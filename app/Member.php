@@ -48,7 +48,7 @@ class Member extends Model
      */
     public function positions()
     {
-        return $this->belongsToMany('App\Position', 'members_positions');
+        return $this->belongsToMany('App\Position');
     }
 
     /**
@@ -77,7 +77,7 @@ class Member extends Model
      */
     public function teams()
     {
-        return $this->belongsToMany('App\Team', 'members_teams');
+        return $this->belongsToMany('App\Team');
     }
 
     /**
