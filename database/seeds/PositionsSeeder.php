@@ -22,7 +22,7 @@ class PositionsSeeder extends Seeder
 
         foreach ($data as $priority => $names) {
             foreach ($names as $name) {
-                Position::create([
+                Position::insert([
                     'name' => $name,
                     'priority' => $priority
                 ]);

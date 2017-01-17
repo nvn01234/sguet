@@ -167,14 +167,6 @@ return [
          * Package Service Providers...
          */
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
-        Amranidev\ScaffoldInterface\ScaffoldInterfaceServiceProvider::class,
-        Amranidev\Ajaxis\AjaxisServiceProvider::class,
-        Spatie\Permission\PermissionServiceProvider::class,
-        Vinkla\Pusher\PusherServiceProvider::class,
-        Laracasts\Flash\FlashServiceProvider::class,
-        Prettus\Repository\Providers\RepositoryServiceProvider::class,
-        \InfyOm\Generator\InfyOmGeneratorServiceProvider::class,
-        \InfyOm\AdminLTETemplates\AdminLTETemplatesServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         Laravel\Scout\ScoutServiceProvider::class,
         //
@@ -236,7 +228,6 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
-        'Flash' => Laracasts\Flash\Flash::class,
         'NestedSet' => \Kalnoy\Nestedset\NestedSet::class,
     ],
 

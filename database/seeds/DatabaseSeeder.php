@@ -14,5 +14,8 @@ class DatabaseSeeder extends Seeder
         $this->call(ScaffoldInterfacesSeeder::class);
         $this->call(PositionsSeeder::class);
         $this->call(CategoriesSeeder::class);
+
+        // Require call before: CategoriesSeeder
+        $this->call(FaqSeeder::class);
     }
 }
