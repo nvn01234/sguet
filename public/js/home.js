@@ -11,7 +11,7 @@ function setupSearch(btn, input, result, result_title, result_body, top_heading)
         if (q != '') {
             $.ajax({
                 type: "GET",
-                url: "api/faq",
+                url: "api/search/faq",
                 data: {q: q},
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",

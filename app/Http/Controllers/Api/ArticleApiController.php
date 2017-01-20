@@ -4,8 +4,12 @@ namespace App\Http\Controllers\Api;
 
 use App\Article;
 use App\Category;
+use Doctrine\DBAL\Query\QueryBuilder;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Psy\Util\Json;
+use Searchy;
 
 /**
  * Class ArticleApiController
@@ -20,7 +24,8 @@ class ArticleApiController extends Controller
     public function searchFaq(Request $request)
     {
         $faq_id = Category::whereName('Q&A')->first(['id'])->id;
-        $result = Article::whereCategoryId($faq_id)->get();
+        $q = $request['q'];
+        $result = Article::search($q)->where('category_id', $faq_id)->get();
         return response($result, 200);
     }
 }
