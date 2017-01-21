@@ -1,4 +1,4 @@
-function loadImgAsync(source) {
+function load(source) {
     return $.Deferred(function (task) {
         var image = new Image();
         image.onload = function () {
@@ -11,11 +11,15 @@ function loadImgAsync(source) {
     }).promise();
 }
 
-function replaceImgAsync(url, img, options) {
-    $.when(loadImgAsync(url)).done(function (image) {
+function loadImgAsync(url, target, options) {
+    $.when(load(url)).done(function (image) {
         if (options && 'class' in options) {
-            image.addClass(options.class);
+            $(image).addClass(options.class);
         }
-        $(img).replaceWith(image);
+        if (options && 'append' in options && options.append) {
+            $(target).append(image);
+        } else {
+            $(target).replaceWith(image);
+        }
     });
 }

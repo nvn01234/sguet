@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Article;
 use App\Category;
 
 /**
@@ -28,7 +29,12 @@ class HomeController extends Controller
     {
         $cat_news_id = Category::whereName(Category::NAME_NEWS)->first(['id'])->id;
         $cat_act_id = Category::whereName(Category::NAME_ACTIVITIES)->first(['id'])->id;
-        return view('news', compact('cat_news_id', 'cat_act_id'));
+        $articles = Article::whereIn('category_id', [$cat_news_id, $cat_act_id])
+            ->newQuery()
+            ->orderBy('created_at', 'desc')
+            ->take(8)
+            ->get();
+        return view('news', compact('cat_news_id', 'cat_act_id', 'articles'));
     }
 
     /**

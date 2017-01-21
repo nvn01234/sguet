@@ -42,13 +42,13 @@ function load_more() {
         lightboxDelegate: '.cbp-lightbox',
         lightboxGallery: true,
         lightboxTitleSrc: 'data-title',
-        lightboxCounter: '<div class="cbp-popup-lightbox-counter">{{current}} of {{total}}</div>',
+        lightboxCounter: '<div class="cbp-popup-lightbox-counter">Bài {{current}} / {{total}}</div>',
 
         // singlePage popup
         singlePageDelegate: '.cbp-singlePage',
         singlePageDeeplinking: true,
         singlePageStickyNavigation: true,
-        singlePageCounter: '<div class="cbp-popup-singlePage-counter">{{current}} of {{total}}</div>',
+        singlePageCounter: '<div class="cbp-popup-singlePage-counter">Bài {{current}} / {{total}}</div>',
         singlePageCallback: function (url, element) {
             // to update singlePage content use the following method: this.updateSinglePage(yourContent)
             var t = this;
@@ -63,7 +63,7 @@ function load_more() {
                     t.updateSinglePage(result);
                 })
                 .fail(function () {
-                    t.updateSinglePage('AJAX Error! Please refresh the page!');
+                    t.updateSinglePage('Có lỗi trong quá trình tải tin tức! Vui lòng thử lại sau!');
                 });
         }
     });

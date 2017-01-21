@@ -12,6 +12,7 @@
 @section('page_level_styles')
     @parent
     {!! Html::style('metronic/pages/css/portfolio.min.css') !!}
+    {!! Html::style('metronic/pages/css/blog.min.css') !!}
 @endsection
 
 @section('styles')
@@ -42,7 +43,9 @@
                 </div>
             </div>
             <div id="js-grid-juicy-projects" class="cbp">
-
+                @foreach($articles as $article)
+                    @include('api.news_item', ['article' => $article])
+                @endforeach
             </div>
             <div id="js-loadMore-juicy-projects" class="cbp-l-loadMore-button">
                 <a href="{!! URL::route('api.news.index') !!}"

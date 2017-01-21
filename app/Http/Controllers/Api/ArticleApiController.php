@@ -31,11 +31,20 @@ class ArticleApiController extends Controller
 
     public function indexNewsAndActivities()
     {
-        $articles = Category::whereName(Category::NAME_NEWS)
-            ->orWhere('name', '=', Category::NAME_ACTIVITIES)
-            ->join('articles', 'articles.category_id', '=', 'categories.id')
+        $cat_ids = Category::whereName(Category::NAME_NEWS)->orWhere('name', '=', Category::NAME_ACTIVITIES)->get(['id'])->toArray();
+        $page = request('page', 1);
+        $articles = Article::whereIn('category_id', $cat_ids)
             ->orderBy('created_at', 'desc')
-            ->paginate(8, ['articles.*']);
+            ->paginate(8, ["*"], 'page', $page + 1);
         return view('api.index_news', compact('articles'));
+    }
+
+    public function show($id)
+    {
+        /**
+         * @var Article $article
+         */
+        $article = Article::findOrFail($id);
+        return view('api.show_news', compact('article'));
     }
 }
