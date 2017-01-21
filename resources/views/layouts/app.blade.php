@@ -36,5 +36,5 @@
 @endsection
 
 @section('scripts')
-    @include('vendor.flash.toastr')
+{{--    @include('vendor.flash.toastr')--}}
 @endsection
