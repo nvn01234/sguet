@@ -17,6 +17,10 @@ use \Illuminate\Database\Query\Builder;
  */
 class Category extends Model
 {
+    const NAME_FAQ = 'Q&A';
+    const NAME_NEWS = 'Tin tức';
+    const NAME_ACTIVITIES = 'Hoạt động';
+
     /**
      * @var bool
      */

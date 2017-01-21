@@ -53,6 +53,10 @@
 
     @yield('styles')
 
+    @section('scripts.top')
+        {!! Html::script('metronic/global/plugins/jquery.min.js') !!}
+    @show
+
     {!! Html::favicon('img/SGUET.png', ['type' => 'image/png']) !!}
 </head>
 <body class="@yield('body.class')">
@@ -65,7 +69,6 @@
 <![endif]-->
 
 @section('core_plugins')
-    {!! Html::script('metronic/global/plugins/jquery.min.js') !!}
     {!! Html::script('metronic/global/plugins/bootstrap/js/bootstrap.min.js') !!}
     {!! Html::script('metronic/global/plugins/js.cookie.min.js') !!}
     {!! Html::script('metronic/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js') !!}

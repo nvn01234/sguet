@@ -6,15 +6,7 @@ body {
     overflow: hidden;
 }
 
-.search-result {
-    margin-top: 20px;
-}
-
-.has-result {
-    margin-top: 40px !important;
-}
-
-.search-result-body {
+.scroller {
     height: 200px;
     text-align: left;
 }

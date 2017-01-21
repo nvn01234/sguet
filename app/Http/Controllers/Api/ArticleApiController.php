@@ -23,9 +23,19 @@ class ArticleApiController extends Controller
      */
     public function searchFaq(Request $request)
     {
-        $faq_id = Category::whereName('Q&A')->first(['id'])->id;
+        $faq_id = Category::whereName(Category::NAME_FAQ)->first(['id'])->id;
         $q = $request['q'];
         $result = Article::search($q)->where('category_id', $faq_id)->get();
         return response($result, 200);
+    }
+
+    public function indexNewsAndActivities()
+    {
+        $articles = Category::whereName(Category::NAME_NEWS)
+            ->orWhere('name', '=', Category::NAME_ACTIVITIES)
+            ->join('articles', 'articles.category_id', '=', 'categories.id')
+            ->orderBy('created_at', 'desc')
+            ->paginate(8, ['articles.*']);
+        return view('api.index_news', compact('articles'));
     }
 }

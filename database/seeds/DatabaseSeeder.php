@@ -16,5 +16,7 @@ class DatabaseSeeder extends Seeder
 
         // Require call before: CategoriesSeeder
         $this->call(FaqSeeder::class);
+        $this->call(NewsSeeder::class);
+        $this->call(ActivitiesSeeder::class);
     }
 }
