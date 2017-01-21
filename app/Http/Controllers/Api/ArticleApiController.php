@@ -38,4 +38,13 @@ class ArticleApiController extends Controller
             ->paginate(8, ["*"], 'page', $page + 1);
         return view('api.index_news', compact('articles'));
     }
+
+    public function show($id)
+    {
+        /**
+         * @var Article $article
+         */
+        $article = Article::findOrFail($id);
+        return view('api.show_news', compact('article'));
+    }
 }
