@@ -3,10 +3,12 @@
 @section('menu.home', 'active')
 
 @section('page_level_styles')
+    @parent
     {!! Html::style('metronic/pages/css/about.min.css') !!}
 @endsection
 
 @section('styles')
+    @parent
     {!! Html::style('css/home.css') !!}
 @endsection
 
@@ -27,17 +29,21 @@
                 </div>
             </div>
         </div>
-        <div class="row search-result" id="search_result" hidden="hidden">
+        <div class="row margin-top-20" id="search_result" hidden="hidden">
             <div class="col-md-6 col-md-offset-3">
-                <div class="portlet light">
+                <div class="portlet light portlet-fit full-height-content full-height-content-scrollable">
                     <div class="portlet-title">
                         <div class="caption">
                             <i class="fa fa-search font-blue-hoki"></i>
                             <span class="caption-subject font-blue-hoki" id="search_result_title"></span>
                         </div>
+                        <div class="actions">
+                            <button class="btn btn-circle btn-icon-only btn-default fullscreen"></button>
+                        </div>
                     </div>
                     <div class="portlet-body">
-                        <div class="scroller search-result-body" data-rail-visible="1" data-rail-color="yellow"
+                        <div class="scroller" data-rail-visible="1"
+                             data-rail-color="yellow"
                              data-handle-color="#a1b2bd" id="search_result_body">
 
                         </div>
@@ -51,13 +57,4 @@
 @section('scripts')
     @parent
     {!! Html::script('js/home.js') !!}
-    <script type="text/javascript">
-        var btn = $('#search_btn');
-        var input = $('#search_input');
-        var result = $('#search_result');
-        var result_title = $('#search_result_title');
-        var result_body = $('#search_result_body');
-        var top_heading = $('#top_heading');
-        setupSearch(btn, input, result, result_title, result_body, top_heading);
-    </script>
 @endsection

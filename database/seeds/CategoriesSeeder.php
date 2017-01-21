@@ -12,7 +12,7 @@ class CategoriesSeeder extends Seeder
      */
     public function run()
     {
-        $names = ['Q&A', 'Tin tức', 'Hoạt động'];
+        $names = [Category::NAME_FAQ, Category::NAME_NEWS, Category::NAME_ACTIVITIES];
 
         foreach ($names as $name) {
             Category::insert([

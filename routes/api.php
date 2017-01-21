@@ -13,4 +13,5 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/search/faq', 'Api\ArticleApiController@searchFaq');
+Route::get('/tim-kiem/faq', 'Api\ArticleApiController@searchFaq');
+Route::get('/tin-tuc-hoat-dong', 'Api\ArticleApiController@indexNewsAndActivities')->name('api.news.index');

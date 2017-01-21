@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
+
 /**
  * Class HomeController
  * @package App\Http\Controllers
@@ -24,7 +26,9 @@ class HomeController extends Controller
      */
     public function news()
     {
-        return view('news');
+        $cat_news_id = Category::whereName(Category::NAME_NEWS)->first(['id'])->id;
+        $cat_act_id = Category::whereName(Category::NAME_ACTIVITIES)->first(['id'])->id;
+        return view('news', compact('cat_news_id', 'cat_act_id'));
     }
 
     /**

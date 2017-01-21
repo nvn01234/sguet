@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeder;
 use App\Category;
 
-class FaqSeeder extends Seeder
+class NewsSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,9 +12,9 @@ class FaqSeeder extends Seeder
      */
     public function run()
     {
-        $json = File::get(database_path('json/faq.json'));
+        $json = File::get(database_path('json/news.json'));
         $data = json_decode($json);
-        $cat = Category::whereName(Category::NAME_FAQ)->first(['id'])->id;
+        $cat = Category::whereName(Category::NAME_NEWS)->first(['id'])->id;
         foreach ($data as $obj) {
             $created_at = \Carbon\Carbon::createFromTimestamp($obj->created);
             $updated_at = \Carbon\Carbon::createFromTimestamp($obj->updated);
@@ -23,6 +23,7 @@ class FaqSeeder extends Seeder
                 'id' => $obj->id,
                 'title' => $obj->title,
                 'body' => $obj->body,
+                'image_url' => $obj->image_url,
                 'short_description' => $obj->short_description,
                 'category_id' => $cat,
                 'created_at' => $created_at,
