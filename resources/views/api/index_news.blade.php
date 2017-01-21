@@ -1,4 +1,4 @@
-<div class="cbp-loadMore-block{{$articles->currentPage()}}">
+<div class="cbp-loadMore-block{{$articles->currentPage()-1}}">
     @foreach($articles as $article)
         <div class="cbp-item category-{{$article->category_id}}">
             <div class="cbp-caption">
@@ -25,6 +25,6 @@
     @endforeach
 </div>
 @if($articles->nextPageUrl())
-    <div class="cbp-loadMore-block{{$articles->currentPage() + 1}}">
+    <div class="cbp-loadMore-block{{$articles->currentPage()}}">
     </div>
 @endif
