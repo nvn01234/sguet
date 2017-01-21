@@ -12,7 +12,7 @@
             <div class="cbp-l-caption-alignCenter">
                 <div class="cbp-l-caption-body">
                     <a href="{!! URL::route('api.article.show', ['id' => $article->id]) !!}" rel="nofollow"
-                       class="cbp-singlePage cbp-l-caption-buttonLeft btn red uppercase">xem thêm</a>
+                       class="cbp-singlePage cbp-l-caption-buttonLeft btn primary uppercase">chi tiết</a>
                 </div>
             </div>
         </div>
