@@ -63,7 +63,7 @@ function load_more() {
                     t.updateSinglePage(result);
                 })
                 .fail(function () {
-                    t.updateSinglePage('AJAX Error! Please refresh the page!');
+                    t.updateSinglePage('Có lỗi trong quá trình tải tin tức! Vui lòng thử lại sau!');
                 });
         }
     });

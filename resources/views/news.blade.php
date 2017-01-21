@@ -12,6 +12,7 @@
 @section('page_level_styles')
     @parent
     {!! Html::style('metronic/pages/css/portfolio.min.css') !!}
+    {!! Html::style('metronic/pages/css/blog.min.css') !!}
 @endsection
 
 @section('styles')
