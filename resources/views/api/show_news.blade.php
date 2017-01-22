@@ -6,7 +6,7 @@
                     <h1 class="blog-single-head-title">{{$article->title}}</h1>
                     <div class="blog-single-head-date">
                         <i class="icon-calendar font-blue"></i>
-                        <a href="javascript:">{{$article->created_at}}</a>
+                        {{$article->created_at}}
                     </div>
                 </div>
                 <div class="blog-single-img" id="blog-single-img">
@@ -21,7 +21,7 @@
                     <ul class="blog-post-tags">
                         @foreach($article->tags as $tag)
                             <li class="uppercase">
-                                <a href="javascript:">{{$tag->name}}</a>
+                                {{$tag->name}}
                             </li>
                         @endforeach
                     </ul>

@@ -9,4 +9,36 @@ body {
 .scroller {
     height: 200px;
     text-align: left;
+    padding: 3px;
+}
+
+.portlet > .portlet-title > .actions .btn-icon-only.btn-default.back {
+    font-family: FontAwesome;
+    color: #a0a0a0;
+    padding-top: 3px;
+}
+
+.portlet > .portlet-title > .actions .btn-icon-only.btn-default.back.btn-sm {
+    padding: 3px 3px !important;
+    height: 27px;
+    width: 27px;
+}
+
+.portlet > .portlet-title > .actions .btn-icon-only.btn-default.back:before {
+    content: "\f060";
+}
+
+.faq-content-1 .faq-section > .faq-content .panel-heading .accordion-toggle {
+    padding: 10px 15px;
+    line-height: normal;
+}
+
+.faq-content-1 .faq-section > .faq-content .panel-heading i {
+    font-size: 16px;
+    margin-left: 10px;
+    margin-top: 13px;
+}
+
+.portlet-body.fullscreen {
+    height: 85vh !important;
 }
