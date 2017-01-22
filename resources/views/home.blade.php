@@ -5,6 +5,7 @@
 @section('page_level_styles')
     @parent
     {!! Html::style('metronic/pages/css/about.min.css') !!}
+    {!! Html::style('metronic/pages/css/faq.min.css') !!}
 @endsection
 
 @section('styles')
@@ -15,10 +16,11 @@
 @section('page_content')
     <div class="about-header">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-lg-12">
                 <h1 id="top_heading">Support Group UET</h1>
                 <h2>CLB Hỗ trợ sinh viên Trường ĐH Công nghệ</h2>
-                <div class="col-md-6 col-md-offset-3 input-group" style="text-align:left">
+                <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 input-group"
+                     style="text-align:left">
                     <input type="text" class="form-control" name="question" id="search_input"
                            placeholder="Nhập câu hỏi">
                     <span class="input-group-btn">
@@ -29,25 +31,28 @@
                 </div>
             </div>
         </div>
-        <div class="row margin-top-20" id="search_result" hidden="hidden">
-            <div class="col-md-6 col-md-offset-3">
-                <div class="portlet light portlet-fit full-height-content full-height-content-scrollable">
-                    <div class="portlet-title">
-                        <div class="caption">
-                            <i class="fa fa-search font-blue-hoki"></i>
-                            <span class="caption-subject font-blue-hoki" id="search_result_title"></span>
-                        </div>
-                        <div class="actions">
-                            <button class="btn btn-circle btn-icon-only btn-default back hide" id="back_btn"></button>
-                            <button class="btn btn-circle btn-icon-only btn-default fullscreen"
-                                    title="Toàn màn hình"></button>
-                        </div>
-                    </div>
-                    <div class="portlet-body">
-                        <div class="scroller" data-rail-visible="1"
-                             data-rail-color="yellow"
-                             data-handle-color="#a1b2bd" id="search_result_body">
-
+        <div class="row margin-top-20 faq-page faq-content-1" id="search_result" hidden="hidden">
+            <div class="faq-content-container">
+                <div class="row">
+                    <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+                        <div class="portlet light faq-section">
+                            <div class="portlet-title">
+                                <div class="caption">
+                                    <i class="fa fa-search font-blue-hoki"></i>
+                                    <span class="caption-subject font-blue-hoki" id="search_result_title"></span>
+                                    <span class="caption-helper" id="search_result_count"></span>
+                                </div>
+                                <div class="actions">
+                                    <button class="btn btn-circle btn-icon-only btn-default back hide"
+                                            id="back_btn"></button>
+                                    <button class="btn btn-circle btn-icon-only btn-default fullscreen"
+                                            title="Toàn màn hình"></button>
+                                </div>
+                            </div>
+                            <div class="portlet-body panel-group accordion faq-content">
+                                <div class="scroller" id="search_result_body" data-rail-visible="1">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

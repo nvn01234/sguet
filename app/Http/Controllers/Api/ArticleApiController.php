@@ -47,4 +47,13 @@ class ArticleApiController extends Controller
         $article = Article::findOrFail($id);
         return view('api.show_news', compact('article'));
     }
+
+    public function indexFaq() {
+        /**
+         * @var mixed $faq
+         */
+        $faq = Category::whereName(Category::NAME_FAQ)->first()->articles();
+        $faq->searchable();
+        return response("Done", 200);
+    }
 }

@@ -2,6 +2,9 @@
 var search_btn = $('#search_btn');
 var search_input = $('#search_input');
 var back_btn = $('#back_btn');
+var result_body = $('#search_result_body');
+var result_title = $('#search_result_title');
+var result_count = $('#search_result_count');
 var cache = {
     query: undefined,
     response: undefined
@@ -18,36 +21,46 @@ back_btn.hide = function () {
     back_btn.addClass('hide');
 };
 
+function generateOneResult(faq, index) {
+    var a = $('<a>')
+        .addClass('accordion-toggle')
+        .attr('href', 'javascript:')
+        .attr('data-index', index)
+        .text(faq.title).click(function () {
+            var index = $(this).data('index');
+            var faq = cache.response[index];
+            result_title.text(faq.title);
+            result_body.empty().append(
+                $('<p>').html(faq.body)
+            );
+            back_btn.show();
+        });
+    result_body.append(
+        $('<div>').addClass('panel panel-default').append(
+            $('<div>').addClass('panel-heading').append(
+                $('<h4>').addClass('panel-title').append(
+                    $('<i>').addClass('fa fa-question-circle')
+                ).append(a)
+            )
+        )
+    )
+}
+
 function onsuccess(response) {
     cache.response = response;
-    var result_body = $('#search_result_body');
-    var result_title = $('#search_result_title');
 
     $('#top_heading').removeClass('margin-top-20').addClass('margin-top-40');
     $('#search_result').show();
     back_btn.hide();
 
     result_title.text('Kết quả tìm kiếm cho "' + cache.query + '"');
+    result_count.text(cache.response.length + ' kết quả');
     result_body.empty();
 
     if (cache.response.length == 0) {
         result_body.text('Không có kết quả nào')
     } else {
-        var ul = $('<ul>');
-        result_body.append(ul);
-        cache.response.forEach(function (faq, index) {
-            var ahref = $('<a>').attr('href', 'javascript:').attr('data-index', index).text(faq.title);
-            ul.append($('<li>').append(ahref));
-            ahref.click(function () {
-                var index = $(this).data('index');
-                var faq = cache.response[index];
-                result_title.text(faq.title);
-                result_body.empty().append(
-                    $('<p>').html(faq.body)
-                );
-                back_btn.show();
-            });
-        });
+        cache.response.forEach(generateOneResult);
     }
 }
 /*END FUNCTION*/
@@ -56,13 +69,16 @@ function onsuccess(response) {
 $('.fullscreen').click(function () {
     var slimScrollDiv = $('.slimScrollDiv');
     var scroller = $('.scroller');
+    var portlet_body = $('.portlet-body');
 
     if ($(this).hasClass('on')) {
         slimScrollDiv.css('height', '200px');
-        scroller.css('height', '200px')
+        scroller.css('height', '200px');
+        portlet_body.removeClass('fullscreen');
     } else {
         slimScrollDiv.css('height', 'auto');
-        scroller.css('height', 'auto')
+        scroller.css('height', 'auto');
+        portlet_body.addClass('fullscreen');
     }
 });
 
