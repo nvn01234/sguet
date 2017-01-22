@@ -38,7 +38,9 @@
                             <span class="caption-subject font-blue-hoki" id="search_result_title"></span>
                         </div>
                         <div class="actions">
-                            <button class="btn btn-circle btn-icon-only btn-default fullscreen"></button>
+                            <button class="btn btn-circle btn-icon-only btn-default back hide" id="back_btn"></button>
+                            <button class="btn btn-circle btn-icon-only btn-default fullscreen"
+                                    title="Toàn màn hình"></button>
                         </div>
                     </div>
                     <div class="portlet-body">
