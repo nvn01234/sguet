@@ -39,7 +39,7 @@ function generateOneResult(faq, index) {
         $('<div>').addClass('panel panel-default').append(
             $('<div>').addClass('panel-heading').append(
                 $('<h4>').addClass('panel-title').append(
-                    $('<i>').addClass('fa fa-question-circle')
+                    $('<i>').addClass('fa fa-question')
                 ).append(a)
             )
         )

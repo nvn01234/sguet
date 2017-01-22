@@ -18,12 +18,6 @@ body {
     padding-top: 3px;
 }
 
-.portlet > .portlet-title > .actions .btn-icon-only.btn-default.back.btn-sm {
-    padding: 3px 3px !important;
-    height: 27px;
-    width: 27px;
-}
-
 .portlet > .portlet-title > .actions .btn-icon-only.btn-default.back:before {
     content: "\f060";
 }

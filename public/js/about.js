@@ -186,3 +186,22 @@ function init() {
 }
 
 $(document).ready(init);
+
+// portlet tooltips
+$('.portlet > .portlet-title .zoom-to-fit').tooltip({
+    container: 'body',
+    title: 'Thu nhỏ để vừa màn hình'
+});
+$('.portlet > .portlet-title .center-on-root').tooltip({
+    container: 'body',
+    title: 'Căn giữa vào gốc'
+});
+
+$('.portlet > .portlet-title .fullscreen').click(function () {
+    var myDiagramDiv = $('#myDiagramDiv');
+    if ($(this).hasClass('on')) {
+        myDiagramDiv.css('height', '550px');
+    } else {
+        myDiagramDiv.css('height', '85vh');
+    }
+});
