@@ -5,6 +5,7 @@ function init() {
         $$(go.Diagram, "myDiagramDiv",  // must be the ID or reference to div
             {
                 "toolManager.hoverDelay": 100,  // 100 milliseconds instead of the default 850
+                "toolManager.delay": 1000,
                 allowCopy: false,
                 layout:  // create a TreeLayout for the family tree
                     $$(go.TreeLayout,
@@ -47,6 +48,8 @@ function init() {
         $$(go.Adornment, "Auto",
             $$(go.Shape, "Rectangle",
                 {fill: "whitesmoke", stroke: "black"}),
+            $$(go.Picture, {margin: 10, width: 50, height: 50},
+                "img/SGUET.png"),
             $$(go.TextBlock,
                 {
                     font: "bold 8pt Helvetica, bold Arial, sans-serif",
@@ -65,7 +68,7 @@ function init() {
     // replace the default Node template in the nodeTemplateMap
     myDiagram.nodeTemplate =
         $$(go.Node, "Auto",
-            {deletable: false, toolTip: tooltiptemplate},
+            {deletable: false, toolTip: tooltiptemplate, movable: false, selectable: false},
             new go.Binding("text", "name"),
             $$(go.Shape, "Rectangle",
                 {
@@ -92,6 +95,7 @@ function init() {
     var nodeDataArray = [
         {key: 0, name: "George V", gender: "M", birthYear: "1865", deathYear: "1936", reign: "1910-1936"},
         {key: 1, parent: 0, name: "Edward VIII", gender: "M", birthYear: "1894", deathYear: "1972", reign: "1936"},
+        {key: 3, parent: 0, name: "Mary, Princess Royal", gender: "F", birthYear: "1897", deathYear: "1965"},
         {key: 2, parent: 0, name: "George VI", gender: "M", birthYear: "1895", deathYear: "1952", reign: "1936-1952"},
         {key: 7, parent: 2, name: "Elizabeth II", gender: "F", birthYear: "1926", reign: "1952-"},
         {key: 16, parent: 7, name: "Charles, Prince of Wales", gender: "M", birthYear: "1948"},
@@ -112,7 +116,6 @@ function init() {
         {key: 21, parent: 8, name: "Lady Sarah Chatto", gender: "F", birthYear: "1964"},
         {key: 46, parent: 21, name: "Samuel Chatto", gender: "M", birthYear: "1996"},
         {key: 47, parent: 21, name: "Arthur Chatto", gender: "M", birthYear: "1999"},
-        {key: 3, parent: 0, name: "Mary, Princess Royal", gender: "F", birthYear: "1897", deathYear: "1965"},
         {key: 9, parent: 3, name: "George Lascelles", gender: "M", birthYear: "1923", deathYear: "2011"},
         {key: 22, parent: 9, name: "David Lascelles", gender: "M", birthYear: "1950"},
         {key: 48, parent: 22, name: "Emily Shard", gender: "F", birthYear: "1975"},

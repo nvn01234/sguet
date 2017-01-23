@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Article;
 use App\Category;
+use App\Team;
 
 /**
  * Class HomeController
@@ -42,6 +43,8 @@ class HomeController extends Controller
      */
     public function about()
     {
-        return view('about');
+        $teams = Team::all();
+        $root_id = Team::whereNull('parent_id')->first(['id'])->id;
+        return view('about', compact('teams', 'root_id'));
     }
 }
