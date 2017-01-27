@@ -14,7 +14,13 @@ class FaqSeeder extends Seeder
     {
         $json = File::get(database_path('data/faq.json'));
         $data = json_decode($json);
-        $cat = Category::whereName(Category::NAME_FAQ)->first(['id'])->id;
+
+        /**
+         * @var Category $faq
+         */
+        $faq = Category::firstOrNew(['name' => Category::NAME_FAQ]);
+        $faq->save();
+
         foreach ($data as $obj) {
             $created_at = \Carbon\Carbon::createFromTimestamp($obj->created);
             $updated_at = \Carbon\Carbon::createFromTimestamp($obj->updated);
@@ -24,7 +30,7 @@ class FaqSeeder extends Seeder
                 'title' => $obj->title,
                 'body' => $obj->body,
                 'short_description' => $obj->short_description,
-                'category_id' => $cat,
+                'category_id' => $faq->id,
                 'created_at' => $created_at,
                 'updated_at' => $updated_at
             ]));

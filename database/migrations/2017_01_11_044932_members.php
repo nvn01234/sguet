@@ -34,7 +34,7 @@ class Members extends Migration
 
             $table->string('phone')->nullable();
 
-            $table->string('email');
+            $table->string('email')->nullable();
 
             $table->string('specialize')->nullable();
 

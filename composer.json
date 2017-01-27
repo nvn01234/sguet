@@ -16,7 +16,8 @@
     "laravel/framework": "5.3.*",
     "laravel/scout": "^2.0",
     "laravelcollective/html": "^5.3.0",
-    "spatie/laravel-permission": "^1.6"
+    "spatie/laravel-permission": "^1.6",
+    "maatwebsite/excel": "2.0.*@dev"
   },
   "require-dev": {
     "barryvdh/laravel-ide-helper": "^2.2",
