@@ -20,7 +20,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $faq_id = \Request::get('faq');
+        $faq = null;
+        if ($faq_id) {
+            $faq = Article::find($faq_id);
+            if (!($faq && $faq->category->name === Category::NAME_FAQ)) {
+                $faq = null;
+            }
+        }
+        return view('home', compact('faq'));
     }
 
     /**

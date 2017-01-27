@@ -5,7 +5,6 @@ function init() {
         $$(go.Diagram, "myDiagramDiv",  // must be the ID or reference to div
             {
                 "toolManager.hoverDelay": 100,  // 100 milliseconds instead of the default 850
-                "toolManager.delay": 1000,
                 allowCopy: false,
                 layout:  // create a TreeLayout for the family tree
                     $$(go.TreeLayout,
@@ -48,8 +47,6 @@ function init() {
         $$(go.Adornment, "Auto",
             $$(go.Shape, "Rectangle",
                 {fill: "whitesmoke", stroke: "black"}),
-            $$(go.Picture, {margin: 10, width: 50, height: 50},
-                "img/SGUET.png"),
             $$(go.TextBlock,
                 {
                     font: "bold 8pt Helvetica, bold Arial, sans-serif",

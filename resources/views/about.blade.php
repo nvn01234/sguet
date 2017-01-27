@@ -33,9 +33,7 @@
                     <div class="card-desc">
                         <span>
                             Câu lạc bộ Hỗ trợ sinh viên<br/>
-                            Trường Đại học Công nghệ - ĐHQGHN<br/>
-                            <i>(Support Group UET)</i><br/>
-                            &nbsp;
+                            Trường Đại học Công nghệ<br/>
                         </span>
                     </div>
                 </div>
@@ -52,8 +50,6 @@
                         <span>
                             14/12/2012<br/>
                             &nbsp;<br/>
-                            &nbsp;<br/>
-                            &nbsp;
                         </span>
                     </div>
                 </div>
@@ -68,10 +64,8 @@
                     </div>
                     <div class="card-desc">
                         <span>
-                            - Giúp đỡ sinh viên trong quá trình học tập<br/>
-                            cũng như hoạt động tại trường.<br/>
-                            - Quảng bá hình ảnh của Đại học Công nghệ,<br/>
-                            sinh viên Công nghệ.
+                            Giúp đỡ sinh viên trong quá trình<br/>
+                            học tập và hoạt động tại trường.
                         </span>
                     </div>
                 </div>
@@ -87,9 +81,7 @@
                     <div class="card-desc">
                         <span>
                             Email: {!! Html::mailto('lienhe.sguet@gmail.com') !!}<br/>
-                            Website: {!! Html::link('https://sguet.com') !!}<br/>
-                            Facebook: {!! Html::link('https://www.facebook.com/SupportGroupUET') !!}<br/>
-                            SĐT: 098 555 43 52
+                            Fb: {!! Html::link('https://fb.com/SupportGroupUET') !!}
                         </span>
                     </div>
                 </div>
@@ -140,7 +132,7 @@
             },
             @endforeach
         ];
-        var rootkey = {{$root_id}};
+        var rootkey = '{{$root_id}}';
     </script>
     {!! Html::script('js/about.js') !!}
 @endsection

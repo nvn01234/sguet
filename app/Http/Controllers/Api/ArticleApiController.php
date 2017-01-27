@@ -18,6 +18,7 @@ use Searchy;
 class ArticleApiController extends Controller
 {
     /**
+     * Ajax api tìm FAQ qua full text
      * @param Request $request
      * @return \Illuminate\Contracts\Routing\ResponseFactory|\Symfony\Component\HttpFoundation\Response
      */
@@ -29,7 +30,11 @@ class ArticleApiController extends Controller
         return response($result, 200);
     }
 
-    public function indexNewsAndActivities()
+    /**
+     * Đoạn HTML hiển thị tất cả tin tức - hoạt động theo phân trang
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function indexNewsActivitiesHtml()
     {
         $cat_ids = Category::whereName(Category::NAME_NEWS)->orWhere('name', '=', Category::NAME_ACTIVITIES)->get(['id'])->toArray();
         $page = request('page', 1);
@@ -39,7 +44,12 @@ class ArticleApiController extends Controller
         return view('api.index_news', compact('articles'));
     }
 
-    public function show($id)
+    /**
+     * Đoạn HTML hiển thị một tin tức - hoạt động theo id
+     * @param $id
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function showHtml($id)
     {
         /**
          * @var Article $article
@@ -48,7 +58,12 @@ class ArticleApiController extends Controller
         return view('api.show_news', compact('article'));
     }
 
-    public function indexFaq() {
+    /**
+     * Import index của FAQ lên server Algolia
+     * @return \Illuminate\Contracts\Routing\ResponseFactory|\Symfony\Component\HttpFoundation\Response
+     */
+    public function indexFaq()
+    {
         /**
          * @var mixed $faq
          */
