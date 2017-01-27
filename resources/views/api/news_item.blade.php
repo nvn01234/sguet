@@ -20,6 +20,7 @@
     <div class="cbp-l-grid-projects-title uppercase text-center">{{$article->title}}</div>
     <div class="cbp-l-grid-projects-desc uppercase text-center">
         @if($article->short_description && !empty(trim($article->short_description)))
+            @php(Debugbar::addMessage($article->short_description, 'case 1'))
             {{$article->short_description}}
         @else
             @php
@@ -29,9 +30,8 @@
                 $body = preg_replace('# {2,}#', ' ', $body);
                 $body = trim($body);
                 $short_description = substr($body, 0, 100);
-                Debugbar::addMessage($short_description);
+                echo empty($short_description) ? Html::nbsp() : $short_description;
             @endphp
-            {{!empty($short_description) ? $short_description : '&nbsp;'}}
         @endif
     </div>
 </div>

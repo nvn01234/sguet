@@ -24,7 +24,7 @@ class HomeController extends Controller
         $faq = null;
         if ($faq_id) {
             $faq = Article::find($faq_id);
-            if (!($faq && $faq->category->name === Category::NAME_FAQ)) {
+            if (!($faq && $faq->category && $faq->category->name === Category::NAME_FAQ)) {
                 $faq = null;
             }
         }
@@ -54,5 +54,13 @@ class HomeController extends Controller
         $teams = Team::all();
         $root_id = Team::whereNull('parent_id')->first(['id'])->id;
         return view('about', compact('teams', 'root_id'));
+    }
+
+    /**
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function home()
+    {
+        return redirect()->route('home');
     }
 }

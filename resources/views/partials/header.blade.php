@@ -24,6 +24,9 @@
            data-target=".navbar-collapse"> </a>
         <!-- END RESPONSIVE MENU TOGGLER -->
 
+        @if(Auth::check())
+            @include('partials.top_menu')
+        @endif
     </div>
     <!-- END HEADER INNER -->
 </div>
