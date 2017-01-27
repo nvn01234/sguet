@@ -12,7 +12,7 @@ class NewsSeeder extends Seeder
      */
     public function run()
     {
-        $json = File::get(database_path('json/news.json'));
+        $json = File::get(database_path('data/news.json'));
         $data = json_decode($json);
         $cat = Category::whereName(Category::NAME_NEWS)->first(['id'])->id;
         foreach ($data as $obj) {

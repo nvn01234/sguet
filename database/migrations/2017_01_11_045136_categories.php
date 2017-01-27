@@ -18,20 +18,11 @@ class Categories extends Migration
      */
     public function up()
     {
-        Schema::create('categories',function (Blueprint $table){
+        Schema::create('categories', function (Blueprint $table) {
 
-        $table->increments('id');
-        
-        $table->String('name')->unique();
-        
-        /**
-         * Foreignkeys section
-         */
-        
-        
-        
-        // type your addition here
+            $table->increments('id');
 
+            $table->String('name')->unique();
         });
     }
 

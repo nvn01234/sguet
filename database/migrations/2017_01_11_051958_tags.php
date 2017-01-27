@@ -18,20 +18,10 @@ class Tags extends Migration
      */
     public function up()
     {
-        Schema::create('tags',function (Blueprint $table){
+        Schema::create('tags', function (Blueprint $table) {
+            $table->increments('id');
 
-        $table->increments('id');
-        
-        $table->String('name')->unique();
-        
-        /**
-         * Foreignkeys section
-         */
-        
-        
-        
-        // type your addition here
-
+            $table->String('name')->unique();
         });
     }
 

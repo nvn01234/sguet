@@ -12,7 +12,7 @@ class FaqSeeder extends Seeder
      */
     public function run()
     {
-        $json = File::get(database_path('json/faq.json'));
+        $json = File::get(database_path('data/faq.json'));
         $data = json_decode($json);
         $cat = Category::whereName(Category::NAME_FAQ)->first(['id'])->id;
         foreach ($data as $obj) {
