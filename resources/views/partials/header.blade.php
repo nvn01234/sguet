@@ -12,7 +12,7 @@
         <!-- BEGIN MEGA MENU -->
         <!-- DOC: Remove "hor-menu-light" class to have a horizontal menu with theme background instead of white background -->
         <!-- DOC: This is desktop version of the horizontal menu. The mobile version is defined(duplicated) in the responsive menu below along with sidebar menu. So the horizontal menu has 2 seperate versions -->
-        <div class="hor-menu   hidden-sm hidden-xs">
+        <div class="hor-menu hor-menu-light  hidden-sm hidden-xs">
             <ul class="nav navbar-nav">
                 <!-- DOC: Remove data-hover="megamenu-dropdown" and data-close-others="true" attributes below to disable the horizontal opening on mouse hover -->
                 @include('partials.navigators')

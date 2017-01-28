@@ -16,7 +16,9 @@ Route::get('/home', 'HomeController@home');
 Route::get('/tin-tuc-hoat-dong', 'HomeController@news')->name('news');
 Route::get('/gioi-thieu', 'HomeController@about')->name('about');
 
-Route::get('/dang-nhap', 'Auth\LoginController@showLoginForm')->name('login');
-Route::post('/dang-nhap', 'Auth\LoginController@login')->name('login.post');
-Route::post('/dang-xuat', 'Auth\LoginController@logout')->name('logout');
+Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
+Route::post('/login', 'Auth\LoginController@login')->name('login.post');
+Route::post('/logout', 'Auth\LoginController@logout')->name('logout');
 //Auth::routes();
+
+Route::get('/quan-ly/faq', 'ManageController@manageFaq')->name('manage.faq');

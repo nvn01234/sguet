@@ -88,6 +88,7 @@
 
 @section('theme_layout_scripts')
     {!! Html::script('metronic/layouts/layout/scripts/layout.min.js') !!}
+    {{--    {!! Html::script('metronic/layouts/global/scripts/quick-sidebar.min.js') !!}--}}
 @show
 
 @yield('scripts')
