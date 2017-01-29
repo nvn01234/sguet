@@ -11,12 +11,15 @@
     "php": ">=5.6.4",
     "algolia/algoliasearch-client-php": "^1.13",
     "barryvdh/laravel-debugbar": "^2.3",
+    "caouecs/laravel-lang": "~3.0",
     "doctrine/dbal": "^2.5",
     "kalnoy/nestedset": "^4.2",
     "laravel/framework": "5.3.*",
     "laravel/scout": "^2.0",
     "laravelcollective/html": "^5.3.0",
-    "spatie/laravel-permission": "^1.6"
+    "maatwebsite/excel": "2.0.*@dev",
+    "spatie/laravel-permission": "^1.6",
+    "yajra/laravel-datatables-oracle": "~6.0"
   },
   "require-dev": {
     "barryvdh/laravel-ide-helper": "^2.2",

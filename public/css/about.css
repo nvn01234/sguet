@@ -1,0 +1,21 @@
+.portlet > .portlet-title > .actions .btn-icon-only.btn-default.zoom-to-fit,
+.portlet > .portlet-title > .actions .btn-icon-only.btn-default.center-on-root {
+    font-family: FontAwesome;
+    color: #a0a0a0;
+    padding-top: 3px;
+}
+
+.portlet > .portlet-title > .actions .btn-icon-only.btn-default.zoom-to-fit:before {
+    content: "\f047";
+}
+
+.portlet > .portlet-title > .actions .btn-icon-only.btn-default.center-on-root:before {
+    content: "\f037";
+}
+
+.sguet-logo {
+    content: url("../img/SGUET.png");
+    padding: 20px 20px !important;
+    height: 106px;
+    width: 106px;
+}

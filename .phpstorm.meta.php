@@ -3,7 +3,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2017-01-20.
+    * Generated on 2017-01-29.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -41,6 +41,14 @@ namespace PHPSTORM_META {
             'debugbar' instanceof \Barryvdh\Debugbar\LaravelDebugbar,
             'command.debugbar.clear' instanceof \Barryvdh\Debugbar\Console\ClearCommand,
             'Laravel\Scout\EngineManager' instanceof \Laravel\Scout\EngineManager,
+            'excel.identifier' instanceof \Maatwebsite\Excel\Classes\FormatIdentifier,
+            'excel.parsers.css' instanceof \Maatwebsite\Excel\Parsers\CssParser,
+            'excel.reader' instanceof \Maatwebsite\Excel\Readers\LaravelExcelReader,
+            'excel.readers.html' instanceof \Maatwebsite\Excel\Readers\Html,
+            'excel.parsers.view' instanceof \Maatwebsite\Excel\Parsers\ViewParser,
+            'phpexcel' instanceof \Maatwebsite\Excel\Classes\PHPExcel,
+            'excel.writer' instanceof \Maatwebsite\Excel\Writers\LaravelExcelWriter,
+            'excel' instanceof \Maatwebsite\Excel\Excel,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'cache' instanceof \Illuminate\Cache\CacheManager,
             'cache.store' instanceof \Illuminate\Cache\Repository,
@@ -162,6 +170,14 @@ namespace PHPSTORM_META {
             'debugbar' instanceof \Barryvdh\Debugbar\LaravelDebugbar,
             'command.debugbar.clear' instanceof \Barryvdh\Debugbar\Console\ClearCommand,
             'Laravel\Scout\EngineManager' instanceof \Laravel\Scout\EngineManager,
+            'excel.identifier' instanceof \Maatwebsite\Excel\Classes\FormatIdentifier,
+            'excel.parsers.css' instanceof \Maatwebsite\Excel\Parsers\CssParser,
+            'excel.reader' instanceof \Maatwebsite\Excel\Readers\LaravelExcelReader,
+            'excel.readers.html' instanceof \Maatwebsite\Excel\Readers\Html,
+            'excel.parsers.view' instanceof \Maatwebsite\Excel\Parsers\ViewParser,
+            'phpexcel' instanceof \Maatwebsite\Excel\Classes\PHPExcel,
+            'excel.writer' instanceof \Maatwebsite\Excel\Writers\LaravelExcelWriter,
+            'excel' instanceof \Maatwebsite\Excel\Excel,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'cache' instanceof \Illuminate\Cache\CacheManager,
             'cache.store' instanceof \Illuminate\Cache\Repository,
@@ -283,6 +299,14 @@ namespace PHPSTORM_META {
             'debugbar' instanceof \Barryvdh\Debugbar\LaravelDebugbar,
             'command.debugbar.clear' instanceof \Barryvdh\Debugbar\Console\ClearCommand,
             'Laravel\Scout\EngineManager' instanceof \Laravel\Scout\EngineManager,
+            'excel.identifier' instanceof \Maatwebsite\Excel\Classes\FormatIdentifier,
+            'excel.parsers.css' instanceof \Maatwebsite\Excel\Parsers\CssParser,
+            'excel.reader' instanceof \Maatwebsite\Excel\Readers\LaravelExcelReader,
+            'excel.readers.html' instanceof \Maatwebsite\Excel\Readers\Html,
+            'excel.parsers.view' instanceof \Maatwebsite\Excel\Parsers\ViewParser,
+            'phpexcel' instanceof \Maatwebsite\Excel\Classes\PHPExcel,
+            'excel.writer' instanceof \Maatwebsite\Excel\Writers\LaravelExcelWriter,
+            'excel' instanceof \Maatwebsite\Excel\Excel,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'cache' instanceof \Illuminate\Cache\CacheManager,
             'cache.store' instanceof \Illuminate\Cache\Repository,
@@ -404,6 +428,14 @@ namespace PHPSTORM_META {
             'debugbar' instanceof \Barryvdh\Debugbar\LaravelDebugbar,
             'command.debugbar.clear' instanceof \Barryvdh\Debugbar\Console\ClearCommand,
             'Laravel\Scout\EngineManager' instanceof \Laravel\Scout\EngineManager,
+            'excel.identifier' instanceof \Maatwebsite\Excel\Classes\FormatIdentifier,
+            'excel.parsers.css' instanceof \Maatwebsite\Excel\Parsers\CssParser,
+            'excel.reader' instanceof \Maatwebsite\Excel\Readers\LaravelExcelReader,
+            'excel.readers.html' instanceof \Maatwebsite\Excel\Readers\Html,
+            'excel.parsers.view' instanceof \Maatwebsite\Excel\Parsers\ViewParser,
+            'phpexcel' instanceof \Maatwebsite\Excel\Classes\PHPExcel,
+            'excel.writer' instanceof \Maatwebsite\Excel\Writers\LaravelExcelWriter,
+            'excel' instanceof \Maatwebsite\Excel\Excel,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'cache' instanceof \Illuminate\Cache\CacheManager,
             'cache.store' instanceof \Illuminate\Cache\Repository,

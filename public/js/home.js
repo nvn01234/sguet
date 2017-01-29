@@ -2,10 +2,12 @@
 var search_btn = $('#search_btn');
 var search_input = $('#search_input');
 var back_btn = $('#back_btn');
+var copylink_btn = $('#copylink_btn');
 var result_body = $('#search_result_body');
 var result_title = $('#search_result_title');
 var result_count = $('#search_result_count');
 var cache = {
+    index: undefined,
     query: undefined,
     response: undefined
 };
@@ -21,25 +23,34 @@ back_btn.hide = function () {
     back_btn.addClass('hide');
 };
 
+copylink_btn.show = function () {
+    copylink_btn.removeClass('hide');
+};
+
+copylink_btn.hide = function () {
+    copylink_btn.addClass('hide');
+};
+
 function generateOneResult(faq, index) {
     var a = $('<a>')
         .addClass('accordion-toggle')
         .attr('href', 'javascript:')
         .attr('data-index', index)
         .text(faq.title).click(function () {
-            var index = $(this).data('index');
-            var faq = cache.response[index];
+            cache.index = $(this).data('index');
+            var faq = cache.response[cache.index];
             result_title.text(faq.title);
             result_body.empty().append(
                 $('<p>').html(faq.body)
             );
             back_btn.show();
+            copylink_btn.show();
         });
     result_body.append(
         $('<div>').addClass('panel panel-default').append(
             $('<div>').addClass('panel-heading').append(
                 $('<h4>').addClass('panel-title').append(
-                    $('<i>').addClass('fa fa-question-circle')
+                    $('<i>').addClass('fa fa-question')
                 ).append(a)
             )
         )
@@ -48,10 +59,12 @@ function generateOneResult(faq, index) {
 
 function onsuccess(response) {
     cache.response = response;
+    cache.index = undefined;
 
     $('#top_heading').removeClass('margin-top-20').addClass('margin-top-40');
     $('#search_result').show();
     back_btn.hide();
+    copylink_btn.hide();
 
     result_title.text('Kết quả tìm kiếm cho "' + cache.query + '"');
     result_count.text(cache.response.length + ' kết quả');
@@ -62,6 +75,15 @@ function onsuccess(response) {
     } else {
         cache.response.forEach(generateOneResult);
     }
+}
+
+function copyToClipboard(text) {
+    var aux = document.createElement("input");
+    aux.setAttribute("value", text);
+    document.body.appendChild(aux);
+    aux.select();
+    document.execCommand("copy");
+    document.body.removeChild(aux);
 }
 /*END FUNCTION*/
 
@@ -96,7 +118,7 @@ search_btn.click(function () {
         if (cache.query != '') {
             $.ajax({
                 type: "GET",
-                url: "api/tim-kiem/faq",
+                url: SEARCH_URL,
                 data: {q: cache.query},
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
@@ -118,10 +140,24 @@ search_btn.click(function () {
 back_btn.click(function () {
     onsuccess(cache.response);
 });
+
+copylink_btn.click(function () {
+    if (cache.index != undefined) {
+        var id = cache.response[cache.index].id;
+        var url = HOME_URL + '?faq=' + id;
+        copyToClipboard(url);
+        toastr['info'](url + ' đã được sao chép vào clipboard', 'Copy đường dẫn');
+    }
+});
 /*END HANDLE EVENTS*/
 
 // portlet tooltips
 $('.portlet > .portlet-title .back').tooltip({
     container: 'body',
     title: 'Quay lại'
+});
+
+$('.portlet > .portlet-title .copylink').tooltip({
+    container: 'body',
+    title: 'Copy đường dẫn'
 });

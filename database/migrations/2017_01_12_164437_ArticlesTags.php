@@ -13,15 +13,11 @@ class ArticlesTags extends Migration
     public function up()
     {
         Schema::create('article_tag', function (Blueprint $table) {
-            $table->increments('id')->unique()->index()->unsigned();
-            $table->integer('article_id')->unsigned()->index();
+            $table->increments('id');
+            $table->unsignedInteger('article_id')->index();
             $table->foreign('article_id')->references('id')->on('articles')->onDelete('cascade');
-            $table->integer('tag_id')->unsigned()->index();
+            $table->unsignedInteger('tag_id')->index();
             $table->foreign('tag_id')->references('id')->on('tags')->onDelete('cascade');
-            /**
-             * Type your addition here
-             *
-             */
         });
     }
 

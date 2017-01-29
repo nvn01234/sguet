@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Article;
 use App\Category;
+use App\Team;
 
 /**
  * Class HomeController
@@ -19,7 +20,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $faq_id = \Request::get('faq');
+        $faq = null;
+        if ($faq_id) {
+            $faq = Article::find($faq_id);
+            if (!($faq && $faq->category && $faq->category->name === Category::NAME_FAQ)) {
+                $faq = null;
+            }
+        }
+        return view('home', compact('faq'));
     }
 
     /**
@@ -42,6 +51,16 @@ class HomeController extends Controller
      */
     public function about()
     {
-        return view('about');
+        $teams = Team::all();
+        $root_id = Team::whereNull('parent_id')->first(['id'])->id;
+        return view('about', compact('teams', 'root_id'));
+    }
+
+    /**
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function home()
+    {
+        return redirect()->route('home');
     }
 }

@@ -30,16 +30,7 @@ class Articles extends Migration
 
             $table->String('short_description')->nullable();
 
-            /**
-             * Foreignkeys section
-             */
-            $table->integer('author_id')->unsigned()->index()->nullable();
-            $table->foreign('author_id')->references('id')->on('users')->onDelete('set null')->onUpdate('cascade');
-
-            $table->integer('last_modifier_id')->unsigned()->index()->nullable();
-            $table->foreign('last_modifier_id')->references('id')->on('users')->onDelete('set null')->onUpdate('cascade');
-
-            $table->integer('category_id')->unsigned()->index()->nullable();
+            $table->unsignedInteger('category_id')->index()->nullable();
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('set null')->onUpdate('cascade');
 
             $table->timestamps();

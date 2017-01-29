@@ -25,14 +25,8 @@ class Teams extends Migration
 
             $table->String('name')->unique();
 
-            $table->integer('priority')->unsigned()->default(0);
+            $table->string('year');
 
-            /**
-             * Foreignkeys section
-             */
-
-
-            // type your addition here
             NestedSet::columns($table);
         });
     }

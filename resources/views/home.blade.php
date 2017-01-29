@@ -31,7 +31,7 @@
                 </div>
             </div>
         </div>
-        <div class="row margin-top-20 faq-page faq-content-1" id="search_result" hidden="hidden">
+        <div class="row margin-top-20 faq-page faq-content-1" id="search_result" @if(!$faq) hidden="hidden" @endif>
             <div class="faq-content-container">
                 <div class="row">
                     <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
@@ -39,18 +39,23 @@
                             <div class="portlet-title">
                                 <div class="caption">
                                     <i class="fa fa-search font-blue-hoki"></i>
-                                    <span class="caption-subject font-blue-hoki" id="search_result_title"></span>
+                                    <span class="caption-subject font-blue-hoki" id="search_result_title">
+                                        {{$faq ? $faq->title : ''}}
+                                    </span>
                                     <span class="caption-helper" id="search_result_count"></span>
                                 </div>
                                 <div class="actions">
                                     <button class="btn btn-circle btn-icon-only btn-default back hide"
                                             id="back_btn"></button>
+                                    <button class="btn btn-circle btn-icon-only btn-default copylink {{$faq ? '' : 'hide'}}"
+                                            id="copylink_btn"></button>
                                     <button class="btn btn-circle btn-icon-only btn-default fullscreen"
                                             title="Toàn màn hình"></button>
                                 </div>
                             </div>
                             <div class="portlet-body panel-group accordion faq-content">
                                 <div class="scroller" id="search_result_body" data-rail-visible="1">
+                                    {!! $faq ? $faq->body : '' !!}
                                 </div>
                             </div>
                         </div>
@@ -63,5 +68,15 @@
 
 @section('scripts')
     @parent
+    <script>
+        var HOME_URL = '{!! URL::route('home') !!}';
+        var SEARCH_URL = '{!! URL::route('api.faq.search') !!}';
+    </script>
     {!! Html::script('js/home.js') !!}
+    @if($faq)
+        <script>
+            cache.index = 0;
+            cache.response = [{!! $faq !!}];
+        </script>
+    @endif
 @endsection

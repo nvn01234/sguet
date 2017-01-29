@@ -12,9 +12,15 @@ class NewsSeeder extends Seeder
      */
     public function run()
     {
-        $json = File::get(database_path('json/news.json'));
+        $json = File::get(database_path('data/news.json'));
         $data = json_decode($json);
-        $cat = Category::whereName(Category::NAME_NEWS)->first(['id'])->id;
+
+        /**
+         * @var Category $news
+         */
+        $news = Category::firstOrNew(['name' => Category::NAME_NEWS]);
+        $news->save();
+
         foreach ($data as $obj) {
             $created_at = \Carbon\Carbon::createFromTimestamp($obj->created);
             $updated_at = \Carbon\Carbon::createFromTimestamp($obj->updated);
@@ -25,7 +31,7 @@ class NewsSeeder extends Seeder
                 'body' => $obj->body,
                 'image_url' => $obj->image_url,
                 'short_description' => $obj->short_description,
-                'category_id' => $cat,
+                'category_id' => $news->id,
                 'created_at' => $created_at,
                 'updated_at' => $updated_at
             ]));

@@ -24,21 +24,22 @@ class Members extends Migration
 
             $table->String('name');
 
-            $table->String('avatar_url')->nullable();
-        
-            $table->String('class')->nullable();
+            $table->date('birthday')->nullable();
 
-            $table->date('joined_date')->nullable();
+            $table->String('class');
 
-            /**
-             * Foreignkeys section
-             */
-            $table->integer('user_id')->unsigned()->unique()->nullable();
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('set null')->onUpdate('cascade');
+            $table->boolean('gender');
 
+            $table->string('highest_position')->nullable();
 
-            // type your addition here
+            $table->string('phone')->nullable();
 
+            $table->string('email')->nullable();
+
+            $table->string('specialize')->nullable();
+
+            $table->unsignedInteger('team_id')->index()->nullable();
+            $table->foreign('team_id')->references('id')->on('teams')->onDelete('set null')->onUpdate('cascade');
         });
     }
 

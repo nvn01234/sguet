@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Http\Request;
-
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -13,7 +11,9 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/tim-kiem/faq', 'Api\ArticleApiController@searchFaq');
-Route::get('/tin-tuc-hoat-dong', 'Api\ArticleApiController@indexNewsAndActivities')->name('api.news.index');
-Route::get('/bai-dang/{id}', 'Api\ArticleApiController@show')->name('api.article.show');
-Route::get('/index-faq', 'Api\ArticleApiController@indexFaq');
+Route::get('/faq/search', 'Api\FaqApiController@search')->name('api.faq.search');
+Route::post('/faq/algolia', 'Api\FaqApiController@algolia')->name('api.faq.algolia');
+Route::get('/faq/datatable', 'Api\FaqApiController@datatable')->name('api.faq.datatable');
+
+Route::get('/news', 'Api\NewsApiController@index')->name('api.news.index');
+Route::get('/news/{id}', 'Api\NewsApiController@show')->name('api.news.show');
