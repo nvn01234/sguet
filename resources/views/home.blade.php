@@ -70,6 +70,7 @@
     @parent
     <script>
         var HOME_URL = '{!! URL::route('home') !!}';
+        var SEARCH_URL = '{!! URL::route('api.faq.search') !!}';
     </script>
     {!! Html::script('js/home.js') !!}
     @if($faq)

@@ -10,31 +10,19 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Psy\Util\Json;
 use Searchy;
+use Yajra\Datatables\Facades\Datatables;
 
 /**
  * Class ArticleApiController
  * @package App\Http\Controllers\Api
  */
-class ArticleApiController extends Controller
+class NewsApiController extends Controller
 {
-    /**
-     * Ajax api tìm FAQ qua full text
-     * @param Request $request
-     * @return \Illuminate\Contracts\Routing\ResponseFactory|\Symfony\Component\HttpFoundation\Response
-     */
-    public function searchFaq(Request $request)
-    {
-        $faq_id = Category::whereName(Category::NAME_FAQ)->first(['id'])->id;
-        $q = $request['q'];
-        $result = Article::search($q)->where('category_id', $faq_id)->get();
-        return response($result, 200);
-    }
-
     /**
      * Đoạn HTML hiển thị tất cả tin tức - hoạt động theo phân trang
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function indexNewsActivitiesHtml()
+    public function index()
     {
         $cat_ids = Category::whereName(Category::NAME_NEWS)->orWhere('name', '=', Category::NAME_ACTIVITIES)->get(['id'])->toArray();
         $page = request('page', 1);
@@ -49,26 +37,12 @@ class ArticleApiController extends Controller
      * @param $id
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function showHtml($id)
+    public function show($id)
     {
         /**
          * @var Article $article
          */
         $article = Article::findOrFail($id);
         return view('api.show_news', compact('article'));
-    }
-
-    /**
-     * Import index của FAQ lên server Algolia
-     * @return \Illuminate\Contracts\Routing\ResponseFactory|\Symfony\Component\HttpFoundation\Response
-     */
-    public function indexFaq()
-    {
-        /**
-         * @var mixed $faq
-         */
-        $faq = Category::whereName(Category::NAME_FAQ)->first()->articles();
-        $faq->searchable();
-        return response("Done", 200);
     }
 }

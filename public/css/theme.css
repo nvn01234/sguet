@@ -1,0 +1,3 @@
+.page-header.navbar .hor-menu.hor-menu-light .navbar-nav > li.active > a:hover > i, .page-header.navbar .hor-menu.hor-menu-light .navbar-nav > li.active > a > i, .page-header.navbar .hor-menu.hor-menu-light .navbar-nav > li.current > a:hover > i, .page-header.navbar .hor-menu.hor-menu-light .navbar-nav > li.current > a > i {
+    color: white;
+}

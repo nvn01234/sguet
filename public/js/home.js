@@ -118,7 +118,7 @@ search_btn.click(function () {
         if (cache.query != '') {
             $.ajax({
                 type: "GET",
-                url: "api/tim-kiem/faq",
+                url: SEARCH_URL,
                 data: {q: cache.query},
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
