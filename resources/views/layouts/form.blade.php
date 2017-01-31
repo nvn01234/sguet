@@ -1,11 +1,7 @@
 @extends('layouts.single_portlet')
 
-@section('title')
-    Thêm mới @yield('create.name')
-@endsection
-
 @section('portlet-body')
-    {!! Form::open(['method' => 'post', 'route' => isset($route) ? $route : null, 'role' => 'form', 'class' => 'form-horizontal']) !!}
+    @yield('form-open')
     <div class="form-body">
         @if (count($errors) > 0)
             <div class="alert alert-danger">
@@ -21,7 +17,7 @@
     <div class="form-actions">
         <div class="row">
             <div class="col-md-offset-2 col-md-10">
-                {!! Form::submit(isset($button) ? $button : 'Tạo', ['class' => 'btn blue']) !!}
+                {!! Form::submit(isset($button) ? $button : 'Lưu', ['class' => 'btn blue']) !!}
                 @yield('form-actions')
             </div>
         </div>

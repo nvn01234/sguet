@@ -3,8 +3,6 @@
 namespace App\Http\Controllers\Api;
 
 use App\Faq;
-use Datatables;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -31,14 +29,5 @@ class FaqApiController extends Controller
     {
         Faq::makeAllSearchable();
         return response("Done", 200);
-    }
-
-    public function datatable()
-    {
-        /**
-         * @var HasMany $faq
-         */
-        $faq = Faq::get(['id', 'question', 'created_at', 'updated_at']);
-        return Datatables::of($faq)->make(true);
     }
 }

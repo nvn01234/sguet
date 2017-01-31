@@ -39,6 +39,11 @@ function summernote() {
 }
 
 function tagsinput() {
+    var tagsinput = $('.tagsinput');
+    tagsinput.tagsinput({
+        trimValue: true
+    });
+
     var container = $('.bootstrap-tagsinput');
 
     container.addClass('form-control')

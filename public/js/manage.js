@@ -2,7 +2,7 @@ $(function () {
     $('#manage-table').DataTable({
         processing: true,
         serverSide: true,
-        ajax: API_DATATABLE,
+        ajax: '',
         language: {
             "processing": "Đang xử lý...",
             "lengthMenu": "Xem _MENU_ mục",
