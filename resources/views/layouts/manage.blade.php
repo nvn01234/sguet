@@ -35,13 +35,7 @@
     <table class="table table-striped table-bordered table-hover table-checkable order-column"
            id="manage-table">
         <thead>
-        @if(isset($thead_map))
-            <tr>
-                @foreach($thead_map as $td)
-                    <td>{{$td['name']}}</td>
-                @endforeach
-            </tr>
-        @endif
+        @yield('thead')
         </thead>
     </table>
 @endsection
@@ -60,17 +54,5 @@
 
 @section('scripts')
     @parent
-    @if(isset($thead_map))
-        <script>
-            var COLUMNS = [
-                    @foreach($thead_map as $td)
-                {
-                    data: '{{$td['data']}}'
-                },
-                @endforeach
-            ];
-        </script>
-    @endif
-
     {!! Html::script('js/manage.js') !!}
 @endsection
