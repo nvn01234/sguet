@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "b11c8a9b95b7125b1313410ec29fcf3f",
+    "content-hash": "51f7e508cf459772976c6e2b10281e0b",
     "packages": [
         {
             "name": "algolia/algoliasearch-client-php",
@@ -56,6 +56,53 @@
             "description": "Algolia Search API Client for PHP",
             "homepage": "https://github.com/algolia/algoliasearch-client-php",
             "time": "2016-12-21T14:12:19+00:00"
+        },
+        {
+            "name": "algolia/algoliasearch-laravel",
+            "version": "1.7.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/algolia/algoliasearch-laravel.git",
+                "reference": "22863b2c7ee84bfb69a43c18af563a5f227c9785"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/algolia/algoliasearch-laravel/zipball/22863b2c7ee84bfb69a43c18af563a5f227c9785",
+                "reference": "22863b2c7ee84bfb69a43c18af563a5f227c9785",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9",
+                "vinkla/algolia": "~2.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9",
+                "orchestra/testbench": "3.1.*",
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "AlgoliaSearch\\Laravel\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Laravel Algolia extension",
+            "keywords": [
+                "algolia",
+                "api",
+                "laravel",
+                "search"
+            ],
+            "time": "2017-01-30T23:25:00+00:00"
         },
         {
             "name": "barryvdh/laravel-debugbar",
@@ -768,6 +815,65 @@
             "description": "DOMPDF is a CSS 2.1 compliant HTML to PDF converter",
             "homepage": "https://github.com/dompdf/dompdf",
             "time": "2016-05-11T00:36:29+00:00"
+        },
+        {
+            "name": "graham-campbell/manager",
+            "version": "v2.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/GrahamCampbell/Laravel-Manager.git",
+                "reference": "e6ab47a8971da6fd18bc7ced546f0d24cb7ebe3a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Manager/zipball/e6ab47a8971da6fd18bc7ced546f0d24cb7ebe3a",
+                "reference": "e6ab47a8971da6fd18bc7ced546f0d24cb7ebe3a",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "5.1.*|5.2.*|5.3.*|5.4.*",
+                "illuminate/support": "5.1.*|5.2.*|5.3.*|5.4.*",
+                "php": ">=5.5.9"
+            },
+            "require-dev": {
+                "graham-campbell/testbench-core": "^1.1",
+                "mockery/mockery": "^0.9.4",
+                "phpunit/phpunit": "^4.8|^5.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.5-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GrahamCampbell\\Manager\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Graham Campbell",
+                    "email": "graham@alt-three.com"
+                }
+            ],
+            "description": "Manager Provides Some Manager Functionality For Laravel 5",
+            "keywords": [
+                "Graham Campbell",
+                "GrahamCampbell",
+                "Laravel Manager",
+                "Laravel-Manager",
+                "connector",
+                "framework",
+                "interface",
+                "laravel",
+                "manager"
+            ],
+            "time": "2017-01-01T13:08:54+00:00"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -3072,6 +3178,62 @@
             "description": "CssToInlineStyles is a class that enables you to convert HTML-pages/files into HTML-pages/files with inline styles. This is very useful when you're sending emails.",
             "homepage": "https://github.com/tijsverkoyen/CssToInlineStyles",
             "time": "2015-12-08T16:14:14+00:00"
+        },
+        {
+            "name": "vinkla/algolia",
+            "version": "2.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vinkla/laravel-algolia.git",
+                "reference": "d1a9e73dacf72ef1d593fa7bf4bc19a3816efae1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vinkla/laravel-algolia/zipball/d1a9e73dacf72ef1d593fa7bf4bc19a3816efae1",
+                "reference": "d1a9e73dacf72ef1d593fa7bf4bc19a3816efae1",
+                "shasum": ""
+            },
+            "require": {
+                "algolia/algoliasearch-client-php": "^1.6.3",
+                "graham-campbell/manager": "^2.4",
+                "illuminate/contracts": "5.1.* || 5.2.* || 5.3.*",
+                "illuminate/support": "5.1.* || 5.2.* || 5.3.*",
+                "php": "^5.6.4 || ^7.0"
+            },
+            "require-dev": {
+                "graham-campbell/testbench": "^3.2",
+                "mockery/mockery": "^0.9.5",
+                "phpunit/phpunit": "^5.4"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Vinkla\\Algolia\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vincent Klaiber",
+                    "email": "hello@vinkla.com"
+                }
+            ],
+            "description": "An Algolia bridge for Laravel",
+            "keywords": [
+                "algolia",
+                "api",
+                "laravel",
+                "search"
+            ],
+            "time": "2016-07-11T19:12:28+00:00"
         },
         {
             "name": "vlucas/phpdotenv",

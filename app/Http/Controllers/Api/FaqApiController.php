@@ -19,15 +19,4 @@ class FaqApiController extends Controller
         $result = Faq::search($q)->get();
         return response($result, 200);
     }
-
-
-    /**
-     * Import index của FAQ lên server Algolia
-     * @return \Illuminate\Contracts\Routing\ResponseFactory|\Symfony\Component\HttpFoundation\Response
-     */
-    public function algolia()
-    {
-        Faq::makeAllSearchable();
-        return response("Done", 200);
-    }
 }
