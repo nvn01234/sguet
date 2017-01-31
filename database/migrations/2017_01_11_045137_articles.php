@@ -24,11 +24,11 @@ class Articles extends Migration
 
             $table->String('title');
 
+            $table->String('short_description');
+
             $table->longText('body');
 
             $table->String('image_url')->nullable();
-
-            $table->String('short_description')->nullable();
 
             $table->unsignedInteger('category_id')->index()->nullable();
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('set null')->onUpdate('cascade');

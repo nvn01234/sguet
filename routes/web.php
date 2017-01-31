@@ -13,7 +13,7 @@
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/home', 'HomeController@home');
-Route::get('/tin-tuc-hoat-dong', 'HomeController@news')->name('news');
+Route::get('/tin-tuc-hoat-dong', 'HomeController@articles')->name('articles');
 Route::get('/gioi-thieu', 'HomeController@about')->name('about');
 
 Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
@@ -21,4 +21,6 @@ Route::post('/login', 'Auth\LoginController@login')->name('login.post');
 Route::post('/logout', 'Auth\LoginController@logout')->name('logout');
 //Auth::routes();
 
-Route::get('/quan-ly/faq', 'ManageController@manageFaq')->name('manage.faq');
+Route::get('/quan-ly/faq', 'FaqController@index')->name('manage.faq');
+Route::get('/quan-ly/faq/tao-moi', 'FaqController@create')->name('manage.faq.create');
+Route::post('/quan-ly/faq/tao-moi', 'FaqController@store')->name('manage.faq.store');

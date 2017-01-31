@@ -2,7 +2,7 @@ var next_page = 1;
 
 function load_more() {
     next_page++;
-    $('#loadMore_btn').attr('href', $.news_api_url + '?page=' + next_page);
+    $('#loadMore_btn').attr('href', ARTICLE_API_URL + '?page=' + next_page);
 }
 
 (function ($, window, document, undefined) {

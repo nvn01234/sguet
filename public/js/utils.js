@@ -23,3 +23,30 @@ function loadImgAsync(url, target, options) {
         }
     });
 }
+
+function summernote() {
+    $('.summernote').each(function (index, textarea) {
+        textarea = $(textarea);
+
+        textarea.summernote({
+            height: 300
+        });
+
+        var id = textarea.attr('id');
+        textarea.attr('id', null);
+        textarea.next().find('textarea').attr('id', id);
+    });
+}
+
+function tagsinput() {
+    var container = $('.bootstrap-tagsinput');
+
+    container.addClass('form-control')
+        .append($('<div>').addClass('form-control-focus').css('bottom', '10px'))
+        .append($('<span>').addClass('help-block').text(container.prev().data('help-block')));
+
+    container.find('input').addClass('form-control').attr('id', 'tags')
+        .css('border-bottom-color', 'transparent')
+        .css('padding-bottom', '10px')
+        .css('display', 'inline');
+}

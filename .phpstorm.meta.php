@@ -3,7 +3,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2017-01-29.
+    * Generated on 2017-01-31.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -49,6 +49,10 @@ namespace PHPSTORM_META {
             'phpexcel' instanceof \Maatwebsite\Excel\Classes\PHPExcel,
             'excel.writer' instanceof \Maatwebsite\Excel\Writers\LaravelExcelWriter,
             'excel' instanceof \Maatwebsite\Excel\Excel,
+            'html' instanceof \Collective\Html\HtmlBuilder,
+            'form' instanceof \Collective\Html\FormBuilder,
+            'datatables' instanceof \Yajra\Datatables\Datatables,
+            'datatables.fractal' instanceof \League\Fractal\Manager,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'cache' instanceof \Illuminate\Cache\CacheManager,
             'cache.store' instanceof \Illuminate\Cache\Repository,
@@ -135,8 +139,6 @@ namespace PHPSTORM_META {
             'command.ide-helper.generate' instanceof \Barryvdh\LaravelIdeHelper\Console\GeneratorCommand,
             'command.ide-helper.models' instanceof \Barryvdh\LaravelIdeHelper\Console\ModelsCommand,
             'command.ide-helper.meta' instanceof \Barryvdh\LaravelIdeHelper\Console\MetaCommand,
-            'html' instanceof \Collective\Html\HtmlBuilder,
-            'form' instanceof \Collective\Html\FormBuilder,
         ],
         \Illuminate\Contracts\Container\Container::make('') => [
             '' == '@',
@@ -178,6 +180,10 @@ namespace PHPSTORM_META {
             'phpexcel' instanceof \Maatwebsite\Excel\Classes\PHPExcel,
             'excel.writer' instanceof \Maatwebsite\Excel\Writers\LaravelExcelWriter,
             'excel' instanceof \Maatwebsite\Excel\Excel,
+            'html' instanceof \Collective\Html\HtmlBuilder,
+            'form' instanceof \Collective\Html\FormBuilder,
+            'datatables' instanceof \Yajra\Datatables\Datatables,
+            'datatables.fractal' instanceof \League\Fractal\Manager,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'cache' instanceof \Illuminate\Cache\CacheManager,
             'cache.store' instanceof \Illuminate\Cache\Repository,
@@ -264,8 +270,6 @@ namespace PHPSTORM_META {
             'command.ide-helper.generate' instanceof \Barryvdh\LaravelIdeHelper\Console\GeneratorCommand,
             'command.ide-helper.models' instanceof \Barryvdh\LaravelIdeHelper\Console\ModelsCommand,
             'command.ide-helper.meta' instanceof \Barryvdh\LaravelIdeHelper\Console\MetaCommand,
-            'html' instanceof \Collective\Html\HtmlBuilder,
-            'form' instanceof \Collective\Html\FormBuilder,
         ],
         \App::make('') => [
             '' == '@',
@@ -307,6 +311,10 @@ namespace PHPSTORM_META {
             'phpexcel' instanceof \Maatwebsite\Excel\Classes\PHPExcel,
             'excel.writer' instanceof \Maatwebsite\Excel\Writers\LaravelExcelWriter,
             'excel' instanceof \Maatwebsite\Excel\Excel,
+            'html' instanceof \Collective\Html\HtmlBuilder,
+            'form' instanceof \Collective\Html\FormBuilder,
+            'datatables' instanceof \Yajra\Datatables\Datatables,
+            'datatables.fractal' instanceof \League\Fractal\Manager,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'cache' instanceof \Illuminate\Cache\CacheManager,
             'cache.store' instanceof \Illuminate\Cache\Repository,
@@ -393,8 +401,6 @@ namespace PHPSTORM_META {
             'command.ide-helper.generate' instanceof \Barryvdh\LaravelIdeHelper\Console\GeneratorCommand,
             'command.ide-helper.models' instanceof \Barryvdh\LaravelIdeHelper\Console\ModelsCommand,
             'command.ide-helper.meta' instanceof \Barryvdh\LaravelIdeHelper\Console\MetaCommand,
-            'html' instanceof \Collective\Html\HtmlBuilder,
-            'form' instanceof \Collective\Html\FormBuilder,
         ],
         \app('') => [
             '' == '@',
@@ -436,6 +442,10 @@ namespace PHPSTORM_META {
             'phpexcel' instanceof \Maatwebsite\Excel\Classes\PHPExcel,
             'excel.writer' instanceof \Maatwebsite\Excel\Writers\LaravelExcelWriter,
             'excel' instanceof \Maatwebsite\Excel\Excel,
+            'html' instanceof \Collective\Html\HtmlBuilder,
+            'form' instanceof \Collective\Html\FormBuilder,
+            'datatables' instanceof \Yajra\Datatables\Datatables,
+            'datatables.fractal' instanceof \League\Fractal\Manager,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'cache' instanceof \Illuminate\Cache\CacheManager,
             'cache.store' instanceof \Illuminate\Cache\Repository,
@@ -522,8 +532,6 @@ namespace PHPSTORM_META {
             'command.ide-helper.generate' instanceof \Barryvdh\LaravelIdeHelper\Console\GeneratorCommand,
             'command.ide-helper.models' instanceof \Barryvdh\LaravelIdeHelper\Console\ModelsCommand,
             'command.ide-helper.meta' instanceof \Barryvdh\LaravelIdeHelper\Console\MetaCommand,
-            'html' instanceof \Collective\Html\HtmlBuilder,
-            'form' instanceof \Collective\Html\FormBuilder,
         ],
     ];
 }

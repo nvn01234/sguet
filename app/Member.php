@@ -42,6 +42,8 @@ class Member extends Model
      */
     public $timestamps = false;
 
+    protected $fillable = ['name', 'birthday', 'class', 'gender', 'highest_position', 'phone', 'email', 'specialize', 'team_id'];
+
     /**
      * @var string
      */

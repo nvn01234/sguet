@@ -5,7 +5,6 @@ namespace App;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Query\Builder;
-use Laravel\Scout\Searchable;
 
 /**
  * Class Article.
@@ -32,38 +31,7 @@ use Laravel\Scout\Searchable;
  */
 class Article extends Model
 {
-    use Searchable;
-
-    /**
-     * @return array
-     */
-    public function toSearchableArray()
-    {
-        $array = [];
-
-        $array['title'] = $this->title;
-
-        if ($this->short_description) {
-            $array['short_description'] = $this->short_description;
-        }
-
-        if ($this->category_id) {
-            $array['category_id'] = $this->category_id;
-        }
-
-        if ($this->tags->count() > 0) {
-            $array['tags'] = $this->tags->toArray();
-        }
-
-        $body = strip_tags($this->body);
-        $a = ["\t", "\n", "\r", "&nbsp;"];
-        $body = str_replace($a, " ", $body);
-        $body = preg_replace('# {2,}#', ' ', $body);
-        $body = trim($body);
-        $array['body'] = $body;
-
-        return $array;
-    }
+    protected $fillable = ['id', 'title', 'short_description', 'body', 'category_id', 'image_url', 'created_at', 'updated_at'];
 
     /**
      * @var string

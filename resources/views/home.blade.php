@@ -21,17 +21,18 @@
                 <h2>CLB Hỗ trợ sinh viên Trường ĐH Công nghệ</h2>
                 <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 input-group"
                      style="text-align:left">
-                    <input type="text" class="form-control" name="question" id="search_input"
+                    <input type="text" class="form-control" id="search_input"
                            placeholder="Nhập câu hỏi">
                     <span class="input-group-btn">
-                        <button type="submit" class="btn green" id="search_btn">
+                        <button type="button" class="btn green" id="search_btn">
                             <i class="fa fa-search"></i> Tìm kiếm
                         </button>
                     </span>
                 </div>
             </div>
         </div>
-        <div class="row margin-top-20 faq-page faq-content-1" id="search_result" @if(!$faq) hidden="hidden" @endif>
+        <div class="row margin-top-20 faq-page faq-content-1" id="search_result"
+             @if(!isset($faq)) hidden="hidden" @endif>
             <div class="faq-content-container">
                 <div class="row">
                     <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
@@ -40,14 +41,14 @@
                                 <div class="caption">
                                     <i class="fa fa-search font-blue-hoki"></i>
                                     <span class="caption-subject font-blue-hoki" id="search_result_title">
-                                        {{$faq ? $faq->title : ''}}
+                                        @if(isset($faq)) {{$faq->question}} @endif
                                     </span>
                                     <span class="caption-helper" id="search_result_count"></span>
                                 </div>
                                 <div class="actions">
                                     <button class="btn btn-circle btn-icon-only btn-default back hide"
                                             id="back_btn"></button>
-                                    <button class="btn btn-circle btn-icon-only btn-default copylink {{$faq ? '' : 'hide'}}"
+                                    <button class="btn btn-circle btn-icon-only btn-default copylink @if(isset($faq)) hide @endif"
                                             id="copylink_btn"></button>
                                     <button class="btn btn-circle btn-icon-only btn-default fullscreen"
                                             title="Toàn màn hình"></button>
@@ -55,7 +56,7 @@
                             </div>
                             <div class="portlet-body panel-group accordion faq-content">
                                 <div class="scroller" id="search_result_body" data-rail-visible="1">
-                                    {!! $faq ? $faq->body : '' !!}
+                                    @if(isset($faq)) {!! $faq->answer !!} @endif
                                 </div>
                             </div>
                         </div>
@@ -73,7 +74,7 @@
         var SEARCH_URL = '{!! URL::route('api.faq.search') !!}';
     </script>
     {!! Html::script('js/home.js') !!}
-    @if($faq)
+    @if(isset($faq))
         <script>
             cache.index = 0;
             cache.response = [{!! $faq !!}];

@@ -17,6 +17,11 @@
 
 @if (session()->has('toastr'))
     @foreach(session('toastr') as $toastr)
+        @php
+            if(!isset($toastr['level'])) $toastr['level'] = 'info';
+            if(!isset($toastr['title'])) $toastr['title'] = $toast['level'];
+            if(!isset($toastr['message'])) $toastr['message'] = '';
+        @endphp
         <script async type="text/javascript">
             toastr['{{$toastr['level']}}']('{{$toastr['message']}}', '{{$toastr['title']}}');
         </script>

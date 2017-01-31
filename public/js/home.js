@@ -36,12 +36,12 @@ function generateOneResult(faq, index) {
         .addClass('accordion-toggle')
         .attr('href', 'javascript:')
         .attr('data-index', index)
-        .text(faq.title).click(function () {
+        .text(faq.question).click(function () {
             cache.index = $(this).data('index');
             var faq = cache.response[cache.index];
-            result_title.text(faq.title);
+            result_title.text(faq.question);
             result_body.empty().append(
-                $('<p>').html(faq.body)
+                $('<p>').html(faq.answer)
             );
             back_btn.show();
             copylink_btn.show();

@@ -17,7 +17,6 @@ use \Illuminate\Database\Query\Builder;
  */
 class Category extends Model
 {
-    const NAME_FAQ = 'Q&A';
     const NAME_NEWS = 'Tin tức';
     const NAME_ACTIVITIES = 'Hoạt động';
 
@@ -30,6 +29,8 @@ class Category extends Model
      * @var string
      */
     protected $table = 'categories';
+
+    protected $fillable = ['name'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany

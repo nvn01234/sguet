@@ -3,20 +3,13 @@
 namespace App\Http\Controllers\Api;
 
 use App\Article;
-use App\Category;
-use Doctrine\DBAL\Query\QueryBuilder;
-use Illuminate\Database\Eloquent\Relations\HasMany;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Psy\Util\Json;
-use Searchy;
-use Yajra\Datatables\Facades\Datatables;
 
 /**
  * Class ArticleApiController
  * @package App\Http\Controllers\Api
  */
-class NewsApiController extends Controller
+class ArticleApiController extends Controller
 {
     /**
      * Đoạn HTML hiển thị tất cả tin tức - hoạt động theo phân trang
@@ -24,12 +17,10 @@ class NewsApiController extends Controller
      */
     public function index()
     {
-        $cat_ids = Category::whereName(Category::NAME_NEWS)->orWhere('name', '=', Category::NAME_ACTIVITIES)->get(['id'])->toArray();
         $page = request('page', 1);
-        $articles = Article::whereIn('category_id', $cat_ids)
-            ->orderBy('created_at', 'desc')
+        $articles = Article::orderBy('created_at', 'desc')
             ->paginate(8, ["*"], 'page', $page + 1);
-        return view('api.index_news', compact('articles'));
+        return view('api.article_index', compact('articles'));
     }
 
     /**
@@ -43,6 +34,6 @@ class NewsApiController extends Controller
          * @var Article $article
          */
         $article = Article::findOrFail($id);
-        return view('api.show_news', compact('article'));
+        return view('api.article_show', compact('article'));
     }
 }

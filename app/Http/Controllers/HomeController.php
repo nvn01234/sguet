@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Article;
 use App\Category;
+use App\Faq;
 use App\Team;
+use Illuminate\Http\Request;
 
 /**
  * Class HomeController
@@ -16,34 +18,32 @@ class HomeController extends Controller
     /**
      * Show the application dashboard.
      *
+     * @param Request $request
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $faq_id = \Request::get('faq');
-        $faq = null;
+        $faq_id = $request->get('faq');
         if ($faq_id) {
-            $faq = Article::find($faq_id);
-            if (!($faq && $faq->category && $faq->category->name === Category::NAME_FAQ)) {
-                $faq = null;
+            $faq = Faq::find($faq_id);
+            if ($faq) {
+                return view('home', compact('faq'));
             }
         }
-        return view('home', compact('faq'));
+        return view('home');
     }
 
     /**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function news()
+    public function articles()
     {
         $cat_news_id = Category::whereName(Category::NAME_NEWS)->first(['id'])->id;
         $cat_act_id = Category::whereName(Category::NAME_ACTIVITIES)->first(['id'])->id;
-        $articles = Article::whereIn('category_id', [$cat_news_id, $cat_act_id])
-            ->newQuery()
-            ->orderBy('created_at', 'desc')
+        $articles = Article::orderBy('created_at', 'desc')
             ->take(8)
             ->get();
-        return view('news', compact('cat_news_id', 'cat_act_id', 'articles'));
+        return view('articles', compact('cat_news_id', 'cat_act_id', 'articles'));
     }
 
     /**
