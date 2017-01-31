@@ -27,3 +27,6 @@ Route::post('/quan-ly/faq/tao-moi', 'FaqController@store')->name('manage.faq.sto
 Route::get('/quan-ly/faq/{id}/sua', 'FaqController@edit')->name('manage.faq.edit');
 Route::post('/quan-ly/faq/{id}/sua', 'FaqController@update')->name('manage.faq.update');
 Route::get('/quan-ly/faq/{id}/xoa', 'FaqController@destroy')->name('manage.faq.delete');
+
+Route::get('/settings/algolia/import', 'AlgoliaController@import')->name('setting.algolia.import');
+//Route::get('/settings/algolia/set-settings', 'AlgoliaController@setSettings')->name('settings.algolia.setSettings');

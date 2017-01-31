@@ -2,6 +2,7 @@
 
 namespace App;
 
+use AlgoliaSearch\Laravel\AlgoliaEloquentTrait;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
@@ -53,6 +54,32 @@ class Faq extends Model
 
         return $array;
     }
+
+//    use AlgoliaEloquentTrait;
+//
+//    public function getAlgoliaRecord()
+//    {
+//        return $this->toSearchableArray();
+//    }
+//
+//    public static $autoIndex = false;
+//    public static $autoDelete = false;
+//    public static $objectIdKey = 'objectId';
+//    public $indices = 'sguet_faqs';
+//
+//    public $algoliaSettings = [
+//        'searchableAttributes' => [
+//            'question',
+//            'tags.name',
+//            'answer',
+//        ],
+//        'customRanking' => [
+//            'asc(question)',
+//            'desc(tags)',
+//            'asc(tags.name)',
+//            'asc(answer)',
+//        ]
+//    ];
 
     /**
      * @var string
