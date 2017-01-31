@@ -20,15 +20,6 @@ class FaqController extends Controller
         $this->middleware('auth');
     }
 
-    private function actionButton($action)
-    {
-        return
-            '<a href="' . $action['url'] . '" class="btn btn-sm btn-outline ' . $action['color'] . '">'
-            . '<i class="fa fa-' . $action['icon'] . '"></i>'
-            . $action['name']
-            . '</a>';
-    }
-
     public function index(Request $request)
     {
         if ($request->ajax()) {
@@ -38,24 +29,11 @@ class FaqController extends Controller
             $faq = Faq::get(['id', 'question', 'created_at', 'updated_at']);
             return Datatables::of($faq)
                 ->addColumn('action', function ($faq) {
-                    $actions = [
-                        [
-                            'name' => 'Sửa',
-                            'url' => URL::route('manage.faq.edit', ['id' => $faq->id]),
-                            'icon' => 'edit',
-                            'color' => 'green'
-                        ], [
-                            'name' => 'Xoá',
-                            'url' => URL::route('manage.faq.delete', ['id' => $faq->id]),
-                            'icon' => 'trash-o',
-                            'color' => 'red'
-                        ]
-                    ];
-                    $str = '';
-                    foreach ($actions as $action) {
-                        $str .= $this->actionButton($action);
-                    }
-                    return $str;
+                    return
+                        '<a href="' . URL::route('manage.faq.edit', ['id' => $faq->id]) . '" class="btn btn-sm btn-outline green">
+                        <i class="fa fa-edit"></i>Sửa</a>'
+                        . '<a href="' . URL::route('manage.faq.delete', ['id' => $faq->id]) . '" class="btn btn-sm btn-outline red">
+                        <i class="fa fa-trash-o"></i>Xoá</a>';
                 })
                 ->make(true);
         }
