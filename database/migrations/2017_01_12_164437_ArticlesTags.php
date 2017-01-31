@@ -18,6 +18,7 @@ class ArticlesTags extends Migration
             $table->foreign('article_id')->references('id')->on('articles')->onDelete('cascade');
             $table->unsignedInteger('tag_id')->index();
             $table->foreign('tag_id')->references('id')->on('tags')->onDelete('cascade');
+            $table->unique(['article_id', 'tag_id']);
         });
     }
 

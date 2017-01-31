@@ -18,6 +18,7 @@ class FaqsTags extends Migration
             $table->foreign('faq_id')->references('id')->on('faqs')->onDelete('cascade');
             $table->unsignedInteger('tag_id')->index();
             $table->foreign('tag_id')->references('id')->on('tags')->onDelete('cascade');
+            $table->unique(['faq_id', 'tag_id']);
         });
     }
 
