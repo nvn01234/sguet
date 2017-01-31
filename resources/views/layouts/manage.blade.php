@@ -18,18 +18,20 @@
 @endsection
 
 @section('portlet-body')
-    <div class="table-toolbar">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="btn-group">
-                    <a class="btn sbold btn-primary" href="@yield('create_route', 'javascript:')">
-                        Thêm mới
-                        <i class="fa fa-plus"></i>
-                    </a>
+    @hasSection('create_route')
+        <div class="table-toolbar">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="btn-group">
+                        <a class="btn sbold btn-primary" href="@yield('create_route')">
+                            Tạo mới
+                            <i class="fa fa-plus"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    @endif
     <table class="table table-striped table-bordered table-hover table-checkable order-column"
            id="manage-table">
         <thead>
@@ -58,10 +60,6 @@
 
 @section('scripts')
     @parent
-    <script>
-        var API_DATATABLE = '@yield('manage.api-datatable')';
-    </script>
-
     @if(isset($thead_map))
         <script>
             var COLUMNS = [
