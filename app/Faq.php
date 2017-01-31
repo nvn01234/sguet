@@ -35,6 +35,11 @@ class Faq extends Model
     protected $fillable = ['id', 'question', 'answer', 'created_at', 'updated_at'];
 
     /**
+     * @var string
+     */
+    protected $table = 'faqs';
+
+    /**
      * @return array
      */
     public function toSearchableArray()
@@ -80,11 +85,6 @@ class Faq extends Model
 //            'asc(answer)',
 //        ]
 //    ];
-
-    /**
-     * @var string
-     */
-    protected $table = 'faqs';
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany

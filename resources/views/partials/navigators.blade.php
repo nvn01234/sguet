@@ -30,6 +30,12 @@
                     Q&A
                 </a>
             </li>
+            <li class="@yield('menu.manage.article')">
+                <a href="{!! URL::route('manage.article') !!}">
+                    <i class="fa fa-newspaper-o"></i>
+                    Tin tức - Hoạt động
+                </a>
+            </li>
         </ul>
     </li>
 @endif

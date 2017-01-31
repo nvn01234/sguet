@@ -6,6 +6,7 @@ use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Query\Builder;
+use Laravel\Scout\Searchable;
 
 /**
  * Class Article.
@@ -32,6 +33,8 @@ use Illuminate\Database\Query\Builder;
  */
 class Article extends Model
 {
+    use  Searchable;
+
     protected $fillable = ['id', 'title', 'short_description', 'body', 'category_id', 'image_url', 'created_at', 'updated_at'];
 
     /**
