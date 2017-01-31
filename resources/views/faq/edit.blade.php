@@ -33,7 +33,7 @@
     <div class="form-group form-md-line-input @if($errors->has('tags')) has-error @endif">
         {!! Form::label('tags', 'Nhãn', ['class' => 'col-md-2 control-label']) !!}
         <div class="col-md-10">
-            {!! Form::select('tags[]', $tags, null, ['multiple' => 'multiple', 'class' => 'tagsinput', 'data-help-block' => 'Các nhãn cách nhau bởi dấu phẩy (,)']) !!}
+            {!! Form::select('tags[]', [], null, ['multiple' => 'multiple', 'class' => 'tagsinput', 'data-help-block' => 'Các nhãn cách nhau bởi dấu phẩy (,)']) !!}
         </div>
     </div>
 @endsection
@@ -52,7 +52,11 @@
     <script>
         $(document).ready(function () {
             summernote();
-            tagsinput();
+            tagsinput(function (tagsinput) {
+                @foreach($faq->tags as $tag)
+                tagsinput.tagsinput('add', '{{$tag->name}}');
+                @endforeach
+            });
         })
     </script>
 @endsection

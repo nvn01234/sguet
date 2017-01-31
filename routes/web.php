@@ -26,3 +26,4 @@ Route::get('/quan-ly/faq/tao-moi', 'FaqController@create')->name('manage.faq.cre
 Route::post('/quan-ly/faq/tao-moi', 'FaqController@store')->name('manage.faq.store');
 Route::get('/quan-ly/faq/{id}/sua', 'FaqController@edit')->name('manage.faq.edit');
 Route::post('/quan-ly/faq/{id}/sua', 'FaqController@update')->name('manage.faq.update');
+Route::get('/quan-ly/faq/{id}/xoa', 'FaqController@destroy')->name('manage.faq.delete');

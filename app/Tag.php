@@ -28,8 +28,14 @@ class Tag extends Model
      */
     protected $table = 'tags';
 
+    /**
+     * @var array
+     */
     protected $fillable = ['name'];
 
+    /**
+     * @var array
+     */
     protected $hidden = ['pivot'];
 
     /**

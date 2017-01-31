@@ -38,11 +38,12 @@ function summernote() {
     });
 }
 
-function tagsinput() {
+function tagsinput(init) {
     var tagsinput = $('.tagsinput');
     tagsinput.tagsinput({
         trimValue: true
     });
+    if (init) init(tagsinput);
 
     var container = $('.bootstrap-tagsinput');
 
