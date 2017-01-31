@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.single_portlet')
 
 @section('title')
     Quản lý @yield('manage.name')
@@ -17,48 +17,31 @@
     {!! Html::style('css/manage.css') !!}
 @endsection
 
-@section('page_content')
-    <div class="page-content">
+@section('portlet-body')
+    <div class="table-toolbar">
         <div class="row">
-            <div class="col-md-12">
-                <!-- BEGIN EXAMPLE TABLE PORTLET-->
-                <div class="portlet light bordered">
-                    <div class="portlet-title">
-                        <div class="caption font-dark">
-                            <i class="icon-settings font-dark"></i>
-                            <span class="caption-subject bold uppercase"> Quản lý @yield('manage.name')</span>
-                        </div>
-                    </div>
-                    <div class="portlet-body">
-                        <div class="table-toolbar">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="btn-group">
-                                        <button id="sample_editable_1_new" class="btn sbold green"> Thêm mới
-                                            <i class="fa fa-plus"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <table class="table table-striped table-bordered table-hover table-checkable order-column"
-                               id="manage-table">
-                            <thead>
-                            @if($thead_map)
-                                <tr>
-                                    @foreach($thead_map as $td)
-                                        <td>{{$td['name']}}</td>
-                                    @endforeach
-                                </tr>
-                            @endif
-                            </thead>
-                        </table>
-                    </div>
+            <div class="col-md-6">
+                <div class="btn-group">
+                    <a class="btn sbold btn-primary" href="@yield('create_route', 'javascript:')">
+                        Thêm mới
+                        <i class="fa fa-plus"></i>
+                    </a>
                 </div>
-                <!-- END EXAMPLE TABLE PORTLET-->
             </div>
         </div>
     </div>
+    <table class="table table-striped table-bordered table-hover table-checkable order-column"
+           id="manage-table">
+        <thead>
+        @if(isset($thead_map))
+            <tr>
+                @foreach($thead_map as $td)
+                    <td>{{$td['name']}}</td>
+                @endforeach
+            </tr>
+        @endif
+        </thead>
+    </table>
 @endsection
 
 @section('page_level_plugins.scripts')
@@ -79,7 +62,7 @@
         var API_DATATABLE = '@yield('manage.api-datatable')';
     </script>
 
-    @if($thead_map)
+    @if(isset($thead_map))
         <script>
             var COLUMNS = [
                     @foreach($thead_map as $td)

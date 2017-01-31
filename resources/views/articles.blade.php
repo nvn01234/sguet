@@ -2,7 +2,7 @@
 
 @section('title', 'Tin tức - Hoạt động')
 
-@section('menu.news', 'active')
+@section('menu.articles', 'active')
 
 @section('page_level_plugins.styles')
     @parent
@@ -17,7 +17,7 @@
 
 @section('styles')
     @parent
-    {!! Html::style('css/news.css') !!}
+    {!! Html::style('css/articles.css') !!}
 @endsection
 
 @section('scripts.top')
@@ -44,11 +44,11 @@
             </div>
             <div id="js-grid-juicy-projects" class="cbp">
                 @foreach($articles as $article)
-                    @include('api.news_item', ['article' => $article])
+                    @include('api.article_item', ['article' => $article])
                 @endforeach
             </div>
             <div id="js-loadMore-juicy-projects" class="cbp-l-loadMore-button">
-                <a href="{!! URL::route('api.news.index') !!}"
+                <a href="{!! URL::route('api.article.index') !!}"
                    class="cbp-l-loadMore-link btn grey-mint btn-outline" rel="nofollow" id="loadMore_btn">
                     <span class="cbp-l-loadMore-defaultText">Xem thêm</span>
                     <span class="cbp-l-loadMore-loadingText">Đang tải...</span>
@@ -67,9 +67,9 @@
 @section('page_level_scripts')
     @parent
     <script>
-        $.news_api_url = '{!! URL::route('api.news.index') !!}'
+        var ARTICLE_API_URL = '{!! URL::route('api.article.index') !!}'
     </script>
-    {!! Html::script('js/news.js') !!}
+    {!! Html::script('js/articles.js') !!}
 @endsection
 
 @section('scripts')

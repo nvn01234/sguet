@@ -15,5 +15,5 @@ Route::get('/faq/search', 'Api\FaqApiController@search')->name('api.faq.search')
 Route::post('/faq/algolia', 'Api\FaqApiController@algolia')->name('api.faq.algolia');
 Route::get('/faq/datatable', 'Api\FaqApiController@datatable')->name('api.faq.datatable');
 
-Route::get('/news', 'Api\NewsApiController@index')->name('api.news.index');
-Route::get('/news/{id}', 'Api\NewsApiController@show')->name('api.news.show');
+Route::get('/article', 'Api\ArticleApiController@index')->name('api.article.index');
+Route::get('/article/{id}', 'Api\ArticleApiController@show')->name('api.article.show');

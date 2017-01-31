@@ -82,7 +82,7 @@
 @yield('page_level_plugins.scripts')
 
 @section('theme_global_scripts')
-    {!! Html::script('metronic/global/scripts/app.min.js') !!}
+    {!! Html::script('metronic/global/scripts/app.js') !!}
 @show
 
 @yield('page_level_scripts')

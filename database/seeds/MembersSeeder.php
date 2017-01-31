@@ -5,6 +5,8 @@ use Maatwebsite\Excel\Collections\CellCollection;
 use Maatwebsite\Excel\Collections\RowCollection;
 use Maatwebsite\Excel\Collections\SheetCollection;
 use Maatwebsite\Excel\Readers\LaravelExcelReader;
+use App\Team;
+use App\Member;
 
 class MembersSeeder extends Seeder
 {
@@ -15,7 +17,7 @@ class MembersSeeder extends Seeder
      */
     public function run()
     {
-        $excel = \App::make('excel');
+        $excel = App::make('excel');
         $excel->load(database_path('data/DSSG.xlsx'), function ($reader) {
             /**
              * @var LaravelExcelReader $reader
@@ -45,9 +47,10 @@ class MembersSeeder extends Seeder
         /**
          * @var \App\Team $team
          */
-        $team = \App\Team::firstOrNew(['name' => $sheet_title_parts[0]]);
-        $team->year = $sheet_title_parts[1];
-        $team->save();
+        $team = Team::create([
+            'name' => $sheet_title_parts[0],
+            'year' => $sheet_title_parts[1],
+        ]);
 
         foreach ($sheet->all() as $row) {
             /**
@@ -55,17 +58,17 @@ class MembersSeeder extends Seeder
              * @var \App\Member $member
              */
             if ($row->get('ho_va_ten')) {
-                $member = new \App\Member();
-                $member->name = $row->get('ho_va_ten');
-                $member->birthday = $row->get('ngay_sinh');
-                $member->class = $row->get('lop');
-                $member->gender = $row->get('nu') === "x" ? \App\Member::GENDER_FEMALE : \App\Member::GENDER_MALE;
-                $member->highest_position = $row->get('chuc_vu_cao_nhat');
-                $member->phone = $row->get('so_dien_thoai');
-                $member->email = $row->get('email');
-                $member->specialize = $row->get('chuyen_mon');
-                $member->team_id = $team->id;
-                $member->save();
+                Member::create([
+                    'name' => $row->get('ho_va_ten'),
+                    'birthday' => $row->get('ngay_sinh'),
+                    'class' => $row->get('lop'),
+                    'gender' => $row->get('nu') === "x" ? Member::GENDER_FEMALE : Member::GENDER_MALE,
+                    'highest_position' => $row->get('chuc_vu_cao_nhat'),
+                    'phone' => $row->get('so_dien_thoai'),
+                    'email' => $row->get('email'),
+                    'specialize' => $row->get('chuyen_mon'),
+                    'team_id' => $team->id,
+                ]);
             }
         }
     }

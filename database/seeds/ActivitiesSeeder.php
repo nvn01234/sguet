@@ -18,23 +18,24 @@ class ActivitiesSeeder extends Seeder
         /**
          * @var Category $act
          */
-        $act = Category::firstOrNew(['name' => Category::NAME_ACTIVITIES]);
-        $act->save();
+        $act = Category::create(['name' => Category::NAME_ACTIVITIES]);
 
         foreach ($data as $obj) {
             $created_at = \Carbon\Carbon::createFromTimestamp($obj->created);
             $updated_at = \Carbon\Carbon::createFromTimestamp($obj->updated);
+            $short_description = $obj->short_description;
+            if (!$short_description) $short_description = '';
 
-            \App\Article::insert(array([
+            \App\Article::create([
                 'id' => $obj->id,
                 'title' => $obj->title,
                 'body' => $obj->body,
                 'image_url' => $obj->image_url,
-                'short_description' => $obj->short_description,
+                'short_description' => $short_description,
                 'category_id' => $act->id,
                 'created_at' => $created_at,
                 'updated_at' => $updated_at
-            ]));
+            ]);
         }
     }
 }

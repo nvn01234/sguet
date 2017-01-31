@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Article;
-use App\Category;
+use App\Faq;
+use Datatables;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Yajra\Datatables\Datatables;
 
 class FaqApiController extends Controller
 {
@@ -18,9 +17,8 @@ class FaqApiController extends Controller
      */
     public function search(Request $request)
     {
-        $faq_id = Category::whereName(Category::NAME_FAQ)->first(['id'])->id;
-        $q = $request['q'];
-        $result = Article::search($q)->where('category_id', $faq_id)->get();
+        $q = $request->get('q');
+        $result = Faq::search($q)->get();
         return response($result, 200);
     }
 
@@ -31,11 +29,7 @@ class FaqApiController extends Controller
      */
     public function algolia()
     {
-        /**
-         * @var mixed $faq
-         */
-        $faq = Category::whereName(Category::NAME_FAQ)->first()->articles();
-        $faq->searchable();
+        Faq::makeAllSearchable();
         return response("Done", 200);
     }
 
@@ -44,8 +38,7 @@ class FaqApiController extends Controller
         /**
          * @var HasMany $faq
          */
-        $faq = Category::whereName(Category::NAME_FAQ)->first()->articles();
-        $faq = $faq->getQuery()->get(['id', 'title', 'short_description', 'created_at', 'updated_at']);
+        $faq = Faq::get(['id', 'question', 'created_at', 'updated_at']);
         return Datatables::of($faq)->make(true);
     }
 }
