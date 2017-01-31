@@ -30,8 +30,8 @@ class Articles extends Migration
 
             $table->String('image_url')->nullable();
 
-            $table->unsignedInteger('category_id')->index()->nullable();
-            $table->foreign('category_id')->references('id')->on('categories')->onDelete('set null')->onUpdate('cascade');
+            $table->unsignedInteger('category_id')->index();
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade')->onUpdate('cascade');
 
             $table->timestamps();
 

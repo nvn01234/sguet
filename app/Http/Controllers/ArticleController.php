@@ -5,9 +5,11 @@ namespace App\Http\Controllers;
 use App\Article;
 use App\Category;
 use App\Tag;
+use Carbon\Carbon;
 use Datatables;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 
 class ArticleController extends Controller
 {
@@ -41,22 +43,26 @@ class ArticleController extends Controller
 
     public function create()
     {
-        // trả về array dạng ['id' => 'name', 'id' => 'name']
-        $categories = Category::all()->pluck('name', 'id');
+        $categories = Category::orderBy('id')->pluck('name', 'id');
         return view('article.create', compact('categories'));
     }
 
     public function store(Request $request)
     {
+        $cat_ids = Category::pluck('id')->toArray();
         $validator = \Validator::make($request->all(), [
             'title' => 'required|string|max:255',
             'short_description' => 'required|string|max:255',
             'body' => 'required|string',
             'tags' => 'array',
+            'category_id' => ['required', 'integer',
+                Rule::in($cat_ids)
+            ],
+            'image' => 'image'
         ]);
 
         if ($validator->fails()) {
-            return back()->withErrors($validator);
+            return back()->withErrors($validator)->withInput();
         }
 
         $article = Article::create($request->only(['title', 'short_description', 'category_id', 'body']));
@@ -70,6 +76,11 @@ class ArticleController extends Controller
                 $tags[] = $tag->id;
             }
             $article->syncTags($tags);
+        }
+        if ($request->hasFile('image')) {
+            $file_name = Carbon::now()->timestamp . '_' . $request->file('image')->getClientOriginalName();
+            $request->file('image')->move(public_path('img/upload'), $file_name);
+            $article->image_url = 'img/upload/' . $file_name;
         }
         $article->save();
 

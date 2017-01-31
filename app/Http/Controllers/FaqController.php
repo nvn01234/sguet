@@ -55,7 +55,7 @@ class FaqController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return back()->withErrors($validator);
+            return back()->withErrors($validator)->withInput();
         }
 
         Faq::withoutSyncingToSearch(function () use ($request) {
@@ -103,7 +103,7 @@ class FaqController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return back()->withErrors($validator);
+            return back()->withErrors($validator)->withInput();
         }
 
         /**
