@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Api;
 use App\Faq;
 use Datatables;
 use Illuminate\Database\Eloquent\Relations\HasMany;
-use Illuminate\Database\Query\Builder;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
