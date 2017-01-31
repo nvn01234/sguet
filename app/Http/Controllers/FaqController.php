@@ -26,7 +26,7 @@ class FaqController extends Controller
             /**
              * @var HasMany $faq
              */
-            $faq = Faq::get(['id', 'question', 'created_at', 'updated_at']);
+            $faq = Faq::all();
             return Datatables::of($faq)
                 ->addColumn('action', function ($faq) {
                     return

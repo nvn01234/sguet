@@ -1,186 +1,80 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: nguye
- * Date: 31/01/2017
- * Time: 8:19 CH
- */
+
 namespace App\Http\Controllers;
 
-
 use App\Article;
+use App\Category;
 use App\Tag;
 use Datatables;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Http\Request;
-use URL;
 
-
-class ArticleController extends Controller {
-
-    /**
-     * ArticleController constructor.
-     */
+class ArticleController extends Controller
+{
     public function __construct()
     {
         $this->middleware('auth');
     }
-    private function actionButton($action)
+
+    public function index(Request $request)
     {
-        return
-            '<a href="' . $action['url'] . '" class="btn btn-sm btn-outline ' . $action['color'] . '">'
-            . '<i class="fa fa-' . $action['icon'] . '"></i>'
-            . $action['name']
-            . '</a>';
-    }  public function index(Request $request)
-{
-    if ($request->ajax()) {
-        /**
-         * @var HasMany $article
-         */
-        $article = Article::get(['id', 'title', 'created_at', 'updated_at']);
-        return Datatables::of($article)
-            ->addColumn('action', function ($article) {
-                $actions = [
-                    [
-                        'name' => 'Sửa',
-                        'url' => URL::route('manage.article.edit', ['id' => $article->id]),
-                        'icon' => 'edit',
-                        'color' => 'green'
-                    ], [
-                        'name' => 'Xoá',
-                        'url' => URL::route('manage.article.delete', ['id' => $article->id]),
-                        'icon' => 'trash-o',
-                        'color' => 'red'
-                    ]
-                ];
-                $str = '';
-                foreach ($actions as $action) {
-                    $str .= $this->actionButton($action);
-                }
-                return $str;
-            })
-            ->make(true);
+        if ($request->ajax()) {
+            /**
+             * @var HasMany $article
+             */
+            $article = Article::query()->join('categories', 'categories.id', '=', 'articles.category_id')->get(['articles.*', 'categories.name']);
+            return Datatables::of($article)
+//                ->addColumn('action', function ($article) {
+//                    return
+//                        '<a href="' . URL::route('manage.$\article.edit', ['id' => $faq->id]) . '" class="btn btn-sm btn-outline green">
+//                        <i class="fa fa-edit"></i>Sửa</a>'
+//                        . '<a href="' . URL::route('manage.faq.delete', ['id' => $faq->id]) . '" class="btn btn-sm btn-outline red">
+//                        <i class="fa fa-trash-o"></i>Xoá</a>';
+//                })
+                ->make(true);
+        }
+
+        return view('article.index');
     }
 
-    return view('article.index');
-}
     public function create()
     {
-        return view('article.create');
+        // trả về array dạng ['id' => 'name', 'id' => 'name']
+        $categories = Category::all()->pluck('name', 'id');
+        return view('article.create', compact('categories'));
     }
 
     public function store(Request $request)
     {
         $validator = \Validator::make($request->all(), [
             'title' => 'required|string|max:255',
-            'short_description' => 'required|string',
-            'body' => 'required|text',
-            'image_url' => 'array',
+            'short_description' => 'required|string|max:255',
+            'body' => 'required|string',
+            'tags' => 'array',
         ]);
 
         if ($validator->fails()) {
             return back()->withErrors($validator);
         }
 
-        Article::withoutSyncingToSearch(function () use ($request) {
-            $article = Article::create($request->only(['title', 'short_description', 'body', 'image_url']));
-            if ($request->has('tags')) {
-                $tags = [];
-                foreach ($request->get('tags') as $tag_name) {
-                    /**
-                     * @var Tag $tag
-                     */
-                    $tag = Tag::firstOrCreate(['name' => $tag_name]);
-                    $tags[] = $tag->id;
-                }
-                $article->syncTags($tags);
+        $article = Article::create($request->only(['title', 'short_description','category_id', 'body']));
+        if ($request->has('tags')) {
+            $tags = [];
+            foreach ($request->get('tags') as $tag_name) {
+                /**
+                 * @var Tag $tag
+                 */
+                $tag = Tag::firstOrCreate(['name' => $tag_name]);
+                $tags[] = $tag->id;
             }
-
-            $article->save();
-            $article->searchable();
-        });
+            $article->syncTags($tags);
+        }
+        $article->save();
 
         \Session::flash('toastr', [
             [
-                'title' => 'Tạo mới Tin tức',
+                'title' => 'Tạo mới Tin tức - Hoạt động',
                 'message' => 'Đã tạo "' . $request->get('title') . '"',
-            ]
-        ]);
-        return redirect()->route('manage.article');
-    }
-
-    public function edit($id)
-    {
-        /**
-         * @var Article $article
-         *
-         */
-        $article = Article::findOrFail($id);
-        return view('article.edit', compact('article'));
-    }
-
-    public function update($id, Request $request)
-    {
-        $validator = \Validator::make($request->all(), [
-            'title' => 'required|string|max:255',
-            'short_description' => 'required|string',
-            'body' => 'required|text',
-            'image_url' => 'array',
-        ]);
-
-        if ($validator->fails()) {
-            return back()->withErrors($validator);
-        }
-
-        /**
-         * @var Article $article
-         *
-         */
-        $article = Article::findOrFail($id);
-
-        Article::withoutSyncingToSearch(function () use ($request, $article) {
-            $article->update($request->only(['title', 'short_description', 'body', 'image_url']));
-            if ($request->has('tags')) {
-                $tags = [];
-                foreach ($request->get('tags') as $tag_name) {
-                    /**
-                     * @var Tag $tag
-                     */
-                    $tag = Tag::firstOrCreate(['name' => $tag_name]);
-                    $tags[] = $tag->id;
-                }
-                $article->syncTags($tags);
-            } else {
-                $article->removeTag();
-            }
-
-            $article->save();
-            $article->searchable();
-        });
-
-        \Session::flash('toastr', [
-            [
-                'title' => 'Sửa Tin tức',
-                'message' => 'Đã cập nhật "' . $request->get('question') . '"',
-            ]
-        ]);
-        return redirect()->route('manage.article');
-    }
-
-    public function destroy($id)
-    {
-        /**
-         * @var Article $article
-         */
-        $article = Article::findOrFail($id);
-        $article->unsearchable();
-        $article->delete();
-
-        \Session::flash('toastr', [
-            [
-                'title' => 'Sửa Q&A',
-                'message' => 'Đã xoá "' . $article->title. '"',
             ]
         ]);
         return redirect()->route('manage.article');

@@ -26,6 +26,12 @@
                     Q&A
                 </a>
             </li>
+            <li class="nav-item @yield('menu.manage.article')">
+                <a href="{!! URL::route('manage.article') !!}" class="nav-link">
+                    <i class="fa fa-newspaper-o"></i>
+                    Tin tức - Hoạt động
+                </a>
+            </li>
         </ul>
     </li>
 @endif
