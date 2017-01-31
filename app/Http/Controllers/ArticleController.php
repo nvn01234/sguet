@@ -22,7 +22,9 @@ class ArticleController extends Controller
             /**
              * @var HasMany $article
              */
-            $article = Article::query()->join('categories', 'categories.id', '=', 'articles.category_id')->get(['articles.*', 'categories.name']);
+            $article = Article::query()
+                ->join('categories', 'categories.id', '=', 'articles.category_id')
+                ->get(['articles.id as id', 'title', 'short_description', 'created_at', 'updated_at', 'name']);
             return Datatables::of($article)
 //                ->addColumn('action', function ($article) {
 //                    return
@@ -57,7 +59,7 @@ class ArticleController extends Controller
             return back()->withErrors($validator);
         }
 
-        $article = Article::create($request->only(['title', 'short_description','category_id', 'body']));
+        $article = Article::create($request->only(['title', 'short_description', 'category_id', 'body']));
         if ($request->has('tags')) {
             $tags = [];
             foreach ($request->get('tags') as $tag_name) {

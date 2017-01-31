@@ -22,12 +22,12 @@
 @section('scripts')
     <script>
         var COLUMNS = [
-            {data: 'id', name: 'articles.id'},
-            {data: 'title', name: 'articles.title'},
-            {data: 'short_description', name: 'articles.short_description'},
-            {data: 'name', name: 'categories.name'},
-            {data: 'created_at', name: 'articles.created_at'},
-            {data: 'updated_at', name: 'articles.updated_at'}
+            {data: 'id'},
+            {data: 'title'},
+            {data: 'short_description'},
+            {data: 'name'},
+            {data: 'created_at'},
+            {data: 'updated_at'}
 //            {data: 'action', orderable: false, searchable: false}
         ]
     </script>
