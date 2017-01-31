@@ -79,8 +79,8 @@ class ArticleController extends Controller
         }
         if ($request->hasFile('image')) {
             $file_name = Carbon::now()->timestamp . '_' . $request->file('image')->getClientOriginalName();
-            $request->file('image')->move(public_path('img/upload'), $file_name);
-            $article->image_url = 'img/upload/' . $file_name;
+            $request->file('image')->move(public_path('storage'), $file_name);
+            $article->image_url = public_path('storage/' . $file_name);
         }
         $article->save();
 
