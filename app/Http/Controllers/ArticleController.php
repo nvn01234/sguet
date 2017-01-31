@@ -84,7 +84,7 @@ class ArticleController extends Controller {
         }
 
         Article::withoutSyncingToSearch(function () use ($request) {
-            $article = Article::create($request->only(['question', 'answer']));
+            $article = Article::create($request->only(['title', 'short_description', 'body', 'image_url']));
             if ($request->has('tags')) {
                 $tags = [];
                 foreach ($request->get('tags') as $tag_name) {
@@ -104,7 +104,7 @@ class ArticleController extends Controller {
         \Session::flash('toastr', [
             [
                 'title' => 'Tạo mới Tin tức',
-                'message' => 'Đã tạo "' . $request->get('question') . '"',
+                'message' => 'Đã tạo "' . $request->get('title') . '"',
             ]
         ]);
         return redirect()->route('manage.article');
