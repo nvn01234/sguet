@@ -1,8 +1,12 @@
 /*BEGIN VARIABLES*/
 var search_btn = $('#search_btn');
 var search_input = $('#search_input');
+
 var back_btn = $('#back_btn');
 var copylink_btn = $('#copylink_btn');
+var edit_btn = $('#edit_btn');
+var delete_btn = $('#delete_btn');
+
 var result_body = $('#search_result_body');
 var result_title = $('#search_result_title');
 var result_count = $('#search_result_count');
@@ -31,6 +35,22 @@ copylink_btn.hide = function () {
     copylink_btn.addClass('hide');
 };
 
+edit_btn.show = function () {
+    edit_btn.removeClass('hide');
+};
+
+edit_btn.hide = function () {
+    edit_btn.addClass('hide');
+};
+
+delete_btn.show = function () {
+    delete_btn.removeClass('hide');
+};
+
+delete_btn.hide = function () {
+    delete_btn.addClass('hide');
+};
+
 function generateOneResult(faq, index) {
     var a = $('<a>')
         .addClass('accordion-toggle')
@@ -45,6 +65,8 @@ function generateOneResult(faq, index) {
             );
             back_btn.show();
             copylink_btn.show();
+            edit_btn.show();
+            delete_btn.show();
         });
     result_body.append(
         $('<div>').addClass('panel panel-default').append(
@@ -63,8 +85,11 @@ function onsuccess(response) {
 
     $('#top_heading').removeClass('margin-top-20').addClass('margin-top-40');
     $('#search_result').show();
+
     back_btn.hide();
     copylink_btn.hide();
+    edit_btn.hide();
+    delete_btn.hide();
 
     result_title.text('Kết quả tìm kiếm cho "' + cache.query + '"');
     result_count.text(cache.response.length + ' kết quả');
@@ -149,6 +174,36 @@ copylink_btn.click(function () {
         toastr['info'](url + ' đã được sao chép vào clipboard', 'Copy đường dẫn');
     }
 });
+
+edit_btn.click(function () {
+    if (cache.index != undefined) {
+        var id = cache.response[cache.index].id;
+        window.location = EDIT_URL.replace('FAQ_ID', id);
+    }
+});
+
+delete_btn.click(function () {
+    if (cache.index != undefined) {
+        var faq = cache.response[cache.index];
+        $.ajax({
+            method: 'post',
+            data: {_token: TOKEN, id: faq.id},
+            url: DELETE_URL,
+            success: function (response) {
+                toastr['info'](response['message'], response['title']);
+                if (back_btn.is(':visible')) {
+                    cache.response.splice(cache.index, 1);
+                    onsuccess(cache.response);
+                } else {
+                    window.location = HOME_URL;
+                }
+            },
+            error: function () {
+                toastr['error']('Có lỗi gì đó đã xảy ra trong quá trình xoá, vui lòng thử lại sau.', 'Lỗi không xác định');
+            }
+        })
+    }
+});
 /*END HANDLE EVENTS*/
 
 // portlet tooltips
@@ -160,4 +215,14 @@ $('.portlet > .portlet-title .back').tooltip({
 $('.portlet > .portlet-title .copylink').tooltip({
     container: 'body',
     title: 'Copy đường dẫn'
+});
+
+$('.portlet > .portlet-title .edit').tooltip({
+    container: 'body',
+    title: 'Sửa'
+});
+
+$('.portlet > .portlet-title .delete').tooltip({
+    container: 'body',
+    title: 'Xoá'
 });

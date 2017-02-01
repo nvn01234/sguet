@@ -48,7 +48,13 @@
                                 <div class="actions">
                                     <button class="btn btn-circle btn-icon-only btn-default back hide"
                                             id="back_btn"></button>
-                                    <button class="btn btn-circle btn-icon-only btn-default copylink @if(isset($faq)) hide @endif"
+                                    @if(Auth::check())
+                                        <button class="btn btn-circle btn-icon-only btn-default edit"
+                                                id="edit_btn"></button>
+                                        <button class="btn btn-circle btn-icon-only btn-default delete"
+                                                id="delete_btn"></button>
+                                    @endif
+                                    <button class="btn btn-circle btn-icon-only btn-default copylink"
                                             id="copylink_btn"></button>
                                     <button class="btn btn-circle btn-icon-only btn-default fullscreen"
                                             title="Toàn màn hình"></button>
@@ -73,6 +79,13 @@
         var HOME_URL = '{!! URL::route('home') !!}';
         var SEARCH_URL = '{!! URL::route('api.faq.search') !!}';
     </script>
+    @if(Auth::check())
+        <script>
+            var EDIT_URL = '{!! URL::route('manage.faq.edit', ['id' => 'FAQ_ID']) !!}';
+            var DELETE_URL = '{!! URL::route('api.faq.delete') !!}';
+            var TOKEN = '{!! csrf_token() !!}';
+        </script>
+    @endif
     {!! Html::script('js/home.js') !!}
     @if(isset($faq))
         <script>

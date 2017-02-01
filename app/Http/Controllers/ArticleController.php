@@ -7,9 +7,11 @@ use App\Category;
 use App\Tag;
 use Carbon\Carbon;
 use Datatables;
+use Html;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
+use URL;
 
 class ArticleController extends Controller
 {
@@ -28,13 +30,13 @@ class ArticleController extends Controller
                 ->join('categories', 'categories.id', '=', 'articles.category_id')
                 ->get(['articles.id as id', 'title', 'short_description', 'created_at', 'updated_at', 'name']);
             return Datatables::of($article)
-//                ->addColumn('action', function ($article) {
-//                    return
-//                        '<a href="' . URL::route('manage.$\article.edit', ['id' => $faq->id]) . '" class="btn btn-sm btn-outline green">
-//                        <i class="fa fa-edit"></i>Sửa</a>'
-//                        . '<a href="' . URL::route('manage.faq.delete', ['id' => $faq->id]) . '" class="btn btn-sm btn-outline red">
-//                        <i class="fa fa-trash-o"></i>Xoá</a>';
-//                })
+                ->editColumn('title', function ($article) {
+                    return Html::link(
+                        URL::route('articles') . '#cbp=' . URL::route('api.article.show', ['id' => $article->id]),
+                        $article->title,
+                        ['target' => '_blank']
+                    );
+                })
                 ->make(true);
         }
 

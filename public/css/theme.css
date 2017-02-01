@@ -2,7 +2,15 @@
 .page-header.navbar .hor-menu.hor-menu-light .navbar-nav > li.active > a > i,
 .page-header.navbar .hor-menu.hor-menu-light .navbar-nav > li.current > a:hover > i,
 .page-header.navbar .hor-menu.hor-menu-light .navbar-nav > li.current > a > i {
-    color: white;
+    color: white !important;
+}
+
+.page-header.navbar .hor-menu.hor-menu-light .navbar-nav > li.active > a,
+.page-header.navbar .hor-menu.hor-menu-light .navbar-nav > li.active > a:hover,
+.page-header.navbar .hor-menu.hor-menu-light .navbar-nav > li.current > a,
+.page-header.navbar .hor-menu.hor-menu-light .navbar-nav > li.current > a:hover {
+    background: #337ab7 !important;
+    color: white !important;
 }
 
 .page-header.navbar .hor-menu .navbar-nav > li.active > a,

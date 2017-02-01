@@ -13,7 +13,9 @@ body {
 }
 
 .portlet > .portlet-title > .actions .btn-icon-only.btn-default.back,
-.portlet > .portlet-title > .actions .btn-icon-only.btn-default.copylink {
+.portlet > .portlet-title > .actions .btn-icon-only.btn-default.copylink,
+.portlet > .portlet-title > .actions .btn-icon-only.btn-default.edit,
+.portlet > .portlet-title > .actions .btn-icon-only.btn-default.delete {
     font-family: FontAwesome, sans-serif;
     color: #a0a0a0;
     padding-top: 3px;
@@ -25,6 +27,14 @@ body {
 
 .portlet > .portlet-title > .actions .btn-icon-only.btn-default.copylink:before {
     content: "\f0ea";
+}
+
+.portlet > .portlet-title > .actions .btn-icon-only.btn-default.edit:before {
+    content: "\f040";
+}
+
+.portlet > .portlet-title > .actions .btn-icon-only.btn-default.delete:before {
+    content: "\f1f8";
 }
 
 .faq-content-1 .faq-section > .faq-content .panel-heading .accordion-toggle {

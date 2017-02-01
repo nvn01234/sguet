@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 use App\Faq;
 use App\Tag;
 use Datatables;
+use Html;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Http\Request;
 use URL;
@@ -30,10 +31,21 @@ class FaqController extends Controller
             return Datatables::of($faq)
                 ->addColumn('action', function ($faq) {
                     return
-                        '<a href="' . URL::route('manage.faq.edit', ['id' => $faq->id]) . '" class="btn btn-sm btn-outline green">
-                        <i class="fa fa-edit"></i>Sửa</a>'
-                        . '<a href="' . URL::route('manage.faq.delete', ['id' => $faq->id]) . '" class="btn btn-sm btn-outline red">
-                        <i class="fa fa-trash-o"></i>Xoá</a>';
+                        Html::link(
+                            URL::route('manage.faq.edit', ['id' => $faq->id]),
+                            Html::tag('i', '', ['class' => 'fa fa-edit']) . 'Sửa',
+                            ['class' => 'btn btn-sm btn-outline green'],
+                            null, false
+                        )
+                        . Html::link(
+                            URL::route('manage.faq.delete', ['id' => $faq->id]),
+                            Html::tag('i', '', ['class' => 'fa fa-trash-o']) . 'Xoá',
+                            ['class' => 'btn btn-sm btn-outline red'],
+                            null, false
+                        );
+                })
+                ->editColumn('question', function ($faq) {
+                    return Html::link(URL::route('home') . '?faq=' . $faq->id, $faq->question, ['target' => '_blank']);
                 })
                 ->make(true);
         }

@@ -1,4 +1,4 @@
-<div class="cbp-item category-{{$article->category_id}}">
+<div class="cbp-item category-{{$article->category_id}} @foreach($article->tags as $tag) tag-{{$tag->id}} @endforeach">
     <div class="cbp-caption">
         <div class="cbp-caption-defaultWrap">
             {!! Html::image('img/SGUET.jpg', null, ['id' => 'img-'.$article->id]) !!}
@@ -12,7 +12,7 @@
             <div class="cbp-l-caption-alignCenter">
                 <div class="cbp-l-caption-body">
                     <a href="{!! URL::route('api.article.show', ['id' => $article->id]) !!}" rel="nofollow"
-                       class="cbp-singlePage cbp-l-caption-buttonLeft btn primary uppercase">chi tiết</a>
+                       class="cbp-singlePage cbp-l-caption-buttonLeft btn btn-primary uppercase">chi tiết</a>
                 </div>
             </div>
         </div>

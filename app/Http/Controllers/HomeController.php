@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use App\Article;
 use App\Category;
 use App\Faq;
+use App\Tag;
 use App\Team;
+use DB;
 use Illuminate\Http\Request;
 
 /**
@@ -38,12 +40,19 @@ class HomeController extends Controller
      */
     public function articles()
     {
-        $cat_news_id = Category::whereName(Category::NAME_NEWS)->first(['id'])->id;
-        $cat_act_id = Category::whereName(Category::NAME_ACTIVITIES)->first(['id'])->id;
-        $articles = Article::orderBy('created_at', 'desc')
-            ->take(8)
+        $categories = Category::orderBy('id')->get();
+        $tags = Tag::query()
+            ->join('article_tag', 'article_tag.tag_id', '=', 'tags.id')
+            ->groupBy('tags.id')
+            ->select(['tags.*', DB::raw('count(*) as count')])
+            ->orderBy('count', 'desc')
             ->get();
-        return view('articles', compact('cat_news_id', 'cat_act_id', 'articles'));
+        $articles = Article::query()
+            ->with('tags')
+            ->orderBy('created_at', 'desc')
+            ->take(config('settings.article_per_page', 8))
+            ->get();
+        return view('articles', compact('categories', 'articles', 'tags'));
     }
 
     /**

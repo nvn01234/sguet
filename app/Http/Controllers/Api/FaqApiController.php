@@ -19,4 +19,25 @@ class FaqApiController extends Controller
         $result = Faq::search($q)->get();
         return response($result, 200);
     }
+
+    public function destroy(Request $request)
+    {
+        if (!$request->has('id')) {
+            abort(404);
+        }
+
+        /**
+         * @var Faq $faq
+         */
+        $faq = Faq::findOrFail($request->get('id'));
+        $faq->unsearchable();
+        $faq->delete();
+
+        $content = [
+            'title' => 'Xoá Q&A',
+            'message' => 'Đã xoá ' . $faq->question
+        ];
+
+        return response($content, 200);
+    }
 }

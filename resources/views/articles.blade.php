@@ -33,14 +33,20 @@
                     cả
                     <div class="cbp-filter-counter"></div>
                 </div>
-                <div data-filter=".category-{{$cat_news_id}}" class="cbp-filter-item btn dark btn-outline uppercase">
-                    Tin tức
-                    <div class="cbp-filter-counter"></div>
-                </div>
-                <div data-filter=".category-{{$cat_act_id}}" class="cbp-filter-item btn dark btn-outline uppercase">
-                    Hoạt động
-                    <div class="cbp-filter-counter"></div>
-                </div>
+                @foreach($categories as $category)
+                    <div data-filter=".category-{{$category->id}}"
+                         class="cbp-filter-item btn dark btn-outline uppercase">
+                        {{$category->name}}
+                        <div class="cbp-filter-counter"></div>
+                    </div>
+                @endforeach
+                @foreach($tags as $tag)
+                    <div data-filter=".tag-{{$tag->id}}"
+                         class="cbp-filter-item btn dark btn-outline uppercase">
+                        {{$tag->name}}
+                        <div class="cbp-filter-counter"></div>
+                    </div>
+                @endforeach
             </div>
             <div id="js-grid-juicy-projects" class="cbp">
                 @foreach($articles as $article)
