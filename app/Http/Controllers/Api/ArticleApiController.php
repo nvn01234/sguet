@@ -23,7 +23,7 @@ class ArticleApiController extends Controller
         $articles = Article::query()
             ->with('tags')
             ->orderBy('created_at', 'desc')
-            ->paginate(config('settings.article_per_page', 8), ["*"], 'page', $page + 1);
+            ->paginate(8, ["*"], 'page', $page + 1);
         return view('api.article_index', compact('articles'));
     }
 
