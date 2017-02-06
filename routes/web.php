@@ -31,4 +31,6 @@ Route::get('/quan-ly/faq/{id}/xoa', 'FaqController@destroy')->name('manage.faq.d
 Route::get('/quan-ly/tin-tuc-hoat-dong', 'ArticleController@index')->name('manage.article');
 Route::get('/quan-ly/tin-tuc-hoat-dong/tao-moi', 'ArticleController@create')->name('manage.article.create');
 Route::post('/quan-ly/tin-tuc-hoat-dong/tao-moi', 'ArticleController@store')->name('manage.article.store');
-
+Route::get('/quan-ly/tin-tuc-hoat-dong/{id}/sua', 'ArticleController@edit')->name('manage.article.edit');
+Route::post('/quan-ly/tin-tuc-hoat-dong/{id}/sua', 'ArticleController@update')->name('manage.article.update');
+Route::get('/quan-ly/tin-tuc-hoat-dong/{id}/xoa', 'ArticleController@destroy')->name('manage.article.delete');

@@ -1,6 +1,6 @@
-@extends('layouts.form', ['button' => 'Tạo'])
+@extends('layouts.form', ['button' => 'Cập nhật'])
 
-@section('title', 'Tạo mới Tin tức - Hoạt động')
+@section('title', 'Sửa ' . $article->title)
 
 @section('page_level_plugins.styles')
     @parent
@@ -10,7 +10,7 @@
 @endsection
 
 @section('form-open')
-    {!! Form::open(['method' => 'post', 'role' => 'form', 'class' => 'form-horizontal', 'enctype' => 'multipart/form-data']) !!}
+    {!! Form::model($article, ['method' => 'post', 'role' => 'form', 'class' => 'form-horizontal', 'enctype' => 'multipart/form-data']) !!}
 @endsection
 
 @section('form-body')
@@ -75,7 +75,11 @@
     <script>
         $(document).ready(function () {
             summernote();
-            tagsinput();
+            tagsinput(function (tagsinput) {
+                @foreach($article->tags as $tag)
+                tagsinput.tagsinput('add', '{{$tag->name}}');
+                @endforeach
+            });
         })
     </script>
 @endsection

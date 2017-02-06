@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use \Illuminate\Database\Query\Builder;
+use Zizaco\Entrust\Traits\EntrustUserTrait;
 
 /**
  * App\User
@@ -23,9 +24,12 @@ use \Illuminate\Database\Query\Builder;
  * @method static Builder|User whereCreatedAt($value)
  * @method static Builder|User whereUpdatedAt($value)
  * @mixin \Eloquent
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Role[] $roles
  */
 class User extends Authenticatable
 {
+    use EntrustUserTrait;
+
     /**
      * @var string
      */

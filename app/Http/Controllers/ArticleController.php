@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Article;
 use App\Category;
 use App\Tag;
-use Carbon\Carbon;
 use Datatables;
 use Html;
 use Illuminate\Http\Request;
@@ -43,13 +42,13 @@ class ArticleController extends Controller
                 ->addColumn('action', function ($article) {
                     return
                         Html::link(
-                            '#' . $article->id,
+                            URL::route('manage.article.edit', ['id' => $article->id]),
                             Html::tag('i', '', ['class' => 'fa fa-edit']) . 'Sửa',
                             ['class' => 'btn btn-sm btn-outline green'],
                             null, false
                         )
                         . Html::link(
-                            '#' . $article->id,
+                            URL::route('manage.article.delete', ['id' => $article->id]),
                             Html::tag('i', '', ['class' => 'fa fa-trash-o']) . 'Xoá',
                             ['class' => 'btn btn-sm btn-outline red'],
                             null, false
@@ -77,14 +76,14 @@ class ArticleController extends Controller
             'category_id' => ['required', 'integer',
                 Rule::in($cat_ids)
             ],
-            'image' => 'image'
+            'image_url' => 'string|max:255'
         ]);
 
         if ($validator->fails()) {
             return back()->withErrors($validator)->withInput();
         }
 
-        $article = Article::create($request->only(['title', 'short_description', 'category_id', 'body']));
+        $article = Article::create($request->only(['title', 'short_description', 'category_id', 'body', 'image_url']));
         if ($request->has('tags')) {
             $tags = [];
             foreach ($request->get('tags') as $tag_name) {
@@ -96,17 +95,84 @@ class ArticleController extends Controller
             }
             $article->syncTags($tags);
         }
-        if ($request->hasFile('image')) {
-            $file_name = Carbon::now()->timestamp . '_' . $request->file('image')->getClientOriginalName();
-            $request->file('image')->move(public_path('storage'), $file_name);
-            $article->image_url = public_path('storage/' . $file_name);
-        }
         $article->save();
 
         \Session::flash('toastr', [
             [
                 'title' => 'Tạo mới Tin tức - Hoạt động',
                 'message' => 'Đã tạo "' . $request->get('title') . '"',
+            ]
+        ]);
+        return redirect()->route('manage.article');
+    }
+
+    public function edit($id)
+    {
+        /**
+         * @var Article $article
+         */
+        $article = Article::findOrFail($id);
+        $categories = Category::pluck('name', 'id');
+        return view('article.edit', compact('article', 'categories'));
+    }
+
+    public function update($id, Request $request)
+    {
+        $cat_ids = Category::pluck('id')->toArray();
+        $validator = \Validator::make($request->all(), [
+            'title' => 'required|string|max:255',
+            'short_description' => 'required|string|max:255',
+            'body' => 'required|string',
+            'tags' => 'array',
+            'category_id' => ['required', 'integer',
+                Rule::in($cat_ids)
+            ],
+            'image_url' => 'image_url'
+        ]);
+
+        if ($validator->fails()) {
+            return back()->withErrors($validator)->withInput();
+        }
+
+        /**
+         * @var Article $article
+         */
+        $article = Article::findOrFail($id);
+        $article->update($request->only(['title', 'short_description', 'category_id', 'body', 'image_url']));
+        if ($request->has('tags')) {
+            $tags = [];
+            foreach ($request->get('tags') as $tag_name) {
+                /**
+                 * @var Tag $tag
+                 */
+                $tag = Tag::firstOrCreate(['name' => $tag_name]);
+                $tags[] = $tag->id;
+            }
+            $article->syncTags($tags);
+        }
+        $article->save();
+
+        \Session::flash('toastr', [
+            [
+                'title' => 'Sửa Tin tức - Hoạt động',
+                'message' => 'Đã cập nhật "' . $request->get('title') . '"',
+            ]
+        ]);
+        return redirect()->route('manage.article');
+    }
+
+    public function destroy($id)
+    {
+        /**
+         * @var Article $article
+         */
+        $article = Article::findOrFail($id);
+        $article->delete();
+
+        \Session::flash('toastr', [
+            [
+                'title' => 'Xoá Tin tức - Hoạt động',
+                'message' => 'Đã xoá "' . $article->title . '"',
             ]
         ]);
         return redirect()->route('manage.article');

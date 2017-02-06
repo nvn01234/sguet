@@ -3,7 +3,6 @@ $(document).ready(function () {
         responsive: true,
         processing: true,
         serverSide: true,
-        // bStateSave: true,
         ajax: {
             url: '',
             method: 'get',
@@ -11,7 +10,6 @@ $(document).ready(function () {
                 toastr['error']('Vui lòng thử lại', 'Lỗi kết nối');
             }
         },
-        // lengthMenu: LENGTH_MENU,
         order: ORDER,
         timeout: 10000,
         language: {

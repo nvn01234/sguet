@@ -12,7 +12,7 @@ class CreatePermissionTables extends Migration
      */
     public function up()
     {
-        $config = config('laravel-permission.table_names');
+        /*$config = config('laravel-permission.table_names');
 
         Schema::create($config['roles'], function (Blueprint $table) {
             $table->increments('id');
@@ -77,7 +77,7 @@ class CreatePermissionTables extends Migration
                 ->onDelete('cascade');
 
             $table->primary(['permission_id', 'role_id']);
-        });
+        });*/
     }
 
     /**
@@ -87,12 +87,12 @@ class CreatePermissionTables extends Migration
      */
     public function down()
     {
-        $config = config('laravel-permission.table_names');
-
-        Schema::drop($config['role_has_permissions']);
-        Schema::drop($config['user_has_roles']);
-        Schema::drop($config['user_has_permissions']);
-        Schema::drop($config['roles']);
-        Schema::drop($config['permissions']);
+//        $config = config('laravel-permission.table_names');
+//
+//        Schema::dropIfExists($config['role_has_permissions']);
+//        Schema::dropIfExists($config['user_has_roles']);
+//        Schema::dropIfExists($config['user_has_permissions']);
+//        Schema::dropIfExists($config['roles']);
+//        Schema::dropIfExists($config['permissions']);
     }
 }
