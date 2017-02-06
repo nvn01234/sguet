@@ -8,7 +8,6 @@ use App\Tag;
 use Carbon\Carbon;
 use Datatables;
 use Html;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use URL;
@@ -23,13 +22,17 @@ class ArticleController extends Controller
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            /**
-             * @var HasMany $article
-             */
-            $article = Article::query()
+            $articles = Article::query()
                 ->join('categories', 'categories.id', '=', 'articles.category_id')
-                ->get(['articles.id as id', 'title', 'short_description', 'created_at', 'updated_at', 'name']);
-            return Datatables::of($article)
+                ->select([
+                    'articles.id as id',
+                    'articles.title as title',
+                    'articles.short_description as short_description',
+                    'categories.name as category_name',
+                    'articles.created_at as created_at',
+                    'articles.updated_at as updated_at',
+                ]);
+            return Datatables::of($articles)
                 ->editColumn('title', function ($article) {
                     return Html::link(
                         URL::route('articles') . '#cbp=' . URL::route('api.article.show', ['id' => $article->id]),
@@ -37,9 +40,23 @@ class ArticleController extends Controller
                         ['target' => '_blank']
                     );
                 })
+                ->addColumn('action', function ($article) {
+                    return
+                        Html::link(
+                            '#' . $article->id,
+                            Html::tag('i', '', ['class' => 'fa fa-edit']) . 'Sửa',
+                            ['class' => 'btn btn-sm btn-outline green'],
+                            null, false
+                        )
+                        . Html::link(
+                            '#' . $article->id,
+                            Html::tag('i', '', ['class' => 'fa fa-trash-o']) . 'Xoá',
+                            ['class' => 'btn btn-sm btn-outline red'],
+                            null, false
+                        );
+                })
                 ->make(true);
         }
-
         return view('article.index');
     }
 

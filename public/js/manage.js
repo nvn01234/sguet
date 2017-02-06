@@ -1,8 +1,19 @@
-$(function () {
+$(document).ready(function () {
     $('#manage-table').DataTable({
+        responsive: true,
         processing: true,
         serverSide: true,
-        ajax: '',
+        // bStateSave: true,
+        ajax: {
+            url: '',
+            method: 'get',
+            error: function () {
+                toastr['error']('Vui lòng thử lại', 'Lỗi kết nối');
+            }
+        },
+        // lengthMenu: LENGTH_MENU,
+        order: ORDER,
+        timeout: 10000,
         language: {
             "processing": "Đang xử lý...",
             "lengthMenu": "Xem _MENU_ mục",

@@ -24,11 +24,11 @@ class FaqController extends Controller
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            /**
-             * @var HasMany $faq
-             */
-            $faq = Faq::get(['id', 'question', 'created_at', 'updated_at']);
-            return Datatables::of($faq)
+            $faqs = Faq::query()->select(['id', 'question', 'created_at', 'updated_at']);
+            return Datatables::of($faqs)
+                ->editColumn('question', function ($faq) {
+                    return Html::link(URL::route('home') . '?faq=' . $faq->id, $faq->question, ['target' => '_blank']);
+                })
                 ->addColumn('action', function ($faq) {
                     return
                         Html::link(
@@ -43,9 +43,6 @@ class FaqController extends Controller
                             ['class' => 'btn btn-sm btn-outline red'],
                             null, false
                         );
-                })
-                ->editColumn('question', function ($faq) {
-                    return Html::link(URL::route('home') . '?faq=' . $faq->id, $faq->question, ['target' => '_blank']);
                 })
                 ->make(true);
         }

@@ -1,9 +1,5 @@
 @extends('layouts.single_portlet')
 
-@section('title')
-    Quản lý @yield('manage.name')
-@endsection
-
 @section('menu.manage', 'active')
 
 @section('page_level_plugins.styles')
@@ -45,11 +41,6 @@
     {!! Html::script('metronic/global/scripts/datatable.js') !!}
     {!! Html::script('metronic/global/plugins/datatables/datatables.min.js') !!}
     {!! Html::script('metronic/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.js') !!}
-@endsection
-
-@section('page_level_scripts')
-    @parent
-    {!! Html::script('metronic/pages/scripts/table-datatables-managed.min.js') !!}
 @endsection
 
 @section('scripts')
