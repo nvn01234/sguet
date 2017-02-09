@@ -24,14 +24,22 @@
             <span class="@hasSection('menu.manage') selected @endif"> </span>
         </a>
         <ul class="dropdown-menu pull-left">
+            @role('admin')
+            <li class="@yield('menu.manage.user')">
+                <a href="{!! route('manage.user') !!}">
+                    <i class="fa fa-users"></i>
+                    Người dùng
+                </a>
+            </li>
+            @endrole
             <li class="@yield('menu.manage.faq')">
-                <a href="{!! URL::route('manage.faq') !!}">
+                <a href="{!! route('manage.faq') !!}">
                     <i class="fa fa-question"></i>
                     Q&A
                 </a>
             </li>
             <li class="@yield('menu.manage.article')">
-                <a href="{!! URL::route('manage.article') !!}">
+                <a href="{!! route('manage.article') !!}">
                     <i class="fa fa-newspaper-o"></i>
                     Tin tức - Hoạt động
                 </a>

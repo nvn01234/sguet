@@ -15,6 +15,6 @@ class UsersSeeder extends Seeder
             'name' => 'Admin',
             'username' => 'admin',
             'password' => Hash::make('admin'),
-        ]);
+        ])->attachRole(\App\Role::findByName('admin'));
     }
 }

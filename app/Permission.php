@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Spatie\Permission\Exceptions\PermissionDoesNotExist;
 use Zizaco\Entrust\EntrustPermission;
 
 /**
@@ -24,6 +25,24 @@ use Zizaco\Entrust\EntrustPermission;
  */
 class Permission extends EntrustPermission
 {
-    protected $table = 'permissions';
     protected $fillable = ['name', 'display_name', 'description'];
+
+    /**
+     * Find a permission by its name.
+     *
+     * @param string $name
+     *
+     * @return \Illuminate\Database\Eloquent\Model|null|static
+     * @throws PermissionDoesNotExist
+     */
+    public static function findByName($name)
+    {
+        $permission = static::where('name', $name)->first();
+
+        if (! $permission) {
+            throw new PermissionDoesNotExist();
+        }
+
+        return $permission;
+    }
 }

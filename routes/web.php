@@ -21,6 +21,7 @@ Route::post('/login', 'Auth\LoginController@login')->name('login.post');
 Route::post('/logout', 'Auth\LoginController@logout')->name('logout');
 //Auth::routes();
 
+// middleware: auth
 Route::get('/quan-ly/faq', 'FaqController@index')->name('manage.faq');
 Route::get('/quan-ly/faq/tao-moi', 'FaqController@create')->name('manage.faq.create');
 Route::post('/quan-ly/faq/tao-moi', 'FaqController@store')->name('manage.faq.store');
@@ -28,9 +29,13 @@ Route::get('/quan-ly/faq/{id}/sua', 'FaqController@edit')->name('manage.faq.edit
 Route::post('/quan-ly/faq/{id}/sua', 'FaqController@update')->name('manage.faq.update');
 Route::get('/quan-ly/faq/{id}/xoa', 'FaqController@destroy')->name('manage.faq.delete');
 
+// middleware: auth
 Route::get('/quan-ly/tin-tuc-hoat-dong', 'ArticleController@index')->name('manage.article');
 Route::get('/quan-ly/tin-tuc-hoat-dong/tao-moi', 'ArticleController@create')->name('manage.article.create');
 Route::post('/quan-ly/tin-tuc-hoat-dong/tao-moi', 'ArticleController@store')->name('manage.article.store');
 Route::get('/quan-ly/tin-tuc-hoat-dong/{id}/sua', 'ArticleController@edit')->name('manage.article.edit');
 Route::post('/quan-ly/tin-tuc-hoat-dong/{id}/sua', 'ArticleController@update')->name('manage.article.update');
 Route::get('/quan-ly/tin-tuc-hoat-dong/{id}/xoa', 'ArticleController@destroy')->name('manage.article.delete');
+
+// middleware: role:admin
+Route::get('/quan-ly/nguoi-dung', 'UserController@index')->name('manage.user');

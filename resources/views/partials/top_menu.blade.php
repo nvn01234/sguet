@@ -24,6 +24,11 @@
                     </li>
                     <li class="divider"></li>
                     <li>
+                        <a href="javascript:">
+                            <i class="fa fa-key"></i> Đổi mật khẩu
+                        </a>
+                    </li>
+                    <li>
                         {!! Form::open(['method' => 'post', 'route' => ['logout'], 'id' => 'logout-form']) !!}
                         {!! Form::close() !!}
                         <a href="javascript:" onclick="logout()">

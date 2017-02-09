@@ -20,14 +20,22 @@
             <span class="arrow @hasSection('menu.manage') open @endif"></span>
         </a>
         <ul class="sub-menu">
+            @role('admin')
+            <li class="nav-item @yield('menu.manage.user')">
+                <a href="{!! route('manage.user') !!}" class="nav-link">
+                    <i class="fa fa-users"></i>
+                    Người dùng
+                </a>
+            </li>
+            @endrole
             <li class="nav-item @yield('menu.manage.faq')">
-                <a href="{!! URL::route('manage.faq') !!}" class="nav-link">
+                <a href="{!! route('manage.faq') !!}" class="nav-link">
                     <i class="fa fa-question"></i>
                     Q&A
                 </a>
             </li>
             <li class="nav-item @yield('menu.manage.article')">
-                <a href="{!! URL::route('manage.article') !!}" class="nav-link">
+                <a href="{!! route('manage.article') !!}" class="nav-link">
                     <i class="fa fa-newspaper-o"></i>
                     Tin tức - Hoạt động
                 </a>
