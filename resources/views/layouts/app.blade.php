@@ -5,6 +5,14 @@
     {!! Html::style('metronic/global/plugins/bootstrap-toastr/toastr.min.css') !!}
 @endsection
 
+@section('scripts.top')
+    @parent
+    <script>
+        window.laravel = '{!! csrf_token() !!}';
+    </script>
+    {!! Html::script('js/utils.js') !!}
+@endsection
+
 @section('body.class', 'page-sidebar-closed-hide-logo page-content-white page-full-width page-md page-header-fixed')
 
 @section('body.inner')

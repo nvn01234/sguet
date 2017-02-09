@@ -71,7 +71,6 @@
 
 @section('scripts')
     @parent
-    {!! Html::script('js/utils.js') !!}
     <script>
         $(document).ready(function () {
             summernote();

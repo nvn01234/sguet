@@ -56,3 +56,7 @@ function tagsinput(init) {
         .css('padding-bottom', '10px')
         .css('display', 'inline');
 }
+
+function logout() {
+    $('#logout-form').submit();
+}

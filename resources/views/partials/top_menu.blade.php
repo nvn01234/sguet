@@ -7,30 +7,40 @@
             <a href="javascript:" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
                data-close-others="true">
                 {!! Html::image('img/SGUET.jpg', '', ['class' => 'img-circle']) !!}
-                <span class="username username-hide-on-mobile"> {{Auth::user()->name}} </span>
+                <span class="username username-hide-on-mobile">
+                    @if(Auth::check())
+                        {{Auth::user()->name}}
+                    @else
+                        Khách
+                    @endif
+                </span>
                 <i class="fa fa-angle-down"></i>
             </a>
             <ul class="dropdown-menu dropdown-menu-default">
-                {{--<li>--}}
-                {{--<a href="page_user_profile_1.html">--}}
-                {{--<i class="icon-user"></i> My Profile </a>--}}
-                {{--</li>--}}
-                <li class="divider"></li>
-                <li>
-                    <script>
-                        function logout() {
-                            $('#logout-form').submit();
-                        }
-                    </script>
-                    <a href="javascript:" onclick="logout()">
-                        <i class="icon-key"></i> Đăng xuất
-                    </a>
-                </li>
+                @if (Auth::check())
+                    <li>
+                        <a href="javascript:">
+                            <i class="fa fa-user"></i> Hồ sơ cá nhân </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        {!! Form::open(['method' => 'post', 'route' => ['logout'], 'id' => 'logout-form']) !!}
+                        {!! Form::close() !!}
+                        <a href="javascript:" onclick="logout()">
+                            <i class="fa fa-sign-out"></i> Đăng xuất
+                        </a>
+                    </li>
+                @else
+                    <li>
+                        <a href="{!! route('login') !!}">
+                            <i class="fa fa-sign-in"></i> Đăng nhập
+                        </a>
+                    </li>
+                @endif
             </ul>
         </li>
         <!-- END USER LOGIN DROPDOWN -->
     </ul>
-    {!! Form::open(['method' => 'post', 'route' => ['logout'], 'id' => 'logout-form']) !!}
-    {!! Form::close() !!}
+
 </div>
 <!-- END TOP NAVIGATION MENU -->

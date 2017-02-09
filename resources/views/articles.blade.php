@@ -20,11 +20,6 @@
     {!! Html::style('css/articles.css') !!}
 @endsection
 
-@section('scripts.top')
-    @parent
-    {!! Html::script('js/utils.js') !!}
-@endsection
-
 @section('page_content')
     <div class="page-content">
         <div class="portfolio-content portfolio-1">
