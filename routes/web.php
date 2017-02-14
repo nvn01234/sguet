@@ -39,3 +39,4 @@ Route::get('/quan-ly/tin-tuc-hoat-dong/{id}/xoa', 'ArticleController@destroy')->
 
 // middleware: role:admin
 Route::get('/quan-ly/nguoi-dung', 'UserController@index')->name('manage.user');
+Route::get('/quan-ly/nguoi-dung/tao-moi', 'UserController@create')->name('manage.user.create');

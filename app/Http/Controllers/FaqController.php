@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 
+use App\DataTables\FaqDatatable;
 use App\Faq;
 use App\Tag;
 use Datatables;
@@ -21,33 +22,9 @@ class FaqController extends Controller
         $this->middleware('auth');
     }
 
-    public function index(Request $request)
+    public function index(FaqDatatable $datatable)
     {
-        if ($request->ajax()) {
-            $faqs = Faq::query()->select(['id', 'question', 'created_at', 'updated_at']);
-            return Datatables::of($faqs)
-                ->editColumn('question', function ($faq) {
-                    return Html::link(URL::route('home') . '?faq=' . $faq->id, $faq->question, ['target' => '_blank']);
-                })
-                ->addColumn('action', function ($faq) {
-                    return
-                        Html::link(
-                            URL::route('manage.faq.edit', ['id' => $faq->id]),
-                            Html::tag('i', '', ['class' => 'fa fa-edit']) . 'Sửa',
-                            ['class' => 'btn btn-sm btn-outline green'],
-                            null, false
-                        )
-                        . Html::link(
-                            URL::route('manage.faq.delete', ['id' => $faq->id]),
-                            Html::tag('i', '', ['class' => 'fa fa-trash-o']) . 'Xoá',
-                            ['class' => 'btn btn-sm btn-outline red'],
-                            null, false
-                        );
-                })
-                ->make(true);
-        }
-
-        return view('faq.index');
+        return $datatable->render('faq.index');
     }
 
     public function create()

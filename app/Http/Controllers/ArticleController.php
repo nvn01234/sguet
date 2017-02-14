@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Article;
 use App\Category;
+use App\DataTables\ArticleDatatable;
 use App\Tag;
 use Datatables;
 use Html;
@@ -18,45 +19,9 @@ class ArticleController extends Controller
         $this->middleware('auth');
     }
 
-    public function index(Request $request)
+    public function index(ArticleDatatable $datatable)
     {
-        if ($request->ajax()) {
-            $articles = Article::query()
-                ->join('categories', 'categories.id', '=', 'articles.category_id')
-                ->select([
-                    'articles.id as id',
-                    'articles.title as title',
-                    'articles.short_description as short_description',
-                    'categories.name as category_name',
-                    'articles.created_at as created_at',
-                    'articles.updated_at as updated_at',
-                ]);
-            return Datatables::of($articles)
-                ->editColumn('title', function ($article) {
-                    return Html::link(
-                        URL::route('articles') . '#cbp=' . URL::route('api.article.show', ['id' => $article->id]),
-                        $article->title,
-                        ['target' => '_blank']
-                    );
-                })
-                ->addColumn('action', function ($article) {
-                    return
-                        Html::link(
-                            URL::route('manage.article.edit', ['id' => $article->id]),
-                            Html::tag('i', '', ['class' => 'fa fa-edit']) . 'Sửa',
-                            ['class' => 'btn btn-sm btn-outline green'],
-                            null, false
-                        )
-                        . Html::link(
-                            URL::route('manage.article.delete', ['id' => $article->id]),
-                            Html::tag('i', '', ['class' => 'fa fa-trash-o']) . 'Xoá',
-                            ['class' => 'btn btn-sm btn-outline red'],
-                            null, false
-                        );
-                })
-                ->make(true);
-        }
-        return view('article.index');
+        return $datatable->render('article.index');
     }
 
     public function create()

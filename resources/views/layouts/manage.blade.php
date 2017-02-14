@@ -28,12 +28,7 @@
             </div>
         </div>
     @endif
-    <table class="table table-striped table-bordered table-hover table-checkable order-column"
-           id="manage-table">
-        <thead>
-        @yield('thead')
-        </thead>
-    </table>
+    {!! $dataTable->table(['class' => 'table dataTable table-striped table-hover table-bordered']) !!}
 @endsection
 
 @section('page_level_plugins.scripts')
@@ -46,4 +41,5 @@
 @section('scripts')
     @parent
     {!! Html::script('js/manage.js') !!}
+    {!! $dataTable->scripts() !!}
 @endsection
