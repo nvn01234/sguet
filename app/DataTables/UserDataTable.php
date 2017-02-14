@@ -17,6 +17,13 @@ class UserDataTable extends DataTable
         return $this->datatables
             ->eloquent($this->query())
 //            ->addColumn('action', 'path.to.action.view')
+            ->addColumn('roles', function ($user) {
+                /**
+                 * @var User $user
+                 */
+                $roles = $user->roles;
+                return view('user.datatable_column_roles', compact('roles'))->render();
+            })
             ->make(true);
     }
 
@@ -40,10 +47,10 @@ class UserDataTable extends DataTable
     public function html()
     {
         return $this->builder()
-                    ->columns($this->getColumns())
-                    ->ajax('')
-                    ->addAction(['width' => '80px'])
-                    ->parameters($this->getBuilderParameters());
+            ->columns($this->getColumns())
+            ->ajax('')
+//                    ->addAction(['width' => '80px'])
+            ->parameters($this->getBuilderParameters());
     }
 
     /**
@@ -54,20 +61,18 @@ class UserDataTable extends DataTable
     protected function getColumns()
     {
         return [
-            'id',
-            // add your columns
-            'created_at',
-            'updated_at',
+            'name' => ['title' => 'Tên'],
+            'username' => ['title' => 'Tên đăng nhập'],
+            'roles' => ['title' => 'Quyền', 'orderable' => false, 'searchable' => false],
+            'created_at' => ['title' => 'Tạo lúc'],
+            'updated_at' => ['title' => 'Sửa lúc'],
         ];
     }
 
-    /**
-     * Get filename for export.
-     *
-     * @return string
-     */
-    protected function filename()
+    protected function getBuilderParameters()
     {
-        return 'userdatatables_' . time();
+        return [
+            'order' => [3, 'desc']
+        ];
     }
 }

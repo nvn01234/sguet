@@ -16,11 +16,11 @@ class FaqDatatable extends DataTable
     {
         return $this->datatables
             ->eloquent($this->query())
-            ->addColumn('action', function ($faq) {
-                return view('faq.datatable_action', compact('faq'))->render();
-            })
             ->editColumn('question', function ($faq) {
                 return view('faq.datatable_column_question', compact('faq'))->render();
+            })
+            ->addColumn('action', function ($faq) {
+                return view('faq.datatable_action', compact('faq'))->render();
             })
             ->make(true);
     }
