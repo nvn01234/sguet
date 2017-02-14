@@ -39,7 +39,7 @@ class ArticleDatatable extends DataTable
      */
     public function query()
     {
-        $query = Article::query();
+        $query = Article::query()->with('category')->select('articles.*');
 
         return $this->applyScopes($query);
     }
