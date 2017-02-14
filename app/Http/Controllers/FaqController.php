@@ -6,11 +6,7 @@ namespace App\Http\Controllers;
 use App\DataTables\FaqDatatable;
 use App\Faq;
 use App\Tag;
-use Datatables;
-use Html;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Http\Request;
-use URL;
 
 class FaqController extends Controller
 {
@@ -57,8 +53,6 @@ class FaqController extends Controller
                 }
                 $faq->syncTags($tags);
             }
-
-            $faq->save();
             $faq->searchable();
         });
 
@@ -114,7 +108,6 @@ class FaqController extends Controller
                 $faq->removeTag();
             }
 
-            $faq->save();
             $faq->searchable();
         });
 

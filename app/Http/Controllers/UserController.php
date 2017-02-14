@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\DataTables\UserDataTable;
+use App\Role;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -23,7 +24,8 @@ class UserController extends Controller
 
     public function create()
     {
-        return view('user.create');
+        $roles = Role::pluck('display_name', 'id');
+        return view('user.create', compact('roles'));
     }
 
     public function store(Request $request)

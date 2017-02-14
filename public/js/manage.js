@@ -1,7 +1,6 @@
 $.extend(true, $.fn.dataTable.defaults, {
     responsive: true,
     processing: true,
-    serverSide: true,
     pagingType: 'full_numbers',
     timeout: 10000,
     language: {

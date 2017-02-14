@@ -19,8 +19,12 @@ class ArticleDatatable extends DataTable
             ->addColumn('action', function ($article) {
                 return view('article.datatable_action', compact('article'))->render();
             })
-            ->editColumn('category_id', function ($article) {
-                return $article->category->name;
+            ->addColumn('category', function ($article) {
+                /**
+                 * @var Article $article
+                 */
+                $category = $article->category;
+                return view('article.datatable_column_category', compact('category'))->render();
             })
             ->editColumn('title', function ($article) {
                 return view('article.datatable_column_title', compact('article'))->render();
@@ -64,7 +68,7 @@ class ArticleDatatable extends DataTable
         return [
             'title' => ['title' => 'Tiêu đề'],
             'short_description' => ['title' => 'Mô tả'],
-            'category_id' => ['title' => 'Loại', 'class' => 'col-md-1', 'searchable' => false],
+            'category' => ['title' => 'Loại', 'class' => 'col-md-1', 'searchable' => false, 'orderable' => false],
             'created_at' => ['title' => 'Tạo lúc'],
             'updated_at' => ['title' => 'Sửa lúc'],
         ];

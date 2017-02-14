@@ -60,7 +60,6 @@ class ArticleController extends Controller
             }
             $article->syncTags($tags);
         }
-        $article->save();
 
         \Session::flash('toastr', [
             [
@@ -115,7 +114,6 @@ class ArticleController extends Controller
             }
             $article->syncTags($tags);
         }
-        $article->save();
 
         \Session::flash('toastr', [
             [
