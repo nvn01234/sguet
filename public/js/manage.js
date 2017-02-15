@@ -1,7 +1,16 @@
 $.extend(true, $.fn.dataTable.defaults, {
     responsive: true,
     processing: true,
+    serverSide: true,
     pagingType: 'full_numbers',
+    ajax: {
+        url: '',
+        method: 'GET',
+        data: {_token: window.Laravel},
+        error: function () {
+            toastr['error']('Vui lòng tải lại trang', 'Lỗi tải trang')
+        }
+    },
     timeout: 10000,
     language: {
         "processing": "Đang xử lý...",

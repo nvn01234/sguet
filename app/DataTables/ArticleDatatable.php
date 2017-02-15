@@ -53,8 +53,11 @@ class ArticleDatatable extends DataTable
     {
         return $this->builder()
             ->columns($this->getColumns())
-            ->ajax('')
-            ->addAction(['title' => 'Hành động', 'class' => 'col-md-2'])
+            ->ajax([
+                'url' => '',
+                'error' => ''
+            ])
+            ->addAction(['title' => 'Hành động', 'class' => 'col-md-1'])
             ->parameters($this->getBuilderParameters());
     }
 
@@ -66,11 +69,11 @@ class ArticleDatatable extends DataTable
     protected function getColumns()
     {
         return [
-            'title' => ['title' => 'Tiêu đề'],
-            'short_description' => ['title' => 'Mô tả'],
+            'title' => ['title' => 'Tiêu đề', 'class' => 'col-md-3'],
+            'short_description' => ['title' => 'Mô tả', 'class' => 'col-md-3'],
             'category' => ['title' => 'Loại', 'class' => 'col-md-1', 'searchable' => false, 'orderable' => false],
-            'created_at' => ['title' => 'Tạo lúc'],
-            'updated_at' => ['title' => 'Sửa lúc'],
+            'created_at' => ['title' => 'Tạo lúc', 'class' => 'col-md-1'],
+            'updated_at' => ['title' => 'Sửa lúc', 'class' => 'col-md-1'],
         ];
     }
 

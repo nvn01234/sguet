@@ -24,12 +24,13 @@ class UserController extends Controller
 
     public function create()
     {
-        $roles = Role::pluck('display_name', 'id');
+        $roles = Role::all();
         return view('user.create', compact('roles'));
     }
 
     public function store(Request $request)
     {
+
     }
 
 }

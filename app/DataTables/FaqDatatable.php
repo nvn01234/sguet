@@ -46,7 +46,10 @@ class FaqDatatable extends DataTable
     {
         return $this->builder()
             ->columns($this->getColumns())
-            ->ajax('')
+            ->ajax([
+                'url' => '',
+                'error' => ''
+            ])
             ->addAction(['title' => 'Hành động', 'class' => 'col-md-2'])
             ->parameters($this->getBuilderParameters());
     }
@@ -59,9 +62,9 @@ class FaqDatatable extends DataTable
     protected function getColumns()
     {
         return [
-            'question' => ['title' => 'Câu hỏi'],
-            'created_at' => ['title' => 'Tạo lúc'],
-            'updated_at' => ['title' => 'Sửa lúc'],
+            'question' => ['title' => 'Câu hỏi', 'class' => 'col-md-6'],
+            'created_at' => ['title' => 'Tạo lúc', 'class' => 'col-md-2'],
+            'updated_at' => ['title' => 'Sửa lúc', 'class' => 'col-md-2'],
         ];
     }
 
