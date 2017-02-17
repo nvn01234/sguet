@@ -24,7 +24,7 @@
                     </li>
                     <li class="divider"></li>
                     <li>
-                        <a href="javascript:">
+                        <a href="{!! route('auth.password.change.show') !!}">
                             <i class="fa fa-key"></i> Đổi mật khẩu
                         </a>
                     </li>

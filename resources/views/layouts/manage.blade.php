@@ -19,7 +19,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="btn-group">
-                        <a class="btn sbold btn-primary" href="@yield('create_route')">
+                        <a class="btn sbold blue" href="@yield('create_route')">
                             Tạo mới
                             <i class="fa fa-plus"></i>
                         </a>

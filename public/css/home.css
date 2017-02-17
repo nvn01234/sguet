@@ -1,5 +1,7 @@
 .about-header {
     height: 100vh;
+    background-image: url('/img/bg.jpg');
+    background-size: cover;
 }
 
 body {

@@ -14,10 +14,6 @@
     {!! Html::style('css/about.css') !!}
 @endsection
 
-@section('body.class')
-    @parent page-container-bg-solid
-@endsection
-
 @section('page_content')
     <div class="page-content">
         <!-- BEGIN CARDS -->
@@ -120,19 +116,5 @@
 @section('scripts')
     @parent
     {!! Html::script('js/go.js') !!}
-    <script>
-        var nodeDataArray = [
-                @foreach($teams as $team)
-            {
-                key: '{{$team->id - 1}}',
-                name: '{{$team->name}}',
-                gender: 'M',
-                birthYear: '0',
-                @if($team->parent_id) parent: '{{$team->parent_id - 1}}', @endif
-            },
-            @endforeach
-        ];
-        var rootkey = '{{$root_id}}';
-    </script>
     {!! Html::script('js/about.js') !!}
 @endsection

@@ -44,3 +44,6 @@ Route::post('/quan-ly/nguoi-dung/tao-moi', 'UserController@store')->name('manage
 Route::get('/quan-ly/nguoi-dung/{id}/sua', 'UserController@edit')->name('manage.user.edit');
 Route::post('/quan-ly/nguoi-dung/{id}/sua', 'UserController@update')->name('manage.user.update');
 Route::get('/quan-ly/nguoi-dung/{id}/xoa', 'UserController@destroy')->name('manage.user.delete');
+
+Route::get('/tai-khoan/doi-mat-khau', 'Auth\ChangePasswordController@show')->name('auth.password.change.show');
+Route::post('/tai-khoan/doi-mat-khau', 'Auth\ChangePasswordController@change')->name('auth.password.change');

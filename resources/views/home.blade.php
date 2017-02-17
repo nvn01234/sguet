@@ -24,7 +24,7 @@
                     <input type="text" class="form-control" id="search_input"
                            placeholder="Nhập câu hỏi">
                     <span class="input-group-btn">
-                        <button type="button" class="btn green" id="search_btn">
+                        <button type="button" class="btn blue" id="search_btn">
                             <i class="fa fa-search"></i> Tìm kiếm
                         </button>
                     </span>
