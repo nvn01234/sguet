@@ -89,7 +89,7 @@
         </div>
         <!-- END CARDS -->
 
-        <div class="row">
+        <div class="row" hidden>
             <div class="col-sm-12">
                 <div class="portlet light">
                     <div class="portlet-title">
