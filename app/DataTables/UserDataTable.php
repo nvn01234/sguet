@@ -16,7 +16,9 @@ class UserDataTable extends DataTable
     {
         return $this->datatables
             ->eloquent($this->query())
-            ->addColumn('action', '')
+            ->editColumn('action', function ($user){
+                return view('user.datatable_action', compact('user'))->render();
+            })
             ->addColumn('roles', function ($user) {
                 /**
                  * @var User $user
@@ -67,15 +69,18 @@ class UserDataTable extends DataTable
             'name' => ['title' => 'Tên', 'class' => 'col-md-2'],
             'username' => ['title' => 'Tên đăng nhập', 'class' => 'col-md-2'],
             'roles' => ['title' => 'Quyền', 'orderable' => false, 'searchable' => false, 'class' => 'col-md-2'],
-            'created_at' => ['title' => 'Tạo lúc', 'class' => 'col-md-2'],
-            'updated_at' => ['title' => 'Sửa lúc', 'class' => 'col-md-2'],
+            'created_at' => ['title' => 'Tạo lúc', 'class' => 'col-md-2', 'searchable' => false],
+            'updated_at' => ['title' => 'Sửa lúc', 'class' => 'col-md-2', 'searchable' => false],
         ];
     }
 
     protected function getBuilderParameters()
     {
         return [
-            'order' => [3, 'desc']
+            'order' => [3, 'desc'],
+            'language' => [
+                'searchPlaceholder' => 'Nhập Tên hoặc Tên đăng nhập'
+            ],
         ];
     }
 }

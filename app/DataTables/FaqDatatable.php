@@ -19,7 +19,7 @@ class FaqDatatable extends DataTable
             ->editColumn('question', function ($faq) {
                 return view('faq.datatable_column_question', compact('faq'))->render();
             })
-            ->addColumn('action', function ($faq) {
+            ->editUColumn('action', function ($faq) {
                 return view('faq.datatable_action', compact('faq'))->render();
             })
             ->make(true);
@@ -63,8 +63,8 @@ class FaqDatatable extends DataTable
     {
         return [
             'question' => ['title' => 'Câu hỏi', 'class' => 'col-md-6'],
-            'created_at' => ['title' => 'Tạo lúc', 'class' => 'col-md-2'],
-            'updated_at' => ['title' => 'Sửa lúc', 'class' => 'col-md-2'],
+            'created_at' => ['title' => 'Tạo lúc', 'class' => 'col-md-2', 'searchable' => false],
+            'updated_at' => ['title' => 'Sửa lúc', 'class' => 'col-md-2', 'searchable' => false],
         ];
     }
 
@@ -72,6 +72,9 @@ class FaqDatatable extends DataTable
     {
         return [
             'order' => [[1, 'desc']],
+            'language' => [
+                'searchPlaceholder' => 'Nhập câu hỏi'
+            ]
         ];
     }
 }

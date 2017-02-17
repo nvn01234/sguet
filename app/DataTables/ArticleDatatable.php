@@ -16,10 +16,10 @@ class ArticleDatatable extends DataTable
     {
         return $this->datatables
             ->eloquent($this->query())
-            ->addColumn('action', function ($article) {
+            ->editColumn('action', function ($article) {
                 return view('article.datatable_action', compact('article'))->render();
             })
-            ->addColumn('category', function ($article) {
+            ->editColumn('category_id', function ($article) {
                 /**
                  * @var Article $article
                  */
@@ -71,16 +71,19 @@ class ArticleDatatable extends DataTable
         return [
             'title' => ['title' => 'Tiêu đề', 'class' => 'col-md-3'],
             'short_description' => ['title' => 'Mô tả', 'class' => 'col-md-3'],
-            'category' => ['title' => 'Loại', 'class' => 'col-md-1', 'searchable' => false, 'orderable' => false],
-            'created_at' => ['title' => 'Tạo lúc', 'class' => 'col-md-1'],
-            'updated_at' => ['title' => 'Sửa lúc', 'class' => 'col-md-1'],
+            'category_id' => ['title' => 'Loại', 'class' => 'col-md-1', 'searchable' => false],
+            'created_at' => ['title' => 'Tạo lúc', 'class' => 'col-md-1', 'searchable' => false],
+            'updated_at' => ['title' => 'Sửa lúc', 'class' => 'col-md-1', 'searchable' => false],
         ];
     }
 
     protected function getBuilderParameters()
     {
         return [
-            'order' => [3, 'desc']
+            'order' => [3, 'desc'],
+            'language' => [
+                'searchPlaceholder' => 'Nhập tiêu đề hoặc Mô tả'
+            ]
         ];
     }
 }

@@ -1,9 +1,9 @@
-@extends('layouts.form', ['button' => 'Tạo'])
+@extends('layouts.form', ['button' => 'Cập nhật'])
 
-@section('title', 'Tạo mới Người dùng')
+@section('title', 'Sửa thông tin ' . ($role ? $role->display_name : 'Người dùng') . ' ' . $user->name)
 
 @section('form-open')
-    {!! Form::open(['method' => 'post', 'role' => 'form', 'class' => 'form-horizontal']) !!}
+    {!! Form::model($user, ['method' => 'post', 'role' => 'form', 'class' => 'form-horizontal']) !!}
 @endsection
 
 @section('form-body')
@@ -20,24 +20,6 @@
         <div class="col-md-10">
             {!! Form::text('username', old('username'), ['class' => 'form-control', 'required' => 'required', 'maxLength' => 255]) !!}
             <div class="form-control-focus"></div>
-        </div>
-    </div>
-
-    <div class="form-group form-md-line-input @if($errors->has('password')) has-error @endif">
-        {!! Form::label('password', 'Mật khẩu' . view('partials.span_required')->render(), ['class' => 'col-md-2 control-label'], false) !!}
-        <div class="col-md-10 input-icon">
-            {!! Form::password('password', ['class' => 'form-control', 'required' => 'required', 'maxLength' => 100]) !!}
-            <div class="form-control-focus"></div>
-            <i class="fa fa-key"></i>
-        </div>
-    </div>
-
-    <div class="form-group form-md-line-input @if($errors->has('password_confirmation')) has-error @endif">
-        {!! Form::label('password_confirmation', 'Nhập lại mật khẩu' . view('partials.span_required')->render(), ['class' => 'col-md-2 control-label'], false) !!}
-        <div class="col-md-10 input-icon">
-            {!! Form::password('password_confirmation', ['class' => 'form-control', 'required' => 'required', 'maxLength' => 100]) !!}
-            <div class="form-control-focus"></div>
-            <i class="fa fa-key"></i>
         </div>
     </div>
 

@@ -13,6 +13,7 @@ $.extend(true, $.fn.dataTable.defaults, {
     },
     timeout: 10000,
     language: {
+        "emptyTable": "Không có dữ liệu trong bảng",
         "processing": "Đang xử lý...",
         "lengthMenu": "Xem _MENU_ mục",
         "zeroRecords": "Không tìm thấy dòng nào phù hợp",

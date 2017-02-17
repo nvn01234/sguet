@@ -1,0 +1,1 @@
+<span class="required" aria-required="true">*</span>

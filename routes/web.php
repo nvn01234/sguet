@@ -40,3 +40,7 @@ Route::get('/quan-ly/tin-tuc-hoat-dong/{id}/xoa', 'ArticleController@destroy')->
 // middleware: role:admin
 Route::get('/quan-ly/nguoi-dung', 'UserController@index')->name('manage.user');
 Route::get('/quan-ly/nguoi-dung/tao-moi', 'UserController@create')->name('manage.user.create');
+Route::post('/quan-ly/nguoi-dung/tao-moi', 'UserController@store')->name('manage.user.store');
+Route::get('/quan-ly/nguoi-dung/{id}/sua', 'UserController@edit')->name('manage.user.edit');
+Route::post('/quan-ly/nguoi-dung/{id}/sua', 'UserController@update')->name('manage.user.update');
+Route::get('/quan-ly/nguoi-dung/{id}/xoa', 'UserController@destroy')->name('manage.user.delete');

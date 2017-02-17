@@ -27,3 +27,7 @@
     background: linear-gradient(to bottom, transparent 0%, transparent 100%);
     /* W3C */
 }
+
+div.dataTables_wrapper div.dataTables_filter input {
+    width: 200px !important;
+}
