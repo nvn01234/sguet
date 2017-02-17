@@ -1,0 +1,1 @@
+<a href="{!! route('home') !!}?faq={{$faq->id}}">{{$faq->question}}</a>
