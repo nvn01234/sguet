@@ -22,39 +22,42 @@
 
 @section('page_content')
     <div class="page-content">
-        <div class="portfolio-content portfolio-1">
-            <div id="js-filters-juicy-projects" class="cbp-l-filters-button">
-                <div data-filter="*" class="cbp-filter-item-active cbp-filter-item btn dark btn-outline uppercase"> Tất
-                    cả
-                    <div class="cbp-filter-counter"></div>
+        <div class="portlet light">
+            <div class="portfolio-content portfolio-1">
+                <div id="js-filters-juicy-projects" class="cbp-l-filters-button">
+                    <div data-filter="*"
+                         class="cbp-filter-item-active cbp-filter-item btn dark btn-outline uppercase">
+                        Tất cả
+                        <div class="cbp-filter-counter"></div>
+                    </div>
+                    @foreach($categories as $category)
+                        <div data-filter=".category-{{$category->id}}"
+                             class="cbp-filter-item btn dark btn-outline uppercase">
+                            {{$category->name}}
+                            <div class="cbp-filter-counter"></div>
+                        </div>
+                    @endforeach
+                    @foreach($tags as $tag)
+                        <div data-filter=".tag-{{$tag->id}}"
+                             class="cbp-filter-item btn dark btn-outline uppercase">
+                            {{$tag->name}}
+                            <div class="cbp-filter-counter"></div>
+                        </div>
+                    @endforeach
                 </div>
-                @foreach($categories as $category)
-                    <div data-filter=".category-{{$category->id}}"
-                         class="cbp-filter-item btn dark btn-outline uppercase">
-                        {{$category->name}}
-                        <div class="cbp-filter-counter"></div>
-                    </div>
-                @endforeach
-                @foreach($tags as $tag)
-                    <div data-filter=".tag-{{$tag->id}}"
-                         class="cbp-filter-item btn dark btn-outline uppercase">
-                        {{$tag->name}}
-                        <div class="cbp-filter-counter"></div>
-                    </div>
-                @endforeach
-            </div>
-            <div id="js-grid-juicy-projects" class="cbp">
-                @foreach($articles as $article)
-                    @include('api.article_item', ['article' => $article])
-                @endforeach
-            </div>
-            <div id="js-loadMore-juicy-projects" class="cbp-l-loadMore-button">
-                <a href="{!! URL::route('api.article.index') !!}"
-                   class="cbp-l-loadMore-link btn grey-mint btn-outline" rel="nofollow" id="loadMore_btn">
-                    <span class="cbp-l-loadMore-defaultText">Xem thêm</span>
-                    <span class="cbp-l-loadMore-loadingText">Đang tải...</span>
-                    <span class="cbp-l-loadMore-noMoreLoading">Hết rồi :v</span>
-                </a>
+                <div id="js-grid-juicy-projects" class="cbp">
+                    @foreach($articles as $article)
+                        @include('api.article_item', ['article' => $article])
+                    @endforeach
+                </div>
+                <div id="js-loadMore-juicy-projects" class="cbp-l-loadMore-button">
+                    <a href="{!! URL::route('api.article.index') !!}"
+                       class="cbp-l-loadMore-link btn blue" rel="nofollow" id="loadMore_btn">
+                        <span class="cbp-l-loadMore-defaultText">Xem thêm</span>
+                        <span class="cbp-l-loadMore-loadingText">Đang tải...</span>
+                        <span class="cbp-l-loadMore-noMoreLoading">Hết rồi :v</span>
+                    </a>
+                </div>
             </div>
         </div>
     </div>

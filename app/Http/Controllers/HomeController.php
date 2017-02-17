@@ -60,9 +60,7 @@ class HomeController extends Controller
      */
     public function about()
     {
-        $teams = Team::all();
-        $root_id = Team::whereNull('parent_id')->first(['id'])->id;
-        return view('about', compact('teams', 'root_id'));
+        return view('about');
     }
 
     /**

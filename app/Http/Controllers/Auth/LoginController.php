@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
 use URL;
 
 class LoginController extends Controller
@@ -43,5 +44,16 @@ class LoginController extends Controller
     public function username()
     {
         return 'username';
+    }
+
+    protected function authenticated(Request $request, $user)
+    {
+        \Session::flash('toastr', [
+            [
+                'title' => 'Xin chào ' . $user->name,
+                'message' => 'Bạn đã đăng nhập thành công',
+                'level' => 'success'
+            ]
+        ]);
     }
 }
