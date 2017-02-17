@@ -19,7 +19,7 @@ class FaqDatatable extends DataTable
             ->editColumn('question', function ($faq) {
                 return view('faq.datatable_column_question', compact('faq'))->render();
             })
-            ->editUColumn('action', function ($faq) {
+            ->editColumn('action', function ($faq) {
                 return view('faq.datatable_action', compact('faq'))->render();
             })
             ->make(true);
