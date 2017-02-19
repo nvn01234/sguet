@@ -34,7 +34,7 @@
                            placeholder="Nhập câu hỏi">
                     <span class="input-group-btn">
                         <button type="button" class="btn blue" id="search_btn">
-                            <i class="fa fa-search"></i> Tìm kiếm
+                            <i class="fa fa-search"></i>
                         </button>
                     </span>
                 </div>
