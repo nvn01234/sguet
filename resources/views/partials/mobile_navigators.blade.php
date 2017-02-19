@@ -1,6 +1,6 @@
 <li class="nav-item @yield('menu.home')">
     <a href="{!! URL::route('home') !!}" class="nav-link nav-toggle">
-        Q&A
+        UET Q&A
     </a>
 </li>
 <li class="nav-item @yield('menu.articles')">
@@ -23,20 +23,17 @@
             @role('admin')
             <li class="nav-item @yield('menu.manage.user')">
                 <a href="{!! route('manage.user') !!}" class="nav-link">
-                    <i class="fa fa-users"></i>
                     Người dùng
                 </a>
             </li>
             @endrole
             <li class="nav-item @yield('menu.manage.faq')">
                 <a href="{!! route('manage.faq') !!}" class="nav-link">
-                    <i class="fa fa-question"></i>
-                    Q&A
+                    UET Q&A
                 </a>
             </li>
             <li class="nav-item @yield('menu.manage.article')">
                 <a href="{!! route('manage.article') !!}" class="nav-link">
-                    <i class="fa fa-newspaper-o"></i>
                     Tin tức - Hoạt động
                 </a>
             </li>

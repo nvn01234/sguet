@@ -26,7 +26,9 @@
     <div class="page-container">
         @include('partials.sidebar')
         <div class="page-content-wrapper">
-            @yield('page_content')
+            <div class="page-content">
+                @yield('page_content')
+            </div>
         </div>
     </div>
     <!-- END CONTAINER -->

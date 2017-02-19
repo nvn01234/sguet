@@ -47,9 +47,8 @@
     @yield('page_level_styles')
 
     @section('theme_layout_styles')
-        {!! Html::style('metronic/layouts/layout/css/layout.min.css') !!}
-        {!! Html::style('metronic/layouts/layout/css/themes/light2.min.css', ['id' => 'style_color']) !!}
-        {!! Html::style('css/theme.css') !!}
+        {!! Html::style('metronic/layouts/layout/css/layout-custom.css') !!}
+        {!! Html::style('metronic/layouts/layout/css/themes/sguet.css', ['id' => 'style_color']) !!}
     @show
 
     @yield('styles')

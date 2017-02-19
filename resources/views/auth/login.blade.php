@@ -23,7 +23,7 @@
                         <div class="form-group form-md-line-input {{ $errors->has('username') ? ' has-error' : '' }}">
                             {!! Form::label('username', 'Tên đăng nhập ' . view('partials.span_required')->render(), ['class' => 'col-md-4 control-label'], false) !!}
                             <div class="col-md-6">
-                                {!! Form::text('username', old('username'), ['class' => 'form-control', 'required' => true, 'autofocus' => true, 'maxLength' => 255]) !!}
+                                {!! Form::text('username', null, ['class' => 'form-control', 'required' => true, 'autofocus' => true, 'maxLength' => 255]) !!}
                                 <div class="form-control-focus"></div>
                                 @if ($errors->has('username'))
                                     <span class="help-block">
