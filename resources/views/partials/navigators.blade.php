@@ -1,6 +1,6 @@
 <li class="@yield('menu.home')">
     <a href="{!! URL::route('home') !!}" data-hover="megamenu-dropdown" data-close-other="true">
-        Q&A
+        UET Q&A
         <span class="@hasSection('menu.home') selected @endif"> </span>
     </a>
 </li>
@@ -17,7 +17,7 @@
     </a>
 </li>
 @if(Auth::check())
-    <li class="classic-menu-dropdown @yield('menu.manage')">
+    <li class="classic-menu-dropdown @yield('menu.manage') dropdown-dark last">
         <a href="javascript:" data-hover="megamenu-dropdown" data-close-other="true">
             Quản lý
             <i class="fa fa-angle-down"></i>
@@ -27,20 +27,17 @@
             @role('admin')
             <li class="@yield('menu.manage.user')">
                 <a href="{!! route('manage.user') !!}">
-                    <i class="fa fa-users"></i>
                     Người dùng
                 </a>
             </li>
             @endrole
             <li class="@yield('menu.manage.faq')">
                 <a href="{!! route('manage.faq') !!}">
-                    <i class="fa fa-question"></i>
-                    Q&A
+                    UET Q&A
                 </a>
             </li>
             <li class="@yield('menu.manage.article')">
                 <a href="{!! route('manage.article') !!}">
-                    <i class="fa fa-newspaper-o"></i>
                     Tin tức - Hoạt động
                 </a>
             </li>

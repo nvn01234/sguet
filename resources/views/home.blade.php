@@ -17,8 +17,17 @@
     <div class="about-header">
         <div class="row">
             <div class="col-lg-12">
-                <h1 id="top_heading">Support Group UET</h1>
-                <h2>CLB Hỗ trợ sinh viên Trường ĐH Công nghệ</h2>
+                <div class="container">
+                    <div class="row" id="top_heading">
+                        <div class="col-md-2 col-md-offset-2 hidden-sm hidden-xs">
+                            {!! Html::image('img/SGUET.png', null, ['class' => 'logo']) !!}
+                        </div>
+                        <div class="col-lg-6 col-md-7">
+                            <h1>Support Group UET</h1>
+                            <h2>CLB Hỗ trợ sinh viên Trường ĐH Công nghệ</h2>
+                        </div>
+                    </div>
+                </div>
                 <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 input-group"
                      style="text-align:left">
                     <input type="text" class="form-control" id="search_input"
