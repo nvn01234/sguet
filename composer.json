@@ -23,7 +23,7 @@
     "yajra/laravel-datatables-oracle": "^6.0"
   },
   "require-dev": {
-    "barryvdh/laravel-ide-helper": "^2.2",
+    "barryvdh/laravel-ide-helper": "2.2.3",
     "fzaninotto/faker": "~1.4",
     "mockery/mockery": "0.9.*",
     "phpunit/phpunit": "~5.0",
