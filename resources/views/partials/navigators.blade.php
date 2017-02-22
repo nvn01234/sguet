@@ -10,7 +10,7 @@
         <span class="@hasSection('menu.articles') selected @endif"> </span>
     </a>
 </li>
-<li class="@yield('menu.about')">
+<li class="@yield('menu.about') @if(Auth::guest()) last @endif">
     <a href="{!! URL::route('about') !!}" data-hover="megamenu-dropdown" data-close-other="true">
         Giới thiệu
         <span class="@hasSection('menu.about') selected @endif"> </span>
