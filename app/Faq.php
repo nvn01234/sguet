@@ -15,12 +15,14 @@ use Laravel\Scout\Searchable;
  * @property int $id
  * @property string $question
  * @property string $answer
+ * @property string $paraphrases
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Tag[] $tags
  * @method static \Illuminate\Database\Query\Builder|\App\Faq whereAnswer($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Faq whereCreatedAt($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Faq whereId($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Faq whereParaphrases($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Faq whereQuestion($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Faq whereUpdatedAt($value)
  * @mixin \Eloquent
@@ -32,7 +34,7 @@ class Faq extends Model
     /**
      * @var array
      */
-    protected $fillable = ['id', 'question', 'answer', 'created_at', 'updated_at'];
+    protected $fillable = ['id', 'question', 'answer', 'created_at', 'updated_at', 'paraphrases'];
 
     /**
      * @var string
@@ -56,6 +58,9 @@ class Faq extends Model
         $body = preg_replace('# {2,}#', ' ', $body);
         $body = trim($body);
 //        $array['answer'] = $body;
+
+        $paraphrases = explode(',', $this->paraphrases);
+        $array['paraphrases'] = $paraphrases;
 
         return $array;
     }

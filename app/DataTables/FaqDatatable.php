@@ -62,16 +62,17 @@ class FaqDatatable extends DataTable
     protected function getColumns()
     {
         return [
-            'question' => ['title' => 'Câu hỏi', 'class' => 'col-md-6'],
-            'created_at' => ['title' => 'Tạo lúc', 'class' => 'col-md-2', 'searchable' => false],
-            'updated_at' => ['title' => 'Sửa lúc', 'class' => 'col-md-2', 'searchable' => false],
+            'question' => ['title' => 'Câu hỏi', 'class' => 'col-md-4'],
+            'paraphrases' => ['title' => 'Câu hỏi tương tự', 'class' => 'col-md-4'],
+            'created_at' => ['title' => 'Tạo lúc', 'class' => 'col-md-1', 'searchable' => false],
+            'updated_at' => ['title' => 'Sửa lúc', 'class' => 'col-md-1', 'searchable' => false],
         ];
     }
 
     protected function getBuilderParameters()
     {
         return [
-            'order' => [[1, 'desc']],
+            'order' => [[2, 'desc']],
             'language' => [
                 'searchPlaceholder' => 'Nhập câu hỏi'
             ]

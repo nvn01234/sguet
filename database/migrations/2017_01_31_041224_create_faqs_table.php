@@ -19,6 +19,8 @@ class CreateFaqsTable extends Migration
 
             $table->longText('answer');
 
+            $table->longText('paraphrases')->nullable();
+
             $table->timestamps();
         });
     }
