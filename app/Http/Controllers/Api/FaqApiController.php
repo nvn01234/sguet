@@ -40,4 +40,8 @@ class FaqApiController extends Controller
 
         return response($content, 200);
     }
+
+    public function syncToSearch() {
+        Faq::makeAllSearchable();
+    }
 }

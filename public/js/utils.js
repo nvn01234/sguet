@@ -39,24 +39,45 @@ function summernote() {
 }
 
 function tagsinput(init) {
-    var tagsinput = $('.tagsinput');
-    tagsinput.tagsinput({
-        trimValue: true
+    $('.tagsinput').each((i, tagsinput) => {
+        tagsinput = $(tagsinput);
+        tagsinput.tagsinput({
+            trimValue: true
+        });
+        if (init) {
+            init[i](tagsinput);
+        }
+
+        const container = tagsinput.next();
+
+        container.addClass('form-control')
+            .append($('<div>').addClass('form-control-focus').css('bottom', '10px'))
+            .append($('<span>').addClass('help-block').text(container.prev().data('help-block')));
+
+        container.find('input').addClass('form-control').attr('id', 'tags')
+            .css('border-bottom-color', 'transparent')
+            .css('padding-bottom', '10px')
+            .css('display', 'inline');
     });
-    if (init) init(tagsinput);
-
-    var container = $('.bootstrap-tagsinput');
-
-    container.addClass('form-control')
-        .append($('<div>').addClass('form-control-focus').css('bottom', '10px'))
-        .append($('<span>').addClass('help-block').text(container.prev().data('help-block')));
-
-    container.find('input').addClass('form-control').attr('id', 'tags')
-        .css('border-bottom-color', 'transparent')
-        .css('padding-bottom', '10px')
-        .css('display', 'inline');
 }
 
 function logout() {
     $('#logout-form').submit();
 }
+
+const UI = function (id) {
+    return {
+        block: function () {
+            App.blockUI({
+                target: '#' + id,
+                animation: true,
+                boxed: false,
+                overlayColor: 'none',
+                message: '',
+            });
+        },
+        unblock: function () {
+            App.unblockUI('#' + id);
+        },
+    }
+};

@@ -9,32 +9,30 @@ use Illuminate\Database\Query\Builder;
 use Laravel\Scout\Searchable;
 
 /**
- * Class Article.
+ * App\Article
  *
- * @property integer $id
+ * @property int $id
  * @property string $title
+ * @property string $short_description
  * @property string $body
  * @property string $image_url
- * @property string $short_description
- * @property integer $category_id
- * @property Carbon $created_at
- * @property Carbon $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Tag[] $tags
+ * @property int $category_id
+ * @property \Carbon\Carbon $created_at
+ * @property \Carbon\Carbon $updated_at
  * @property-read \App\Category $category
- * @method static Builder|Article whereId($value)
- * @method static Builder|Article whereTitle($value)
- * @method static Builder|Article whereBody($value)
- * @method static Builder|Article whereImageUrl($value)
- * @method static Builder|Article whereShortDescription($value)
- * @method static Builder|Article whereCategoryId($value)
- * @method static Builder|Article whereCreatedAt($value)
- * @method static Builder|Article whereUpdatedAt($value)
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Tag[] $tags
+ * @method static \Illuminate\Database\Query\Builder|\App\Article whereBody($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Article whereCategoryId($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Article whereCreatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Article whereId($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Article whereImageUrl($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Article whereShortDescription($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Article whereTitle($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Article whereUpdatedAt($value)
  * @mixin \Eloquent
  */
 class Article extends Model
 {
-    use  Searchable;
-
     protected $fillable = ['id', 'title', 'short_description', 'body', 'category_id', 'image_url', 'created_at', 'updated_at'];
 
     /**

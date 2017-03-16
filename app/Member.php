@@ -7,29 +7,29 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Query\Builder;
 
 /**
- * Class Member.
+ * App\Member
  *
- * @property integer $id
+ * @property int $id
  * @property string $name
- * @property Carbon $birthday
+ * @property string $birthday
  * @property string $class
- * @property boolean $gender
+ * @property bool $gender
  * @property string $highest_position
  * @property string $phone
  * @property string $email
  * @property string $specialize
- * @property integer $team_id
+ * @property int $team_id
  * @property-read \App\Team $teams
- * @method static Builder|Member whereId($value)
- * @method static Builder|Member whereName($value)
- * @method static Builder|Member whereBirthday($value)
- * @method static Builder|Member whereClass($value)
- * @method static Builder|Member whereGender($value)
- * @method static Builder|Member whereHighestPosition($value)
- * @method static Builder|Member wherePhone($value)
- * @method static Builder|Member whereEmail($value)
- * @method static Builder|Member whereSpecialize($value)
- * @method static Builder|Member whereTeamId($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Member whereBirthday($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Member whereClass($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Member whereEmail($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Member whereGender($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Member whereHighestPosition($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Member whereId($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Member whereName($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Member wherePhone($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Member whereSpecialize($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Member whereTeamId($value)
  * @mixin \Eloquent
  */
 class Member extends Model

@@ -15,7 +15,7 @@
 
 @section('form-body')
     <div class="form-group form-md-line-input @if($errors->has('question')) has-error @endif">
-        {!! Form::label('question', 'Câu hỏi (*)', ['class' => 'col-md-2 control-label']) !!}
+        {!! Form::label('question', 'Câu hỏi '. view('partials.span_required')->render(), ['class' => 'col-md-2 control-label'], false) !!}
         <div class="col-md-10">
             {!! Form::text('question', null, ['class' => 'form-control', 'required' => 'required', 'maxLength' => 255]) !!}
             <div class="form-control-focus"></div>
@@ -24,9 +24,16 @@
     </div>
 
     <div class="form-group form-md-line-input @if($errors->has('answer')) has-error @endif">
-        {!! Form::label('answer', 'Trả lời (*)', ['class' => 'col-md-2 control-label']) !!}
+        {!! Form::label('answer', 'Trả lời '. view('partials.span_required')->render(), ['class' => 'col-md-2 control-label'], false) !!}
         <div class="col-md-10">
             {!! Form::textarea('answer', null, ['class' => 'form-control summernote', 'rows' => 20, 'required' => 'required']) !!}
+        </div>
+    </div>
+
+    <div class="form-group form-md-line-input @if($errors->has('paraphrases')) has-error @endif">
+        {!! Form::label('paraphrases', 'Câu hỏi tương tự', ['class' => 'col-md-2 control-label']) !!}
+        <div class="col-md-10">
+            {!! Form::text('paraphrases', null, ['class' => 'tagsinput', 'data-help-block' => 'Các câu cách nhau bởi dấu phẩy (,)']) !!}
         </div>
     </div>
 
@@ -49,13 +56,23 @@
 @section('scripts')
     @parent
     <script>
+        const initPraphrases = (tagsinput) => {
+            tagsinput = $(tagsinput);
+            @foreach($paraphrases as $paraphrase)
+            tagsinput.tagsinput('add', '{{$paraphrase}}');
+            @endforeach
+        };
+
+        const initTags = (tagsinput) => {
+            tagsinput = $(tagsinput);
+            @foreach($faq->tags as $tag)
+            tagsinput.tagsinput('add', '{{$tag->name}}');
+            @endforeach
+        };
+
         $(document).ready(function () {
             summernote();
-            tagsinput(function (tagsinput) {
-                @foreach($faq->tags as $tag)
-                tagsinput.tagsinput('add', '{{$tag->name}}');
-                @endforeach
-            });
+            tagsinput([initPraphrases, initTags]);
         })
     </script>
 @endsection

@@ -30,10 +30,12 @@ class FaqController extends Controller
 
     public function store(Request $request)
     {
+        dd($request->all());
         $validator = \Validator::make($request->all(), [
             'question' => 'required|string|max:255',
             'answer' => 'required|string',
             'tags' => 'array',
+            'paraphrases' => 'string'
         ]);
 
         if ($validator->fails()) {
@@ -41,7 +43,7 @@ class FaqController extends Controller
         }
 
         Faq::withoutSyncingToSearch(function () use ($request) {
-            $faq = Faq::create($request->only(['question', 'answer']));
+            $faq = Faq::create($request->only(['question', 'answer', 'paraphrases']));
             if ($request->has('tags')) {
                 $tags = [];
                 foreach ($request->get('tags') as $tag_name) {
@@ -71,7 +73,8 @@ class FaqController extends Controller
          * @var Faq $faq
          */
         $faq = Faq::findOrFail($id);
-        return view('faq.edit', compact('faq'));
+        $paraphrases = explode(',', $faq->paraphrases);
+        return view('faq.edit', compact('faq', 'paraphrases'));
     }
 
     public function update($id, Request $request)
@@ -80,6 +83,7 @@ class FaqController extends Controller
             'question' => 'required|string|max:255',
             'answer' => 'required|string',
             'tags' => 'array',
+            'paraphrases' => 'string',
         ]);
 
         if ($validator->fails()) {
@@ -92,8 +96,7 @@ class FaqController extends Controller
         $faq = Faq::findOrFail($id);
 
         Faq::withoutSyncingToSearch(function () use ($request, $faq) {
-            $faq->update($request->only(['question', 'answer']));
-
+            $faq->update($request->only(['question', 'answer', 'paraphrases']));
             if ($request->has('tags')) {
                 $tags = [];
                 foreach ($request->get('tags') as $tag_name) {

@@ -8,24 +8,24 @@ use Kalnoy\Nestedset\NodeTrait;
 
 
 /**
- * Class Team.
+ * App\Team
  *
- * @property integer $id
+ * @property int $id
  * @property string $name
  * @property string $year
- * @property integer $parent_id
- * @property-read int $_lft
- * @property-read int $_rgt
- * @property-read \App\Team $parent
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Member[] $members
+ * @property int $_lft
+ * @property int $_rgt
+ * @property int $parent_id
  * @property-read \Kalnoy\Nestedset\Collection|\App\Team[] $children
- * @method static Builder|Team d()
- * @method static Builder|Team whereId($value)
- * @method static Builder|Team whereName($value)
- * @method static Builder|Team whereYear($value)
- * @method static Builder|Team whereParentId($value)
- * @method static Builder|Team whereLft($value)
- * @method static Builder|Team whereRgt($value)
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Member[] $members
+ * @property-read \App\Team $parent
+ * @method static \Illuminate\Database\Query\Builder|\App\Team d()
+ * @method static \Illuminate\Database\Query\Builder|\App\Team whereId($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Team whereLft($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Team whereName($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Team whereParentId($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Team whereRgt($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Team whereYear($value)
  * @mixin \Eloquent
  */
 class Team extends Model

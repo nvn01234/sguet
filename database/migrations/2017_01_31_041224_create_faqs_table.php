@@ -19,6 +19,8 @@ class CreateFaqsTable extends Migration
 
             $table->longText('answer');
 
+            $table->longText('paraphrases')->nullable();
+
             $table->timestamps();
         });
     }
@@ -30,7 +32,6 @@ class CreateFaqsTable extends Migration
      */
     public function down()
     {
-        \App\Faq::removeAllFromSearch();
         Schema::dropIfExists('faqs');
     }
 }

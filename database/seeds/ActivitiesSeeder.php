@@ -37,5 +37,6 @@ class ActivitiesSeeder extends Seeder
                 'updated_at' => $updated_at
             ]);
         }
+
     }
 }
