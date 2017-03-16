@@ -60,3 +60,20 @@ function tagsinput(init) {
 function logout() {
     $('#logout-form').submit();
 }
+
+const UI = function (id) {
+    return {
+        block: function () {
+            App.blockUI({
+                target: '#' + id,
+                animation: true,
+                boxed: false,
+                overlayColor: 'none',
+                message: '',
+            });
+        },
+        unblock: function () {
+            App.unblockUI('#' + id);
+        },
+    }
+};

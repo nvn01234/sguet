@@ -10,19 +10,19 @@ use Illuminate\Database\Query\Builder;
 use Laravel\Scout\Searchable;
 
 /**
- * Class Article.
+ * App\Faq
  *
- * @property integer $id
+ * @property int $id
  * @property string $question
  * @property string $answer
- * @property Carbon $created_at
- * @property Carbon $updated_at
+ * @property \Carbon\Carbon $created_at
+ * @property \Carbon\Carbon $updated_at
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Tag[] $tags
- * @method static Builder|Article whereId($value)
- * @method static Builder|Article whereQuestion($value)
- * @method static Builder|Article whereAnswer($value)
- * @method static Builder|Article whereCreatedAt($value)
- * @method static Builder|Article whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Faq whereAnswer($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Faq whereCreatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Faq whereId($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Faq whereQuestion($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Faq whereUpdatedAt($value)
  * @mixin \Eloquent
  */
 class Faq extends Model
@@ -55,7 +55,7 @@ class Faq extends Model
         $body = str_replace($a, " ", $body);
         $body = preg_replace('# {2,}#', ' ', $body);
         $body = trim($body);
-        $array['answer'] = $body;
+//        $array['answer'] = $body;
 
         return $array;
     }

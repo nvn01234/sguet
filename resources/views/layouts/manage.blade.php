@@ -24,6 +24,7 @@
                             <i class="fa fa-plus"></i>
                         </a>
                     </div>
+                    @yield('table-toolbar-more')
                 </div>
             </div>
         </div>

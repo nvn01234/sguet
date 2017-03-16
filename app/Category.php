@@ -6,13 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 use \Illuminate\Database\Query\Builder;
 
 /**
- * Class Category.
+ * App\Category
  *
  * @property int $id
  * @property string $name
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Article[] $articles
- * @method static Builder|Category whereId($value)
- * @method static Builder|Category whereName($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Category whereId($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Category whereName($value)
  * @mixin \Eloquent
  */
 class Category extends Model

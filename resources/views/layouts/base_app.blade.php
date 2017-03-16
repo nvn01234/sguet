@@ -82,6 +82,9 @@
 
 @section('theme_global_scripts')
     {!! Html::script('metronic/global/scripts/app.js') !!}
+    <script>
+        App.setAssetsPath('/metronic/')
+    </script>
 @show
 
 @yield('page_level_scripts')

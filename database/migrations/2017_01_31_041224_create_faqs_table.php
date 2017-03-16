@@ -30,7 +30,6 @@ class CreateFaqsTable extends Migration
      */
     public function down()
     {
-        \App\Faq::removeAllFromSearch();
         Schema::dropIfExists('faqs');
     }
 }

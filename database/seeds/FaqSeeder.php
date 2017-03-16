@@ -11,20 +11,22 @@ class FaqSeeder extends Seeder
      */
     public function run()
     {
-        $json = File::get(database_path('data/faq.json'));
-        $data = json_decode($json);
+        \App\Faq::withoutSyncingToSearch(function () {
+            $json = File::get(database_path('data/faq.json'));
+            $data = json_decode($json);
 
-        foreach ($data as $obj) {
-            $created_at = \Carbon\Carbon::createFromTimestamp($obj->created);
-            $updated_at = \Carbon\Carbon::createFromTimestamp($obj->updated);
+            foreach ($data as $obj) {
+                $created_at = \Carbon\Carbon::createFromTimestamp($obj->created);
+                $updated_at = \Carbon\Carbon::createFromTimestamp($obj->updated);
 
-            \App\Faq::create([
-                'id' => $obj->id,
-                'question' => $obj->title,
-                'answer' => $obj->body,
-                'created_at' => $created_at,
-                'updated_at' => $updated_at
-            ]);
-        }
+                \App\Faq::create([
+                    'id' => $obj->id,
+                    'question' => $obj->title,
+                    'answer' => $obj->body,
+                    'created_at' => $created_at,
+                    'updated_at' => $updated_at
+                ]);
+            }
+        });
     }
 }
