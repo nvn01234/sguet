@@ -78,7 +78,7 @@ Page Header
 .page-header.navbar .page-logo {
     float: left;
     display: block;
-    width: 35%;
+    width: 20%;
     height: 58px;
     padding-left: 20px;
     padding-right: 20px;
@@ -218,7 +218,7 @@ Page Header
 .page-header.navbar .top-menu .navbar-nav > li.dropdown {
     margin: 0px;
     padding: 0px 4px;
-    height: 46px;
+    height: 58px;
     display: inline-block;
 }
 
@@ -463,7 +463,7 @@ Page Header
 }
 
 .page-header.navbar .top-menu .navbar-nav > li.dropdown-user .dropdown-toggle {
-    padding: 14px 6px 12px 8px;
+    padding: 20px 6px 18px 8px;
 }
 
 .page-header.navbar .top-menu .navbar-nav > li.dropdown-user .dropdown-toggle > .username {

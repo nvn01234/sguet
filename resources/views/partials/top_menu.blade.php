@@ -4,7 +4,7 @@
         <ul class="nav navbar-nav pull-right">
             <!-- BEGIN USER LOGIN DROPDOWN -->
             <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
-            <li class="dropdown dropdown-user dropdown-dark">
+            <li class="dropdown dropdown-user dropdown-dark last">
                 <a href="javascript:" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
                    data-close-others="true">
                     {!! Html::image('metronic/layouts/layout/img/avatar.png', '', ['class' => 'img-circle']) !!}

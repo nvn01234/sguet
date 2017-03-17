@@ -18,7 +18,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="container">
-                    <div class="row" id="top_heading">
+                    <div class="row @if(isset($faq)) margin-top-40 @endif" id="top_heading">
                         <div class="col-md-2 col-md-offset-2 hidden-sm hidden-xs">
                             {!! Html::image('img/SGUET.png', null, ['class' => 'logo']) !!}
                         </div>
