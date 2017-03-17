@@ -3,10 +3,23 @@
 namespace App\DataTables;
 
 use App\Faq;
+use Illuminate\Database\Query\Builder;
 use Yajra\Datatables\Services\DataTable;
 
 class FaqDatatable extends DataTable
 {
+    private $tag_id = null;
+
+    /**
+     * @param int $tag_id
+     * @return $this
+     */
+    public function setTagId($tag_id)
+    {
+        $this->tag_id = $tag_id;
+        return $this;
+    }
+
     /**
      * Display ajax response.
      *
@@ -32,7 +45,15 @@ class FaqDatatable extends DataTable
      */
     public function query()
     {
-        $query = Faq::query();
+        if ($this->tag_id != null) {
+            $query = Faq::query()
+                ->join('faq_tag', 'faq_tag.faq_id', '=', 'faqs.id')
+                ->where('faq_tag.tag_id', '=', $this->tag_id)
+                ->groupBy('faqs.id')
+                ->select('faqs.*');
+        } else {
+            $query = Faq::query();
+        }
 
         return $this->applyScopes($query);
     }

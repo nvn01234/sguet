@@ -56,7 +56,7 @@
     <div class="form-group form-md-line-input @if($errors->has('tags')) has-error @endif">
         {!! Form::label('tags', 'Nhãn', ['class' => 'col-md-2 control-label']) !!}
         <div class="col-md-10">
-            {!! Form::select('tags[]', [], null, ['multiple' => 'multiple', 'data-role' => 'tagsinput', 'data-help-block' => 'Các nhãn cách nhau bởi dấu phẩy (,)']) !!}
+            {!! Form::select('tags[]', [], null, ['multiple' => 'multiple', 'class' => 'tagsinput', 'data-help-block' => 'Các nhãn cách nhau bởi dấu phẩy (,)']) !!}
         </div>
     </div>
 @endsection

@@ -43,7 +43,7 @@ class Tag extends Model
      */
     public function articles()
     {
-        return $this->belongsToMany('App\Article');
+        return $this->belongsToMany('App\Article', 'article_tag');
     }
 
     /**
@@ -68,7 +68,7 @@ class Tag extends Model
      */
     public function faqs()
     {
-        return $this->belongsToMany('App\Faq');
+        return $this->belongsToMany('App\Faq', 'faq_tag');
     }
 
     /**

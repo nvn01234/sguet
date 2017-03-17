@@ -37,6 +37,11 @@
                     Tin tức - Hoạt động
                 </a>
             </li>
+            <li class="nav-item @yield('menu.manage.tag')">
+                <a href="{!! route('manage.tag') !!}" class="nav-link">
+                    Nhãn
+                </a>
+            </li>
         </ul>
     </li>
 @endif

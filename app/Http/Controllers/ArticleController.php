@@ -91,7 +91,7 @@ class ArticleController extends Controller
             'category_id' => ['required', 'integer',
                 Rule::in($cat_ids)
             ],
-            'image_url' => 'image_url'
+            'image_url' => 'string|max:255'
         ]);
 
         if ($validator->fails()) {

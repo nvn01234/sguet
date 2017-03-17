@@ -1,0 +1,1 @@
+<a href="{{route('manage.tag.faqs', [$tag->id])}}"><span class="label label-success">{{$tag->faqs_count}}</span></a>
