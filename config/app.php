@@ -173,7 +173,6 @@ return [
         Laravel\Scout\ScoutServiceProvider::class,
         Maatwebsite\Excel\ExcelServiceProvider::class,
         Yajra\Datatables\DatatablesServiceProvider::class,
-        AlgoliaSearch\Laravel\AlgoliaServiceProvider::class,
         Zizaco\Entrust\EntrustServiceProvider::class,
         //
 
