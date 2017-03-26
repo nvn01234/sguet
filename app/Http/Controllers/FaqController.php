@@ -30,7 +30,6 @@ class FaqController extends Controller
 
     public function store(Request $request)
     {
-        dd($request->all());
         $validator = \Validator::make($request->all(), [
             'question' => 'required|string|max:255',
             'answer' => 'required|string',
