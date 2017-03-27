@@ -39,7 +39,7 @@ function summernote() {
 }
 
 function tagsinput(init) {
-    $('.tagsinput').each((i, tagsinput) => {
+    $('.tagsinput').each(function (i, tagsinput) {
         tagsinput = $(tagsinput);
         tagsinput.tagsinput({
             trimValue: true
@@ -65,7 +65,7 @@ function logout() {
     $('#logout-form').submit();
 }
 
-const UI = function (id) {
+function UI(id) {
     return {
         block: function () {
             App.blockUI({
@@ -73,11 +73,11 @@ const UI = function (id) {
                 animation: true,
                 boxed: false,
                 overlayColor: 'none',
-                message: '',
+                message: ''
             });
         },
         unblock: function () {
             App.unblockUI('#' + id);
-        },
+        }
     }
-};
+}

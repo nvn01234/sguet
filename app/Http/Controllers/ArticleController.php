@@ -16,12 +16,21 @@ class ArticleController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth', ['except' => ['show']]);
     }
 
     public function index(ArticleDatatable $datatable)
     {
         return $datatable->render('article.index');
+    }
+
+    public function show($id) {
+        /**
+         * @var Article $article
+         */
+        $article = Article::findOrFail($id);
+        $col_9_3 = \Auth::check() || (isset($article->tags) && $article->tags->count() > 0);
+        return view('article.show', compact('article', 'col_9_3'));
     }
 
     public function create()

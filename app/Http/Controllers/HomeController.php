@@ -41,18 +41,12 @@ class HomeController extends Controller
     public function articles()
     {
         $categories = Category::orderBy('id')->get();
-        $tags = Tag::query()
-            ->join('article_tag', 'article_tag.tag_id', '=', 'tags.id')
-            ->groupBy('tags.id')
-            ->select(['tags.*', DB::raw('count(*) as count')])
-            ->orderBy('count', 'desc')
-            ->get();
         $articles = Article::query()
             ->with('tags')
             ->orderBy('created_at', 'desc')
             ->take(8)
             ->get();
-        return view('articles', compact('categories', 'articles', 'tags'));
+        return view('articles', compact('categories', 'articles'));
     }
 
     /**

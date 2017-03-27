@@ -1,1 +1,1 @@
-<a href="{!! route('articles') !!}#cbp={!! route('api.article.show', ['id' => $article->id]) !!}">{{$article->title}}</a>
+<a href="{!! route('articles.show', $article->id) !!}">{{$article->title}}</a>

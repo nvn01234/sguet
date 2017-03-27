@@ -16,6 +16,8 @@ Route::get('/home', 'HomeController@home');
 Route::get('/tin-tuc-hoat-dong', 'HomeController@articles')->name('articles');
 Route::get('/gioi-thieu', 'HomeController@about')->name('about');
 
+Route::get('/tin-tuc-hoat-dong/{id}','ArticleController@show')->name('articles.show');
+
 Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('/login', 'Auth\LoginController@login')->name('login.post');
 Route::post('/logout', 'Auth\LoginController@logout')->name('logout');
