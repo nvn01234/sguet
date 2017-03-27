@@ -34,7 +34,7 @@
                     <div class="blog-single-sidebar bordered blog-container">
                         @if(isset($article->tags) && count($article->tags) > 0)
                             <div class="blog-single-sidebar-tags">
-                                <h3 class="blog-sidebar-title uppercase">Tags</h3>
+                                <h3 class="blog-sidebar-title uppercase">Nhãn</h3>
                                 <ul class="blog-post-tags">
                                     @foreach($article->tags as $tag)
                                         <li class="uppercase">
