@@ -32,11 +32,11 @@
             @if(isset($col_9_3) && $col_9_3)
                 <div class="col-lg-3">
                     <div class="blog-single-sidebar bordered blog-container">
-                        @if(isset($articles->tags) && count($articles->tags) > 0)
+                        @if(isset($article->tags) && count($article->tags) > 0)
                             <div class="blog-single-sidebar-tags">
                                 <h3 class="blog-sidebar-title uppercase">Tags</h3>
                                 <ul class="blog-post-tags">
-                                    @foreach($articles->tags as $tag)
+                                    @foreach($article->tags as $tag)
                                         <li class="uppercase">
                                             <a href="javascript:;">{{$tag->name}}</a>
                                         </li>
