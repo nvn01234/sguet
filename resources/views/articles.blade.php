@@ -36,13 +36,6 @@
                         <div class="cbp-filter-counter"></div>
                     </div>
                 @endforeach
-                @foreach($tags as $tag)
-                    <div data-filter=".tag-{{$tag->id}}"
-                         class="cbp-filter-item btn dark btn-outline uppercase">
-                        {{$tag->name}}
-                        <div class="cbp-filter-counter"></div>
-                    </div>
-                @endforeach
             </div>
             <div id="js-grid-juicy-projects" class="cbp">
                 @foreach($articles as $article)

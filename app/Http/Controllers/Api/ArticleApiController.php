@@ -26,18 +26,4 @@ class ArticleApiController extends Controller
             ->paginate(8, ["*"], 'page', $page + 1);
         return view('api.article_index', compact('articles'));
     }
-
-    /**
-     * Đoạn HTML hiển thị một tin tức - hoạt động theo id
-     * @param $id
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
-    public function show($id)
-    {
-        /**
-         * @var Article $article
-         */
-        $article = Article::findOrFail($id);
-        return view('api.article_show', compact('article'));
-    }
 }

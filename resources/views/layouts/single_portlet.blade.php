@@ -7,7 +7,7 @@
             <div class="portlet box blue">
                 <div class="portlet-title">
                     <div class="caption">
-                        <i class="icon-settings"></i>
+                        <i class="@yield('icon', 'icon-settings')"></i>
                         @yield('title')
                     </div>
                 </div>

@@ -11,8 +11,8 @@
         <div class="cbp-caption-activeWrap">
             <div class="cbp-l-caption-alignCenter">
                 <div class="cbp-l-caption-body">
-                    <a href="{!! URL::route('api.article.show', ['id' => $article->id]) !!}" rel="nofollow"
-                       class="cbp-singlePage cbp-l-caption-buttonLeft btn btn-primary uppercase">chi tiết</a>
+                    <a href="{!! URL::route('articles.show', $article->id) !!}" rel="nofollow"
+                       class="cbp-l-caption-buttonLeft btn btn-primary uppercase">chi tiết</a>
                 </div>
             </div>
         </div>

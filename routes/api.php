@@ -16,4 +16,3 @@ Route::post('/faq/delete', 'Api\FaqApiController@destroy')->name('api.faq.delete
 Route::post('/faq/sync', 'Api\FaqApiController@syncToSearch')->name('api.faq.sync');
 
 Route::get('/article', 'Api\ArticleApiController@index')->name('api.article.index');
-Route::get('/article/{id}', 'Api\ArticleApiController@show')->name('api.article.show');
