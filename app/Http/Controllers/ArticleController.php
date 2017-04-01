@@ -76,7 +76,7 @@ class ArticleController extends Controller
                 'message' => 'Đã tạo "' . $request->get('title') . '"',
             ]
         ]);
-        return redirect()->route('manage.article');
+        return redirect()->route('articles.show', $article->id);
     }
 
     public function edit($id)
@@ -130,7 +130,7 @@ class ArticleController extends Controller
                 'message' => 'Đã cập nhật "' . $request->get('title') . '"',
             ]
         ]);
-        return redirect()->route('manage.article');
+        return redirect()->route('articles.show', $article->id);
     }
 
     public function destroy($id)

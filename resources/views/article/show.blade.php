@@ -9,6 +9,15 @@
 
 @section('title', $article->title)
 
+@section('styles')
+    <style>
+        .blog-single-desc img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    </style>
+@endsection
+
 @section('portlet-body')
     <div class="blog-page blog-content-2">
         <div class="row">
