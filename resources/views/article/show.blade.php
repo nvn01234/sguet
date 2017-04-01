@@ -22,7 +22,7 @@
                         </div>
                     </div>
                     @if($article->image_url)
-                        <div class="blog-single-img" id="blog-single-img"></div>
+                        {!! Html::image($article->image_url, null, ['class' => 'blog-single-img']) !!}
                     @endif
                     <div class="blog-single-desc">
                         {!! $article->body !!}
@@ -68,15 +68,4 @@
             @endif
         </div>
     </div>
-@endsection
-
-@section('scripts')
-    @parent
-    @if($article->image_url)
-        <script>
-            var url = '{{$article->image_url}}';
-            var target = $('#blog-single-img');
-            loadImgAsync(url, target, {append: true});
-        </script>
-    @endif
 @endsection

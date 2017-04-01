@@ -37,9 +37,22 @@
                     Tin tức - Hoạt động
                 </a>
             </li>
-            <li class="nav-item @yield('menu.manage.tag')">
-                <a href="{!! route('manage.tag') !!}" class="nav-link">
+        </ul>
+    </li>
+    <li class="nav-item @yield('menu.statistics') @hasSection('menu.statistics') open @endif">
+        <a href="javascript:" class="nav-link nav-toggle">
+            Thống kê
+            <span class="arrow @hasSection('menu.statistics') open @endif"></span>
+        </a>
+        <ul class="sub-menu">
+            <li class="nav-item @yield('menu.statistics.tag')">
+                <a href="{!! route('statistics.tag') !!}" class="nav-link">
                     Nhãn
+                </a>
+            </li>
+            <li class="nav-item @yield('menu.statistics.search_log')">
+                <a href="{!! route('statistics.search_log') !!}" class="nav-link">
+                    Lịch sử tìm kiếm
                 </a>
             </li>
         </ul>

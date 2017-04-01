@@ -15,11 +15,6 @@
     {!! Html::style('metronic/pages/css/blog.min.css') !!}
 @endsection
 
-@section('styles')
-    @parent
-    {!! Html::style('css/articles.css') !!}
-@endsection
-
 @section('page_content')
     <div class="portlet light">
         <div class="portfolio-content portfolio-1">

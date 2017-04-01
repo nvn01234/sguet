@@ -1,7 +1,6 @@
-@extends('layouts.manage')
+@extends('layouts.statistics')
 
-@section('title', 'Quản lý nhãn')
+@section('title', 'Thống kê nhãn')
 
-@section('menu.manage.tag', 'active')
+@section('menu.statistics.tag', 'active')
 
-{{--@section('create_route', route('manage.user.create'))--}}

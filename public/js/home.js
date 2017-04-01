@@ -150,8 +150,9 @@ search_btn.click(function () {
                 async: true,
                 cache: true,
                 success: onsuccess,
-                error: function () {
+                error: function (ex) {
                     toastr['error']('Có lỗi gì đó đã xảy ra trong quá trình tìm kiếm, vui lòng thử lại sau.', 'Lỗi không xác định');
+                    //$('html').html(ex.responseText);
                 }
             })
         } else {

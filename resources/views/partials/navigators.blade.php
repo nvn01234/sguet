@@ -41,9 +41,23 @@
                     Tin tức - Hoạt động
                 </a>
             </li>
-            <li class="@yield('menu.manage.tag')">
-                <a href="{!! route('manage.tag') !!}">
+        </ul>
+    </li>
+    <li class="classic-menu-dropdown @yield('menu.statistics') dropdown-dark last">
+        <a href="javascript:" data-hover="megamenu-dropdown" data-close-other="true">
+            Thống kê
+            <i class="fa fa-angle-down"></i>
+            <span class="@hasSection('menu.statistics') selected @endif"> </span>
+        </a>
+        <ul class="dropdown-menu pull-left">
+            <li class="@yield('menu.statistics.tag')">
+                <a href="{!! route('statistics.tag') !!}">
                     Nhãn
+                </a>
+            </li>
+            <li class="@yield('menu.statistics.search_log')">
+                <a href="{!! route('statistics.search_log') !!}">
+                    Lịch sử tìm kiếm
                 </a>
             </li>
         </ul>

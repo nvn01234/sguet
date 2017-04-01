@@ -40,9 +40,10 @@ Route::post('/quan-ly/tin-tuc-hoat-dong/{id}/sua', 'ArticleController@update')->
 Route::get('/quan-ly/tin-tuc-hoat-dong/{id}/xoa', 'ArticleController@destroy')->name('manage.article.delete');
 
 // middleware: auth
-Route::get('/quan-ly/nhan', 'TagController@index')->name('manage.tag');
+Route::get('/thong-ke/nhan', 'TagController@index')->name('statistics.tag');
 Route::get('/quan-ly/nhan/{id}/faq', 'TagController@faqs')->name('manage.tag.faqs');
 Route::get('/quan-ly/nhan/{id}/tin-tuc-hoat-dong', 'TagController@articles')->name('manage.tag.articles');
+Route::get('/thong-ke/tim-kiem', 'SearchLogController@index')->name('statistics.search_log');
 
 // middleware: role:admin
 Route::get('/quan-ly/nguoi-dung', 'UserController@index')->name('manage.user');

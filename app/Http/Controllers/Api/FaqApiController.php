@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Faq;
+use App\SearchLog;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -15,9 +16,19 @@ class FaqApiController extends Controller
      */
     public function search(Request $request)
     {
-        $q = $request->get('q');
-        $result = Faq::search($q)->get();
-        return response($result, 200);
+        $text = $request->get('q', '');
+        $text = trim($text);
+        if ($text !== '') {
+            $result = Faq::search($text)->get();
+            $result_ids = $result->pluck('id');
+            /**
+             * @var SearchLog $log
+             */
+            $log = SearchLog::firstOrCreate(compact('text'));
+            $log->update(['search_count' => $log->search_count + 1]);
+            $log->syncResults($result_ids);
+            return response($result, 200);
+        }
     }
 
     public function destroy(Request $request)

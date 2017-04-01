@@ -2,10 +2,10 @@
 
 namespace App\DataTables;
 
-use App\Tag;
+use App\SearchLog;
 use Yajra\Datatables\Services\DataTable;
 
-class TagsDataTables extends DataTable
+class SearchStatisticsDataTable extends DataTable
 {
     /**
      * Display ajax response.
@@ -16,15 +16,6 @@ class TagsDataTables extends DataTable
     {
         return $this->datatables
             ->eloquent($this->query())
-//            ->editColumn('action', function ($tag) {
-//                return view('tag.datatable_action', compact('tag'))->render();
-//            })
-            ->editColumn('faqs_count', function ($tag) {
-                return view('tag.datatable_column_faqs_count', compact('tag'))->render();
-            })
-            ->editColumn('articles_count', function ($tag) {
-                return view('tag.datatable_column_articles_count', compact('tag'))->render();
-            })
             ->make(true);
     }
 
@@ -35,8 +26,7 @@ class TagsDataTables extends DataTable
      */
     public function query()
     {
-        $query = Tag::query()->withCount('faqs')->withCount('articles')
-        ->has('faqs')->orHas('articles');
+        $query = SearchLog::query()->withCount('results');
 
         return $this->applyScopes($query);
     }
@@ -52,9 +42,8 @@ class TagsDataTables extends DataTable
                     ->columns($this->getColumns())
                     ->ajax([
                         'url' => '',
-                        'error' => '',
+                        'error' => ''
                     ])
-//                    ->addAction(['title' => 'Hành động'])
                     ->parameters($this->getBuilderParameters());
     }
 
@@ -66,18 +55,19 @@ class TagsDataTables extends DataTable
     protected function getColumns()
     {
         return [
-            'name' => ['title' => 'Tên'],
-            'faqs_count' => ['title' => 'Số Q&A', 'searchable' => false],
-            'articles_count' => ['title' => 'Số tin tức - hoạt động', 'searchable' => false]
+            'text' => ['title' => 'Câu hỏi'],
+            'search_count' => ['title' => 'Số lần', 'searchable' => false],
+            'results_count' => ['title' => 'Số kết quả', 'searchable' => false],
+            'updated_at' => ['title' => 'Lần gần nhất', 'searchable' => false],
         ];
     }
 
     protected function getBuilderParameters()
     {
         return [
-            'order' => [0, 'asc'],
+            'order' => [1, 'desc'],
             'language' => [
-                'searchPlaceholder' => 'Nhập tên nhãn'
+                'searchPlaceholder' => 'Nhập câu hỏi'
             ]
         ];
     }

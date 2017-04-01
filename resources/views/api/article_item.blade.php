@@ -1,11 +1,10 @@
 <div class="cbp-item category-{{$article->category_id}} @foreach($article->tags as $tag) tag-{{$tag->id}} @endforeach">
     <div class="cbp-caption">
         <div class="cbp-caption-defaultWrap">
-            {!! Html::image('img/SGUET.jpg', null, ['id' => 'img-'.$article->id]) !!}
             @if($article->image_url)
-                <script async>
-                    loadImgAsync('{{$article->image_url}}', $('#img-{{$article->id}}'));
-                </script>
+                {!! Html::image($article->image_url) !!}
+            @else
+                {!! Html::image('img/SGUET.jpg') !!}
             @endif
         </div>
         <div class="cbp-caption-activeWrap">
