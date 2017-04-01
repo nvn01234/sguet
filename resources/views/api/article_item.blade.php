@@ -2,9 +2,9 @@
     <div class="cbp-caption">
         <div class="cbp-caption-defaultWrap">
             @if($article->image_url)
-                {!! Html::image($article->image_url) !!}
+                <img src="{{$article->image_url}}" style="height: 100%" alt="">
             @else
-                {!! Html::image('img/SGUET.jpg') !!}
+                {!! Html::image('img/no-image.png') !!}
             @endif
         </div>
         <div class="cbp-caption-activeWrap">

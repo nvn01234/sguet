@@ -15,6 +15,19 @@
     {!! Html::style('metronic/pages/css/blog.min.css') !!}
 @endsection
 
+@section('styles')
+    @parent
+    <style>
+        .cbp-caption, .cbp-caption-defaultWrap {
+            height: 179px;
+        }
+
+        .cbp-caption-defaultWrap img {
+            object-fit: cover;
+        }
+    </style>
+@endsection
+
 @section('page_content')
     <div class="portlet light">
         <div class="portfolio-content portfolio-1">
