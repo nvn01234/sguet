@@ -1,3 +1,32 @@
+<style>
+    .page-header.navbar .page-logo {
+        width: @if(Auth::check()) 15% @else 30% @endif;
+    }
+
+    @if (Auth::check())
+        @media (max-width: 1194px) {
+            .page-header.navbar .page-logo {
+                width: 10%;
+            }
+        }
+
+        @media (max-width: 1127px) {
+            .page-header.navbar .page-logo {
+                width: auto;
+            }
+        }
+
+        @media (max-width: 1084px) {
+            .hor-menu {
+                display: none;
+            }
+
+            .page-header.navbar .menu-toggler.responsive-toggler {
+                display: inline-block;
+            }
+        }
+    @endif
+</style>
 <li class="@yield('menu.home')">
     <a href="{!! URL::route('home') !!}" data-hover="megamenu-dropdown" data-close-other="true">
         UET Q&A
@@ -10,6 +39,12 @@
         <span class="@hasSection('menu.articles') selected @endif"> </span>
     </a>
 </li>
+<li class="@yield('menu.contacts')">
+    <a href="{!! URL::route('contact.index') !!}" data-hover="megamenu-dropdown" data-close-other="true">
+        Danh bạ
+        <span class="@hasSection('menu.contacts') selected @endif"> </span>
+    </a>
+</li>
 <li class="@yield('menu.about') @if(Auth::guest()) last @endif">
     <a href="{!! URL::route('about') !!}" data-hover="megamenu-dropdown" data-close-other="true">
         Giới thiệu
@@ -17,7 +52,7 @@
     </a>
 </li>
 @if(Auth::check())
-    <li class="classic-menu-dropdown @yield('menu.manage') dropdown-dark last">
+    <li class="classic-menu-dropdown @yield('menu.manage') dropdown-dark">
         <a href="javascript:" data-hover="megamenu-dropdown" data-close-other="true">
             Quản lý
             <i class="fa fa-angle-down"></i>
@@ -39,6 +74,11 @@
             <li class="@yield('menu.manage.article')">
                 <a href="{!! route('manage.article') !!}">
                     Tin tức - Hoạt động
+                </a>
+            </li>
+            <li class="@yield('menu.manage.contact')">
+                <a href="{!! route('manage.contact') !!}">
+                    Danh bạ
                 </a>
             </li>
         </ul>

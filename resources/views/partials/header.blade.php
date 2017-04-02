@@ -5,7 +5,7 @@
         <!-- BEGIN LOGO -->
         <div class="page-logo">
             <a href="{!! URL::route('home') !!}">
-                {!! Html::image('img/SGUET.png', 'logo', ['class' => 'logo-default hidden-lg hidden-md', 'width' => '30px', 'height' => 'auto', 'style' => 'margin-top: 8px']) !!}
+                {!! Html::image('img/SGUET.png', 'logo', ['class' => 'logo-default', 'width' => '30px', 'height' => 'auto', 'style' => 'margin-top: 8px']) !!}
             </a>
         </div>
         <!-- END LOGO -->

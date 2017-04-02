@@ -22,3 +22,16 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+$factory->define(\App\Contact::class, function(\Faker\Generator $faker) {
+    return [
+        'name' => $faker->name,
+        'description' => $faker->sentence(3),
+        'phone_cq' => $faker->phoneNumber,
+        'phone_nr' => $faker->phoneNumber,
+        'phone_dd' => $faker->phoneNumber,
+        'fax' => $faker->phoneNumber,
+        'email' => $faker->email,
+        'parent_id' => \App\Contact::all()->count() > 0 ? \App\Contact::all()->random()->id : null
+    ];
+});

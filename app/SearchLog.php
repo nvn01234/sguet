@@ -12,7 +12,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $search_count
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Article[] $results
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Faq[] $results
  * @method static \Illuminate\Database\Query\Builder|\App\SearchLog whereCreatedAt($value)
  * @method static \Illuminate\Database\Query\Builder|\App\SearchLog whereId($value)
  * @method static \Illuminate\Database\Query\Builder|\App\SearchLog whereSearchCount($value)

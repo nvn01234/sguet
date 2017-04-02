@@ -8,6 +8,11 @@
         Tin tức - Hoạt động
     </a>
 </li>
+<li class="nav-item @yield('menu.contacts')">
+    <a href="{!! URL::route('contact.index') !!}" class="nav-link nav-toggle">
+        Danh bạ
+    </a>
+</li>
 <li class="nav-item @yield('menu.about')">
     <a href="{!! URL::route('about') !!}" class="nav-link nav-toggle">
         Giới thiệu
@@ -35,6 +40,11 @@
             <li class="nav-item @yield('menu.manage.article')">
                 <a href="{!! route('manage.article') !!}" class="nav-link">
                     Tin tức - Hoạt động
+                </a>
+            </li>
+            <li class="nav-item @yield('menu.manage.contact')">
+                <a href="{{route('manage.contact')}}" class="nav-link">
+                    Danh bạ
                 </a>
             </li>
         </ul>

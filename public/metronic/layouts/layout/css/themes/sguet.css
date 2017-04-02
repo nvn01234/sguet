@@ -1011,7 +1011,7 @@ a:hover {
     }
 
     .page-header.navbar .top-menu .navbar-nav > li.dropdown-user .dropdown-toggle {
-        background-color: #415265;
+        /*background-color: #415265;*/
     }
 
     .page-header-fixed-mobile .page-header.navbar .top-menu .navbar-nav > li.dropdown-user .dropdown-toggle {

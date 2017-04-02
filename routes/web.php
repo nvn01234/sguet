@@ -55,3 +55,7 @@ Route::get('/quan-ly/nguoi-dung/{id}/xoa', 'UserController@destroy')->name('mana
 
 Route::get('/tai-khoan/doi-mat-khau', 'Auth\ChangePasswordController@show')->name('auth.password.change.show');
 Route::post('/tai-khoan/doi-mat-khau', 'Auth\ChangePasswordController@change')->name('auth.password.change');
+
+Route::get('/danh-ba', 'ContactController@index')->name('contact.index');
+Route::get('/quan-ly/danh-ba', 'ContactController@manage')->name('manage.contact');
+Route::post('/quan-ly/danh-ba/tai-len', 'ContactController@upload')->name('manage.contact.upload');

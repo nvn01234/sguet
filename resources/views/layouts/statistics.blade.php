@@ -26,6 +26,6 @@
 
 @section('scripts')
     @parent
-    {!! Html::script('js/manage.js') !!}
+    {!! Html::script('js/datatable_config.js') !!}
     {!! $dataTable->scripts() !!}
 @endsection

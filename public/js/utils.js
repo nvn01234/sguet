@@ -39,19 +39,34 @@ function logout() {
     $('#logout-form').submit();
 }
 
-function UI(id) {
+function scroll(id) {
+    const target = $('#' + id);
     return {
-        block: function () {
-            App.blockUI({
-                target: '#' + id,
-                animation: true,
-                boxed: false,
-                overlayColor: 'none',
-                message: ''
-            });
+        toTop: function() {
+            $('html, body').animate({
+                scrollTop: target.offset().top
+            }, 1000);
         },
-        unblock: function () {
-            App.unblockUI('#' + id);
+        toVisible: function() {
+            var offset = target.offset().top - $(window).scrollTop();
+
+            if (offset > window.innerHeight) {
+                // Not in view so scroll to it
+                $('html,body').animate({scrollTop: offset}, 1000);
+            }
         }
     }
+}
+
+String.prototype.replaceAll = function(from, to) {
+    return this.split(from).join(to);
+};
+
+function copyToClipboard(text) {
+    const aux = document.createElement("input");
+    aux.setAttribute("value", text);
+    document.body.appendChild(aux);
+    aux.select();
+    document.execCommand("copy");
+    document.body.removeChild(aux);
 }

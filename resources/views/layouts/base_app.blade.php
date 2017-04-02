@@ -83,7 +83,23 @@
 @section('theme_global_scripts')
     {!! Html::script('metronic/global/scripts/app.js') !!}
     <script>
-        App.setAssetsPath('/metronic/')
+        App.setAssetsPath('/metronic/');
+        function UI(id) {
+            var target = $('#' + id);
+            return {
+                block: function () {
+                    App.blockUI({
+                        target: target,
+                        animation: true,
+                        boxed: true,
+                        message: 'Đang xử lý...'
+                    });
+                },
+                unblock: function () {
+                    App.unblockUI('#' + id);
+                }
+            }
+        }
     </script>
 @show
 

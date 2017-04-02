@@ -101,15 +101,6 @@ function onsuccess(response) {
         cache.response.forEach(generateOneResult);
     }
 }
-
-function copyToClipboard(text) {
-    var aux = document.createElement("input");
-    aux.setAttribute("value", text);
-    document.body.appendChild(aux);
-    aux.select();
-    document.execCommand("copy");
-    document.body.removeChild(aux);
-}
 /*END FUNCTION*/
 
 /*BEGIN HANDLE EVENTS*/

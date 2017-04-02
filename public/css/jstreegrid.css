@@ -1,0 +1,16 @@
+.jstree-grid-column {
+    border: 1px solid grey;
+    border-collapse: collapse;
+}
+
+.jstree-grid-header {
+    font-size: 14px;
+    font-weight: 600;
+    background-color: whitesmoke !important;
+    text-align: center;
+    border-bottom: 1px solid grey;
+}
+
+.jstree-grid-separator {
+    display: none;
+}
