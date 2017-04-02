@@ -57,5 +57,5 @@ Route::get('/tai-khoan/doi-mat-khau', 'Auth\ChangePasswordController@show')->nam
 Route::post('/tai-khoan/doi-mat-khau', 'Auth\ChangePasswordController@change')->name('auth.password.change');
 
 Route::get('/danh-ba', 'ContactController@index')->name('contact.index');
-Route::get('/quan-ly/danh-ba', 'ContactController@manage')->name('manage.contact');
-Route::post('/quan-ly/danh-ba/tai-len', 'ContactController@upload')->name('manage.contact.upload');
+Route::get('/quan-ly/danh-ba', 'ContactController@manage')->name('manage.contact')->middleware('auth');
+Route::post('/quan-ly/danh-ba/tai-len', 'ContactController@upload')->name('manage.contact.upload')->middleware('auth');
