@@ -39,7 +39,7 @@ function logout() {
     $('#logout-form').submit();
 }
 
-function scroll(id) {
+function Scroll(id) {
     const target = $('#' + id);
     return {
         toTop: function() {

@@ -88,7 +88,7 @@
     @if(isset($from_manage))
         {!! Html::script('metronic/global/plugins/jquery.pulsate.min.js') !!}
         <script async>
-            scroll('manage').toVisible();
+            Scroll('manage').toVisible();
             $('#manage').pulsate({
                 color: "#399bc3",
                 repeat: 3
@@ -116,7 +116,7 @@
             tree.on('search.jstree', function (e, data) {
                 if (data.nodes.length > 0) {
                     var first = data.nodes[0];
-                    scroll(first.id).toVisible();
+                    Scroll(first.id).toVisible();
                 }
             }).jstree({
                 plugins: ["grid"],
