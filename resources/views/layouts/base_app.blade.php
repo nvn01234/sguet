@@ -83,7 +83,7 @@
 @section('theme_global_scripts')
     {!! Html::script('metronic/global/scripts/app.js') !!}
     <script>
-        App.setAssetsPath('/metronic/');
+        App.setAssetsPath('{{route('home')}}/metronic');
         function UI(id) {
             var target = $('#' + id);
             return {

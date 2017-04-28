@@ -25,10 +25,10 @@ class ContactApiController extends Controller
          * @var Contact $contact
          */
         $contact = Contact::query()->findOrFail($id);
-        $result = (object)[
+        $result = [
             'id' => $contact->id,
             'parent' => isset($contact->parent) ? $contact->parent->id : '#',
-            'text' => $contact->name,
+            'text' => str_limit($contact->name, 40),
             'data' => [
                 'description' => $contact->description,
                 'phone_cq' => $contact->phone_cq,
@@ -37,8 +37,17 @@ class ContactApiController extends Controller
                 'fax' => $contact->fax,
                 'email' => $contact->email,
             ],
-//            'a_attr' => (object)['href' => route('api.organizes.show', ['id' => $organize->id])],
+            'state' => [
+                'opened' => true
+            ],
+            'a_attr' => [
+                'href' => 'javascript:',
+                'data-original-title' => $contact->name,
+            ],
         ];
+        if (mb_strwidth($contact->name) > 40) {
+            $result['a_attr']['class'] = 'tooltips';
+        }
         return $result;
     }
 

@@ -22,8 +22,11 @@
             if(!isset($toastr['title'])) $toastr['title'] = $toast['level'];
             if(!isset($toastr['message'])) $toastr['message'] = '';
         @endphp
-        <script async type="text/javascript">
-            toastr['{{$toastr['level']}}']('{{$toastr['message']}}', '{{$toastr['title']}}');
+        <script type="text/javascript">
+            window.setTimeout(function() {
+                console.log('[{{$toastr['level']}}] {{$toastr['title']}}: {{$toastr['message']}}');
+                toastr['{{$toastr['level']}}']('{{$toastr['message']}}', '{{$toastr['title']}}');
+            }, 100);
         </script>
     @endforeach
 @endif

@@ -1,6 +1,6 @@
 @extends('layouts.single_portlet')
 
-@if(isset($from_manage))
+@if(Route::currentRouteNamed('manage.contact'))
     @section('menu.manage', 'active')
     @section('menu.manage.contact', 'active')
 @else
@@ -23,10 +23,11 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="portlet-input input-inline input-small">
-                    <div class="input-icon right tooltips" data-container="body" data-placement="top" data-original-title="Enter để tìm kiếm" style="min-width: 300px">
-                        <i class="icon-magnifier"></i>
-                        <input type="text" class="form-control" placeholder="Nhập tên"
-                               id="search"></div>
+                    <div class="input-icon right tooltips" data-container="body" data-placement="top"
+                         data-original-title="Enter để tìm kiếm" style="min-width: 300px">
+                        <i class="fa fa-spin fa-spinner"></i>
+                        <input type="text" class="form-control" placeholder="Đang tải..."
+                               id="search" disabled></div>
                 </div>
                 @if(Auth::check())
                     <div class="btn-group pull-right" id="manage">
@@ -41,7 +42,7 @@
                             </li>
                             <li>
                                 <a href="javascript:;">
-                                    <i class="fa fa-download"></i> Tải xuống  </a>
+                                    <i class="fa fa-download"></i> Tải xuống </a>
                             </li>
                         </ul>
                     </div>
@@ -53,31 +54,31 @@
     @if(Auth::check())
         <div id="bootbox-content" hidden>
             {!! Form::open(['method' => 'post', 'route' => 'manage.contact.upload', 'class' => 'form', 'role' => 'form', 'enctype' =>"multipart/form-data"]) !!}
-                <div class="form-body">
-                    <div class="form-group">
-                        <div class="fileinput fileinput-new" data-provides="fileinput">
-                            <div class="input-group input-large">
-                                <div class="form-control uneditable-input input-fixed input-medium"
-                                     data-trigger="fileinput">
-                                    <i class="fa fa-file fileinput-exists"></i>&nbsp;
-                                    <span class="fileinput-filename"> </span>
-                                </div>
-                                <span class="input-group-addon btn default btn-file">
+            <div class="form-body">
+                <div class="form-group">
+                    <div class="fileinput fileinput-new" data-provides="fileinput">
+                        <div class="input-group input-large">
+                            <div class="form-control uneditable-input input-fixed input-medium"
+                                 data-trigger="fileinput">
+                                <i class="fa fa-file fileinput-exists"></i>&nbsp;
+                                <span class="fileinput-filename"> </span>
+                            </div>
+                            <span class="input-group-addon btn default btn-file">
                                         <span class="fileinput-new"> Chọn </span>
                                         <span class="fileinput-exists"> Đổi </span>
                                         <input type="file" name="file" required="required"
                                                accept="application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
                                 </span>
-                                <a href="javascript:;" class="input-group-addon btn red fileinput-exists"
-                                   data-dismiss="fileinput"> Xoá </a>
-                            </div>
+                            <a href="javascript:;" class="input-group-addon btn red fileinput-exists"
+                               data-dismiss="fileinput"> Xoá </a>
                         </div>
                     </div>
                 </div>
-                <div class="form-actions" style="background-color: transparent">
-                    <button type="submit" class="btn blue">Tải lên</button>
-                    <button type="button" class="bootbox-close-button btn default">Đóng</button>
-                </div>
+            </div>
+            <div class="form-actions" style="background-color: transparent">
+                <button type="submit" class="btn blue">Tải lên</button>
+                <button type="button" class="bootbox-close-button btn default">Đóng</button>
+            </div>
             {!! Form::close() !!}
         </div>
     @endif
@@ -85,7 +86,7 @@
 
 @section('page_level_plugins.scripts')
     @parent
-    @if(isset($from_manage))
+    @if(Route::currentRouteNamed('manage.contact'))
         {!! Html::script('metronic/global/plugins/jquery.pulsate.min.js') !!}
         <script async>
             Scroll('manage').toVisible();
@@ -113,49 +114,56 @@
             var tree = $('#tree');
             var search = $('#search');
 
-            tree.on('search.jstree', function (e, data) {
-                if (data.nodes.length > 0) {
-                    var first = data.nodes[0];
-                    Scroll(first.id).toVisible();
-                }
-            }).jstree({
-                plugins: ["grid"],
-                grid: {
-                    columns: [
-                        {header: "Tên", width: "30%"},
-                        {header: "Chức vụ", value: "description", width: "20%"},
-                        {header: "CQ", value: "phone_cq", width: "10%"},
-                        {header: "NR", value: "phone_nr", width: "10%"},
-                        {header: "DĐ", value: "phone_dd", width: "10%"},
-                        {header: "Fax", value: "fax", width: "10%"},
-                        {header: "Email", value: "email", width: "10%"}
-                    ]
-                },
-                core: {
-                    strings: {
-                        'Loading ...': 'Đang tải ...'
+            tree
+                .on('search.jstree', function (e, data) {
+                    if (data.nodes.length > 0) {
+                        var first = data.nodes[0];
+                        Scroll(first.id).toVisible();
+                    }
+                })
+                .on('ready.jstree', function () {
+                    search.attr('placeholder', 'Nhập tên').attr('disabled', null);
+                    search.prev().removeClass('fa fa-spin fa-spinner').addClass('icon-magnifier');
+                    $('.tooltips').tooltip();
+                })
+                .jstree({
+                    plugins: ["grid"],
+                    grid: {
+                        columns: [
+                            {header: "Tên", width: "30%"},
+                            {header: "Chức vụ", value: "description", width: "20%"},
+                            {header: "CQ", value: "phone_cq", width: "10%"},
+                            {header: "NR", value: "phone_nr", width: "10%"},
+                            {header: "DĐ", value: "phone_dd", width: "10%"},
+                            {header: "Fax", value: "fax", width: "10%"},
+                            {header: "Email", value: "email", width: "10%"}
+                        ]
                     },
-                    check_callback: true,
-                    expand_selected_onload: true,
-                    multiple: true,
-                    force_text: true,
-                    dblclick_toggle: true,
-                    themes: {
-                        variant: "large",
-                        dots: true,
-                        icons: false,
-                        responsive: true
-                    },
-                    data: {
-                        url: function (node) {
-                            return node.id === '#' ? '{{route('api.contacts.roots')}}' : '{{route('api.contacts.children', '_ID_')}}'.replace('_ID_', node.id);
+                    core: {
+                        strings: {
+                            'Loading ...': 'Đang tải ...'
                         },
-                        data: function (node) {
-                            return '{{route('api.contacts.show', '_ID_')}}'.replace('_ID_', node.id);
+                        check_callback: true,
+                        expand_selected_onload: true,
+                        multiple: true,
+                        force_text: true,
+                        dblclick_toggle: true,
+                        themes: {
+                            variant: "large",
+                            dots: true,
+                            icons: false,
+                            responsive: true
+                        },
+                        data: {
+                            url: function (node) {
+                                return node.id === '#' ? '{{route('api.contacts.roots')}}' : '{{route('api.contacts.children', '_ID_')}}'.replace('_ID_', node.id);
+                            },
+                            data: function (node) {
+                                return '{{route('api.contacts.show', '_ID_')}}'.replace('_ID_', node.id);
+                            }
                         }
                     }
-                }
-            });
+                });
 
             search.keyup(function (e) {
                 const code = e.which | e.code;
@@ -166,15 +174,19 @@
         });
 
         function doSearch(q) {
-            UI('portlet').block();
-            var show_all = function(inst) {
+            var searchDialog = bootbox.dialog({
+                message: '<p><i class="fa fa-spin fa-spinner"></i> Đang tìm kiếm...</p>',
+                closeButton: false
+            });
+            var show_all = function (inst) {
                 inst.show_all();
                 $('.jstree-grid-cell').removeClass('jstree-hidden');
+                $('.tooltips').tooltip();
             };
             if (q.trim() === '') {
                 const inst = $.jstree.reference(tree);
-               show_all(inst);
-                UI('portlet').unblock();
+                show_all(inst);
+                searchDialog.modal('hide');
             } else {
                 $.ajax({
                     url: "{{route('api.contacts.search')}}?q=" + q.trim(),
@@ -186,22 +198,23 @@
                         var result = response.result;
                         console.log(result);
                         show_all(inst);
-                        var callback = function() {
-                            hidden.forEach(function(id) {
+                        var callback = function () {
+                            hidden.forEach(function (id) {
                                 $('#' + id).addClass('jstree-hidden');
                                 $('.jstree-grid-cell[data-jstreegrid="' + id + '"]').addClass('jstree-hidden');
                             });
                             if (result.length > 0) {
-                                result.forEach(function(id) {
+                                result.forEach(function (id) {
                                     $('#' + id + '_anchor').addClass('jstree-search');
                                 });
                             } else {
                                 toastr['warning']('Rất tiếc chúng tôi không tìm thấy tên bạn cần tìm', 'Không có kết quả');
                             }
-                            UI('portlet').unblock();
+                            searchDialog.modal('hide');
+                            $('.tooltips').tooltip();
                         };
                         if (opened.length > 0) {
-                            const recursive = function() {
+                            const recursive = function () {
                                 opened = opened.splice(1);
                                 if (opened.length > 0) {
                                     inst.open_node(opened[0] + '', recursive);
@@ -221,11 +234,21 @@
     </script>
     @if(Auth::check())
         <script>
-            $('#upload').click(function() {
-                bootbox.dialog({
+            var bootbox_content = $('#bootbox-content');
+            var bootbox_message = bootbox_content.html();
+            bootbox_content.remove();
+            $('#upload').click(function () {
+                var uploadDialog = bootbox.dialog({
                     title: 'Tải lên danh bạ',
-                    message: $('#bootbox-content').html(),
+                    message: bootbox_message
                 });
+                uploadDialog.find('form').submit(function() {
+                    uploadDialog.modal('hide');
+                    bootbox.dialog({
+                        message: '<p><i class="fa fa-spin fa-spinner"></i> Đang tải lên...</p>',
+                        closeButton: false
+                    });
+                })
             });
         </script>
     @endif

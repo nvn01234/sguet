@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Contact;
+use App\Faq;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Input;
 use Maatwebsite\Excel\Collections\CellCollection;
 use Maatwebsite\Excel\Collections\RowCollection;
 use Maatwebsite\Excel\Collections\SheetCollection;
@@ -12,15 +12,18 @@ use Maatwebsite\Excel\Readers\LaravelExcelReader;
 
 class ContactController extends Controller
 {
-    public function index() {
+    public function index()
+    {
         return view('contact.index');
     }
 
-    public function manage() {
-        return view('contact.index', ['from_manage' => true]);
+    public function manage()
+    {
+        return view('contact.index');
     }
 
-    public function upload(Request $request) {
+    public function upload(Request $request)
+    {
         if ($request->hasFile('file')) {
             $file = $request->file('file');
             $extension = \File::extension($file->getClientOriginalName());
@@ -54,6 +57,7 @@ class ContactController extends Controller
                 ['level' => 'error', 'title' => 'Tải lên danh bạ', 'message' => 'Không có tệp nào được tải lên'],
             ]);
         }
+
         return redirect()->route('contact.index');
     }
 
@@ -64,12 +68,19 @@ class ContactController extends Controller
     {
         Contact::query()->delete();
         $contacts = collect();
-        foreach ($sheet->all() as $row) {
+        $rows = $sheet
+            ->filter(function ($row) {
+                /**
+                 * @var CellCollection $row
+                 */
+                return $row->has('stt') && $row->has('ten') && $row->get('stt') && $row->get('ten');
+            });
+        foreach ($rows as $index => $row) {
             /**
              * @var CellCollection $row
              * @var \App\Member $member
              */
-            if ($row->has('stt') && $row->has('ten')) {
+            try {
                 $stt = (string)$row->get('stt');
                 $stts = explode('.', $stt);
                 $parent_id = null;
@@ -89,6 +100,10 @@ class ContactController extends Controller
                     'parent_id' => $parent_id,
                 ]);
                 $contacts->put($stt, $contact);
+            } catch (\Exception $e) {
+                \Session::flash('toastr', [
+                    ['level' => 'warning', 'title' => 'Tải lên danh bạ', 'message' => 'Có lỗi tại dòng ' . ($index + 2) . ': ' . $e->getMessage()],
+                ]);
             }
         }
     }
