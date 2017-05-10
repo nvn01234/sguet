@@ -16,6 +16,12 @@ class SearchStatisticsDataTable extends DataTable
     {
         return $this->datatables
             ->eloquent($this->query())
+            ->editColumn('text', function($log) {
+                /**
+                 * @var SearchLog $log
+                 */
+                return e($log->text);
+            })
             ->make(true);
     }
 
