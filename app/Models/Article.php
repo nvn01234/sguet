@@ -1,15 +1,12 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
-use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Query\Builder;
-use Laravel\Scout\Searchable;
 
 /**
- * App\Article
+ * App\Models\Article
  *
  * @property int $id
  * @property string $title
@@ -19,21 +16,21 @@ use Laravel\Scout\Searchable;
  * @property int $category_id
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
- * @property-read \App\Category $category
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Tag[] $tags
- * @method static \Illuminate\Database\Query\Builder|\App\Article whereBody($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Article whereCategoryId($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Article whereCreatedAt($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Article whereId($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Article whereImageUrl($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Article whereShortDescription($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Article whereTitle($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Article whereUpdatedAt($value)
+ * @property-read \App\Models\Category $category
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Tag[] $tags
+ * @method static \Illuminate\Database\Query\Builder|\App\Models\Article whereBody($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Models\Article whereCategoryId($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Models\Article whereCreatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Models\Article whereId($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Models\Article whereImageUrl($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Models\Article whereShortDescription($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Models\Article whereTitle($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Models\Article whereUpdatedAt($value)
  * @mixin \Eloquent
  */
 class Article extends Model
 {
-    protected $fillable = ['id', 'title', 'short_description', 'body', 'category_id', 'image_url', 'created_at', 'updated_at'];
+    protected $guarded = [];
 
     /**
      * @var string
@@ -45,7 +42,7 @@ class Article extends Model
      */
     public function tags()
     {
-        return $this->belongsToMany('App\Tag');
+        return $this->belongsToMany('App\Models\Tag');
     }
 
     /**
@@ -78,7 +75,7 @@ class Article extends Model
      */
     public function category()
     {
-        return $this->belongsTo('App\Category');
+        return $this->belongsTo('App\Models\Category');
     }
 
     /**

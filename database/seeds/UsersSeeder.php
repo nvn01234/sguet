@@ -11,11 +11,11 @@ class UsersSeeder extends Seeder
      */
     public function run()
     {
-        \App\User::create([
+        \App\Models\User::create([
             'name' => 'Admin',
             'username' => 'admin',
             'password' => Hash::make('admin'),
             'remember_token' => str_random(60)
-        ])->attachRole(\App\Role::findByName('admin'));
+        ])->attachRole(\App\Models\Role::findByName('admin'));
     }
 }

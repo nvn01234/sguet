@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Web;
 
 use App\DataTables\ArticleDatatable;
 use App\DataTables\FaqDatatable;
 use App\DataTables\TagsDataTables;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class TagController extends Controller

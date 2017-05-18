@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Web;
 
 use App\DataTables\UserDataTable;
-use App\Role;
-use App\User;
+use App\Http\Controllers\Controller;
+use App\Models\Role;
+use App\Models\User;
 use Auth;
 use Hash;
 use Illuminate\Http\Request;

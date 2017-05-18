@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Web;
 
 
 use App\DataTables\FaqDatatable;
-use App\Faq;
-use App\Tag;
+use App\Http\Controllers\Controller;
+use App\Models\Faq;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 
 class FaqController extends Controller

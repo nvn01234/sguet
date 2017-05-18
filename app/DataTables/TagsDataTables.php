@@ -2,7 +2,7 @@
 
 namespace App\DataTables;
 
-use App\Tag;
+use App\Models\Tag;
 use Yajra\Datatables\Services\DataTable;
 
 class TagsDataTables extends DataTable

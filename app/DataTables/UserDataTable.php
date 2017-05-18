@@ -2,7 +2,7 @@
 
 namespace App\DataTables;
 
-use App\User;
+use App\Models\User;
 use Yajra\Datatables\Services\DataTable;
 
 class UserDataTable extends DataTable

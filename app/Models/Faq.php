@@ -1,15 +1,13 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
-use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Query\Builder;
 use Laravel\Scout\Searchable;
 
 /**
- * App\Faq
+ * App\Models\Faq
  *
  * @property int $id
  * @property string $question
@@ -17,13 +15,13 @@ use Laravel\Scout\Searchable;
  * @property string $paraphrases
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Tag[] $tags
- * @method static \Illuminate\Database\Query\Builder|\App\Faq whereAnswer($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Faq whereCreatedAt($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Faq whereId($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Faq whereParaphrases($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Faq whereQuestion($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Faq whereUpdatedAt($value)
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Tag[] $tags
+ * @method static \Illuminate\Database\Query\Builder|\App\Models\Faq whereAnswer($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Models\Faq whereCreatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Models\Faq whereId($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Models\Faq whereParaphrases($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Models\Faq whereQuestion($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Models\Faq whereUpdatedAt($value)
  * @mixin \Eloquent
  */
 class Faq extends Model
@@ -33,7 +31,7 @@ class Faq extends Model
     /**
      * @var array
      */
-    protected $fillable = ['id', 'question', 'answer', 'created_at', 'updated_at', 'paraphrases'];
+    protected $guarded = [];
 
     /**
      * @var string
@@ -69,7 +67,7 @@ class Faq extends Model
      */
     public function tags()
     {
-        return $this->belongsToMany('App\Tag');
+        return $this->belongsToMany('App\Models\Tag');
     }
 
     /**

@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Web;
 
-use App\Contact;
-use App\Faq;
+use App\Http\Controllers\Controller;
+use App\Models\Category;
+use App\Models\Faq;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Collections\CellCollection;
 use Maatwebsite\Excel\Collections\RowCollection;
@@ -78,7 +79,7 @@ class ContactController extends Controller
         foreach ($rows as $index => $row) {
             /**
              * @var CellCollection $row
-             * @var \App\Member $member
+             * @var \App\Models\Member $member
              */
             try {
                 $stt = (string)$row->get('stt');

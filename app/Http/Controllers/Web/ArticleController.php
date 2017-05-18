@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Web;
 
-use App\Article;
-use App\Category;
+use App\Http\Controllers\Controller;
+use App\Models\Article;
+use App\Models\Category;
 use App\DataTables\ArticleDatatable;
-use App\Tag;
+use App\Models\Tag;
 use Datatables;
 use Html;
 use Illuminate\Http\Request;

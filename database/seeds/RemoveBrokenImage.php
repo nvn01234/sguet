@@ -11,7 +11,7 @@ class RemoveBrokenImage extends Seeder
      */
     public function run()
     {
-        \App\Article::whereRaw('year(created_at) < 2017')->update([
+        \App\Models\Article::whereRaw('year(created_at) < 2017')->update([
             'image_url' => null
         ]);
     }

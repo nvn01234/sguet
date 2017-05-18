@@ -26,7 +26,7 @@ class NewsSeeder extends Seeder
             $short_description = $obj->short_description;
             if (!$short_description) $short_description = '';
 
-            \App\Article::create([
+            \App\Models\Article::create([
                 'id' => $obj->id,
                 'title' => $obj->title,
                 'body' => $obj->body,

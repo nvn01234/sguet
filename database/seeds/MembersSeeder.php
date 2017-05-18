@@ -5,8 +5,8 @@ use Maatwebsite\Excel\Collections\CellCollection;
 use Maatwebsite\Excel\Collections\RowCollection;
 use Maatwebsite\Excel\Collections\SheetCollection;
 use Maatwebsite\Excel\Readers\LaravelExcelReader;
-use App\Team;
-use App\Member;
+use App\Models\Team;
+use App\Models\Member;
 
 class MembersSeeder extends Seeder
 {
@@ -45,7 +45,7 @@ class MembersSeeder extends Seeder
         $sheet_title_parts = explode(' ', $sheet_title, 2);
 
         /**
-         * @var \App\Team $team
+         * @var \App\Models\Team $team
          */
         $team = Team::create([
             'name' => $sheet_title_parts[0],
@@ -55,7 +55,7 @@ class MembersSeeder extends Seeder
         foreach ($sheet->all() as $row) {
             /**
              * @var CellCollection $row
-             * @var \App\Member $member
+             * @var \App\Models\Member $member
              */
             if ($row->get('ho_va_ten')) {
                 Member::create([

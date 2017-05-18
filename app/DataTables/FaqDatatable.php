@@ -2,8 +2,7 @@
 
 namespace App\DataTables;
 
-use App\Faq;
-use Illuminate\Database\Query\Builder;
+use App\Models\Faq;
 use Yajra\Datatables\Services\DataTable;
 
 class FaqDatatable extends DataTable

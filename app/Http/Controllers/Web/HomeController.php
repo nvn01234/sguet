@@ -1,18 +1,19 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Web;
 
-use App\Article;
-use App\Category;
-use App\Faq;
-use App\Tag;
-use App\Team;
+use App\Http\Controllers\Controller;
+use App\Models\Article;
+use App\Models\Category;
+use App\Models\Faq;
+use App\Models\Tag;
+use App\Models\Team;
 use DB;
 use Illuminate\Http\Request;
 
 /**
  * Class HomeController
- * @package App\Http\Controllers
+ * @package App\Http\Controllers\Web
  */
 class HomeController extends Controller
 {

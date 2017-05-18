@@ -1,8 +1,8 @@
 <?php
 
-use App\Role;
+use App\Models\Role;
 use Illuminate\Database\Seeder;
-use App\Permission;
+use App\Models\Permission;
 
 class EntrustSeeder extends Seeder
 {

@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Web;
 
 use App\DataTables\SearchStatisticsDataTable;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class SearchLogController extends Controller

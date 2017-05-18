@@ -2,7 +2,7 @@
 
 namespace App\DataTables;
 
-use App\SearchLog;
+use App\Models\SearchLog;
 use Yajra\Datatables\Services\DataTable;
 
 class SearchStatisticsDataTable extends DataTable

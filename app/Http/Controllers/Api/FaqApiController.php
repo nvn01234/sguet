@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Faq;
-use App\SearchLog;
+use App\Models\Faq;
+use App\Models\SearchLog;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 

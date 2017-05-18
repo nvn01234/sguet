@@ -1,19 +1,18 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Query\Builder;
 
 /**
- * App\Tag
+ * App\Models\Tag
  *
  * @property int $id
  * @property string $name
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Article[] $articles
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Faq[] $faqs
- * @method static \Illuminate\Database\Query\Builder|\App\Tag whereId($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Tag whereName($value)
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Article[] $articles
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Faq[] $faqs
+ * @method static \Illuminate\Database\Query\Builder|\App\Models\Tag whereId($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Models\Tag whereName($value)
  * @mixin \Eloquent
  */
 class Tag extends Model
@@ -31,7 +30,7 @@ class Tag extends Model
     /**
      * @var array
      */
-    protected $fillable = ['name'];
+    protected $guarded = [];
 
     /**
      * @var array
@@ -43,7 +42,7 @@ class Tag extends Model
      */
     public function articles()
     {
-        return $this->belongsToMany('App\Article', 'article_tag');
+        return $this->belongsToMany('App\Models\Article', 'article_tag');
     }
 
     /**
@@ -68,7 +67,7 @@ class Tag extends Model
      */
     public function faqs()
     {
-        return $this->belongsToMany('App\Faq', 'faq_tag');
+        return $this->belongsToMany('App\Models\Faq', 'faq_tag');
     }
 
     /**

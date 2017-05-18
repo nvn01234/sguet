@@ -1,18 +1,17 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use \Illuminate\Database\Query\Builder;
 
 /**
- * App\Category
+ * App\Models\Category
  *
  * @property int $id
  * @property string $name
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Article[] $articles
- * @method static \Illuminate\Database\Query\Builder|\App\Category whereId($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Category whereName($value)
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Article[] $articles
+ * @method static \Illuminate\Database\Query\Builder|\App\Models\Category whereId($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Models\Category whereName($value)
  * @mixin \Eloquent
  */
 class Category extends Model
@@ -30,13 +29,13 @@ class Category extends Model
      */
     protected $table = 'categories';
 
-    protected $fillable = ['name'];
+    protected $guarded = [];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function articles()
     {
-        return $this->hasMany('App\Article');
+        return $this->hasMany('App\Models\Article');
     }
 }

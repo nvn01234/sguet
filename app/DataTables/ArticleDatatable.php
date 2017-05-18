@@ -2,7 +2,7 @@
 
 namespace App\DataTables;
 
-use App\Article;
+use App\Models\Article;
 use Yajra\Datatables\Services\DataTable;
 
 class ArticleDatatable extends DataTable
