@@ -12,14 +12,13 @@
 */
 
 Route::get('/', 'Web\HomeController@index')->name('home');
-Route::get('/home', 'Web\HomeController@home');
 Route::get('/tin-tuc-hoat-dong', 'Web\HomeController@articles')->name('articles');
 Route::get('/gioi-thieu', 'Web\HomeController@about')->name('about');
 
 Route::get('/tin-tuc-hoat-dong/{id}','Web\ArticleController@show')->name('articles.show');
 
 Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
-Route::post('/login', 'Auth\LoginController@login')->name('login.post');
+Route::post('/login', 'Auth\LoginController@login');
 Route::post('/logout', 'Auth\LoginController@logout')->name('logout');
 //Auth::routes();
 
@@ -40,9 +39,6 @@ Route::post('/quan-ly/tin-tuc-hoat-dong/{id}/sua', 'Web\ArticleController@update
 Route::get('/quan-ly/tin-tuc-hoat-dong/{id}/xoa', 'Web\ArticleController@destroy')->name('manage.article.delete');
 
 // middleware: auth
-Route::get('/thong-ke/nhan', 'Web\TagController@index')->name('statistics.tag');
-Route::get('/quan-ly/nhan/{id}/faq', 'Web\TagController@faqs')->name('manage.tag.faqs');
-Route::get('/quan-ly/nhan/{id}/tin-tuc-hoat-dong', 'Web\TagController@articles')->name('manage.tag.articles');
 Route::get('/thong-ke/tim-kiem', 'Web\SearchLogController@index')->name('statistics.search_log');
 
 // middleware: role:admin

@@ -1,16 +1,11 @@
-@extends('layouts.base_app')
+@extends('layouts.page')
 
-@section('page_level_styles')
+@section('page-level-styles')
+    @parent
     {!! Html::style('metronic/pages/css/error.min.css') !!}
 @endsection
 
-@section('theme_layout_styles', ' ')
-
-@section('theme_layout_scripts', ' ')
-
-@section('body.class', 'page-404-full-page')
-
-@section('body.inner')
+@section('page-body')
     <div class="row">
         <div class="col-md-12 page-404">
             <div class="number font-@yield('color','red')">@yield('code')</div>
@@ -25,7 +20,6 @@
                         </a>
                     </span>
                 </div>
-
             </div>
         </div>
     </div>

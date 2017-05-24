@@ -1,32 +1,8 @@
-<script type="text/javascript">
-    toastr.options = {
-        "closeButton": true,
-        "debug": false,
-        "positionClass": "toast-top-right",
-        "onclick": null,
-        "showDuration": "1000",
-        "hideDuration": "1000",
-        "timeOut": "5000",
-        "extendedTimeOut": "1000",
-        "showEasing": "swing",
-        "hideEasing": "linear",
-        "showMethod": "fadeIn",
-        "hideMethod": "fadeOut"
-    };
-</script>
-
+{{ Html::script('js/sguet/toastr.js') }}
 @if (session()->has('toastr'))
-    @foreach(session('toastr') as $toastr)
-        @php
-            if(!isset($toastr['level'])) $toastr['level'] = 'info';
-            if(!isset($toastr['title'])) $toastr['title'] = $toast['level'];
-            if(!isset($toastr['message'])) $toastr['message'] = '';
-        @endphp
-        <script type="text/javascript">
-            window.setTimeout(function() {
-                console.log('[{{$toastr['level']}}] {{$toastr['title']}}: {{$toastr['message']}}');
-                toastr['{{$toastr['level']}}']('{{$toastr['message']}}', '{{$toastr['title']}}');
-            }, 100);
-        </script>
-    @endforeach
+    <script>
+        @foreach(session('toastr') as $toastr)
+            @toastr($toastr)
+        @endforeach
+    </script>
 @endif

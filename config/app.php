@@ -12,7 +12,11 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'Website chính thức của SGUET',
+    'name' => 'SGUET - CLB Hỗ trợ sinh viên Trường Đại học Công nghệ',
+    'description' => 'Website chính thức của SGUET',
+    'keywords' => 'SGUET, Câu lạc bộ Hỗ trợ sinh viên',
+    'author' => 'Nguyễn Văn Nhật',
+    'copyright' => 'SGUET',
 
     /*
     |--------------------------------------------------------------------------
@@ -183,7 +187,8 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-
+        \App\Providers\MenuHelperProvider::class,
+        \App\Providers\ToastrProvider::class,
     ],
 
     /*
@@ -237,6 +242,8 @@ return [
         'Excel' => Maatwebsite\Excel\Facades\Excel::class,
         'Datatables' => Yajra\Datatables\Facades\Datatables::class,
         'Entrust'   => Zizaco\Entrust\EntrustFacade::class,
+        'MenuHelper' => \App\Helpers\MenuHelper\MenuHelperFacade::class,
+        'Toastr' => \App\Helpers\Toastr\ToastrFacade::class,
     ],
 
 ];

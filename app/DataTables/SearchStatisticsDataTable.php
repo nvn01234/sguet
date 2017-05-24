@@ -71,7 +71,7 @@ class SearchStatisticsDataTable extends DataTable
     protected function getBuilderParameters()
     {
         return [
-            'order' => [1, 'desc'],
+            'order' => [3, 'desc'],
             'language' => [
                 'searchPlaceholder' => 'Nhập câu hỏi'
             ]

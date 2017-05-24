@@ -1,21 +1,34 @@
-@extends('layouts.app')
+@extends('layouts.page')
 
-@section('title', 'Giới thiệu về SGUET')
-
-@section('menu.about', 'active')
-
-@section('page_level_styles')
+@section('page-level-styles')
     @parent
-    {!! Html::style('metronic/pages/css/about.min.css') !!}
+    {{ Html::style('metronic/pages/css/about.min.css') }}
+    <style>
+        .sguet-logo {
+            content: url("{{asset('img/SGUET.png')}}");
+            padding: 20px 20px !important;
+            height: 106px;
+            width: 106px;
+        }
+    </style>
 @endsection
 
-@section('styles')
-    @parent
-    {!! Html::style('css/about.css') !!}
+@section('page-breadcrumb')
+    <li>
+        <a href="{{route('home')}}">
+            Trang chủ
+        </a>
+        <i class="fa fa-angle-right"></i>
+    </li>
+    <li>
+        <span>Giới thiệu</span>
+    </li>
 @endsection
 
-@section('page_content')
-    <!-- BEGIN CARDS -->
+@section('page-title', 'Giới thiệu về SGUET')
+@section('page-description', 'Support Group University of Engineering and Technology')
+
+@section('page-body')
     <div class="row margin-bottom-20">
         <div class="col-lg-3 col-md-6">
             <div class="portlet light">
@@ -26,10 +39,10 @@
                     <span>Tên đầy đủ</span>
                 </div>
                 <div class="card-desc">
-                        <span>
-                            Câu lạc bộ Hỗ trợ sinh viên<br/>
-                            Trường Đại học Công nghệ<br/>
-                        </span>
+                    <span>
+                        Câu lạc bộ Hỗ trợ sinh viên<br/>
+                        Trường Đại học Công nghệ<br/>
+                    </span>
                 </div>
             </div>
         </div>
@@ -43,7 +56,7 @@
                 </div>
                 <div class="card-desc">
                         <span>
-                            14/12/2012<br/>
+                            14/11/2012<br/>
                             &nbsp;<br/>
                         </span>
                 </div>
@@ -52,15 +65,16 @@
         <div class="col-lg-3 col-md-6">
             <div class="portlet light">
                 <div class="card-icon">
-                    <i class="icon-trophy font-purple-wisteria theme-font"></i>
+                    <i class="fa fa-globe font-purple-wisteria theme-font"></i>
                 </div>
                 <div class="card-title">
-                    <span>Sứ mệnh</span>
+                    <span>Các kênh</span>
                 </div>
                 <div class="card-desc">
                         <span>
-                            Giúp đỡ sinh viên trong quá trình<br/>
-                            học tập và hoạt động tại trường.
+                            <i class="fa fa-facebook-official"></i> <a href="https://www.facebook.com/SupportGroupUET"
+                                                                       target="_blank">SupportGroupUET</a><br>
+                            <i class="fa fa-youtube-play"></i> <a href="https://www.youtube.com/sguetchannel"> sguetchannel </a>
                         </span>
                 </div>
             </div>
@@ -74,45 +88,56 @@
                     <span>Liên hệ</span>
                 </div>
                 <div class="card-desc">
-                        <span>
-                            Email: {!! Html::mailto('lienhe.sguet@gmail.com') !!}<br/>
-                            Fb: {!! Html::link('https://fb.com/SupportGroupUET') !!}
-                        </span>
+                    <span>
+                        <i class="fa fa-envelope"></i> {{Html::mailto('lienhe.sguet@gmail.com')}}<br/>
+                        <i class="fa fa-phone"></i> <a href="tel:+84985554352">098 555 43 52</a> <br>
+                    </span>
                 </div>
             </div>
         </div>
     </div>
-    <!-- END CARDS -->
 
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="portlet light">
-                <div class="portlet-title">
-                    <div class="caption">
-                        <i class="fa fa-users font-blue-hoki"></i>
-                        <span class="caption-subject font-blue-hoki">Gia phả</span>
+    <div class="row row-eq-height margin-bottom-40">
+        <div class="col-lg-6">
+            <div class="portlet light about-text">
+                <h4>
+                    <i class="fa fa-trophy"></i> Nhiệm vụ</h4>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <ul class="list-unstyled margin-top-10 margin-bottom-10">
+                            <li>
+                                <i class="fa fa-check"></i>
+                                Hỗ trợ và giúp đỡ sinh viên UET hiểu biết về trường và các hoạt động học tập, phong trào đoàn thể của nhà trường. (Mục đích chính).
+                            </li>
+                            <li>
+                                <i class="fa fa-check"></i>
+                                Hỗ trợ và phát triển các hoạt động của Đoàn TN- Hội SV trường.
+                            </li>
+                            <li>
+                                <i class="fa fa-check"></i>
+                                Quảng bá hình ảnh UET.
+                            </li>
+                            <li>
+                                <i class="fa fa-check"></i>
+                                Tạo môi trường mới đầy đam mê, nhiệt huyết và chuyên nghiệp cho sinh viên trường Đại học Công nghệ.
+                            </li>
+                            <li>
+                                <i class="fa fa-check"></i>
+                                Xây dựng SGUET trở thành một kênh truyền bá thông tin chính thức và đáng tin cậy của sinh viên Đại học Công nghệ - ĐHQGHN.
+                            </li>
+                            <li>
+                                <i class="fa fa-check"></i>
+                                Xây dựng SGUET trở thành một kênh truyền thông phản ánh đời sống và nguyện vọng của sv công nghệ
+                            </li>
+                        </ul>
                     </div>
-                    <div class="actions">
-                        <button class="btn btn-circle btn-icon-only btn-default zoom-to-fit"
-                                id="zoomToFit"></button>
-                        <button class="btn btn-circle btn-icon-only btn-default center-on-root"
-                                id="centerRoot"></button>
-                        <button class="btn btn-circle btn-icon-only btn-default fullscreen"
-                                title="Toàn màn hình"></button>
-                    </div>
-                </div>
-                <div class="portlet-body">
-
-                    <div id="myDiagramDiv"
-                         style="background-color: white; width: 100%; height: 550px"></div>
                 </div>
             </div>
         </div>
+        <div class="col-lg-6">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/uwNPxjqX0UY" allowfullscreen></iframe>
+            </div>
+        </div>
     </div>
-@endsection
-
-@section('scripts')
-    @parent
-{{--    {!! Html::script('js/go.js') !!}--}}
-{{--    {!! Html::script('js/about.js') !!}--}}
 @endsection

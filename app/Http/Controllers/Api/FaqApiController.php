@@ -12,47 +12,29 @@ class FaqApiController extends Controller
     /**
      * Ajax api tìm FAQ qua full text
      * @param Request $request
-     * @return \Illuminate\Contracts\Routing\ResponseFactory|\Symfony\Component\HttpFoundation\Response
+     * @return \Illuminate\Http\JsonResponse
      */
     public function search(Request $request)
     {
-        $text = $request->get('q', '');
+        $text = $request->get('query', '');
         $text = trim($text);
+        $result = collect();
         if ($text !== '') {
             $result = Faq::search($text)->get();
             $result_ids = $result->pluck('id');
+
             /**
              * @var SearchLog $log
              */
             $log = SearchLog::firstOrCreate(compact('text'));
             $log->update(['search_count' => $log->search_count + 1]);
             $log->syncResults($result_ids);
-            return response($result, 200);
         }
+        return response()->json($result);
     }
 
-    public function destroy(Request $request)
+    public function syncToSearch()
     {
-        if (!$request->has('id')) {
-            abort(404);
-        }
-
-        /**
-         * @var Faq $faq
-         */
-        $faq = Faq::findOrFail($request->get('id'));
-        $faq->unsearchable();
-        $faq->delete();
-
-        $content = [
-            'title' => 'Xoá Q&A',
-            'message' => 'Đã xoá ' . $faq->question
-        ];
-
-        return response($content, 200);
-    }
-
-    public function syncToSearch() {
         Faq::makeAllSearchable();
     }
 }

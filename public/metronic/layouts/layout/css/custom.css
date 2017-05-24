@@ -1,1 +1,106 @@
 /* here you can put your own css to customize and override the theme */
+.page-header.navbar {
+    height: 58px;
+    min-height: 58px;
+}
+
+.page-header.navbar .page-logo {
+    height: 58px;
+    width: calc((100% - 541.97px)/2);
+}
+
+.page-header.navbar .hor-menu .navbar-nav>li>a {
+    padding: 19px 30px;
+}
+
+.pace .pace-progress {
+    top: 58px;
+}
+
+.pace .pace-activity {
+    top: 62px;
+}
+
+.page-header.navbar .top-menu .navbar-nav>li.dropdown>.dropdown-toggle {
+    padding: 19px 16px;
+}
+
+.page-header-fixed .page-container {
+    margin-top: 58px;
+}
+
+.page-header.navbar .menu-toggler.responsive-toggler {
+    margin: 17px 6px 0;
+}
+
+.about-text {
+    height: auto;
+}
+
+.hor-menu .navbar-nav > li:not(.last) {
+    background: url(../img/line.gif) no-repeat right center;
+}
+
+.faq-content-1 .faq-section > .faq-content .panel-heading i {
+    font-size: 16px;
+    margin-left: 10px;
+    margin-top: 13px;
+}
+
+.faq-content-1 .faq-section > .faq-content .panel-heading .accordion-toggle {
+    padding: 10px 15px;
+    line-height: normal;
+}
+
+.faq-content-1 .faq-section>.faq-content .panel-body {
+    margin-left: 0;
+    padding: 20px;
+}
+
+.cbp-caption, .cbp-caption-defaultWrap {
+    height: 172.3px;
+}
+
+.cbp-caption-defaultWrap img {
+    object-fit: cover;
+}
+
+.blog-single-desc img {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+.bootstrap-tagsinput.form-control .form-control-focus {
+    bottom: 10px !important;
+}
+
+.bootstrap-tagsinput.form-control .form-control {
+    border-bottom-color: transparent;
+    display: inline;
+}
+
+.bootstrap-tagsinput.form-control {
+    padding-top: 0;
+}
+
+.note-editor.panel {
+    margin-bottom: 0;
+}
+
+@media (min-width: 992px) {
+    .page-sidebar-closed .page-content-wrapper .page-content.margin-left-0,
+    .page-content-wrapper .page-content.margin-left-0 {
+        margin-left: 0 !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-header.navbar .top-menu {
+        clear: none;
+        display: inline;
+    }
+
+    .page-header.navbar .top-menu .navbar-nav>li.dropdown-user .dropdown-toggle {
+        background-color: transparent;
+    }
+}

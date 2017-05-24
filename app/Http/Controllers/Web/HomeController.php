@@ -5,10 +5,6 @@ namespace App\Http\Controllers\Web;
 use App\Http\Controllers\Controller;
 use App\Models\Article;
 use App\Models\Category;
-use App\Models\Faq;
-use App\Models\Tag;
-use App\Models\Team;
-use DB;
 use Illuminate\Http\Request;
 
 /**
@@ -26,14 +22,7 @@ class HomeController extends Controller
      */
     public function index(Request $request)
     {
-        $faq_id = $request->get('faq');
-        if ($faq_id) {
-            $faq = Faq::find($faq_id);
-            if ($faq) {
-                return view('home', compact('faq'));
-            }
-        }
-        return view('home');
+        return view('home', compact('request'));
     }
 
     /**
@@ -45,9 +34,9 @@ class HomeController extends Controller
         $articles = Article::query()
             ->with('tags')
             ->orderBy('created_at', 'desc')
-            ->take(8)
+            ->take(12)
             ->get();
-        return view('articles', compact('categories', 'articles'));
+        return view('article.articles', compact('categories', 'articles'));
     }
 
     /**
@@ -56,13 +45,5 @@ class HomeController extends Controller
     public function about()
     {
         return view('about');
-    }
-
-    /**
-     * @return \Illuminate\Http\RedirectResponse
-     */
-    public function home()
-    {
-        return redirect()->route('home');
     }
 }

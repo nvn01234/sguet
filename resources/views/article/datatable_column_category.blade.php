@@ -1,4 +1,4 @@
-@if(isset($category))
+@if($category)
     @if($category->id == 1)
         <span class="label label-info">{{$category->name}}</span>
     @else

@@ -1,0 +1,9 @@
+.page-content-wrapper .page-content,
+.page-container-bg-solid .page-content-wrapper .page-content {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-image: url('../../img/bg.jpg');
+    background-attachment: fixed;
+}

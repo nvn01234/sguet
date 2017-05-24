@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use Spatie\Permission\Exceptions\RoleDoesNotExist;
 use Zizaco\Entrust\EntrustRole;
 
 /**
@@ -33,17 +32,11 @@ class Role extends EntrustRole
      *
      * @param string $name
      *
-     * @throws RoleDoesNotExist
-     *
      * @return Role
      */
     public static function findByName($name)
     {
         $role = static::where('name', $name)->first();
-
-        if (!$role) {
-            throw new RoleDoesNotExist();
-        }
 
         return $role;
     }

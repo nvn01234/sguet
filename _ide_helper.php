@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.3.31 on 2017-05-18.
+ * Generated for Laravel 5.3.31 on 2017-05-21.
  *
  * @author Barry vd. Heuvel <barryvdh@gmail.com>
  * @see https://github.com/barryvdh/laravel-ide-helper
@@ -14475,6 +14475,50 @@ if (! function_exists('with')) {
          */
         public static function routeNeedsRoleOrPermission($route, $roles, $permissions, $result = null, $requireAll = false){
             \Zizaco\Entrust\Entrust::routeNeedsRoleOrPermission($route, $roles, $permissions, $result, $requireAll);
+        }
+        
+    }
+
+
+    class MenuHelper extends \App\Helpers\MenuHelper\MenuHelperFacade{
+        
+        /**
+         * 
+         *
+         * @param string|mixed $names
+         * @return bool 
+         * @static 
+         */
+        public static function currentRouteNamedIn($names){
+            return \App\Helpers\MenuHelper\MenuHelper::currentRouteNamedIn($names);
+        }
+        
+    }
+
+
+    class Toastr extends \App\Helpers\Toastr\ToastrFacade{
+        
+        /**
+         * 
+         *
+         * @param array $data
+         * @static 
+         */
+        public static function append($data = array()){
+            return \App\Helpers\Toastr\Toastr::append($data);
+        }
+        
+        /**
+         * 
+         *
+         * @param array $data
+         * @param string $key
+         * @param mixed $default
+         * @return array 
+         * @static 
+         */
+        public static function safe($data = array(), $key = null, $default = null){
+            return \App\Helpers\Toastr\Toastr::safe($data, $key, $default);
         }
         
     }

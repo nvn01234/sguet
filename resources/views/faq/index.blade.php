@@ -1,41 +1,57 @@
-@extends('layouts.manage')
+@extends('layouts.datatables')
 
-@section('title', 'Quản lý Q&A')
+@section('page-title', 'Danh sách Q&A')
+@section('page-breadcrumb')
+    <li>
+        <a href="javascript:" class="sidebar-toggler menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">Quản lý</a>
+        <i class="fa fa-angle-right"></i>
+    </li>
+    <li>
+        <a href="javascript:" class="sidebar-toggler menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">UET Q&A</a>
+        <i class="fa fa-angle-right"></i>
+    </li>
+    <li>
+        <span>Danh sách Q&A</span>
+    </li>
+@endsection
 
-@section('menu.manage.faq', 'active')
-
-@section('create_route', route('manage.faq.create'))
-
-@section('table-toolbar-more')
-    @parent
-    <div class="btn-group">
-        <button class="btn sbold blue" id="sync_to_search">
-            Cập nhật Máy tìm kiếm
-            <i class="fa fa-refresh"></i>
-        </button>
+@section('table-toolbar')
+    <div class="table-toolbar">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="btn-group">
+                    <a href="{{route('manage.faq.create')}}" class="btn blue">
+                        <i class="fa fa-plus"></i>
+                        Tạo Q&A
+                    </a>
+                </div>
+                <div class="btn-group">
+                    <button class="btn sbold blue" id="sync_to_search">
+                        Cập nhật Máy tìm kiếm
+                        <i class="fa fa-refresh"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
 @endsection
 
-@section('scripts')
+@section('page-level-scripts')
     @parent
     <script>
         $('#sync_to_search').click(function () {
-            UI('sync_to_search').block();
-            $('#sync_to_search').attr('disabled', '');
-            toastr['info']('Đang cập nhât...', 'Cập nhật Máy tìm kiếm');
+            var dialog = bootbox.loading({message: 'Đang cập nhật'});
             $.ajax({
                 method: 'POST',
                 url: '{!! route('api.faq.sync') !!}',
-                data: {_token: window.Laravel},
+                data: {_token: window.Laravel.csrfToken},
                 success: function () {
-                    toastr['success']('Cập nhật thành công', 'Cập nhật Máy tìm kiếm');
-                    $('#sync_to_search').attr('disabled', null);
-                    UI('sync_to_search').unblock();
+                    @toastr(['level' => 'success', 'title' => 'Cập nhật thành công'])
+                    dialog.modal('hide');
                 },
                 error: function () {
-                    toastr['error']('Cập nhật thất bại', 'Cập nhật Máy tìm kiếm');
-                    $('#sync_to_search').attr('disabled', null);
-                    UI('sync_to_search').unblock();
+                    @toastr(['level' => 'error', 'title' => 'Cập nhật thất bại'])
+                    dialog.modal('hide');
                 }
             });
         });

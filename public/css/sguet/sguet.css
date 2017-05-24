@@ -1,0 +1,23 @@
+/* animation */
+.animation-all,
+a,
+button,
+.btn:not(.md-skip) {
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
+}
+
+/* row-eq-height */
+@media (min-width: 992px) {
+    .row-eq-height {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display:         flex;
+    }
+
+    .row-eq-height > [class*='col-'] > .portlet {
+        height: 100%;
+    }
+}

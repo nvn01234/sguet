@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Models\Category;
+use App\Models\Contact;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -12,8 +12,11 @@ class ContactApiController extends Controller
     {
         $result = [];
         foreach ($children as $child) {
+            /**
+             * @var Contact $child
+             */
             $json = (object)$this->show($child->id, $request);
-            if (!empty($child->children->toArray())) $json->children = true;
+            if ($child->children->isNotEmpty()) $json->children = true;
             $result[] = $json;
         }
         return $result;
@@ -28,26 +31,25 @@ class ContactApiController extends Controller
         $result = [
             'id' => $contact->id,
             'parent' => isset($contact->parent) ? $contact->parent->id : '#',
-            'text' => str_limit($contact->name, 40),
+            'text' => str_limit($contact->name, 60),
             'data' => [
                 'description' => $contact->description,
                 'phone_cq' => $contact->phone_cq,
                 'phone_nr' => $contact->phone_nr,
                 'phone_dd' => $contact->phone_dd,
                 'fax' => $contact->fax,
-                'email' => $contact->email,
+                'email' => $contact->email ? \Html::mailto($contact->email)->toHtml() : '',
             ],
             'state' => [
                 'opened' => true
             ],
             'a_attr' => [
                 'href' => 'javascript:',
-                'data-original-title' => $contact->name,
+                'data-container' => 'body',
+                'data-original-title' => $contact->description ? "$contact->name ($contact->description)" : $contact->name,
+                'class' => 'tooltips',
             ],
         ];
-        if (mb_strwidth($contact->name) > 40) {
-            $result['a_attr']['class'] = 'tooltips';
-        }
         return $result;
     }
 
@@ -90,9 +92,12 @@ class ContactApiController extends Controller
      */
     public function search(Request $request)
     {
-        $name = trim($request->get('q', ''));
+        $q = trim($request->get('q', ''));
 
-        $contacts = Contact::where('name', 'LIKE', "%$name%")->get();
+        $contacts = Contact::query()
+            ->where('name', 'LIKE', "%$q%")
+            ->orWhere('description', 'LIKE', "%$q%")
+            ->get();
         if ($request->has('debug')) {
             return response()->json($contacts);
         } else {

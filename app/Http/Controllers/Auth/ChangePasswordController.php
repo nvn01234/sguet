@@ -27,12 +27,18 @@ class ChangePasswordController extends Controller
     public function change(Request $request)
     {
         $user = Auth::user();
+        if (!Hash::check($request->get('old_password'), $user->password)) {
+            return back()->withErrors([
+                'old_password' => [
+                    'Sai mật khẩu cũ',
+                ]
+            ])->withInput();
+        }
 
+        /**
+         * @var \Validator
+         */
         $validator = \Validator::make($request->all(), [
-            'remember_token' => [
-                'string', 'required', 'max:255',
-                Rule::in([$user->remember_token])
-            ],
             'old_password' => 'string|required|max:255',
             'password' => 'string|confirmed|required|max:255'
         ]);
@@ -41,22 +47,13 @@ class ChangePasswordController extends Controller
             return back()->withErrors($validator)->withInput();
         }
 
-        if (!Hash::check($request->get('old_password'), $user->password)) {
-            return back()->withErrors([
-                'old_password.match' => 'Sai mật khẩu cũ'
-            ])->withInput();
-        }
-
         $user->update([
-            'password' => Hash::make($request->get('password')),
-            'remember_token' => str_random(60)
+            'password' => Hash::make($request->get('password'))
         ]);
-        \Session::flash('toastr', [
-            [
-                'title' => 'Đổi mật khẩu',
-                'message' => 'Đổi mật khẩu thành công',
-                'level' => 'success'
-            ]
+        \Toastr::append([
+            'title' => 'Đổi mật khẩu',
+            'message' => 'Đổi mật khẩu thành công',
+            'level' => 'success'
         ]);
         return redirect()->route('home');
     }

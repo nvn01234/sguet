@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 use URL;
 
 class LoginController extends Controller
@@ -20,7 +22,9 @@ class LoginController extends Controller
     |
     */
 
-    use AuthenticatesUsers;
+    use AuthenticatesUsers {
+        logout as protected logoutTrait;
+    }
 
     /**
      * Where to redirect users after login.
@@ -29,7 +33,7 @@ class LoginController extends Controller
      */
     protected function redirectTo()
     {
-        return URL::route('home');
+        return route('home');
     }
 
     /**
@@ -48,12 +52,28 @@ class LoginController extends Controller
 
     protected function authenticated(Request $request, $user)
     {
-        \Session::flash('toastr', [
-            [
-                'title' => 'Xin chào ' . $user->name,
-                'message' => 'Bạn đã đăng nhập thành công',
-                'level' => 'success'
-            ]
+        \Toastr::append([
+            'title' => 'Xin chào ' . $user->name,
+            'message' => 'Bạn đã đăng nhập thành công',
+            'level' => 'success',
         ]);
+    }
+
+    public function logout(Request $request)
+    {
+        /**
+         * @var User $user
+         */
+        $user = \Auth::guard()->user();
+        $this->logoutTrait($request);
+
+        if ($user) {
+            \Toastr::append([
+                'title' => 'Tạm biệt ' . $user->name,
+                'message' => 'Bạn đã đăng xuất',
+                'level' => 'info',
+            ]);
+        }
+        return redirect($this->redirectPath());
     }
 }

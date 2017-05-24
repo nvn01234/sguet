@@ -4,12 +4,11 @@ namespace App\Http\Controllers\Web;
 
 use App\DataTables\UserDataTable;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CreateUserRequest;
+use App\Http\Requests\UpdateUserRequest;
 use App\Models\Role;
 use App\Models\User;
-use Auth;
 use Hash;
-use Illuminate\Http\Request;
-use Illuminate\Validation\Rule;
 
 class UserController extends Controller
 {
@@ -29,28 +28,11 @@ class UserController extends Controller
     public function create()
     {
         $roles = Role::all();
-        $selected_role = $roles->last();
-        return view('user.create', compact('roles', 'selected_role'));
+        return view('user.create', compact('roles'));
     }
 
-    public function store(Request $request)
+    public function store(CreateUserRequest $request)
     {
-        $roles = Role::pluck('id')->toArray();
-
-        $validator = \Validator::make($request->all(), [
-            'name' => 'string|required|max:255',
-            'username' => 'string|required|max:255|unique:users',
-            'password' => 'string|confirmed|required|max:255',
-            'role_id' => [
-                'integer', 'required',
-                Rule::in($roles)
-            ]
-        ]);
-
-        if ($validator->fails()) {
-            return back()->withErrors($validator)->withInput();
-        }
-
         /**
          * @var Role $role
          */
@@ -60,46 +42,25 @@ class UserController extends Controller
         ]));
         $user->attachRole($role);
 
-        \Session::flash('toastr', [
-            [
-                'title' => 'Tạo người dùng',
-                'message' => 'Đã tạo ' . $role->display_name . ' ' . $user->name,
-            ]
+        \Toastr::append([
+            'title' => 'Thêm người dùng',
+            'message' => 'Đã thêm ' . $role->display_name . ' ' . $user->name,
         ]);
         return redirect()->route('manage.user');
     }
 
-    public function edit($id) {
+    public function edit($id)
+    {
         /**
          * @var User $user
          */
         $user = User::findOrFail($id);
         $roles = Role::all();
-        $role = $user->roles()->first();
-        $selected_role = $role ? $role : $roles->last();
-        return view('user.edit', compact('user', 'roles', 'role', 'selected_role'));
+        return view('user.edit', compact('user', 'roles'));
     }
 
-    public function update($id, Request $request)
+    public function update($id, UpdateUserRequest $request)
     {
-        $roles = Role::pluck('id')->toArray();
-
-        $validator = \Validator::make($request->all(), [
-            'name' => 'string|required|max:255',
-            'username' => [
-                'string', 'required', 'max:255',
-                Rule::unique('users')->ignore($id),
-            ],
-            'role_id' => [
-                'integer', 'required',
-                Rule::in($roles)
-            ]
-        ]);
-
-        if ($validator->fails()) {
-            return back()->withErrors($validator)->withInput();
-        }
-
         /**
          * @var Role $role
          */
@@ -111,16 +72,21 @@ class UserController extends Controller
         $user->update($request->only('name', 'username'));
         $user->syncRoles([$role->id]);
 
-        \Session::flash('toastr', [
-            [
-                'title' => 'Sửa thông tin người dùng',
-                'message' => 'Đã cập nhật ' . $role->display_name . ' ' . $user->name,
-            ]
+        if ($request->has('password')) {
+            $user->update([
+                'password' => Hash::make($request->get('password')),
+            ]);
+        }
+
+        \Toastr::append([
+            'title' => 'Thay đổi thông tin người dùng',
+            'message' => 'Đã cập nhật ' . $role->display_name . ' ' . $user->name,
         ]);
         return redirect()->route('manage.user');
     }
 
-    public function destroy($id) {
+    public function destroy($id)
+    {
         /**
          * @var User $user
          */
@@ -131,11 +97,9 @@ class UserController extends Controller
          */
         $role = $user->roles()->first();
         $role_name = $role ? $role->display_name : 'Người dùng';
-        \Session::flash('toastr', [
-            [
-                'title' => 'Xoá người dùng',
-                'message' => 'Đã xoá ' . $role_name . ' ' . $user->name,
-            ]
+        \Toastr::append([
+            'title' => 'Xoá người dùng',
+            'message' => 'Đã xoá ' . $role_name . ' ' . $user->name,
         ]);
         return redirect()->route('manage.user');
     }

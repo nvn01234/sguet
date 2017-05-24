@@ -1,27 +1,32 @@
-@extends('layouts.single_portlet')
+@extends('layouts.page')
 
-@section('page_level_styles')
+@section('page-level-styles')
     @parent
     {!! Html::style('metronic/pages/css/blog.min.css') !!}
 @endsection
 
-@section('icon', 'fa fa-newspaper-o')
-
 @section('title', $article->title)
+@section('description', str_limit($article->title . ' - ' . trim(strip_tags($article->body)), 160))
+@section('page-title', $article->title)
 
-@section('styles')
-    <style>
-        .blog-single-desc img {
-            width: 100% !important;
-            height: auto !important;
-        }
-    </style>
+@section('page-breadcrumb')
+    <li>
+        <a href="{{route('home')}}">Trang chủ</a>
+        <i class="fa fa-angle-right"></i>
+    </li>
+    <li>
+        <a href="{{route('articles')}}">Tin tức - Hoạt động</a>
+        <i class="fa fa-angle-right"></i>
+    </li>
+    <li>
+        <span>{{$article->title}}</span>
+    </li>
 @endsection
 
-@section('portlet-body')
+@section('page-body')
     <div class="blog-page blog-content-2">
         <div class="row">
-            <div class="@if(Auth::check()) col-lg-9 @else col-lg-12 @endif">
+            <div class="col-lg-9">
                 <div class="blog-single-content bordered blog-container">
                     <div class="blog-single-head">
                         <h1 class="blog-single-head-title">{{$article->title}}</h1>
@@ -49,19 +54,29 @@
                     </div>
                 </div>
             </div>
-            @if(Auth::check())
-                <div class="col-lg-3">
-                    <div class="blog-single-sidebar bordered blog-container">
-                        <div class="blog-single-sidebar-tags">
-                            <h3 class="blog-sidebar-title uppercase">Nhãn</h3>
-                            <ul class="blog-post-tags">
-                                @foreach($article->tags as $tag)
-                                    <li class="uppercase">
-                                        <a href="javascript:;">{{$tag->name}}</a>
-                                    </li>
-                                @endforeach
-                            </ul>
-                        </div>
+            <div class="col-lg-3">
+                <div class="blog-single-sidebar bordered blog-container">
+                    <div class="blog-single-sidebar-recent">
+                        <h3 class="blog-sidebar-title uppercase">{{$category->name}} gần đây</h3>
+                        <ul>
+                            @foreach($recents as $recent)
+                                <li>
+                                    <a href="{{route('articles.show', $recent->id)}}">{{$recent->title}}</a>
+                                </li>
+                            @endforeach
+                        </ul>
+                    </div>
+                    <div class="blog-single-sidebar-tags">
+                        <h3 class="blog-sidebar-title uppercase">Nhãn</h3>
+                        <ul class="blog-post-tags">
+                            @foreach($article->tags as $tag)
+                                <li class="uppercase">
+                                    <a href="javascript:;">{{$tag->name}}</a>
+                                </li>
+                            @endforeach
+                        </ul>
+                    </div>
+                    @if(Auth::check())
                         <div class="blog-single-sidebar-links">
                             <h3 class="blog-sidebar-title uppercase">
                                 <i class="fa fa-cog"></i> Quản lý
@@ -79,8 +94,8 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>
-                @endif
+                    @endif
+                </div>
             </div>
         </div>
     </div>
