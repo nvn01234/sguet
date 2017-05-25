@@ -4,7 +4,7 @@
 
 @section('page-breadcrumb')
     <li>
-        <a href="javascript:" class="sidebar-toggler menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">Thống kê</a>
+        <a href="javascript:" class="sidebar-toggler menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">Quản lý</a>
         <i class="fa fa-angle-right"></i>
     </li>
     <li>

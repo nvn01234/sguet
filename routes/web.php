@@ -38,7 +38,7 @@ Route::post('articles/{id}/edit', 'Web\ArticleController@update')->name('manage.
 Route::get('articles/{id}/delete', 'Web\ArticleController@destroy')->name('manage.article.delete');
 
 // middleware: auth
-Route::get('search-log', 'Web\SearchLogController@index')->name('statistics.search_log');
+Route::get('search-log', 'Web\SearchLogController@index')->name('manage.search_log');
 
 // middleware: role:admin
 Route::get('users', 'Web\UserController@index')->name('manage.user');

@@ -22,7 +22,7 @@
     </li>
 
     @if(Auth::check())
-        <li class="nav-item @activeroute('manage.user', 'manage.user.create', 'manage.user.edit', 'manage.faq', 'manage.faq.create', 'manage.faq.edit', 'manage.article', 'manage.article.create', 'manage.article.edit', 'manage.contact')">
+        <li class="nav-item @activeroute('manage.user', 'manage.user.create', 'manage.user.edit', 'manage.faq', 'manage.faq.create', 'manage.faq.edit', 'manage.article', 'manage.article.create', 'manage.article.edit', 'manage.contact', 'manage.search_log', 'manage.backup')">
             <a href="javascript:;" class="nav-link nav-toggle">
                 <span class="title">Quản lý</span>
                 <span class="arrow"></span>
@@ -93,19 +93,16 @@
                         <span class="title">Danh bạ</span>
                     </a>
                 </li>
-            </ul>
-        </li>
-
-        <li class="nav-item @activeroute('statistics.search_log')">
-            <a href="javascript:;" class="nav-link nav-toggle">
-                <span class="title">Thống kê</span>
-                <span class="arrow"></span>
-            </a>
-            <ul class="sub-menu">
-                <li class="nav-item  @activeroute('statistics.search_log')">
-                    <a href="{{route('statistics.search_log')}}" class="nav-link nav-toggle">
+                <li class="nav-item  @activeroute('manage.search_log')">
+                    <a href="{{route('manage.search_log')}}" class="nav-link nav-toggle">
                         <i class="fa fa-history"></i>
                         <span class="title">Lịch sử tìm kiếm</span>
+                    </a>
+                </li>
+                <li class="nav-item  @activeroute('manage.backup')">
+                    <a href="{{route('manage.backup')}}" class="nav-link nav-toggle">
+                        <i class="fa fa-database"></i>
+                        <span class="title">Sao lưu CSDL</span>
                     </a>
                 </li>
             </ul>

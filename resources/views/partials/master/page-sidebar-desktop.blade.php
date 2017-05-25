@@ -71,13 +71,18 @@
             <span class="title">Danh bạ</span>
         </a>
     </li>
-    <li class="heading">
-        <h3 class="uppercase">Thống kê</h3>
-    </li>
-    <li class="nav-item  @activeroute('statistics.search_log')">
-        <a href="{{route('statistics.search_log')}}" class="nav-link nav-toggle">
+    <li class="nav-item  @activeroute('manage.search_log')">
+        <a href="{{route('manage.search_log')}}" class="nav-link nav-toggle">
             <i class="fa fa-history"></i>
             <span class="title">Lịch sử tìm kiếm</span>
         </a>
     </li>
+    @role('admin')
+    <li class="nav-item  @activeroute('manage.backup')">
+        <a href="{{route('manage.backup')}}" class="nav-link nav-toggle">
+            <i class="fa fa-database"></i>
+            <span class="title">Sao lưu CSDL</span>
+        </a>
+    </li>
+    @endrole
 </ul>
