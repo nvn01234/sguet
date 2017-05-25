@@ -14,9 +14,9 @@
 Route::get('faq/search', 'Api\FaqApiController@search')->name('api.faq.search');
 Route::post('faq/sync', 'Api\FaqApiController@syncToSearch')->name('api.faq.sync');
 
-Route::get('/article', 'Api\ArticleApiController@index')->name('api.article.index');
+Route::get('articles', 'Api\ArticleApiController@index')->name('api.article.index');
 
-Route::get('/contacts/roots', 'Api\ContactApiController@roots')->name('api.contacts.roots');
-Route::get('/contacts/search', 'Api\ContactApiController@search')->name('api.contacts.search');
-Route::get('/contacts/{id}', 'Api\ContactApiController@show')->name('api.contacts.show');
-Route::get('/contacts/{id}/children', 'Api\ContactApiController@children')->name('api.contacts.children');
+Route::get('contacts/roots', 'Api\ContactApiController@roots')->name('api.contacts.roots');
+Route::get('contacts/search', 'Api\ContactApiController@search')->name('api.contacts.search');
+Route::get('contacts/{id}', 'Api\ContactApiController@show')->name('api.contacts.show');
+Route::get('contacts/{id}/children', 'Api\ContactApiController@children')->name('api.contacts.children');

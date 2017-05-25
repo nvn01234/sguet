@@ -3,14 +3,21 @@
         <h4 class="panel-title">
             <i class="fa fa-question"></i>
             <a class="accordion-toggle" data-toggle="collapse"
-               data-parent="#search-result" href="#collapse_{{isset($faq) ? $faq->id : ''}}">
-                {{isset($faq) ? $faq->question : ''}}
+               data-parent="#search-result" href="#collapse_">
+
             </a>
         </h4>
     </div>
-    <div id="collapse_{{isset($faq) ? $faq->id : ''}}" class="panel-collapse collapse">
+    <div id="collapse_" class="panel-collapse collapse">
+        <div class="panel-footer bg-white" style="display: none;">
+            <a href="javascript:" class="btn btn-sm green edit-btn">
+                <i class="fa fa-edit"></i>Sửa
+            </a>
+            <a href="javascript:" class="btn btn-sm red delete-btn">
+                <i class="fa fa-trash-o"></i> Xoá
+            </a>
+        </div>
         <div class="panel-body">
-            {!! isset($faq) ? $faq->answer : '' !!}
         </div>
     </div>
 </div>

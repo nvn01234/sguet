@@ -66,7 +66,7 @@
                 <div class="row">
                     <div class="col-md-10 col-md-offset-2">
                         <button type="submit" class="btn blue">
-                            Thêm Q&A
+                            Cập nhật
                         </button>
                     </div>
                 </div>
@@ -93,6 +93,11 @@
         $(function() {
             initSummernote();
             initTagsinput();
+
+            var original_tags = $('#original_tags');
+            @foreach($faq->tags as $tag)
+            original_tags.tagsinput('add', '{{$tag->name}}');
+            @endforeach
         });
     </script>
 @endsection
