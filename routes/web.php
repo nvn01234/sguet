@@ -54,3 +54,8 @@ Route::post('account/change-password', 'Auth\ChangePasswordController@change')->
 Route::get('contacts', 'Web\ContactController@index')->name('contact.index');
 Route::get('contacts/index', 'Web\ContactController@manage')->name('manage.contact')->middleware('auth');
 Route::post('contacts/upload', 'Web\ContactController@upload')->name('manage.contact.upload')->middleware('auth');
+
+Route::get('backup', 'Web\BackupController@index')->name('manage.backup');
+Route::post('backup/run', 'Web\BackupController@backup')->name('manage.backup.run');
+Route::get('backup/download/{file_name}', 'Web\BackupController@download')->name('manage.backup.download');
+Route::post('backup/delete', 'Web\BackupController@delete')->name('manage.backup.delete');

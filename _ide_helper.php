@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.3.31 on 2017-05-21.
+ * Generated for Laravel 5.3.31 on 2017-05-25.
  *
  * @author Barry vd. Heuvel <barryvdh@gmail.com>
  * @see https://github.com/barryvdh/laravel-ide-helper
@@ -13831,17 +13831,6 @@ if (! function_exists('with')) {
         }
         
         /**
-         * Convert all applicable characters to HTML entities.
-         *
-         * @param string $value
-         * @return string 
-         * @static 
-         */
-        public static function escapeAll($value){
-            return \Collective\Html\HtmlBuilder::escapeAll($value);
-        }
-        
-        /**
          * Convert entities to HTML characters.
          *
          * @param string $value
@@ -14519,6 +14508,15 @@ if (! function_exists('with')) {
          */
         public static function safe($data = array(), $key = null, $default = null){
             return \App\Helpers\Toastr\Toastr::safe($data, $key, $default);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function script($data = array()){
+            return \App\Helpers\Toastr\Toastr::script($data);
         }
         
     }
