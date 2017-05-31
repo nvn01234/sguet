@@ -46,10 +46,7 @@ class SearchStatisticsDataTable extends DataTable
     {
         return $this->builder()
                     ->columns($this->getColumns())
-                    ->ajax([
-                        'url' => '',
-                        'error' => ''
-                    ])
+                    ->ajax('')
                     ->parameters($this->getBuilderParameters());
     }
 

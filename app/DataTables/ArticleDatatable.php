@@ -74,10 +74,7 @@ class ArticleDatatable extends DataTable
     {
         return $this->builder()
             ->columns($this->getColumns())
-            ->ajax([
-                'url' => '',
-                'error' => ''
-            ])
+            ->ajax('')
             ->addAction(['title' => 'Hành động', 'class' => 'col-md-1'])
             ->parameters($this->getBuilderParameters());
     }

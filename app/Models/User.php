@@ -55,4 +55,18 @@ class User extends Authenticatable
     public function syncRoles($ids = []) {
         return $this->roles()->sync($ids);
     }
+
+    /**
+     * @return integer
+     */
+    public function roleLevel() {
+        return $this->roles()->getQuery()->max('level');
+    }
+
+    /**
+     * @return Role
+     */
+    public function highestRole() {
+        return $this->roles()->getQuery()->orderBy('level', 'desc')->get()->first();
+    }
 }

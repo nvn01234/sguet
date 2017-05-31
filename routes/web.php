@@ -25,6 +25,7 @@ Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('faq/index', 'Web\FaqController@index')->name('manage.faq');
 Route::get('faq/create', 'Web\FaqController@create')->name('manage.faq.create');
 Route::post('faq/create', 'Web\FaqController@store')->name('manage.faq.store');
+Route::post('faq/sync', 'Web\FaqController@sync')->name('manage.faq.sync');
 Route::get('faq/{id}/edit', 'Web\FaqController@edit')->name('manage.faq.edit');
 Route::post('faq/{id}/edit', 'Web\FaqController@update')->name('manage.faq.update');
 Route::get('faq/{id}/delete', 'Web\FaqController@destroy')->name('manage.faq.delete');

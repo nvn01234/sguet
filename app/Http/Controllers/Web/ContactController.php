@@ -3,8 +3,7 @@
 namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
-use App\Models\Category;
-use App\Models\Faq;
+use App\Models\Contact;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Collections\CellCollection;
 use Maatwebsite\Excel\Collections\RowCollection;
@@ -13,6 +12,14 @@ use Maatwebsite\Excel\Readers\LaravelExcelReader;
 
 class ContactController extends Controller
 {
+    /**
+     * ContactController constructor.
+     */
+    public function __construct()
+    {
+        $this->middleware('permission:manage-content')->except('index');
+    }
+
     public function index()
     {
         return view('contact.index');

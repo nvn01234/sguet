@@ -15,7 +15,7 @@ class BackupController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('role:admin');
+        $this->middleware('permission:manage-system');
     }
 
     public function index(BackupDataTable $dataTable)

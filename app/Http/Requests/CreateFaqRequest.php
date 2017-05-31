@@ -2,11 +2,9 @@
 
 namespace App\Http\Requests;
 
-use App\Models\Category;
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Validation\Rule;
 
-class CreateArticleRequest extends FormRequest
+class CreateFaqRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,18 +23,12 @@ class CreateArticleRequest extends FormRequest
      */
     public function rules()
     {
-        $cat_ids = Category::pluck('id')->toArray();
         return [
-            'title' => 'required|string|max:255',
-            'short_description' => 'required|string',
-            'body' => 'required|string',
+            'question' => 'required|string',
+            'answer' => 'required|string',
             'tags' => 'array',
             'tags.*' => 'string|required',
-            'category_id' => [
-                'required',
-                Rule::in($cat_ids)
-            ],
-            'image_url' => 'active_url|nullable|max:255'
+            'paraphrases' => 'string'
         ];
     }
 }

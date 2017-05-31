@@ -1,8 +1,8 @@
 <div class="page-sidebar-wrapper">
     <div class="page-sidebar navbar-collapse collapse">
-        @if(Auth::check())
+        @permission('manage-content')
             @include('partials.master.page-sidebar-desktop')
-        @endif
+        @endpermission
         @include('partials.master.page-sidebar-mobile')
     </div>
 </div>

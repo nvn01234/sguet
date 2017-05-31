@@ -21,14 +21,14 @@
         </a>
     </li>
 
-    @if(Auth::check())
+    @permission('manage-content')
         <li class="nav-item @activeroute('manage.user', 'manage.user.create', 'manage.user.edit', 'manage.faq', 'manage.faq.create', 'manage.faq.edit', 'manage.article', 'manage.article.create', 'manage.article.edit', 'manage.contact', 'manage.search_log', 'manage.backup')">
             <a href="javascript:;" class="nav-link nav-toggle">
                 <span class="title">Quản lý</span>
                 <span class="arrow"></span>
             </a>
             <ul class="sub-menu">
-                @role('admin')
+                @permission('manage-user')
                 <li class="nav-item @activeroute('manage.user.create', 'manage.user', 'manage.user.edit')">
                     <a href="javascript:;" class="nav-link nav-toggle">
                         <i class="fa fa-users"></i>
@@ -48,7 +48,7 @@
                         </li>
                     </ul>
                 </li>
-                @endrole
+                @endpermission
                 <li class="nav-item @activeroute('manage.faq.create', 'manage.faq', 'manage.faq.edit')">
                     <a href="javascript:;" class="nav-link nav-toggle">
                         <i class="fa fa-question"></i>
@@ -99,13 +99,15 @@
                         <span class="title">Lịch sử tìm kiếm</span>
                     </a>
                 </li>
+                @permission('manage-system')
                 <li class="nav-item  @activeroute('manage.backup')">
                     <a href="{{route('manage.backup')}}" class="nav-link nav-toggle">
                         <i class="fa fa-database"></i>
                         <span class="title">Sao lưu CSDL</span>
                     </a>
                 </li>
+                @endpermission
             </ul>
         </li>
-    @endif
+    @endpermission
 </ul>

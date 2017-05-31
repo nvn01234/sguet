@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Web;
 
 use App\DataTables\FaqDatatable;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CreateFaqRequest;
 use App\Models\Faq;
 use App\Models\Tag;
 use Illuminate\Http\Request;
@@ -16,7 +17,8 @@ class FaqController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('permission:manage-content')->except('sync');
+        $this->middleware('permission:manage-system')->only('sync');
     }
 
     public function index(FaqDatatable $datatable)
@@ -29,19 +31,8 @@ class FaqController extends Controller
         return view('faq.create');
     }
 
-    public function store(Request $request)
+    public function store(CreateFaqRequest $request)
     {
-        $validator = \Validator::make($request->all(), [
-            'question' => 'required|string|max:255',
-            'answer' => 'required|string',
-            'tags' => 'array',
-            'paraphrases' => 'string'
-        ]);
-
-        if ($validator->fails()) {
-            return back()->withErrors($validator)->withInput();
-        }
-
         Faq::withoutSyncingToSearch(function () use ($request) {
             $faq = Faq::create($request->only(['question', 'answer', 'paraphrases']));
             if ($request->has('tags')) {
@@ -55,14 +46,14 @@ class FaqController extends Controller
                 }
                 $faq->syncTags($tags);
             }
-            $faq->searchable();
+            if (env('APP_ENV') === 'production') {
+                $faq->searchable();
+            }
         });
 
-        \Session::flash('toastr', [
-            [
-                'title' => 'Tạo mới Q&A',
-                'message' => 'Đã tạo "' . $request->get('question') . '"',
-            ]
+        \Toastr::append([
+            'title' => 'Tạo mới Q&A',
+            'message' => 'Đã tạo "' . $request->get('question') . '"',
         ]);
         return redirect()->route('manage.faq');
     }
@@ -77,19 +68,8 @@ class FaqController extends Controller
         return view('faq.edit', compact('faq', 'paraphrases'));
     }
 
-    public function update($id, Request $request)
+    public function update($id, CreateFaqRequest $request)
     {
-        $validator = \Validator::make($request->all(), [
-            'question' => 'required|string|max:255',
-            'answer' => 'required|string',
-            'tags' => 'array',
-            'paraphrases' => 'string',
-        ]);
-
-        if ($validator->fails()) {
-            return back()->withErrors($validator)->withInput();
-        }
-
         /**
          * @var Faq $faq
          */
@@ -111,14 +91,14 @@ class FaqController extends Controller
                 $faq->removeTag();
             }
 
-            $faq->searchable();
+            if (env('APP_ENV') === 'production') {
+                $faq->searchable();
+            }
         });
 
-        \Session::flash('toastr', [
-            [
-                'title' => 'Sửa Q&A',
-                'message' => 'Đã cập nhật "' . $request->get('question') . '"',
-            ]
+        \Toastr::append([
+            'title' => 'Sửa Q&A',
+            'message' => 'Đã cập nhật "' . $request->get('question') . '"',
         ]);
         return redirect()->route('manage.faq');
     }
@@ -129,15 +109,20 @@ class FaqController extends Controller
          * @var Faq $faq
          */
         $faq = Faq::findOrFail($id);
-        $faq->unsearchable();
+        if (env('APP_ENV') === 'production') {
+            $faq->unsearchable();
+        }
         $faq->delete();
 
-        \Session::flash('toastr', [
-            [
-                'title' => 'Sửa Q&A',
-                'message' => 'Đã xoá "' . $faq->question . '"',
-            ]
+        \Toastr::append([
+            'title' => 'Sửa Q&A',
+            'message' => 'Đã xoá "' . $faq->question . '"',
         ]);
         return redirect()->route('manage.faq');
+    }
+
+    public function sync()
+    {
+        Faq::makeAllSearchable();
     }
 }

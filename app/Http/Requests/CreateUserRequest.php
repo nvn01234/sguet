@@ -3,7 +3,6 @@
 namespace App\Http\Requests;
 
 use App\Models\Role;
-use App\Models\User;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
@@ -16,11 +15,7 @@ class CreateUserRequest extends FormRequest
      */
     public function authorize()
     {
-        /**
-         * @var User $user
-         */
-        $user = $this->user();
-        return $user && $user->hasRole('admin');
+        return \Entrust::can('manage-user');
     }
 
     /**
@@ -30,7 +25,7 @@ class CreateUserRequest extends FormRequest
      */
     public function rules()
     {
-        $roles = Role::pluck('id')->toArray();
+        $roles = Role::lowerCurrentUser()->pluck('id')->toArray();
         return [
             'name' => 'string|required',
             'username' => 'string|required|unique:users',

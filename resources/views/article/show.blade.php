@@ -76,7 +76,7 @@
                             @endforeach
                         </ul>
                     </div>
-                    @if(Auth::check())
+                    @permission('manage-content')
                         <div class="blog-single-sidebar-links">
                             <h3 class="blog-sidebar-title uppercase">
                                 <i class="fa fa-cog"></i> Quản lý
@@ -94,7 +94,7 @@
                                 </li>
                             </ul>
                         </div>
-                    @endif
+                    @endpermission
                 </div>
             </div>
         </div>

@@ -27,7 +27,7 @@
         @include('partials.master.page-sidebar')
 
         <div class="page-content-wrapper">
-            <div class="page-content @if(Auth::guest()) margin-left-0 @endif">
+            <div class="page-content @permission('manage-content') sidebar-visible @endpermission">
                 @yield('page')
             </div>
         </div>

@@ -6,7 +6,7 @@
     <li class="heading">
         <h3 class="uppercase">Quản lý</h3>
     </li>
-    @role('admin')
+    @permission('manage-user')
     <li class="nav-item @activeroute('manage.user.create', 'manage.user', 'manage.user.edit')">
         <a href="javascript:;" class="nav-link nav-toggle">
             <i class="fa fa-users"></i>
@@ -26,7 +26,7 @@
             </li>
         </ul>
     </li>
-    @endrole
+    @endpermission
     <li class="nav-item @activeroute('manage.faq.create', 'manage.faq', 'manage.faq.edit')">
         <a href="javascript:;" class="nav-link nav-toggle">
             <i class="fa fa-question"></i>
@@ -77,12 +77,12 @@
             <span class="title">Lịch sử tìm kiếm</span>
         </a>
     </li>
-    @role('admin')
+    @permission('manage-system')
     <li class="nav-item  @activeroute('manage.backup')">
         <a href="{{route('manage.backup')}}" class="nav-link nav-toggle">
             <i class="fa fa-database"></i>
             <span class="title">Sao lưu CSDL</span>
         </a>
     </li>
-    @endrole
+    @endpermission
 </ul>

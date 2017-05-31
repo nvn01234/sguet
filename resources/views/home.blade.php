@@ -127,13 +127,13 @@
                             result_el.find('.panel-body')
                                 .html(result.answer);
 
-                            @if(Auth::check())
+                            @permission('manage-content')
                                 result_el.find('.panel-footer').show();
                                 result_el.find('.edit-btn')
                                     .attr('href', '{{route('manage.faq.edit', '_ID_')}}'.replace('_ID_', result.id));
                                 result_el.find('.delete-btn')
                                     .attr('href', '{{route('manage.faq.delete', '_ID_')}}'.replace('_ID_', result.id));
-                            @endif
+                            @endpermission
 
                             results.append(result_el);
                         })

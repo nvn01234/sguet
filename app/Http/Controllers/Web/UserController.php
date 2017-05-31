@@ -17,7 +17,8 @@ class UserController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('role:admin');
+        $this->middleware('permission:manage-user');
+        $this->middleware('rolelevel:id')->only('edit', 'destroy');
     }
 
     public function index(UserDataTable $dataTable)
@@ -27,7 +28,7 @@ class UserController extends Controller
 
     public function create()
     {
-        $roles = Role::all();
+        $roles = Role::lowerCurrentUser();
         return view('user.create', compact('roles'));
     }
 
@@ -55,7 +56,8 @@ class UserController extends Controller
          * @var User $user
          */
         $user = User::findOrFail($id);
-        $roles = Role::all();
+
+        $roles = Role::lowerCurrentUser();
         return view('user.edit', compact('user', 'roles'));
     }
 
@@ -91,6 +93,7 @@ class UserController extends Controller
          * @var User $user
          */
         $user = User::findOrFail($id);
+
         $user->delete();
         /**
          * @var Role $role
@@ -98,7 +101,7 @@ class UserController extends Controller
         $role = $user->roles()->first();
         $role_name = $role ? $role->display_name : 'Người dùng';
         \Toastr::append([
-            'title' => 'Xoá người dùng',
+            'title' => 'Xoá người dùng thành công',
             'message' => 'Đã xoá ' . $role_name . ' ' . $user->name,
         ]);
         return redirect()->route('manage.user');

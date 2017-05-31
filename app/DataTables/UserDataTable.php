@@ -19,7 +19,7 @@ class UserDataTable extends DataTable
             ->editColumn('action', function ($user){
                 return view('user.datatable_action', compact('user'))->render();
             })
-            ->addColumn('roles', function ($user) {
+            ->editColumn('roles_level_max', function ($user) {
                 /**
                  * @var User $user
                  */
@@ -36,9 +36,14 @@ class UserDataTable extends DataTable
      */
     public function query()
     {
+        $level = \Auth::check() ? \Auth::user()->roleLevel() : 0;
         $query = User::query()
             ->with('roles')
-            ->select('users.*');
+            ->leftJoin('role_user', 'role_user.user_id', '=', 'users.id')
+            ->leftJoin('roles', 'roles.id', '=', 'role_user.role_id')
+            ->groupBy('users.id')
+            ->select('users.*', \DB::raw('max(roles.level) as roles_level_max'))
+            ->having('roles_level_max', '<=', $level);
 
         return $this->applyScopes($query);
     }
@@ -52,11 +57,8 @@ class UserDataTable extends DataTable
     {
         return $this->builder()
             ->columns($this->getColumns())
-            ->ajax([
-                'url' => '',
-                'error' => ''
-            ])
-            ->addAction(['class' => 'col-md-2', 'title' => 'Hành động'])
+            ->ajax('')
+            ->addAction(['class' => 'col-md-3', 'title' => 'Hành động'])
             ->parameters($this->getBuilderParameters());
     }
 
@@ -68,20 +70,18 @@ class UserDataTable extends DataTable
     protected function getColumns()
     {
         return [
-            'name' => ['title' => 'Tên', 'class' => 'col-md-2'],
-            'username' => ['title' => 'Tên đăng nhập', 'class' => 'col-md-2'],
-            'roles' => ['title' => 'Quyền', 'orderable' => false, 'searchable' => false, 'class' => 'col-md-2'],
-            'created_at' => ['title' => 'Tạo lúc', 'class' => 'col-md-2', 'searchable' => false],
-            'updated_at' => ['title' => 'Sửa lúc', 'class' => 'col-md-2', 'searchable' => false],
+            'name' => ['title' => 'Tên', 'class' => 'col-md-3'],
+            'username' => ['title' => 'Tên đăng nhập', 'class' => 'col-md-3'],
+            'roles_level_max' => ['title' => 'Nhóm quyền', 'searchable' => false, 'class' => 'col-md-3'],
         ];
     }
 
     protected function getBuilderParameters()
     {
         return [
-            'order' => [3, 'desc'],
+            'order' => [2, 'desc'],
             'language' => [
-                'searchPlaceholder' => 'Nhập Tên hoặc Tên đăng nhập'
+                'searchPlaceholder' => 'Tên/Tên đăng nhập'
             ],
         ];
     }

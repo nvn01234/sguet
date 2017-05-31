@@ -12,7 +12,6 @@
 */
 
 Route::get('faq/search', 'Api\FaqApiController@search')->name('api.faq.search');
-Route::post('faq/sync', 'Api\FaqApiController@syncToSearch')->name('api.faq.sync');
 
 Route::get('articles', 'Api\ArticleApiController@index')->name('api.article.index');
 

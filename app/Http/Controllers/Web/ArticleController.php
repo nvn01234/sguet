@@ -18,7 +18,7 @@ class ArticleController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth', ['except' => ['show']]);
+        $this->middleware('permission:manage-content')->except('show');
     }
 
     public function index(ArticleDatatable $datatable)

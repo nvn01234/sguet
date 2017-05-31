@@ -13,7 +13,7 @@ class SearchLogController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('permission:manage-content');
     }
 
     public function index(SearchStatisticsDataTable $dataTable) {

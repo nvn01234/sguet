@@ -88,8 +88,8 @@
 }
 
 @media (min-width: 992px) {
-    .page-sidebar-closed .page-content-wrapper .page-content.margin-left-0,
-    .page-content-wrapper .page-content.margin-left-0 {
+    .page-sidebar-closed .page-content-wrapper .page-content:not(.sidebar-visible),
+    .page-content-wrapper .page-content:not(.sidebar-visible) {
         margin-left: 0 !important;
     }
 }

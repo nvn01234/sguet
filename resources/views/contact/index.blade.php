@@ -35,7 +35,7 @@
                                 <input type="text" class="form-control" placeholder="Đang tải..."
                                        id="search" disabled></div>
                         </div>
-                        @if(Auth::check())
+                        @permission('manage-content')
                             <div class="btn-group pull-right" id="manage">
                                 <a class="btn btn-default " href="javascript:;" data-toggle="dropdown" aria-expanded="false">
                                     <i class="fa fa-cog"></i> Quản lý
@@ -52,12 +52,12 @@
                                     </li>
                                 </ul>
                             </div>
-                        @endif
+                        @endpermission
                     </div>
                 </div>
             </div>
             <div id="tree" class="jstree jstree-default"></div>
-            @if(Auth::check())
+            @permission('manage-content')
                 <div id="bootbox-content" hidden>
                     {!! Form::open(['method' => 'post', 'route' => 'manage.contact.upload', 'class' => 'form', 'role' => 'form', 'enctype' =>"multipart/form-data"]) !!}
                     <div class="form-body">
@@ -87,7 +87,7 @@
                     </div>
                     {!! Form::close() !!}
                 </div>
-            @endif
+            @endpermission
         </div>
     </div>
 @endsection
@@ -239,7 +239,7 @@
             }
         }
     </script>
-    @if(Auth::check())
+    @permission('manage-content')
         <script>
             var bootbox_content = $('#bootbox-content');
             var bootbox_message = bootbox_content.html();
@@ -258,5 +258,5 @@
                 })
             });
         </script>
-    @endif
+    @endpermission
 @endsection

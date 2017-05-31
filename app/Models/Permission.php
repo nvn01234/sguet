@@ -39,4 +39,12 @@ class Permission extends EntrustPermission
 
         return $permission;
     }
+
+    /**
+     * @param array $ids
+     * @return array
+     */
+    public function syncRoles($ids) {
+        return $this->roles()->sync($ids);
+    }
 }

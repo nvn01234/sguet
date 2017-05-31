@@ -13,12 +13,14 @@ use Zizaco\Entrust\EntrustRole;
  * @property string $description
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
+ * @property int $level
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Permission[] $perms
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\User[] $users
  * @method static \Illuminate\Database\Query\Builder|\App\Models\Role whereCreatedAt($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Models\Role whereDescription($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Models\Role whereDisplayName($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Models\Role whereId($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Models\Role whereLevel($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Models\Role whereName($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Models\Role whereUpdatedAt($value)
  * @mixin \Eloquent
@@ -39,5 +41,15 @@ class Role extends EntrustRole
         $role = static::where('name', $name)->first();
 
         return $role;
+    }
+
+    public static function lowerCurrentUser() {
+        if (\Auth::guest()) {
+            return collect();
+        }
+        return Role::query()
+            ->where('level', '<=', \Auth::user()->roleLevel())
+            ->orderBy('level', 'desc')
+            ->get();
     }
 }
