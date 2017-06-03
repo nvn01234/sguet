@@ -60,3 +60,7 @@ Route::get('backup', 'Web\BackupController@index')->name('manage.backup');
 Route::post('backup/run', 'Web\BackupController@backup')->name('manage.backup.run');
 Route::get('backup/download/{file_name}', 'Web\BackupController@download')->name('manage.backup.download');
 Route::post('backup/delete', 'Web\BackupController@delete')->name('manage.backup.delete');
+
+Route::get('googleeadd1946a0bd73da.html', function() {
+    return view('googleeadd1946a0bd73da');
+});
