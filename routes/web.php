@@ -12,16 +12,13 @@
 */
 
 Route::get('/', 'Web\HomeController@index')->name('home');
-Route::get('articles', 'Web\HomeController@articles')->name('articles');
-Route::get('about', 'Web\HomeController@about')->name('about');
 
-Route::get('articles/{id}','Web\ArticleController@show')->name('articles.show');
+Route::get('about', 'Web\HomeController@about')->name('about');
 
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Auth\LoginController@login');
 Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
-// middleware: auth
 Route::get('faq/index', 'Web\FaqController@index')->name('manage.faq');
 Route::get('faq/create', 'Web\FaqController@create')->name('manage.faq.create');
 Route::post('faq/create', 'Web\FaqController@store')->name('manage.faq.store');
@@ -30,18 +27,17 @@ Route::get('faq/{id}/edit', 'Web\FaqController@edit')->name('manage.faq.edit');
 Route::post('faq/{id}/edit', 'Web\FaqController@update')->name('manage.faq.update');
 Route::get('faq/{id}/delete', 'Web\FaqController@destroy')->name('manage.faq.delete');
 
-// middleware: auth
+Route::get('articles', 'Web\HomeController@articles')->name('articles');
 Route::get('articles/index', 'Web\ArticleController@index')->name('manage.article');
 Route::get('articles/create', 'Web\ArticleController@create')->name('manage.article.create');
 Route::post('articles/create', 'Web\ArticleController@store')->name('manage.article.store');
+Route::get('articles/{id}','Web\ArticleController@show')->name('articles.show');
 Route::get('articles/{id}/edit', 'Web\ArticleController@edit')->name('manage.article.edit');
 Route::post('articles/{id}/edit', 'Web\ArticleController@update')->name('manage.article.update');
 Route::get('articles/{id}/delete', 'Web\ArticleController@destroy')->name('manage.article.delete');
 
-// middleware: auth
 Route::get('search-log', 'Web\SearchLogController@index')->name('manage.search_log');
 
-// middleware: role:admin
 Route::get('users', 'Web\UserController@index')->name('manage.user');
 Route::get('users/create', 'Web\UserController@create')->name('manage.user.create');
 Route::post('users/create', 'Web\UserController@store')->name('manage.user.store');
@@ -53,14 +49,12 @@ Route::get('account/change-password', 'Auth\ChangePasswordController@show')->nam
 Route::post('account/change-password', 'Auth\ChangePasswordController@change')->name('auth.password.change');
 
 Route::get('contacts', 'Web\ContactController@index')->name('contact.index');
-Route::get('contacts/index', 'Web\ContactController@manage')->name('manage.contact')->middleware('auth');
-Route::post('contacts/upload', 'Web\ContactController@upload')->name('manage.contact.upload')->middleware('auth');
+Route::get('contacts/index', 'Web\ContactController@manage')->name('manage.contact');
+Route::post('contacts/upload', 'Web\ContactController@upload')->name('manage.contact.upload');
 
 Route::get('backup', 'Web\BackupController@index')->name('manage.backup');
 Route::post('backup/run', 'Web\BackupController@backup')->name('manage.backup.run');
 Route::get('backup/download/{file_name}', 'Web\BackupController@download')->name('manage.backup.download');
 Route::post('backup/delete', 'Web\BackupController@delete')->name('manage.backup.delete');
 
-Route::get('googleeadd1946a0bd73da.html', function() {
-    return view('googleeadd1946a0bd73da');
-});
+Route::get('googleeadd1946a0bd73da.html', 'Web\HomeController@google_site_verification');

@@ -8,7 +8,6 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateFaqRequest;
 use App\Models\Faq;
 use App\Models\Tag;
-use Illuminate\Http\Request;
 
 class FaqController extends Controller
 {

@@ -1,4 +1,4 @@
-@if(!config('app.debug'))
+@if(env('APP_ENV') === 'production')
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KNPXHVC"
                   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
