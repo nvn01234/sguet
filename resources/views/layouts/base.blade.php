@@ -85,6 +85,7 @@
 
 {{ Html::script('js/sguet/sguet.js') }}
 @include('vendor.flash.toastr')
+@include('vendor.analyticstracking')
 @yield('page-level-scripts')
 
 {{ Html::script('metronic/layouts/layout/scripts/layout.min.js') }}
