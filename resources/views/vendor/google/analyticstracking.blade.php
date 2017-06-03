@@ -1,3 +1,4 @@
+@if(!config('app.debug'))
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -5,9 +6,9 @@
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
     ga('create', 'UA-100443538-1', 'auto');
-    ga('set', 'userId', '{{ request()->ip() }}');
+    ga('set', 'userId', '{{ Auth::check() ? Auth::user()->id : request()->ip() }}');
     ga('set', 'location', '{{Request::fullUrl()}}');
-    ga('set', 'dimension1', '{{Auth::id()}}');
     ga('send', 'pageview');
 
 </script>
+@endif

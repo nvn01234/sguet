@@ -23,11 +23,15 @@
     <meta property="og:description" content="@yield('description', config('app.description'))"/>
     <meta property="og:url" content="{{Request::fullUrl()}}"/>
     <meta property="og:image" content="{{asset('img/SGUET.jpg')}}"/>
+    <meta name="google-site-verification" content="L4ISmVFmVbVo6BsOYHzUJR31FcSYRFok82aW-awSwoI" />
 
     <title>@yield('title', config('app.name'))</title>
 
     {{ Html::script('metronic/global/plugins/pace/pace.min.js') }}
     {{ Html::style('metronic/global/plugins/pace/themes/pace-theme-flash.css') }}
+
+    @include('vendor.google.tagmanager')
+    @include('vendor.google.analyticstracking')
 
     {{ Html::style('http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&amp;subset=all') }}
     {{ Html::style('metronic/global/plugins/font-awesome/css/font-awesome.min.css') }}
@@ -58,7 +62,7 @@
     </script>
 </head>
 <body class="@yield('body-class', 'page-header-fixed page-container-bg-solid page-content-white page-md')">
-
+@include('vendor.google.tagmanager_noscript')
 @yield('body')
 
 <!--[if lt IE 9]>
@@ -85,9 +89,7 @@
 
 {{ Html::script('js/sguet/sguet.js') }}
 @include('vendor.flash.toastr')
-@if(!config('app.debug'))
-    @include('vendor.analyticstracking')
-@endif
+
 @yield('page-level-scripts')
 
 {{ Html::script('metronic/layouts/layout/scripts/layout.min.js') }}
