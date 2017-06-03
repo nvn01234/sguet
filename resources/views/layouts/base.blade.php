@@ -31,7 +31,7 @@
     {{ Html::style('metronic/global/plugins/pace/themes/pace-theme-flash.css') }}
 
     @include('vendor.google.tagmanager')
-    @include('vendor.google.analyticstracking')
+
 
     {{ Html::style('http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&amp;subset=all') }}
     {{ Html::style('metronic/global/plugins/font-awesome/css/font-awesome.min.css') }}
@@ -63,6 +63,7 @@
 </head>
 <body class="@yield('body-class', 'page-header-fixed page-container-bg-solid page-content-white page-md')">
 @include('vendor.google.tagmanager_noscript')
+@include('vendor.google.analyticstracking')
 @yield('body')
 
 <!--[if lt IE 9]>
