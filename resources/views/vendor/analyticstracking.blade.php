@@ -5,9 +5,9 @@
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
     ga('create', 'UA-100443538-1', 'auto');
-    ga('set', 'userId', '{{ Auth::id() }}');
-    ga('set', 'ipAddress', '{{request()->ip()}}');
+    ga('set', 'userId', '{{ request()->ip() }}');
     ga('set', 'location', '{{Request::fullUrl()}}');
+    ga('set', 'dimension1', '{{Auth::id()}}');
     ga('send', 'pageview');
 
 </script>
