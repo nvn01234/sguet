@@ -34,11 +34,11 @@
     </div>
 
     <div class="page-footer">
-        <div class="page-footer-inner">
+        <div class="page-footer-inner" style="margin-left: 40px">
             2017 © {{config('app.name')}}
         </div>
-        <div class="page-footer-inner pull-right">
-            <a href="{{route('feedback.create')}}">Liên hệ</a>
+        <div class="page-footer-inner pull-right" style="margin-right: 40px;">
+            <a href="{{route('feedback.create')}}">Liên hệ</a> | <a href="{{route('links')}}"><i class="fa fa-link"></i></a>
         </div>
         <div class="scroll-to-top">
             <i class="icon-arrow-up"></i>

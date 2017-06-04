@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Web;
 
+use App\DataTables\LinksDataTable;
 use App\Http\Controllers\Controller;
 use App\Models\Article;
 use App\Models\Category;
@@ -49,5 +50,9 @@ class HomeController extends Controller
 
     public function google_site_verification() {
         return view('vendor.google.googleeadd1946a0bd73da');
+    }
+
+    public function links(LinksDataTable $dataTable) {
+        return $dataTable->render('links');
     }
 }

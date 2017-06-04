@@ -15,7 +15,7 @@
                 <span class="selected"> </span>
             </a>
         </li>
-        <li class="last @activeroute('about')">
+        <li class="@activeroute('about')">
             <a href="{{route('about')}}"> Giới thiệu
                 <span class="selected"> </span>
             </a>
