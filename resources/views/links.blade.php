@@ -1,6 +1,6 @@
 @extends('layouts.datatables')
 
-@section('page-title', 'Có thể bạn chưa biết')
+@section('page-title', 'Có thể bạn sẽ cần')
 
 @section('page-breadcrumb')
     <li>

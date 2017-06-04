@@ -16,7 +16,7 @@ class LinksDataTable extends DataTable
         return $this->datatables
             ->collection($this->query())
             ->editColumn('url', function($link) {
-                return \Html::link($link->url);
+                return \Html::link($link->url, null, ['target' => '_blank'])->toHtml();
             })
             ->make(true);
     }
