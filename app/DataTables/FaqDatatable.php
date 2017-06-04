@@ -29,7 +29,10 @@ class FaqDatatable extends DataTable
         return $this->datatables
             ->eloquent($this->query())
             ->editColumn('question', function ($faq) {
-                return view('faq.datatable_column_question', compact('faq'))->render();
+                /**
+                 * @var Faq $faq
+                 */
+                return \Html::link(route('faq.show', $faq->id), str_limit($faq->question, 50))->toHtml();
             })
             ->editColumn('action', function ($faq) {
                 return view('faq.datatable_action', compact('faq'))->render();

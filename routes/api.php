@@ -11,8 +11,6 @@
 |
 */
 
-Route::get('faq/search', 'Api\FaqApiController@search')->name('api.faq.search');
-
 Route::get('articles', 'Api\ArticleApiController@index')->name('api.article.index');
 
 Route::get('contacts/roots', 'Api\ContactApiController@roots')->name('api.contacts.roots');

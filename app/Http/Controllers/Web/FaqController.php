@@ -7,7 +7,9 @@ use App\DataTables\FaqDatatable;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateFaqRequest;
 use App\Models\Faq;
+use App\Models\SearchLog;
 use App\Models\Tag;
+use Illuminate\Http\Request;
 
 class FaqController extends Controller
 {
@@ -16,13 +18,22 @@ class FaqController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('permission:manage-content')->except('sync');
+        $this->middleware('permission:manage-content')->except('sync', 'search', 'show');
         $this->middleware('permission:manage-system')->only('sync');
+        $this->middleware('throttle:60,1')->only('search');
     }
 
     public function index(FaqDatatable $datatable)
     {
         return $datatable->render('faq.index');
+    }
+
+    public function show($id) {
+        /**
+         * @var Faq $faq
+         */
+        $faq = Faq::findOrFail($id);
+        return redirect()->route('home', ['query' => $faq->question, 'nolog' => true]);
     }
 
     public function create()
@@ -32,6 +43,7 @@ class FaqController extends Controller
 
     public function store(CreateFaqRequest $request)
     {
+        $faq = null;
         Faq::withoutSyncingToSearch(function () use ($request) {
             $faq = Faq::create($request->only(['question', 'answer', 'paraphrases']));
             if ($request->has('tags')) {
@@ -54,7 +66,14 @@ class FaqController extends Controller
             'title' => 'Tạo mới Q&A',
             'message' => 'Đã tạo "' . $request->get('question') . '"',
         ]);
-        return redirect()->route('manage.faq');
+        if ($faq) {
+            /**
+             * @var Faq $faq
+             */
+            return redirect()->route('faq.show', $faq->id);
+        } else {
+            return redirect()->route('manage.faq');
+        }
     }
 
     public function edit($id)
@@ -99,7 +118,7 @@ class FaqController extends Controller
             'title' => 'Sửa Q&A',
             'message' => 'Đã cập nhật "' . $request->get('question') . '"',
         ]);
-        return redirect()->route('manage.faq');
+        return redirect()->route('faq.show', $faq->id);
     }
 
     public function destroy($id)
@@ -117,11 +136,38 @@ class FaqController extends Controller
             'title' => 'Sửa Q&A',
             'message' => 'Đã xoá "' . $faq->question . '"',
         ]);
-        return redirect()->route('manage.faq');
+        return redirect()->back();
     }
 
     public function sync()
     {
         Faq::makeAllSearchable();
+    }
+
+    public function search(Request $request)
+    {
+        $text = $request->get('query', '');
+        $text = trim($text);
+        $faqs = collect();
+        if ($text) {
+            $faqs = Faq::search($text)->get();
+            if (!$request->get('nolog')) {
+                $latest = SearchLog::latest()->first();
+                if ($latest->text === $text && $latest->user_id === \Auth::id() && $latest->ip === $request->ip()) {
+                    $latest->update([
+                        'search_count' => $latest->search_count + 1,
+                    ]);
+                    $latest->syncResults($faqs->pluck('id'));
+                } else {
+                    $log = SearchLog::create([
+                        'text' => $text,
+                        'user_id' => \Auth::id(),
+                        'ip' => $request->ip(),
+                    ]);
+                    $log->syncResults($faqs->pluck('id'));
+                }
+            }
+        }
+        return view('partials.home.results', compact('faqs'));
     }
 }

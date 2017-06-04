@@ -1,1 +1,0 @@
-<a href="{!! route('home') !!}?query={{urlencode($faq->question)}}">{{$faq->question}}</a>

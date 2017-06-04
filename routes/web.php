@@ -23,6 +23,8 @@ Route::get('faq/index', 'Web\FaqController@index')->name('manage.faq');
 Route::get('faq/create', 'Web\FaqController@create')->name('manage.faq.create');
 Route::post('faq/create', 'Web\FaqController@store')->name('manage.faq.store');
 Route::post('faq/sync', 'Web\FaqController@sync')->name('manage.faq.sync');
+Route::get('faq/search', 'Web\FaqController@search')->name('faq.search');
+Route::get('faq/{id}', 'Web\FaqController@show')->name('faq.show');
 Route::get('faq/{id}/edit', 'Web\FaqController@edit')->name('manage.faq.edit');
 Route::post('faq/{id}/edit', 'Web\FaqController@update')->name('manage.faq.update');
 Route::get('faq/{id}/delete', 'Web\FaqController@destroy')->name('manage.faq.delete');
@@ -37,6 +39,8 @@ Route::post('articles/{id}/edit', 'Web\ArticleController@update')->name('manage.
 Route::get('articles/{id}/delete', 'Web\ArticleController@destroy')->name('manage.article.delete');
 
 Route::get('search-log', 'Web\SearchLogController@index')->name('manage.search_log');
+Route::get('search-log/{id}/delete', 'Web\SearchLogController@delete')->name('manage.search_log.delete');
+Route::post('search-log/cleanup', 'Web\SearchLogController@cleanup')->name('manage.search_log.cleanup');
 
 Route::get('users', 'Web\UserController@index')->name('manage.user');
 Route::get('users/create', 'Web\UserController@create')->name('manage.user.create');

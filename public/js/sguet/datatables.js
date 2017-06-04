@@ -86,14 +86,19 @@ function initButtons() {
     });
 }
 
+function initTooltips() {
+    $('.tooltips').tooltip();
+}
+
 $('#dataTableBuilder')
     .on('error.dt', handleDataTableError)
     .on('draw.dt', function() {
         updateSearchInputWidth();
         initToggleVisCb();
         initButtons();
+        initTooltips();
     })
-    .on('init.dt', function() {
+    .on('init.dt order.dt length.dt page.dt', function() {
         retry_count = 0;
         initCheckboxUniform();
     });

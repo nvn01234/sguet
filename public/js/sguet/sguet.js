@@ -42,3 +42,9 @@ function getHtmlAndRemove(id) {
     target.remove();
     return html;
 }
+
+$.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+});
