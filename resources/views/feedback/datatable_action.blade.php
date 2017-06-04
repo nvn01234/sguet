@@ -1,0 +1,1 @@
+<a href="javascript:" onclick="bootbox.detailDialog({}, '{{route('manage.feedback.detail', $feedback->id)}}')" class="btn btn-sm btn-primary">Chi tiết</a>

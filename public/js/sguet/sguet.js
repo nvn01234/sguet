@@ -24,9 +24,31 @@ bootbox.loading = function (options) {
     var dialog = bootbox.dialog(options);
 
     dialog.updateMessage = function (message) {
-        dialog.find('bootbox-body').html(renderMessage(message));
+        dialog.find('.bootbox-body').html(renderMessage(message));
     };
 
+    return dialog;
+};
+
+bootbox.detailDialog = function(data, url, options) {
+    var defaults = {
+        message: 'Đang tải',
+        closeButton: true
+    };
+    options = $.extend({}, defaults, options || {});
+    var dialog = bootbox.loading(options);
+    window.dialog = dialog;
+    $.ajax({
+        method: 'get',
+        url: url,
+        data: data
+    }).done(function(response) {
+        dialog.find('.bootbox-body').html(response);
+    }).fail(function(e) {
+        console.log(e);
+        toastr['error']('Đã có lỗi xảy ra, vui lòng thử lại sau', 'Lỗi không xác định');
+        dialog.modal('hide');
+    });
     return dialog;
 };
 

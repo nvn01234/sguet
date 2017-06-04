@@ -62,3 +62,10 @@ Route::get('backup/download/{file_name}', 'Web\BackupController@download')->name
 Route::post('backup/delete', 'Web\BackupController@delete')->name('manage.backup.delete');
 
 Route::get('googleeadd1946a0bd73da.html', 'Web\HomeController@google_site_verification');
+
+Route::get('feedback', 'Web\FeedbackController@index')->name('manage.feedback');
+Route::get('feedback/create', 'Web\FeedbackController@create')->name('feedback.create');
+Route::post('feedback/create', 'Web\FeedbackController@store')->name('feedback.store');
+Route::get('feedback/{id}/process', 'Web\FeedbackController@process')->name('manage.feedback.process');
+Route::get('feedback/{id}/delete', 'Web\FeedbackController@delete')->name('manage.feedback.delete');
+Route::get('feedback/{id}/detail', 'Web\FeedbackController@detail')->name('manage.feedback.detail');

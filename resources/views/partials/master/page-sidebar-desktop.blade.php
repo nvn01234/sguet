@@ -77,6 +77,12 @@
             <span class="title">Lịch sử tìm kiếm</span>
         </a>
     </li>
+    <li class="nav-item  @activeroute('manage.feedback')">
+        <a href="{{route('manage.feedback')}}" class="nav-link nav-toggle">
+            <i class="fa fa-comments"></i>
+            <span class="title">Liên hệ | Góp ý</span>
+        </a>
+    </li>
     @permission('manage-system')
     <li class="nav-item  @activeroute('manage.backup')">
         <a href="{{route('manage.backup')}}" class="nav-link nav-toggle">

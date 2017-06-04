@@ -38,7 +38,7 @@
             2017 © {{config('app.name')}}
         </div>
         <div class="page-footer-inner pull-right">
-            <a href="{{route('about')}}">Liên hệ</a>
+            <a href="{{route('feedback.create')}}">Liên hệ</a>
         </div>
         <div class="scroll-to-top">
             <i class="icon-arrow-up"></i>

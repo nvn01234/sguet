@@ -38,7 +38,8 @@
                             </div>
                         @endforeach
                     @else
-                        Chúng tôi không tìm thấy câu trả lời cho câu hỏi bạn cần tìm. Câu hỏi của bạn đã được ghi lại và sẽ được cập nhật. Vui lòng quay lại sau.
+                        Chúng tôi không tìm thấy câu trả lời cho câu hỏi bạn cần tìm.
+                        <br>Bạn có muốn {{Html::link(route('feedback.create', ['type' => 2, 'message' => request('query')]), 'gửi câu hỏi này')}} cho chúng tôi?
                     @endif
                 </div>
             </div>

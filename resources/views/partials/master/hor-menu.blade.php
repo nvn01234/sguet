@@ -20,5 +20,10 @@
                 <span class="selected"> </span>
             </a>
         </li>
+        <li class="last @activeroute('feedback.create')">
+            <a href="{{route('feedback.create')}}"> Liên hệ
+                <span class="selected"> </span>
+            </a>
+        </li>
     </ul>
 </div>

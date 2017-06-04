@@ -20,9 +20,14 @@
             <span class="title">Giới thiệu</span>
         </a>
     </li>
+    <li class="nav-item @activeroute('feedback.create')">
+        <a href="{{route('feedback.create')}}" class="nav-link nav-toggle">
+            <span class="title">Liên hệ</span>
+        </a>
+    </li>
 
     @permission('manage-content')
-        <li class="nav-item @activeroute('manage.user', 'manage.user.create', 'manage.user.edit', 'manage.faq', 'manage.faq.create', 'manage.faq.edit', 'manage.article', 'manage.article.create', 'manage.article.edit', 'manage.contact', 'manage.search_log', 'manage.backup')">
+        <li class="nav-item @activeroute('manage.user', 'manage.user.create', 'manage.user.edit', 'manage.faq', 'manage.faq.create', 'manage.faq.edit', 'manage.article', 'manage.article.create', 'manage.article.edit', 'manage.contact', 'manage.search_log', 'manage.backup', 'manage.feedback')">
             <a href="javascript:;" class="nav-link nav-toggle">
                 <span class="title">Quản lý</span>
                 <span class="arrow"></span>
@@ -97,6 +102,12 @@
                     <a href="{{route('manage.search_log')}}" class="nav-link nav-toggle">
                         <i class="fa fa-history"></i>
                         <span class="title">Lịch sử tìm kiếm</span>
+                    </a>
+                </li>
+                <li class="nav-item  @activeroute('manage.feedback')">
+                    <a href="{{route('manage.feedback')}}" class="nav-link nav-toggle">
+                        <i class="fa fa-comments"></i>
+                        <span class="title">Liên hệ | Góp ý</span>
                     </a>
                 </li>
                 @permission('manage-system')

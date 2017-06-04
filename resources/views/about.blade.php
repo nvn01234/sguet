@@ -29,7 +29,7 @@
 @section('page-description', 'Support Group University of Engineering and Technology')
 
 @section('page-body')
-    <div class="row margin-bottom-20">
+    <div class="row margin-bottom-20 row-eq-height">
         <div class="col-lg-3 col-md-6">
             <div class="portlet light">
                 <div class="card-icon">
@@ -90,7 +90,7 @@
                 <div class="card-desc">
                     <span>
                         <i class="fa fa-envelope"></i> {{Html::mailto('lienhe.sguet@gmail.com')}}<br/>
-                        <i class="fa fa-phone"></i> <a href="tel:+84985554352">098 555 43 52</a> <br>
+                        <i class="fa fa-comments"></i> <a href="{{route('feedback.create')}}">Để lại tin nhắn</a>
                     </span>
                 </div>
             </div>
