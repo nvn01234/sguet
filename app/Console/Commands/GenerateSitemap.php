@@ -31,6 +31,9 @@ class GenerateSitemap extends Command
     public function handle()
     {
         // modify this to your own needs
+        /**
+         * @var SitemapIndex $sitemap
+         */
         $sitemap = SitemapIndex::create();
 
         $sitemap = $sitemap
