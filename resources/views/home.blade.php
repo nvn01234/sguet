@@ -37,7 +37,7 @@
 @endsection
 
 @section('page-body')
-    <div class="container vertical-center">
+    <div class="container-fluid vertical-center">
         <div class="row">
             <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
                 <div class="row row-eq-height">
