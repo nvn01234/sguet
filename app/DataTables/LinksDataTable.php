@@ -48,6 +48,10 @@ class LinksDataTable extends DataTable
             [
                 'url' => 'http://student.uet.vnu.edu.vn/',
                 'description' => 'Dịch vụ hỗ trợ gửi/nhận yêu cầu của Sinh viên',
+            ],
+            [
+                'url' => 'https://drive.google.com/drive/u/0/folders/0B4Z6dhf02ykOVzlYYmtRUjNTQTg',
+                'description' => 'itNoodle - App hóng điểm thi'
             ]
         ])->map(function($array) {
             return (object)$array;

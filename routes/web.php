@@ -69,5 +69,3 @@ Route::post('feedback/create', 'Web\FeedbackController@store')->name('feedback.s
 Route::get('feedback/{id}/process', 'Web\FeedbackController@process')->name('manage.feedback.process');
 Route::get('feedback/{id}/delete', 'Web\FeedbackController@delete')->name('manage.feedback.delete');
 Route::get('feedback/{id}/detail', 'Web\FeedbackController@detail')->name('manage.feedback.detail');
-
-Route::get('synonyms/sync', 'Web\SynonymController@sync');
