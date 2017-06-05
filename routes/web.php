@@ -22,7 +22,6 @@ Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('faq/index', 'Web\FaqController@index')->name('manage.faq');
 Route::get('faq/create', 'Web\FaqController@create')->name('manage.faq.create');
 Route::post('faq/create', 'Web\FaqController@store')->name('manage.faq.store');
-Route::post('faq/sync', 'Web\FaqController@sync')->name('manage.faq.sync');
 Route::get('faq/search', 'Web\FaqController@search')->name('faq.search');
 Route::get('faq/{id}', 'Web\FaqController@show')->name('faq.show');
 Route::get('faq/{id}/edit', 'Web\FaqController@edit')->name('manage.faq.edit');
@@ -70,3 +69,5 @@ Route::post('feedback/create', 'Web\FeedbackController@store')->name('feedback.s
 Route::get('feedback/{id}/process', 'Web\FeedbackController@process')->name('manage.feedback.process');
 Route::get('feedback/{id}/delete', 'Web\FeedbackController@delete')->name('manage.feedback.delete');
 Route::get('feedback/{id}/detail', 'Web\FeedbackController@detail')->name('manage.feedback.detail');
+
+Route::get('synonyms/sync', 'Web\SynonymController@sync');

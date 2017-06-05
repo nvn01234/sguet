@@ -26,8 +26,6 @@ use Laravel\Scout\Searchable;
  */
 class Faq extends Model
 {
-    use Searchable;
-
     /**
      * @var array
      */
@@ -37,30 +35,6 @@ class Faq extends Model
      * @var string
      */
     protected $table = 'faqs';
-
-    /**
-     * @return array
-     */
-    public function toSearchableArray()
-    {
-        $array = [];
-
-        $array['question'] = $this->question;
-
-        $array['tags'] = $this->tags()->get(['name']);
-
-        $body = strip_tags($this->answer);
-        $a = ["\t", "\n", "\r", "&nbsp;"];
-        $body = str_replace($a, " ", $body);
-        $body = preg_replace('# {2,}#', ' ', $body);
-        $body = trim($body);
-//        $array['answer'] = $body;
-
-        $paraphrases = explode(',', $this->paraphrases);
-        $array['paraphrases'] = $paraphrases;
-
-        return $array;
-    }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany

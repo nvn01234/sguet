@@ -174,7 +174,6 @@ return [
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
-        Laravel\Scout\ScoutServiceProvider::class,
         Maatwebsite\Excel\ExcelServiceProvider::class,
         Yajra\Datatables\DatatablesServiceProvider::class,
         Zizaco\Entrust\EntrustServiceProvider::class,
@@ -190,6 +189,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         \App\Providers\MenuHelperProvider::class,
         \App\Providers\ToastrProvider::class,
+        App\Providers\ElasticHelperProvider::class,
     ],
 
     /*
@@ -245,6 +245,7 @@ return [
         'Entrust'   => Zizaco\Entrust\EntrustFacade::class,
         'MenuHelper' => \App\Helpers\MenuHelper\MenuHelperFacade::class,
         'Toastr' => \App\Helpers\Toastr\ToastrFacade::class,
+        'Elastic' => \App\Helpers\ElasticHelper\ElasticHelperFacade::class,
     ],
 
 ];

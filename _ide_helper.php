@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.3.31 on 2017-06-04.
+ * Generated for Laravel 5.3.31 on 2017-06-05.
  *
  * @author Barry vd. Heuvel <barryvdh@gmail.com>
  * @see https://github.com/barryvdh/laravel-ide-helper
@@ -12806,6 +12806,21 @@ if (! function_exists('with')) {
         }
         
         /**
+         * Handle silenced errors
+         *
+         * @param $level
+         * @param $message
+         * @param string $file
+         * @param int $line
+         * @param array $context
+         * @throws \ErrorException
+         * @static 
+         */
+        public static function handleError($level, $message, $file = '', $line = 0, $context = array()){
+            return \Barryvdh\Debugbar\LaravelDebugbar::handleError($level, $message, $file, $line, $context);
+        }
+        
+        /**
          * Starts a measure
          *
          * @param string $name Internal name, used to stop the measure
@@ -14517,6 +14532,53 @@ if (! function_exists('with')) {
          */
         public static function script($data = array()){
             return \App\Helpers\Toastr\Toastr::script($data);
+        }
+        
+    }
+
+
+    class Elastic extends \App\Helpers\ElasticHelper\ElasticHelperFacade{
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function indexSynonyms(){
+            return \App\Helpers\ElasticHelper\ElasticHelper::indexSynonyms();
+        }
+        
+        /**
+         * 
+         *
+         * @param \Illuminate\Support\Collection $faqs
+         * @return array 
+         * @static 
+         */
+        public static function indexFaqs($faqs){
+            return \App\Helpers\ElasticHelper\ElasticHelper::indexFaqs($faqs);
+        }
+        
+        /**
+         * 
+         *
+         * @param string $query
+         * @return \Illuminate\Database\Eloquent\Collection|static[] 
+         * @static 
+         */
+        public static function searchFaqs($query){
+            return \App\Helpers\ElasticHelper\ElasticHelper::searchFaqs($query);
+        }
+        
+        /**
+         * 
+         *
+         * @param \Illuminate\Support\Collection $ids
+         * @return array 
+         * @static 
+         */
+        public static function deleteFaqs($ids){
+            return \App\Helpers\ElasticHelper\ElasticHelper::deleteFaqs($ids);
         }
         
     }

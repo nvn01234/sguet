@@ -25,39 +25,7 @@
                         Tạo Q&A
                     </a>
                 </div>
-                @permission('manage-system')
-                <div class="btn-group">
-                    <button class="btn sbold blue" id="sync_to_search">
-                        Cập nhật Máy tìm kiếm
-                        <i class="fa fa-refresh"></i>
-                    </button>
-                </div>
-                @endpermission
             </div>
         </div>
     </div>
-@endsection
-
-@section('page-level-scripts')
-    @parent
-    @permission('manage-system')
-    <script>
-        $('#sync_to_search').click(function () {
-            var dialog = bootbox.loading({message: 'Đang cập nhật'});
-            $.ajax({
-                method: 'POST',
-                url: '{!! route('manage.faq.sync') !!}',
-                data: {_token: window.Laravel.csrfToken},
-                success: function () {
-                    @toastr(['level' => 'success', 'title' => 'Cập nhật thành công'])
-                    dialog.modal('hide');
-                },
-                error: function () {
-                    @toastr(['level' => 'error', 'title' => 'Cập nhật thất bại'])
-                    dialog.modal('hide');
-                }
-            });
-        });
-    </script>
-    @endpermission
 @endsection

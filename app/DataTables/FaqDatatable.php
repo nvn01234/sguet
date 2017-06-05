@@ -32,7 +32,14 @@ class FaqDatatable extends DataTable
                 /**
                  * @var Faq $faq
                  */
-                return \Html::link(route('faq.show', $faq->id), str_limit($faq->question, 50))->toHtml();
+                return \Html::link(route('faq.show', $faq->id), str_limit($faq->question, 50), ['class' => 'tooltips', 'data-original-title' => $faq->question])->toHtml();
+            })
+            ->editColumn('paraphrases', function($faq) {
+                /**
+                 * @var Faq $faq
+                 */
+                $paraphrases = collect($faq->paraphrases ? explode(',', $faq->paraphrases) : []);
+                return view('faq.datatable_paraphrases', compact('paraphrases'))->render();
             })
             ->editColumn('action', function ($faq) {
                 return view('faq.datatable_action', compact('faq'))->render();

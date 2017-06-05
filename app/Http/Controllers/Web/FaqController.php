@@ -18,8 +18,7 @@ class FaqController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('permission:manage-content')->except('sync', 'search', 'show');
-        $this->middleware('permission:manage-system')->only('sync');
+        $this->middleware('permission:manage-content')->except( 'search', 'show');
         $this->middleware('throttle:60,1')->only('search');
     }
 
@@ -28,7 +27,8 @@ class FaqController extends Controller
         return $datatable->render('faq.index');
     }
 
-    public function show($id) {
+    public function show($id)
+    {
         /**
          * @var Faq $faq
          */
@@ -43,37 +43,28 @@ class FaqController extends Controller
 
     public function store(CreateFaqRequest $request)
     {
-        $faq = null;
-        Faq::withoutSyncingToSearch(function () use ($request) {
-            $faq = Faq::create($request->only(['question', 'answer', 'paraphrases']));
-            if ($request->has('tags')) {
-                $tags = [];
-                foreach ($request->get('tags') as $tag_name) {
-                    /**
-                     * @var Tag $tag
-                     */
-                    $tag = Tag::firstOrCreate(['name' => $tag_name]);
-                    $tags[] = $tag->id;
-                }
-                $faq->syncTags($tags);
+        $faq = Faq::create($request->only(['question', 'answer', 'paraphrases']));
+        if ($request->has('tags')) {
+            $tags = [];
+            foreach ($request->get('tags') as $tag_name) {
+                /**
+                 * @var Tag $tag
+                 */
+                $tag = Tag::firstOrCreate(['name' => $tag_name]);
+                $tags[] = $tag->id;
             }
-            if (env('APP_ENV') === 'production') {
-                $faq->searchable();
-            }
-        });
+            $faq->syncTags($tags);
+        }
+        if (env('APP_ENV') === 'production') {
+            \Elastic::indexFaqs(collect([$faq]));
+        }
 
         \Toastr::append([
             'title' => 'Tạo mới Q&A',
             'message' => 'Đã tạo "' . $request->get('question') . '"',
         ]);
-        if ($faq) {
-            /**
-             * @var Faq $faq
-             */
-            return redirect()->route('faq.show', $faq->id);
-        } else {
-            return redirect()->route('manage.faq');
-        }
+
+        return redirect()->route('faq.show', $faq->id);
     }
 
     public function edit($id)
@@ -93,26 +84,24 @@ class FaqController extends Controller
          */
         $faq = Faq::findOrFail($id);
 
-        Faq::withoutSyncingToSearch(function () use ($request, $faq) {
-            $faq->update($request->only(['question', 'answer', 'paraphrases']));
-            if ($request->has('tags')) {
-                $tags = [];
-                foreach ($request->get('tags') as $tag_name) {
-                    /**
-                     * @var Tag $tag
-                     */
-                    $tag = Tag::firstOrCreate(['name' => $tag_name]);
-                    $tags[] = $tag->id;
-                }
-                $faq->syncTags($tags);
-            } else {
-                $faq->removeTag();
+        $faq->update($request->only(['question', 'answer', 'paraphrases']));
+        if ($request->has('tags')) {
+            $tags = [];
+            foreach ($request->get('tags') as $tag_name) {
+                /**
+                 * @var Tag $tag
+                 */
+                $tag = Tag::firstOrCreate(['name' => $tag_name]);
+                $tags[] = $tag->id;
             }
+            $faq->syncTags($tags);
+        } else {
+            $faq->removeTag();
+        }
 
-            if (env('APP_ENV') === 'production') {
-                $faq->searchable();
-            }
-        });
+        if (env('APP_ENV') === 'production') {
+            \Elastic::indexFaqs(collect([$faq]));
+        }
 
         \Toastr::append([
             'title' => 'Sửa Q&A',
@@ -123,49 +112,36 @@ class FaqController extends Controller
 
     public function destroy($id)
     {
-        /**
-         * @var Faq $faq
-         */
-        $faq = Faq::findOrFail($id);
         if (env('APP_ENV') === 'production') {
-            $faq->unsearchable();
+            \Elastic::deleteFaqs(collect([$id]));
         }
-        $faq->delete();
+        $result = Faq::destroy($id);
 
         \Toastr::append([
-            'title' => 'Sửa Q&A',
-            'message' => 'Đã xoá "' . $faq->question . '"',
+            'message' => "Đã xoá $result Q&A",
         ]);
         return redirect()->back();
     }
 
-    public function sync()
-    {
-        Faq::makeAllSearchable();
-    }
-
     public function search(Request $request)
     {
-        $text = $request->get('query', '');
-        $text = trim($text);
-        $faqs = collect();
-        if ($text) {
-            $faqs = Faq::search($text)->get();
-            if (!$request->get('nolog')) {
-                $latest = SearchLog::latest()->first();
-                if ($latest->text === $text && $latest->user_id === \Auth::id() && $latest->ip === $request->ip()) {
-                    $latest->update([
-                        'search_count' => $latest->search_count + 1,
-                    ]);
-                    $latest->syncResults($faqs->pluck('id'));
-                } else {
-                    $log = SearchLog::create([
-                        'text' => $text,
-                        'user_id' => \Auth::id(),
-                        'ip' => $request->ip(),
-                    ]);
-                    $log->syncResults($faqs->pluck('id'));
-                }
+        $query = $request->get('query', '');
+        $query = trim($query);
+        $faqs = \Elastic::searchFaqs($query);
+        if (!$request->get('nolog')) {
+            $latest = SearchLog::latest()->first();
+            if ($latest->text === $query && $latest->user_id === \Auth::id() && $latest->ip === $request->ip()) {
+                $latest->update([
+                    'search_count' => $latest->search_count + 1,
+                ]);
+                $latest->syncResults($faqs->pluck('id'));
+            } else {
+                $log = SearchLog::create([
+                    'text' => $query,
+                    'user_id' => \Auth::id(),
+                    'ip' => $request->ip(),
+                ]);
+                $log->syncResults($faqs->pluck('id'));
             }
         }
         return view('partials.home.results', compact('faqs'));
