@@ -11,14 +11,16 @@
     "php": ">=5.6.4",
     "barryvdh/laravel-debugbar": "^2.3",
     "caouecs/laravel-lang": "~3.0",
+    "cviebrock/eloquent-sluggable": "4.1",
     "doctrine/dbal": "^2.5",
+    "elasticsearch/elasticsearch": "~5.0",
     "kalnoy/nestedset": "^4.2",
     "laravel/framework": "5.3.*",
     "laravelcollective/html": "^5.3.0",
     "maatwebsite/excel": "2.0.*@dev",
-    "yajra/laravel-datatables-oracle": "^6.0",
     "spatie/laravel-backup": "^3.0.0",
-    "elasticsearch/elasticsearch": "~5.0"
+    "spatie/laravel-sitemap": "^2.2",
+    "yajra/laravel-datatables-oracle": "^6.0"
   },
   "require-dev": {
     "barryvdh/laravel-ide-helper": "2.2.3",

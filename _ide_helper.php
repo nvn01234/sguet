@@ -14540,8 +14540,10 @@ if (! function_exists('with')) {
     class Elastic extends \App\Helpers\ElasticHelper\ElasticHelperFacade{
         
         /**
-         * 
+         * Not working
          *
+         * @deprecated 
+         * @return array 
          * @static 
          */
         public static function indexSynonyms(){

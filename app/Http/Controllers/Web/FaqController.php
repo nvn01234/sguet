@@ -18,7 +18,7 @@ class FaqController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('permission:manage-content')->except( 'search', 'show');
+        $this->middleware('permission:manage-content')->except( 'search', 'show', 'slug');
         $this->middleware('throttle:60,1')->only('search');
     }
 
@@ -27,13 +27,22 @@ class FaqController extends Controller
         return $datatable->render('faq.index');
     }
 
+    public function slug($slug)
+    {
+        /**
+         * @var Faq $faq
+         */
+        $faq = Faq::findBySlugOrFail($slug);
+        return redirect()->route('home', ['query' => $faq->question, 'nolog' => true]);
+    }
+
     public function show($id)
     {
         /**
          * @var Faq $faq
          */
         $faq = Faq::findOrFail($id);
-        return redirect()->route('home', ['query' => $faq->question, 'nolog' => true]);
+        return redirect()->route('faq.slug', $faq->slug);
     }
 
     public function create()

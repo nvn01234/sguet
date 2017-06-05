@@ -18,7 +18,7 @@ class ArticleController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('permission:manage-content')->except('show');
+        $this->middleware('permission:manage-content')->except('show', 'slug');
     }
 
     public function index(ArticleDatatable $datatable)
@@ -26,11 +26,11 @@ class ArticleController extends Controller
         return $datatable->render('article.index');
     }
 
-    public function show($id) {
+    public function slug($slug) {
         /**
          * @var Article $article
          */
-        $article = Article::findOrFail($id);
+        $article = Article::findBySlugOrFail($slug);
         $category = $article->category;
         $recents = $category->articles()->getQuery()
             ->where('id', '<>', $article->id)
@@ -38,6 +38,14 @@ class ArticleController extends Controller
             ->take(4)
             ->get();
         return view('article.show', compact('article', 'category', 'recents'));
+    }
+
+    public function show($id) {
+        /**
+         * @var Article $article
+         */
+        $article = Article::findOrFail($id);
+        return redirect()->route('articles.slug', $article->slug);
     }
 
     public function create()

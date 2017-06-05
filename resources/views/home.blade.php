@@ -104,6 +104,7 @@
                     toastr['error']('Đã có lỗi trong quá trình tìm kiếm. Vui lòng thử lại sau.', 'Lỗi không xác định');
                     loading.modal('hide');
                 });
+                form.find('input[name="nolog"]').remove();
             });
 
             @if(request()->has('query'))

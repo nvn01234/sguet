@@ -10,7 +10,7 @@
         <div class="cbp-caption-activeWrap">
             <div class="cbp-l-caption-alignCenter">
                 <div class="cbp-l-caption-body">
-                    <a href="{!! URL::route('articles.show', $article->id) !!}" rel="nofollow"
+                    <a href="{!! URL::route('articles.slug', $article->slug) !!}" rel="nofollow"
                        class="cbp-l-caption-buttonLeft btn btn-primary uppercase">chi tiết</a>
                 </div>
             </div>

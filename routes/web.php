@@ -27,6 +27,7 @@ Route::get('faq/{id}', 'Web\FaqController@show')->name('faq.show');
 Route::get('faq/{id}/edit', 'Web\FaqController@edit')->name('manage.faq.edit');
 Route::post('faq/{id}/edit', 'Web\FaqController@update')->name('manage.faq.update');
 Route::get('faq/{id}/delete', 'Web\FaqController@destroy')->name('manage.faq.delete');
+Route::get('faq/{slug}', 'Web\FaqController@slug')->name('faq.slug');
 
 Route::get('articles', 'Web\HomeController@articles')->name('articles');
 Route::get('articles/index', 'Web\ArticleController@index')->name('manage.article');
@@ -36,6 +37,7 @@ Route::get('articles/{id}','Web\ArticleController@show')->name('articles.show');
 Route::get('articles/{id}/edit', 'Web\ArticleController@edit')->name('manage.article.edit');
 Route::post('articles/{id}/edit', 'Web\ArticleController@update')->name('manage.article.update');
 Route::get('articles/{id}/delete', 'Web\ArticleController@destroy')->name('manage.article.delete');
+Route::get('articles/{slug}', 'Web\ArticleController@slug')->name('articles.slug');
 
 Route::get('search-log', 'Web\SearchLogController@index')->name('manage.search_log');
 Route::get('search-log/{id}/delete', 'Web\SearchLogController@delete')->name('manage.search_log.delete');

@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use Cviebrock\EloquentSluggable\Sluggable;
+use Cviebrock\EloquentSluggable\SluggableScopeHelpers;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 
@@ -16,20 +18,26 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $category_id
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
+ * @property string $slug
  * @property-read \App\Models\Category $category
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Tag[] $tags
+ * @method static \Illuminate\Database\Query\Builder|\App\Models\Article findSimilarSlugs(\Illuminate\Database\Eloquent\Model $model, $attribute, $config, $slug)
  * @method static \Illuminate\Database\Query\Builder|\App\Models\Article whereBody($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Models\Article whereCategoryId($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Models\Article whereCreatedAt($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Models\Article whereId($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Models\Article whereImageUrl($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Models\Article whereShortDescription($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Models\Article whereSlug($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Models\Article whereTitle($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Models\Article whereUpdatedAt($value)
  * @mixin \Eloquent
  */
 class Article extends Model
 {
+    use Sluggable;
+    use SluggableScopeHelpers;
+
     protected $guarded = [];
 
     /**
@@ -101,5 +109,19 @@ class Article extends Model
          */
         $model = $this->category()->dissociate();
         return $model;
+    }
+
+    /**
+     * Return the sluggable configuration array for this model.
+     *
+     * @return array
+     */
+    public function sluggable()
+    {
+        return [
+            'slug' => [
+                'source' => 'title'
+            ]
+        ];
     }
 }

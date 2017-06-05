@@ -61,7 +61,7 @@
                         <ul>
                             @foreach($recents as $recent)
                                 <li>
-                                    <a href="{{route('articles.show', $recent->id)}}">{{$recent->title}}</a>
+                                    <a href="{{route('articles.slug', $recent->slug)}}">{{$recent->title}}</a>
                                 </li>
                             @endforeach
                         </ul>
