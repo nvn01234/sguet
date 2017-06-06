@@ -55,4 +55,8 @@ class HomeController extends Controller
     public function links(LinksDataTable $dataTable) {
         return $dataTable->render('links');
     }
+
+    public function hong() {
+        return redirect("http://hong.sguet.com");
+    }
 }

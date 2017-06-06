@@ -38,7 +38,7 @@
             2017 © {{config('app.name')}}
         </div>
         <div class="page-footer-inner pull-right" style="margin-right: 40px;">
-            <a href="http://hong.sguet.com">Hóng điểm thi</a>
+            <a href="http://hong.sguet.com" target="_blank">Hóng điểm thi</a>
         </div>
         <div class="scroll-to-top">
             <i class="icon-arrow-up"></i>
