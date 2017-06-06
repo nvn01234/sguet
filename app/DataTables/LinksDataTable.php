@@ -30,7 +30,7 @@ class LinksDataTable extends DataTable
     {
         return collect([
             [
-                'url' => 'https://ueter.xyz/',
+                'url' => 'https://catty.me/',
                 'description' => 'Hóng điểm thi UET tốc độ ánh sáng'
             ],
             [
