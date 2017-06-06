@@ -25,6 +25,11 @@
             <span class="title">Liên hệ</span>
         </a>
     </li>
+    <li class="nav-item @activeroute('links')">
+        <a href="{{route('links')}}" class="nav-link nav-toggle">
+            <span class="title">Có thể bạn sẽ cần</span>
+        </a>
+    </li>
 
     @permission('manage-content')
         <li class="nav-item @activeroute('manage.user', 'manage.user.create', 'manage.user.edit', 'manage.faq', 'manage.faq.create', 'manage.faq.edit', 'manage.article', 'manage.article.create', 'manage.article.edit', 'manage.contact', 'manage.search_log', 'manage.backup', 'manage.feedback')">
