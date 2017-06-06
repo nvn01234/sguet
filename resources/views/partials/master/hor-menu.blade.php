@@ -41,7 +41,10 @@
             </a>
         </li>
         <li class="last @activeroute('links')">
-            <a href="{{route('links')}}" class="only-icon"> <i class="fa fa-link"></i>
+            <a href="{{route('links')}}" class="visible-md only-icon"> <i class="fa fa-link"></i>
+                <span class="selected"> </span>
+            </a>
+            <a href="{{route('links')}}" class="hidden-md"> Links
                 <span class="selected"> </span>
             </a>
         </li>

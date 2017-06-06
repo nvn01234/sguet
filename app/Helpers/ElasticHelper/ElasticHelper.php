@@ -22,18 +22,6 @@ class ElasticHelper
         $this->client = $builder;
     }
 
-    private function closeIndex() {
-        return $this->client->indices()->close([
-            'index' => config('elastic.index')
-        ]);
-    }
-
-    private function openIndex() {
-        return $this->client->indices()->open([
-            'index' => config('elastic.index')
-        ]);
-    }
-
     /**
      * @param array $body
      * @return array
@@ -45,43 +33,6 @@ class ElasticHelper
             'body' => $body
         ];
         return $this->client->bulk($params);
-    }
-
-    /**
-     * Not working
-     * @deprecated
-     * @return array
-     */
-    public function indexSynonyms() {
-        $synonyms = Synonym::pluck('synonyms')->toArray();
-        $params = [
-            'index' => config('elastic.index'),
-            'body' => [
-                '_settings' => [
-                    'filter' => [
-                        'synonym_filter' => [
-                            'type' => 'synonym',
-                            'synonyms' => $synonyms
-                        ]
-                    ],
-                    'analysis' => [
-                        'analyzer' => [
-                            'synonyms' => [
-                                'filter' => [
-                                    'lowercase',
-                                    'synonym_filter'
-                                ]
-                            ],
-                            'tokenizer' => 'standard',
-                        ]
-                    ],
-                ]
-            ]
-        ];
-        $this->closeIndex();
-        $response = $this->client->indices()->putSettings($params);
-        $this->openIndex();
-        return $response;
     }
 
     /**

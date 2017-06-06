@@ -8,7 +8,7 @@
         <i class="fa fa-angle-right"></i>
     </li>
     <li>
-        <a href="javascript:" class="sidebar-toggler menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">Tin tức - Hoạt động</a>
+        <a href="{{route('manage.article')}}" >Tin tức - Hoạt động</a>
         <i class="fa fa-angle-right"></i>
     </li>
     <li>

@@ -2,6 +2,7 @@
 
 namespace App\DataTables;
 
+use App\Models\Link;
 use Yajra\Datatables\Services\DataTable;
 
 class LinksDataTable extends DataTable
@@ -14,9 +15,12 @@ class LinksDataTable extends DataTable
     public function ajax()
     {
         return $this->datatables
-            ->collection($this->query())
+            ->eloquent($this->query())
             ->editColumn('url', function($link) {
                 return \Html::link($link->url, null, ['target' => '_blank'])->toHtml();
+            })
+            ->editColumn('action', function($link) {
+                return view('link.datatable_action', compact('link'))->render();
             })
             ->make(true);
     }
@@ -28,34 +32,8 @@ class LinksDataTable extends DataTable
      */
     public function query()
     {
-        return collect([
-            [
-                'url' => 'http://hong.sguet.com/',
-                'description' => 'Hóng điểm thi UET tốc độ ánh sáng'
-            ],
-            [
-                'url' => 'http://bluebee-uet.com/',
-                'description' => 'Hệ thống tài liệu, đề thi các năm'
-            ],
-            [
-                'url' => 'http://doit.uet.vnu.edu.vn/',
-                'description' => 'Hệ thống hỗ trợ nâng cao chất lượng tài liệu',
-            ],
-            [
-                'url' => 'https://112.137.129.87/',
-                'description' => 'Cổng thông tin đào tạo'
-            ],
-            [
-                'url' => 'http://student.uet.vnu.edu.vn/',
-                'description' => 'Dịch vụ hỗ trợ gửi/nhận yêu cầu của Sinh viên',
-            ],
-            [
-                'url' => 'https://drive.google.com/drive/u/0/folders/0B4Z6dhf02ykOVzlYYmtRUjNTQTg',
-                'description' => 'itNoodle - App hóng điểm thi'
-            ]
-        ])->map(function($array) {
-            return (object)$array;
-        });
+        $query = Link::query();
+        return $this->applyScopes($query);
     }
 
     /**
@@ -65,10 +43,14 @@ class LinksDataTable extends DataTable
      */
     public function html()
     {
-        return $this->builder()
+        $builder =  $this->builder()
                     ->columns($this->getColumns())
                     ->ajax('')
                     ->parameters($this->getBuilderParameters());
+        if (\Entrust::can('manage-content')) {
+            $builder = $builder->addAction(['title' => 'Hành động']);
+        }
+        return $builder;
     }
 
     /**

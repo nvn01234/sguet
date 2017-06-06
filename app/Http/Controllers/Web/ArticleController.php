@@ -8,11 +8,6 @@ use App\Models\Article;
 use App\Models\Category;
 use App\DataTables\ArticleDatatable;
 use App\Models\Tag;
-use Datatables;
-use Html;
-use Illuminate\Http\Request;
-use Illuminate\Validation\Rule;
-use URL;
 
 class ArticleController extends Controller
 {
@@ -20,8 +15,21 @@ class ArticleController extends Controller
     {
         $this->middleware('permission:manage-content')->except('show', 'slug');
     }
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function index()
+    {
+        $categories = Category::orderBy('id')->get();
+        $articles = Article::query()
+            ->with('tags')
+            ->orderBy('created_at', 'desc')
+            ->take(12)
+            ->get();
+        return view('article.articles', compact('categories', 'articles'));
+    }
 
-    public function index(ArticleDatatable $datatable)
+    public function manage(ArticleDatatable $datatable)
     {
         return $datatable->render('article.index');
     }

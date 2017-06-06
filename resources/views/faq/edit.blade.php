@@ -7,11 +7,11 @@
         <i class="fa fa-angle-right"></i>
     </li>
     <li>
-        <a href="javascript:" class="sidebar-toggler menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">UET Q&A</a>
+        <a href="{{route('manage.faq')}}" >UET Q&A</a>
         <i class="fa fa-angle-right"></i>
     </li>
     <li>
-        <a href="javascript:">{{$faq->question}}</a>
+        <a href="{{route('faq.slug', $faq->slug)}}">{{$faq->question}}</a>
         <i class="fa fa-angle-right"></i>
     </li>
     <li>

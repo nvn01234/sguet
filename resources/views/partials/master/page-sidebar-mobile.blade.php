@@ -97,6 +97,25 @@
                         </li>
                     </ul>
                 </li>
+                <li class="nav-item  @activeroute('manage.links.create', 'manage.links', 'manage.links.edit')">
+                    <a href="javascript:;" class="nav-link nav-toggle">
+                        <i class="fa fa-link"></i>
+                        <span class="title">Links</span>
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item  @activeroute('manage.links.create')">
+                            <a href="{{route('manage.links.create')}}" class="nav-link ">
+                                <span class="title">Thêm link</span>
+                            </a>
+                        </li>
+                        <li class="nav-item  @activeroute('manage.links')">
+                            <a href="{{route('manage.links')}}" class="nav-link ">
+                                <span class="title">Danh sách links</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
                 <li class="nav-item  @activeroute('manage.contact')">
                     <a href="{{route('manage.contact')}}" class="nav-link nav-toggle">
                         <i class="fa fa-address-book"></i>

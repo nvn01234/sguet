@@ -29,8 +29,8 @@ Route::post('faq/{id}/edit', 'Web\FaqController@update')->name('manage.faq.updat
 Route::get('faq/{id}/delete', 'Web\FaqController@destroy')->name('manage.faq.delete');
 Route::get('faq/{slug}', 'Web\FaqController@slug')->name('faq.slug');
 
-Route::get('articles', 'Web\HomeController@articles')->name('articles');
-Route::get('articles/index', 'Web\ArticleController@index')->name('manage.article');
+Route::get('articles', 'Web\ArticleController@index')->name('articles');
+Route::get('articles/index', 'Web\ArticleController@manage')->name('manage.article');
 Route::get('articles/create', 'Web\ArticleController@create')->name('manage.article.create');
 Route::post('articles/create', 'Web\ArticleController@store')->name('manage.article.store');
 Route::get('articles/{id}','Web\ArticleController@show')->name('articles.show');
@@ -66,7 +66,13 @@ Route::get('googleeadd1946a0bd73da.html', 'Web\HomeController@google_site_verifi
 Route::get('hong', 'Web\HomeController@hong');
 Route::get('hongdiemthi', 'Web\HomeController@hong');
 
-Route::get('links', 'Web\HomeController@links')->name('links');
+Route::get('links', 'Web\LinkController@index')->name('links');
+Route::get('links/index', 'Web\LinkController@manage')->name('manage.links');
+Route::get('links/create', 'Web\LinkController@create')->name('manage.links.create');
+Route::post('links/create', 'Web\LinkController@store')->name('manage.links.store');
+Route::get('links/{id}/edit', 'Web\LinkController@edit')->name('manage.links.edit');
+Route::post('links/{id}/edit', 'Web\LinkController@update')->name('manage.links.update');
+Route::get('links/{id}/delete', 'Web\LinkController@delete')->name('manage.links.delete');
 
 Route::get('feedback', 'Web\FeedbackController@index')->name('manage.feedback');
 Route::get('feedback/create', 'Web\FeedbackController@create')->name('feedback.create');
