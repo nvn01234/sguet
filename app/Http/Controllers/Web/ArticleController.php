@@ -13,7 +13,7 @@ class ArticleController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('permission:manage-content')->except('show', 'slug');
+        $this->middleware('permission:manage-content')->except('index', 'show', 'slug');
     }
     /**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View

@@ -63,14 +63,13 @@
                                 </button>
                             </span>
                         </div>
-                        @if(request('nolog'))
-                            {{Form::hidden('nolog', request('nolog'))}}
-                        @endif
                         {{Form::close()}}
                     </div>
                 </div>
-                <div class="row margin-top-20" id="search-result-container" style="display: none">
-
+                <div class="row margin-top-20" id="search-result-container" @if(!isset($faqs))style="display: none"@endif>
+                    @if(isset($faqs))
+                        @include('partials.home.results')
+                    @endif
                 </div>
             </div>
         </div>
@@ -106,10 +105,6 @@
                 });
                 form.find('input[name="nolog"]').remove();
             });
-
-            @if(request()->has('query'))
-                form.submit();
-            @endif
         });
     </script>
 @endsection

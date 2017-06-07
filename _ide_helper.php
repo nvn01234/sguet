@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.3.31 on 2017-06-05.
+ * Generated for Laravel 5.3.31 on 2017-06-07.
  *
  * @author Barry vd. Heuvel <barryvdh@gmail.com>
  * @see https://github.com/barryvdh/laravel-ide-helper
@@ -14534,21 +14534,19 @@ if (! function_exists('with')) {
             return \App\Helpers\Toastr\Toastr::script($data);
         }
         
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function scriptAsync($data = array(), $delay = 100){
+            return \App\Helpers\Toastr\Toastr::scriptAsync($data, $delay);
+        }
+        
     }
 
 
     class Elastic extends \App\Helpers\ElasticHelper\ElasticHelperFacade{
-        
-        /**
-         * Not working
-         *
-         * @deprecated 
-         * @return array 
-         * @static 
-         */
-        public static function indexSynonyms(){
-            return \App\Helpers\ElasticHelper\ElasticHelper::indexSynonyms();
-        }
         
         /**
          * 
@@ -14559,6 +14557,17 @@ if (! function_exists('with')) {
          */
         public static function indexFaqs($faqs){
             return \App\Helpers\ElasticHelper\ElasticHelper::indexFaqs($faqs);
+        }
+        
+        /**
+         * 
+         *
+         * @param \Illuminate\Support\Collection $contacts
+         * @return array 
+         * @static 
+         */
+        public static function indexContacts($contacts){
+            return \App\Helpers\ElasticHelper\ElasticHelper::indexContacts($contacts);
         }
         
         /**
@@ -14575,12 +14584,34 @@ if (! function_exists('with')) {
         /**
          * 
          *
+         * @param string $query
+         * @return \Illuminate\Database\Eloquent\Collection|static[] 
+         * @static 
+         */
+        public static function searchContacts($query){
+            return \App\Helpers\ElasticHelper\ElasticHelper::searchContacts($query);
+        }
+        
+        /**
+         * 
+         *
          * @param \Illuminate\Support\Collection $ids
          * @return array 
          * @static 
          */
         public static function deleteFaqs($ids){
             return \App\Helpers\ElasticHelper\ElasticHelper::deleteFaqs($ids);
+        }
+        
+        /**
+         * 
+         *
+         * @param \Illuminate\Support\Collection $ids
+         * @return array 
+         * @static 
+         */
+        public static function deleteContacts($ids){
+            return \App\Helpers\ElasticHelper\ElasticHelper::deleteContacts($ids);
         }
         
     }

@@ -75,6 +75,7 @@ class ContactController extends Controller
      */
     private function readSheet($sheet)
     {
+        \Elastic::deleteContacts(Contact::pluck('id'));
         Contact::query()->delete();
         $contacts = collect();
         $rows = $sheet
@@ -113,6 +114,7 @@ class ContactController extends Controller
                 \Toastr::append(['level' => 'warning', 'title' => 'Có lỗi tại dòng ' . ($index + 2), 'message' => $e->getMessage()]);
             }
         }
+        \Elastic::indexContacts(Contact::all());
     }
 
     public function download($file_name) {

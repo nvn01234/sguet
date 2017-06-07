@@ -2,8 +2,8 @@
 
 namespace App\Helpers\ElasticHelper;
 
+use App\Models\Contact;
 use App\Models\Faq;
-use App\Models\Synonym;
 use Elasticsearch\Client;
 
 class ElasticHelper
@@ -23,13 +23,14 @@ class ElasticHelper
     }
 
     /**
+     * @param string $type
      * @param array $body
      * @return array
      */
-    private function bulk($body) {
+    private function bulk($type, $body) {
         $params = [
             'index' => config('elastic.index'),
-            'type' => 'faq',
+            'type' => $type,
             'body' => $body
         ];
         return $this->client->bulk($params);
@@ -60,7 +61,39 @@ class ElasticHelper
                 ]
             ];
         })->collapse()->toArray();
-        return $this->bulk($body);
+        return $this->bulk("faq", $body);
+    }
+
+    /**
+     * @param \Illuminate\Support\Collection $contacts
+     * @return array
+     */
+    public function indexContacts($contacts) {
+        $body = $contacts->map(function($contact) {
+            /**
+             * @var Contact $contact
+             */
+            return [
+                [
+                    'index' => [
+                        '_index' => config('elastic.index'),
+                        '_type' => 'contact',
+                        '_id' => $contact->id,
+                    ],
+                ],
+                [
+                    'id' => $contact->id,
+                    'name' => $contact->name,
+                    'description' => $contact->description,
+                    'phone_cq' => $contact->phone_cq,
+                    'phone_nr' => $contact->phone_nr,
+                    'phone_dd' => $contact->phone_dd,
+                    'fax' => $contact->fax,
+                    'email' => $contact->email,
+                ]
+            ];
+        })->collapse()->toArray();
+        return $this->bulk('contact', $body);
     }
 
     /**
@@ -93,6 +126,35 @@ class ElasticHelper
     }
 
     /**
+     * @param string $query
+     * @return \Illuminate\Database\Eloquent\Collection|static[]
+     */
+    public function searchContacts($query) {
+        $params = [
+            'index' => config('elastic.index'),
+            'type' => 'contact',
+            'body' => [
+                'query' => [
+                    'multi_match' => [
+                        'query' => $query,
+                        'fields' => ['name^3', 'description^2', 'phone_cq', 'phone_nr', 'phone_dd', 'fax', 'email'],
+                    ],
+                ],
+                "_source" => [""]
+            ]
+        ];
+        $response =  $this->client->search($params);
+        $ids = collect($response['hits']['hits'])->pluck('_id')->toArray();
+        $ids_ordered = implode(',', $ids);
+        $query = Contact::query()
+            ->whereIn('id', $ids);
+        if ($ids) {
+            $query = $query->orderByRaw("field(id, $ids_ordered)");
+        }
+        return $query->get();
+    }
+
+    /**
      * @param \Illuminate\Support\Collection $ids
      * @return array
      */
@@ -106,6 +168,23 @@ class ElasticHelper
                 ]
             ];
         })->toArray();
-        return $this->bulk($body);
+        return $this->bulk("faq", $body);
+    }
+
+    /**
+     * @param \Illuminate\Support\Collection $ids
+     * @return array
+     */
+    public function deleteContacts($ids) {
+        $body = $ids->map(function($id) {
+            return [
+                'delete' => [
+                    "_index" => config('elastic.index'),
+                    '_type' => 'contact',
+                    '_id' => $id
+                ]
+            ];
+        })->toArray();
+        return $this->bulk("contact", $body);
     }
 }

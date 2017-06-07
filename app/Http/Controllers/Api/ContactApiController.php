@@ -94,10 +94,7 @@ class ContactApiController extends Controller
     {
         $q = trim($request->get('q', ''));
 
-        $contacts = Contact::query()
-            ->where('name', 'LIKE', "%$q%")
-            ->orWhere('description', 'LIKE', "%$q%")
-            ->get();
+        $contacts = \Elastic::searchContacts($q);
         if ($request->has('debug')) {
             return response()->json($contacts);
         } else {

@@ -27,7 +27,7 @@ class FaqController extends Controller
         return $datatable->render('faq.index');
     }
 
-    public function slug($slug)
+    public function slug($slug, Request $request, FaqController $controller)
     {
         /**
          * @var Faq $faq
@@ -153,6 +153,9 @@ class FaqController extends Controller
                 $log->syncResults($faqs->pluck('id'));
             }
         }
-        return view('partials.home.results', compact('faqs'));
+        if ($request->ajax()) {
+            return view('partials.home.results', compact('faqs'));
+        }
+        return view('home', compact('faqs'));
     }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use App\Models\Contact;
 use App\Models\Faq;
 use Illuminate\Console\Command;
 
@@ -12,7 +13,7 @@ class IndexElasticCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'elastic:index';
+    protected $signature = 'elastic:index {--type=*}';
 
     /**
      * The console command description.
@@ -38,6 +39,19 @@ class IndexElasticCommand extends Command
      */
     public function handle()
     {
-        \Elastic::indexFaqs(Faq::all());
+        $types = $this->option('type');
+        if (empty($types)) {
+            $types = [
+                'faq', 'contact'
+            ];
+        }
+
+        if (in_array("faq", $types)) {
+            \Elastic::indexFaqs(Faq::all());
+        }
+
+        if (in_array("contact", $types)) {
+            \Elastic::indexContacts(Contact::all());
+        }
     }
 }
