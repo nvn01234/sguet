@@ -132,6 +132,10 @@
     .page-content-wrapper .page-content:not(.sidebar-visible) {
         margin-left: 0 !important;
     }
+
+    .page-sidebar-fixed .page-sidebar {
+        top: 58px;
+    }
 }
 
 @media (max-width: 480px) {

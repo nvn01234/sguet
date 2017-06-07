@@ -58,7 +58,7 @@
         };
     </script>
 </head>
-<body class="@yield('body-class', 'page-header-fixed page-container-bg-solid page-content-white page-md')">
+<body class="@yield('body-class', 'page-header-fixed page-container-bg-solid page-content-white page-sidebar-fixed page-md ')">
 
 @yield('body')
 
