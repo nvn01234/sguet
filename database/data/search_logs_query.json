@@ -1,0 +1,3482 @@
+[
+  {
+    "id": 1,
+    "text": "học phí cả năm của trường là bao nhiêu",
+    "created_at": "2017-04-02 01:02:06",
+    "updated_at": "2017-04-05 23:46:24",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 2,
+    "text": "mã trường",
+    "created_at": "2017-04-02 05:02:52",
+    "updated_at": "2017-04-05 23:47:00",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 3,
+    "text": "Lan có xinh gái không ;)",
+    "created_at": "2017-04-02 18:36:23",
+    "updated_at": "2017-06-04 15:31:52",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 4,
+    "text": "nguyện vọng",
+    "created_at": "2017-04-02 18:41:14",
+    "updated_at": "2017-04-02 18:41:14",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 5,
+    "text": "thpt",
+    "created_at": "2017-04-02 18:44:09",
+    "updated_at": "2017-04-12 04:58:46",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 6,
+    "text": "Được tuyển thẳng thì có phải làm bài thi tốt nghiệp không",
+    "created_at": "2017-04-02 18:44:33",
+    "updated_at": "2017-04-02 18:44:33",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 7,
+    "text": "Được tuyển thẳng thì có phải làm bài thi tốt nghiệp",
+    "created_at": "2017-04-02 18:44:38",
+    "updated_at": "2017-04-02 18:44:38",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 8,
+    "text": "học phí cả năm của trường là bao nhiêu\t?",
+    "created_at": "2017-04-02 19:02:16",
+    "updated_at": "2017-04-02 19:02:16",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 9,
+    "text": "a",
+    "created_at": "2017-04-02 19:17:50",
+    "updated_at": "2017-06-04 15:31:09",
+    "ip": "",
+    "faqs_count": 13
+  },
+  {
+    "id": 10,
+    "text": "bảng điểm",
+    "created_at": "2017-04-03 18:31:22",
+    "updated_at": "2017-05-11 05:36:54",
+    "ip": "",
+    "faqs_count": 2
+  },
+  {
+    "id": 11,
+    "text": "trường mình năm nay lấy bao nhiêu điểm xét tuyển ạ",
+    "created_at": "2017-04-04 04:06:56",
+    "updated_at": "2017-04-04 04:06:56",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 12,
+    "text": "phuong thuc xet tuyen",
+    "created_at": "2017-04-04 05:39:48",
+    "updated_at": "2017-04-04 05:39:48",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 13,
+    "text": "tuyển sinh đại học",
+    "created_at": "2017-04-04 05:51:52",
+    "updated_at": "2017-04-04 05:53:21",
+    "ip": "",
+    "faqs_count": 3
+  },
+  {
+    "id": 14,
+    "text": "tuyển sinh đại học 2017",
+    "created_at": "2017-04-04 05:52:16",
+    "updated_at": "2017-04-25 21:46:13",
+    "ip": "",
+    "faqs_count": 23
+  },
+  {
+    "id": 15,
+    "text": "kết quả bài thi DGNL",
+    "created_at": "2017-04-04 15:22:27",
+    "updated_at": "2017-04-04 15:22:27",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 16,
+    "text": "DGNL",
+    "created_at": "2017-04-04 15:22:33",
+    "updated_at": "2017-04-04 15:22:33",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 17,
+    "text": "cách tính điểm chuẩn năm 2017",
+    "created_at": "2017-04-04 16:22:19",
+    "updated_at": "2017-04-04 16:22:19",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 18,
+    "text": "cách tính điểm",
+    "created_at": "2017-04-04 16:22:26",
+    "updated_at": "2017-04-06 00:04:58",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 19,
+    "text": "tính điểm",
+    "created_at": "2017-04-04 16:22:49",
+    "updated_at": "2017-04-04 16:22:49",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 20,
+    "text": "tính điểm chuẩn",
+    "created_at": "2017-04-04 16:23:50",
+    "updated_at": "2017-04-04 16:23:50",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 21,
+    "text": "giúp mình xin chương trình đào tao ngành mới : công nghệ kỹ thuật xây dựng giao thông  với ạ. xin cảm ơn",
+    "created_at": "2017-04-04 18:51:42",
+    "updated_at": "2017-04-04 18:51:42",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 22,
+    "text": "công nghệ kỹ thuật xây dựng giao thông",
+    "created_at": "2017-04-04 18:51:52",
+    "updated_at": "2017-04-04 18:51:52",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 23,
+    "text": "cho e hoi cach tinh diem xet tuyen cua dai hoc quoc gia ha noi nhu the nao a? nam nay co thi danh gia nang luc tren may tinh khong a",
+    "created_at": "2017-04-04 19:33:10",
+    "updated_at": "2017-04-04 19:33:11",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 24,
+    "text": "cach tinh diem xet tuyen cua dai hoc quoc gia ha noi nhu the nao a? nam nay co thi danh gia nang luc tren may tinh khong a",
+    "created_at": "2017-04-04 19:33:47",
+    "updated_at": "2017-04-04 19:33:47",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 25,
+    "text": "công nghệ kỹ thuật",
+    "created_at": "2017-04-05 00:51:38",
+    "updated_at": "2017-04-05 00:51:38",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 26,
+    "text": "Chương trình chất lượng cao",
+    "created_at": "2017-04-05 02:58:05",
+    "updated_at": "2017-04-05 02:58:05",
+    "ip": "",
+    "faqs_count": 2
+  },
+  {
+    "id": 27,
+    "text": "khóa luận tốt nghiệp",
+    "created_at": "2017-04-05 04:00:43",
+    "updated_at": "2017-04-05 04:00:43",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 28,
+    "text": "tính điểm thi",
+    "created_at": "2017-04-05 06:35:17",
+    "updated_at": "2017-04-05 06:35:17",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 29,
+    "text": "điểm trúng tuyển",
+    "created_at": "2017-04-05 06:35:35",
+    "updated_at": "2017-04-05 06:35:35",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 30,
+    "text": "Em sắp thi,i yêu thích lập trình, học ban A1, các ac tư vấn giúp em đăng kí nguyện vọng xem vào học đâu thì hợp lý với",
+    "created_at": "2017-04-05 19:41:03",
+    "updated_at": "2017-04-05 19:41:03",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 31,
+    "text": "Cách tính điểm của trường năm nay",
+    "created_at": "2017-04-06 00:42:44",
+    "updated_at": "2017-04-06 00:42:44",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 32,
+    "text": "dsfsdf",
+    "created_at": "2017-04-06 04:10:15",
+    "updated_at": "2017-06-04 15:32:00",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 33,
+    "text": "chỉ tiêu của đại học công nghệ",
+    "created_at": "2017-04-06 04:10:30",
+    "updated_at": "2017-04-06 04:10:30",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 34,
+    "text": "điểm chuẩn",
+    "created_at": "2017-04-06 04:10:42",
+    "updated_at": "2017-05-07 06:32:04",
+    "ip": "",
+    "faqs_count": 4
+  },
+  {
+    "id": 35,
+    "text": "cho e hỏi thêm thông tin về khoa cntt định hướng thị trường nhật bản của trường ạ? Khoa này năm nay trường mới mở phải không ạ?",
+    "created_at": "2017-04-06 04:36:06",
+    "updated_at": "2017-04-06 04:36:06",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 36,
+    "text": "mã ngành",
+    "created_at": "2017-04-06 07:44:29",
+    "updated_at": "2017-04-06 07:44:29",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 37,
+    "text": "đào tạo",
+    "created_at": "2017-04-06 07:46:16",
+    "updated_at": "2017-04-20 04:16:05",
+    "ip": "",
+    "faqs_count": 10
+  },
+  {
+    "id": 38,
+    "text": "Cho mình hỏi nhà trường mình khi xét chuẩn đầu ra tiếng anh b1 thì mình có thể thay thế bằng toxic được không.Nếu được thì thủ tục thế nào",
+    "created_at": "2017-04-07 02:07:34",
+    "updated_at": "2017-04-07 02:07:34",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 39,
+    "text": "chuẩn tiếng anh b1",
+    "created_at": "2017-04-07 02:08:00",
+    "updated_at": "2017-04-07 02:08:00",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 40,
+    "text": "CNTT định hướng thị trường Nhật bản",
+    "created_at": "2017-04-07 03:54:59",
+    "updated_at": "2017-04-07 03:54:59",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 41,
+    "text": "số điện thoại",
+    "created_at": "2017-04-07 14:52:09",
+    "updated_at": "2017-05-11 05:46:09",
+    "ip": "",
+    "faqs_count": 2
+  },
+  {
+    "id": 42,
+    "text": "danh bạ",
+    "created_at": "2017-04-07 14:52:31",
+    "updated_at": "2017-06-03 12:46:28",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 43,
+    "text": "xét tuyển",
+    "created_at": "2017-04-07 17:32:53",
+    "updated_at": "2017-04-07 17:32:53",
+    "ip": "",
+    "faqs_count": 7
+  },
+  {
+    "id": 44,
+    "text": "Đánh giá năng lực",
+    "created_at": "2017-04-07 18:29:57",
+    "updated_at": "2017-04-07 18:30:20",
+    "ip": "",
+    "faqs_count": 4
+  },
+  {
+    "id": 45,
+    "text": "Giấy nghĩa vụ",
+    "created_at": "2017-04-07 18:30:54",
+    "updated_at": "2017-04-07 18:30:54",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 46,
+    "text": "Nghĩ vụ",
+    "created_at": "2017-04-07 18:31:01",
+    "updated_at": "2017-04-07 18:31:01",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 47,
+    "text": "Quân sự",
+    "created_at": "2017-04-07 18:31:07",
+    "updated_at": "2017-04-07 18:31:07",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 48,
+    "text": "em dang co ý định thi vao truong.em đinh thi cntt.co gai thi nen chon nganh nao ah",
+    "created_at": "2017-04-07 19:10:20",
+    "updated_at": "2017-04-07 19:10:20",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 49,
+    "text": "Đại học công nghệ đại học quốc gia hà nội",
+    "created_at": "2017-04-07 19:44:49",
+    "updated_at": "2017-04-07 19:44:49",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 50,
+    "text": "Cách tính điểm đại học công nghệ đại học quốc gia hà nội",
+    "created_at": "2017-04-07 19:45:11",
+    "updated_at": "2017-04-07 19:45:11",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 51,
+    "text": "Cách tính điểm đại học công nghệ",
+    "created_at": "2017-04-07 19:45:15",
+    "updated_at": "2017-04-07 19:45:15",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 52,
+    "text": "tuyển sinh đại học 2016",
+    "created_at": "2017-04-07 19:46:57",
+    "updated_at": "2017-04-07 19:46:57",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 53,
+    "text": "năm nay muốn học trường đh công nghệ thì đạt đc thang điểm từ bn đến bn ạ",
+    "created_at": "2017-04-07 19:55:24",
+    "updated_at": "2017-04-07 19:55:24",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 54,
+    "text": "'",
+    "created_at": "2017-04-07 20:39:50",
+    "updated_at": "2017-06-04 15:32:09",
+    "ip": "",
+    "faqs_count": 93
+  },
+  {
+    "id": 55,
+    "text": "CLC",
+    "created_at": "2017-04-07 22:50:23",
+    "updated_at": "2017-05-11 20:15:57",
+    "ip": "",
+    "faqs_count": 5
+  },
+  {
+    "id": 56,
+    "text": "tuyển thẳng",
+    "created_at": "2017-04-07 22:51:15",
+    "updated_at": "2017-04-18 03:22:25",
+    "ip": "",
+    "faqs_count": 3
+  },
+  {
+    "id": 57,
+    "text": "Khoa học máy tính",
+    "created_at": "2017-04-07 22:53:07",
+    "updated_at": "2017-05-10 04:32:11",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 58,
+    "text": "KHMT",
+    "created_at": "2017-04-07 22:53:13",
+    "updated_at": "2017-04-07 22:53:13",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 59,
+    "text": "CNTT",
+    "created_at": "2017-04-07 22:53:16",
+    "updated_at": "2017-05-24 03:21:28",
+    "ip": "",
+    "faqs_count": 6
+  },
+  {
+    "id": 60,
+    "text": "Khung đào tạo",
+    "created_at": "2017-04-07 22:54:40",
+    "updated_at": "2017-05-11 05:39:00",
+    "ip": "",
+    "faqs_count": 5
+  },
+  {
+    "id": 61,
+    "text": "Con gái nên học ngành gì",
+    "created_at": "2017-04-07 23:13:54",
+    "updated_at": "2017-04-07 23:13:54",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 62,
+    "text": "Khung chương trình",
+    "created_at": "2017-04-07 23:20:39",
+    "updated_at": "2017-05-24 13:02:32",
+    "ip": "",
+    "faqs_count": 6
+  },
+  {
+    "id": 63,
+    "text": "tại sao",
+    "created_at": "2017-04-08 00:45:19",
+    "updated_at": "2017-04-08 00:45:19",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 64,
+    "text": "đăng kí",
+    "created_at": "2017-04-08 00:45:30",
+    "updated_at": "2017-04-08 00:45:30",
+    "ip": "",
+    "faqs_count": 2
+  },
+  {
+    "id": 65,
+    "text": "hình thức đào tạo",
+    "created_at": "2017-04-08 00:48:50",
+    "updated_at": "2017-04-08 00:48:50",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 66,
+    "text": "Cho e hỏi trường đào tạo nghành công nghệ kĩ thuật cơ điện tử tốt k?",
+    "created_at": "2017-04-08 00:59:13",
+    "updated_at": "2017-04-08 00:59:13",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 67,
+    "text": "chị Lan đã hết xấu chưa?",
+    "created_at": "2017-04-08 03:06:44",
+    "updated_at": "2017-06-04 15:33:26",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 68,
+    "text": "cách tính điểm của trường là như thế nào ạ?",
+    "created_at": "2017-04-08 04:02:48",
+    "updated_at": "2017-04-08 04:02:48",
+    "ip": "",
+    "faqs_count": 3
+  },
+  {
+    "id": 69,
+    "text": "Em muốn học an ninh mạng thì thì vào khoa nào của trường ạ.em cảm ơn",
+    "created_at": "2017-04-08 04:21:30",
+    "updated_at": "2017-04-08 04:21:30",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 70,
+    "text": "An ninh mạng",
+    "created_at": "2017-04-08 04:22:03",
+    "updated_at": "2017-04-08 04:22:03",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 71,
+    "text": "Ngành an ninh mạng",
+    "created_at": "2017-04-08 04:22:25",
+    "updated_at": "2017-04-08 04:22:25",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 72,
+    "text": "Học an ninh mạng",
+    "created_at": "2017-04-08 04:27:45",
+    "updated_at": "2017-04-08 04:27:45",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 73,
+    "text": "năm nay xét tuyển thế nào ạ",
+    "created_at": "2017-04-08 05:40:51",
+    "updated_at": "2017-04-08 05:40:52",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 74,
+    "text": "nghành cơ điện tử",
+    "created_at": "2017-04-08 05:57:25",
+    "updated_at": "2017-04-08 05:57:25",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 75,
+    "text": "khả ngăng vệc làm",
+    "created_at": "2017-04-08 05:57:38",
+    "updated_at": "2017-04-08 05:57:38",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 76,
+    "text": "sử dụng kết quả thi đánh giá năng lực như thế nào",
+    "created_at": "2017-04-08 08:02:33",
+    "updated_at": "2017-04-08 08:02:33",
+    "ip": "",
+    "faqs_count": 2
+  },
+  {
+    "id": 77,
+    "text": "thời gian xét tuyển kết quả thi đánh giá năng lưc",
+    "created_at": "2017-04-08 08:03:33",
+    "updated_at": "2017-04-08 08:03:33",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 78,
+    "text": "thời gian xét tuyển",
+    "created_at": "2017-04-08 08:03:42",
+    "updated_at": "2017-04-08 08:03:42",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 79,
+    "text": "Điểm đánh giá năng lực năm 2016 thì sẽ được quy đổi như thế nào?",
+    "created_at": "2017-04-08 08:07:24",
+    "updated_at": "2017-04-08 08:07:24",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 80,
+    "text": "ha",
+    "created_at": "2017-04-08 13:01:58",
+    "updated_at": "2017-05-06 03:21:09",
+    "ip": "",
+    "faqs_count": 9
+  },
+  {
+    "id": 81,
+    "text": "điểm chuẩn công nghệ thông tin",
+    "created_at": "2017-04-08 19:29:51",
+    "updated_at": "2017-04-08 19:29:51",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 82,
+    "text": "công nghệ thông tin",
+    "created_at": "2017-04-08 19:30:03",
+    "updated_at": "2017-05-10 04:23:44",
+    "ip": "",
+    "faqs_count": 6
+  },
+  {
+    "id": 83,
+    "text": "Học phí",
+    "created_at": "2017-04-09 02:10:06",
+    "updated_at": "2017-05-16 01:10:43",
+    "ip": "",
+    "faqs_count": 6
+  },
+  {
+    "id": 84,
+    "text": "Học phí tính theo kỳ của từng ngành",
+    "created_at": "2017-04-09 02:11:28",
+    "updated_at": "2017-04-09 02:11:28",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 85,
+    "text": "nội dung đào tạo nghành công nghệ kĩ thuật máy tinh",
+    "created_at": "2017-04-09 03:16:36",
+    "updated_at": "2017-04-09 03:16:36",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 86,
+    "text": "công nghệ kĩ thuật máy tinh",
+    "created_at": "2017-04-09 03:17:00",
+    "updated_at": "2017-04-09 03:17:00",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 87,
+    "text": "Nhóm ngành",
+    "created_at": "2017-04-09 03:47:23",
+    "updated_at": "2017-04-09 03:47:23",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 88,
+    "text": "Có thể đăng ký 2 ngành của trường đại học công nghệ không",
+    "created_at": "2017-04-09 04:07:47",
+    "updated_at": "2017-04-09 04:07:47",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 89,
+    "text": "đăng ký 2 ngành của trường đại học công nghệ không",
+    "created_at": "2017-04-09 04:07:56",
+    "updated_at": "2017-04-09 04:07:56",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 90,
+    "text": "đăng ký 2 ngành",
+    "created_at": "2017-04-09 04:08:05",
+    "updated_at": "2017-04-09 04:08:05",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 91,
+    "text": "học phí của trường",
+    "created_at": "2017-04-09 04:56:31",
+    "updated_at": "2017-04-09 04:56:31",
+    "ip": "",
+    "faqs_count": 3
+  },
+  {
+    "id": 92,
+    "text": "học phí chấ lượng cao",
+    "created_at": "2017-04-09 04:57:18",
+    "updated_at": "2017-04-09 04:57:18",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 93,
+    "text": "học phí chất lượng cao",
+    "created_at": "2017-04-09 04:57:24",
+    "updated_at": "2017-04-09 04:57:24",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 94,
+    "text": "học bổng",
+    "created_at": "2017-04-09 16:52:56",
+    "updated_at": "2017-05-17 03:13:00",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 95,
+    "text": "kĩ thuật máy tính tầm bao nhiêu điểm ạ ?",
+    "created_at": "2017-04-09 17:28:52",
+    "updated_at": "2017-04-09 17:28:52",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 96,
+    "text": "nhật bản",
+    "created_at": "2017-04-09 18:14:43",
+    "updated_at": "2017-04-09 18:14:43",
+    "ip": "",
+    "faqs_count": 2
+  },
+  {
+    "id": 97,
+    "text": "Các ngành học của khoa Công nghệ thông tin",
+    "created_at": "2017-04-10 03:06:17",
+    "updated_at": "2017-04-10 03:06:17",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 98,
+    "text": "Tinh diem vao dai hoc cong nghr quoc gia ha noi",
+    "created_at": "2017-04-10 14:47:31",
+    "updated_at": "2017-04-10 14:47:31",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 99,
+    "text": "Cach Tinh diem vao dai hoc cong nghr quoc gia ha noi",
+    "created_at": "2017-04-10 14:47:38",
+    "updated_at": "2017-04-10 14:47:38",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 100,
+    "text": "diem vao dai hoc cong nghr quoc gia ha noi",
+    "created_at": "2017-04-10 14:47:45",
+    "updated_at": "2017-04-10 14:47:45",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 101,
+    "text": "Diem chuan vao truong",
+    "created_at": "2017-04-10 14:58:11",
+    "updated_at": "2017-04-10 14:58:11",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 102,
+    "text": "Diem chuan vao truong la nhu the nao",
+    "created_at": "2017-04-10 14:58:19",
+    "updated_at": "2017-04-10 14:58:19",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 103,
+    "text": "lịch",
+    "created_at": "2017-04-10 20:09:39",
+    "updated_at": "2017-04-21 10:06:47",
+    "ip": "",
+    "faqs_count": 2
+  },
+  {
+    "id": 104,
+    "text": "Điểm chuẩn 2015",
+    "created_at": "2017-04-10 20:38:47",
+    "updated_at": "2017-04-10 20:38:47",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 105,
+    "text": "Tuyển sinh 2017",
+    "created_at": "2017-04-10 20:39:08",
+    "updated_at": "2017-04-25 21:42:08",
+    "ip": "",
+    "faqs_count": 23
+  },
+  {
+    "id": 106,
+    "text": "Thầy cô cho em hỏi là xin lại bảng điểm khóa 2004 2009 hệ vừa học vừa làm TC k10đb được ko",
+    "created_at": "2017-04-11 15:54:16",
+    "updated_at": "2017-04-11 15:54:16",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 107,
+    "text": "xin lại bảng điểm khóa 2004 2009 hệ vừa học vừa làm TC k10đb được ko",
+    "created_at": "2017-04-11 15:54:26",
+    "updated_at": "2017-04-11 15:54:26",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 108,
+    "text": "hỏi số thầy xiêm",
+    "created_at": "2017-04-11 19:44:24",
+    "updated_at": "2017-04-11 19:44:24",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 109,
+    "text": "hồ sơ",
+    "created_at": "2017-04-12 04:58:40",
+    "updated_at": "2017-04-12 04:58:40",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 110,
+    "text": "Cho e hỏi học lực e tầm 22đ có khả năng đỗ ngành Hệ thống thông tin không ạ?",
+    "created_at": "2017-04-13 03:22:13",
+    "updated_at": "2017-04-13 03:22:13",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 111,
+    "text": "22đ có khả năng đỗ ngành Hệ thống thông tin không ạ?",
+    "created_at": "2017-04-13 03:22:30",
+    "updated_at": "2017-04-13 03:22:30",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 112,
+    "text": "22đ có  đỗ ngành Hệ thống thông tin không ạ?",
+    "created_at": "2017-04-13 03:22:36",
+    "updated_at": "2017-04-13 03:22:36",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 113,
+    "text": "uet mail",
+    "created_at": "2017-04-13 17:17:07",
+    "updated_at": "2017-04-13 17:17:07",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 114,
+    "text": "mail",
+    "created_at": "2017-04-13 17:17:16",
+    "updated_at": "2017-05-25 17:52:44",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 115,
+    "text": "Nhà trường có chấp nhận bằng TOEIC không ?",
+    "created_at": "2017-04-16 03:12:34",
+    "updated_at": "2017-04-16 03:12:34",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 116,
+    "text": "Nhà trường chấp nhận chứng chỉ tiếng anh nào ?",
+    "created_at": "2017-04-16 03:13:00",
+    "updated_at": "2017-04-16 03:13:00",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 117,
+    "text": "Em đạt giải 3 khoa học kĩ thuật cấp quốc gia lĩnh vực kĩ thuật cơ khí, sản phẩm em mang tên \"Máy bơm nước sử dụng dòng nước chảy\" thì sẽ được tuyển thẳng vào những ngành nào của trường. Em có nguyện vọng học ngành công nghệ thông tin có được không ạ?",
+    "created_at": "2017-04-17 00:11:37",
+    "updated_at": "2017-04-17 00:11:37",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 118,
+    "text": "ve xe bus",
+    "created_at": "2017-04-17 06:51:26",
+    "updated_at": "2017-04-17 06:51:26",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 119,
+    "text": "thực tập",
+    "created_at": "2017-04-17 23:46:29",
+    "updated_at": "2017-04-17 23:46:29",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 120,
+    "text": "2017",
+    "created_at": "2017-04-18 02:24:12",
+    "updated_at": "2017-04-18 02:24:12",
+    "ip": "",
+    "faqs_count": 24
+  },
+  {
+    "id": 121,
+    "text": "CNTT thị trường nhật bản",
+    "created_at": "2017-04-18 02:31:35",
+    "updated_at": "2017-04-18 02:31:35",
+    "ip": "",
+    "faqs_count": 2
+  },
+  {
+    "id": 122,
+    "text": "làm hồ sơ tuyển thẳng",
+    "created_at": "2017-04-18 03:22:59",
+    "updated_at": "2017-04-18 03:22:59",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 123,
+    "text": "hồ sơ tuyển thẳng",
+    "created_at": "2017-04-18 03:23:06",
+    "updated_at": "2017-04-18 03:23:06",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 124,
+    "text": "cách tuyển thẳng",
+    "created_at": "2017-04-18 03:23:16",
+    "updated_at": "2017-04-18 03:23:16",
+    "ip": "",
+    "faqs_count": 3
+  },
+  {
+    "id": 125,
+    "text": "gg",
+    "created_at": "2017-04-18 04:04:54",
+    "updated_at": "2017-04-18 04:04:54",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 126,
+    "text": "chon nganh nao trong khoa cntt",
+    "created_at": "2017-04-18 04:05:13",
+    "updated_at": "2017-04-18 04:05:13",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 127,
+    "text": "khối a",
+    "created_at": "2017-04-18 05:09:12",
+    "updated_at": "2017-04-18 05:09:12",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 128,
+    "text": "ten giam doc dai hoc quoc gia",
+    "created_at": "2017-04-18 14:27:21",
+    "updated_at": "2017-04-18 14:27:21",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 129,
+    "text": "đơn trùng lịch thi",
+    "created_at": "2017-04-19 03:18:24",
+    "updated_at": "2017-04-19 03:18:24",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 130,
+    "text": "trùng lịch thi",
+    "created_at": "2017-04-19 03:18:33",
+    "updated_at": "2017-04-19 03:18:33",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 131,
+    "text": "lịch thi",
+    "created_at": "2017-04-19 03:18:44",
+    "updated_at": "2017-05-27 09:31:24",
+    "ip": "",
+    "faqs_count": 2
+  },
+  {
+    "id": 132,
+    "text": "Danh bạ ddienj thoại",
+    "created_at": "2017-04-19 11:55:34",
+    "updated_at": "2017-04-19 11:55:34",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 133,
+    "text": "công tác sinh viên",
+    "created_at": "2017-04-20 04:15:02",
+    "updated_at": "2017-04-20 04:15:02",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 134,
+    "text": "lịch làm việc",
+    "created_at": "2017-04-20 04:15:09",
+    "updated_at": "2017-05-11 05:49:45",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 135,
+    "text": "giờ làm việc của phòng công tác",
+    "created_at": "2017-04-20 04:15:41",
+    "updated_at": "2017-04-20 04:15:41",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 136,
+    "text": "đào tạon",
+    "created_at": "2017-04-20 04:16:03",
+    "updated_at": "2017-04-20 04:16:03",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 137,
+    "text": "Quy chế tuyển thẳng của trường năm nay thế nào ạ?",
+    "created_at": "2017-04-20 04:30:46",
+    "updated_at": "2017-04-20 04:30:46",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 138,
+    "text": "tuyển thẳng của trường năm nay thế nào ạ?",
+    "created_at": "2017-04-20 04:30:51",
+    "updated_at": "2017-04-20 04:30:51",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 139,
+    "text": "tuyển thẳng của trường năm \\",
+    "created_at": "2017-04-20 04:30:56",
+    "updated_at": "2017-04-20 04:30:56",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 140,
+    "text": "đối tượng tuyển thẳng",
+    "created_at": "2017-04-20 04:31:45",
+    "updated_at": "2017-04-20 04:31:45",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 141,
+    "text": "sinh vien cong nghe nhu the nao",
+    "created_at": "2017-04-20 06:31:16",
+    "updated_at": "2017-04-20 06:31:16",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 142,
+    "text": "cac mau de thi cuoi ky dai so",
+    "created_at": "2017-04-20 06:31:37",
+    "updated_at": "2017-04-20 06:31:37",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 143,
+    "text": "đề thi hết môn đại số",
+    "created_at": "2017-04-20 06:31:56",
+    "updated_at": "2017-04-20 06:31:56",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 144,
+    "text": "van phong khoa",
+    "created_at": "2017-04-21 10:06:33",
+    "updated_at": "2017-04-21 10:06:58",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 145,
+    "text": "lochj",
+    "created_at": "2017-04-21 10:06:44",
+    "updated_at": "2017-04-21 10:06:44",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 146,
+    "text": "bộ môn công nghệ vũ trụ",
+    "created_at": "2017-04-21 19:07:03",
+    "updated_at": "2017-04-25 21:47:48",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 147,
+    "text": "co hoc ki thuat",
+    "created_at": "2017-04-21 19:07:39",
+    "updated_at": "2017-04-24 19:29:43",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 148,
+    "text": "cong nghe vu tru",
+    "created_at": "2017-04-21 19:12:05",
+    "updated_at": "2017-04-21 19:12:05",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 149,
+    "text": "cac mon bo tro",
+    "created_at": "2017-04-21 23:20:09",
+    "updated_at": "2017-04-21 23:20:09",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 150,
+    "text": "bổ trợ",
+    "created_at": "2017-04-21 23:20:15",
+    "updated_at": "2017-04-21 23:20:15",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 151,
+    "text": "hòa lạc",
+    "created_at": "2017-04-21 23:21:02",
+    "updated_at": "2017-05-24 09:21:26",
+    "ip": "",
+    "faqs_count": 9
+  },
+  {
+    "id": 152,
+    "text": "học phần",
+    "created_at": "2017-04-21 23:21:12",
+    "updated_at": "2017-04-21 23:21:12",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 153,
+    "text": "sau khi học xong có việc làm ngay ko ạ",
+    "created_at": "2017-04-23 03:19:37",
+    "updated_at": "2017-04-23 03:19:37",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 154,
+    "text": "Trường có xét miễn thi tiếng anh không a?",
+    "created_at": "2017-04-24 01:12:07",
+    "updated_at": "2017-04-24 01:12:07",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 155,
+    "text": "tiếng anh",
+    "created_at": "2017-04-24 01:12:24",
+    "updated_at": "2017-05-11 05:37:25",
+    "ip": "",
+    "faqs_count": 3
+  },
+  {
+    "id": 156,
+    "text": "đăng",
+    "created_at": "2017-04-24 07:01:47",
+    "updated_at": "2017-04-24 07:01:47",
+    "ip": "",
+    "faqs_count": 8
+  },
+  {
+    "id": 157,
+    "text": "Các bạn cho mình hỏi, làm sao để chuyển tiếp thư từ ctmail sang gmail",
+    "created_at": "2017-04-24 15:47:44",
+    "updated_at": "2017-04-24 15:47:44",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 158,
+    "text": "ctmail",
+    "created_at": "2017-04-24 15:47:51",
+    "updated_at": "2017-04-24 16:33:05",
+    "ip": "",
+    "faqs_count": 2
+  },
+  {
+    "id": 159,
+    "text": "co hoc ky thuat",
+    "created_at": "2017-04-24 19:53:08",
+    "updated_at": "2017-04-24 19:53:08",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 160,
+    "text": "số điện thoại thầy Hoàng Xuân Huấn",
+    "created_at": "2017-04-24 21:13:45",
+    "updated_at": "2017-04-24 21:13:45",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 161,
+    "text": "the sinh vien",
+    "created_at": "2017-04-25 01:55:19",
+    "updated_at": "2017-04-25 03:33:04",
+    "ip": "",
+    "faqs_count": 7
+  },
+  {
+    "id": 162,
+    "text": "Không dự thi thpt quốc gia có được dùng điểm đánh giá năng lực để xét tuyển",
+    "created_at": "2017-04-25 06:45:11",
+    "updated_at": "2017-04-25 06:45:11",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 163,
+    "text": "co hoi viec lam sau khi hoc nganh co ki thuat",
+    "created_at": "2017-04-25 21:43:41",
+    "updated_at": "2017-04-25 21:43:41",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 164,
+    "text": "Tuyen sinh dai hoc 2017",
+    "created_at": "2017-04-25 21:45:11",
+    "updated_at": "2017-04-25 21:45:11",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 165,
+    "text": "sđt cô hoàng ngọc trang",
+    "created_at": "2017-04-25 22:57:51",
+    "updated_at": "2017-04-25 22:57:51",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 166,
+    "text": "cô hoàng ngọc trang",
+    "created_at": "2017-04-25 23:18:15",
+    "updated_at": "2017-04-25 23:18:15",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 167,
+    "text": "Em muốn hỏi điểm chuẩn vào các ngành CNTT và kỹ thuật năng lượng dự đoán dao động ra sao trong năm nay ạ. Vì những năm trc trường thi theo hình thức khác nên em thấy rất khó để ước lượng điểm chuẩn năm nay. Cảm ơn a/c",
+    "created_at": "2017-04-27 06:51:31",
+    "updated_at": "2017-04-27 06:51:31",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 168,
+    "text": "trường có xét học bạ không ạ?",
+    "created_at": "2017-04-28 03:16:02",
+    "updated_at": "2017-04-28 03:16:02",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 169,
+    "text": "xét học bạ",
+    "created_at": "2017-04-28 03:20:10",
+    "updated_at": "2017-04-28 03:20:10",
+    "ip": "",
+    "faqs_count": 2
+  },
+  {
+    "id": 170,
+    "text": "tuyển sinh",
+    "created_at": "2017-04-28 21:04:40",
+    "updated_at": "2017-04-28 21:04:40",
+    "ip": "",
+    "faqs_count": 24
+  },
+  {
+    "id": 171,
+    "text": "cách ghi mã nhms ngành",
+    "created_at": "2017-05-02 04:30:32",
+    "updated_at": "2017-05-02 04:30:32",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 172,
+    "text": "mã nhóm ngành",
+    "created_at": "2017-05-02 04:30:40",
+    "updated_at": "2017-05-02 04:30:40",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 173,
+    "text": "Ngô thị duyên",
+    "created_at": "2017-05-03 15:44:20",
+    "updated_at": "2017-05-08 04:21:05",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 174,
+    "text": "dien thoai",
+    "created_at": "2017-05-05 07:57:00",
+    "updated_at": "2017-05-05 07:57:00",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 175,
+    "text": "so dien thoai",
+    "created_at": "2017-05-05 07:57:08",
+    "updated_at": "2017-05-05 07:57:08",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 176,
+    "text": "thay",
+    "created_at": "2017-05-05 07:57:13",
+    "updated_at": "2017-05-05 07:57:13",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 177,
+    "text": "giao vien",
+    "created_at": "2017-05-05 07:57:19",
+    "updated_at": "2017-05-05 07:57:19",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 178,
+    "text": "bui quang hung",
+    "created_at": "2017-05-05 07:57:25",
+    "updated_at": "2017-05-05 07:57:25",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 179,
+    "text": "trinh nhat tien",
+    "created_at": "2017-05-05 07:57:31",
+    "updated_at": "2017-05-08 03:58:12",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 180,
+    "text": "Trường Minh!!!",
+    "created_at": "2017-05-05 14:12:49",
+    "updated_at": "2017-05-09 03:03:21",
+    "ip": "",
+    "faqs_count": 25
+  },
+  {
+    "id": 182,
+    "text": "Cho em hỏi : em là hs trường THPT Chuyên Lương văn tụy. Năm vừa rồi em đạt giải khuyến khích quốc gia môn vật lý . Em thấy trường có ưu tiên xét tuyển cho hs của các trường THPT chuyên thuộc đại học quốc gia hà nôi là thành viên đội tuyển quốc gia các môn văn hóa. Vậy cho em hỏi trường hợp của em có được ưu tiên không và nếu đc thì cần giấy tờ gì sj",
+    "created_at": "2017-05-06 04:07:31",
+    "updated_at": "2017-05-06 04:07:31",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 183,
+    "text": "Chịch",
+    "created_at": "2017-05-07 02:11:47",
+    "updated_at": "2017-06-04 15:33:11",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 184,
+    "text": "thi đánh giá năng lực",
+    "created_at": "2017-05-07 02:11:55",
+    "updated_at": "2017-05-07 02:11:55",
+    "ip": "",
+    "faqs_count": 4
+  },
+  {
+    "id": 185,
+    "text": "điểm chuẩn năm nay tầm bao nhiêu vậy ,. cì mấy năm trước toàn thi dgnl nên em không biết",
+    "created_at": "2017-05-07 06:31:57",
+    "updated_at": "2017-05-07 06:31:57",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 186,
+    "text": "Lê Thanh Hà",
+    "created_at": "2017-05-08 03:52:57",
+    "updated_at": "2017-05-08 03:52:57",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 187,
+    "text": "ma thị châu",
+    "created_at": "2017-05-08 04:21:50",
+    "updated_at": "2017-05-08 04:21:50",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 188,
+    "text": "trương anh hoàng",
+    "created_at": "2017-05-08 04:21:56",
+    "updated_at": "2017-05-08 04:21:56",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 189,
+    "text": "Điểm rèn luyện",
+    "created_at": "2017-05-08 15:49:13",
+    "updated_at": "2017-05-29 20:06:26",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 190,
+    "text": "Hoàng xuân huấn",
+    "created_at": "2017-05-08 17:15:32",
+    "updated_at": "2017-05-08 17:15:32",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 191,
+    "text": "Trường minh",
+    "created_at": "2017-05-09 03:03:14",
+    "updated_at": "2017-05-09 03:03:14",
+    "ip": "",
+    "faqs_count": 25
+  },
+  {
+    "id": 192,
+    "text": "Nguyễn thị nhật thanh",
+    "created_at": "2017-05-09 03:35:58",
+    "updated_at": "2017-05-09 03:35:58",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 193,
+    "text": "g2",
+    "created_at": "2017-05-09 04:22:32",
+    "updated_at": "2017-05-09 04:22:32",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 194,
+    "text": "đoàn",
+    "created_at": "2017-05-09 04:22:40",
+    "updated_at": "2017-05-09 04:22:40",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 195,
+    "text": "lich thi hoc ki",
+    "created_at": "2017-05-09 04:28:25",
+    "updated_at": "2017-05-27 09:31:17",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 196,
+    "text": "Thi khối nào để vào trường",
+    "created_at": "2017-05-09 20:12:24",
+    "updated_at": "2017-05-09 20:12:24",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 197,
+    "text": "bình",
+    "created_at": "2017-05-09 23:17:12",
+    "updated_at": "2017-05-09 23:17:12",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 198,
+    "text": "cơ điện tử",
+    "created_at": "2017-05-10 04:32:24",
+    "updated_at": "2017-05-10 04:32:24",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 199,
+    "text": "chương trình học các ngành",
+    "created_at": "2017-05-10 19:22:52",
+    "updated_at": "2017-05-10 19:22:52",
+    "ip": "",
+    "faqs_count": 5
+  },
+  {
+    "id": 200,
+    "text": "khung chương trình đào tạo",
+    "created_at": "2017-05-10 19:23:12",
+    "updated_at": "2017-05-19 03:38:04",
+    "ip": "",
+    "faqs_count": 5
+  },
+  {
+    "id": 201,
+    "text": "đơn mượn phòng",
+    "created_at": "2017-05-11 03:24:51",
+    "updated_at": "2017-05-11 03:24:51",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 202,
+    "text": "mượn phòng",
+    "created_at": "2017-05-11 03:24:56",
+    "updated_at": "2017-05-11 03:24:56",
+    "ip": "",
+    "faqs_count": 5
+  },
+  {
+    "id": 203,
+    "text": "điểm trung bình",
+    "created_at": "2017-05-11 05:02:25",
+    "updated_at": "2017-05-11 05:02:25",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 204,
+    "text": "tích lũy",
+    "created_at": "2017-05-11 05:02:32",
+    "updated_at": "2017-05-11 05:02:32",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 205,
+    "text": "điểm",
+    "created_at": "2017-05-11 05:02:38",
+    "updated_at": "2017-05-11 05:02:38",
+    "ip": "",
+    "faqs_count": 7
+  },
+  {
+    "id": 206,
+    "text": "hệ số",
+    "created_at": "2017-05-11 05:02:55",
+    "updated_at": "2017-05-11 05:02:55",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 207,
+    "text": "câu lạc bộ",
+    "created_at": "2017-05-11 05:03:02",
+    "updated_at": "2017-05-11 21:56:12",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 208,
+    "text": "Web này dùng thế nào đây admin",
+    "created_at": "2017-05-11 05:06:39",
+    "updated_at": "2017-05-11 05:06:39",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 209,
+    "text": "đm",
+    "created_at": "2017-05-11 05:14:30",
+    "updated_at": "2017-05-11 05:14:30",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 210,
+    "text": "bet",
+    "created_at": "2017-05-11 05:14:33",
+    "updated_at": "2017-05-11 05:14:33",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 211,
+    "text": "chuẩn đầu ra tiếng anh k59",
+    "created_at": "2017-05-11 05:14:34",
+    "updated_at": "2017-05-11 05:14:34",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 212,
+    "text": "chuẩn đầu ra tiếng anh",
+    "created_at": "2017-05-11 05:14:38",
+    "updated_at": "2017-05-11 05:14:38",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 213,
+    "text": "lịch học",
+    "created_at": "2017-05-11 05:14:43",
+    "updated_at": "2017-05-11 05:49:31",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 214,
+    "text": "chuẩn đầu ra",
+    "created_at": "2017-05-11 05:14:44",
+    "updated_at": "2017-05-11 05:14:44",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 215,
+    "text": "Trường mình có bao nhiêu nữ?",
+    "created_at": "2017-05-11 05:15:51",
+    "updated_at": "2017-05-11 05:15:51",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 216,
+    "text": "hay",
+    "created_at": "2017-05-11 05:23:44",
+    "updated_at": "2017-05-11 05:23:44",
+    "ip": "",
+    "faqs_count": 4
+  },
+  {
+    "id": 219,
+    "text": "hỏi gì?",
+    "created_at": "2017-05-11 05:28:50",
+    "updated_at": "2017-05-11 05:28:50",
+    "ip": "",
+    "faqs_count": 14
+  },
+  {
+    "id": 220,
+    "text": "bảo lưu",
+    "created_at": "2017-05-11 05:32:30",
+    "updated_at": "2017-05-11 05:32:30",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 221,
+    "text": "ping 127.0.0.1 && dir",
+    "created_at": "2017-05-11 05:33:46",
+    "updated_at": "2017-05-11 05:33:46",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 222,
+    "text": "ping 127.0.0.1 && ls",
+    "created_at": "2017-05-11 05:33:57",
+    "updated_at": "2017-05-11 05:33:57",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 223,
+    "text": "gái",
+    "created_at": "2017-05-11 05:36:28",
+    "updated_at": "2017-05-11 05:36:28",
+    "ip": "",
+    "faqs_count": 2
+  },
+  {
+    "id": 224,
+    "text": "Abc",
+    "created_at": "2017-05-11 05:36:37",
+    "updated_at": "2017-06-04 15:32:29",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 225,
+    "text": "machine learning",
+    "created_at": "2017-05-11 05:36:52",
+    "updated_at": "2017-05-11 06:49:25",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 226,
+    "text": "giải tích",
+    "created_at": "2017-05-11 05:36:59",
+    "updated_at": "2017-05-11 05:36:59",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 227,
+    "text": "thi",
+    "created_at": "2017-05-11 05:37:06",
+    "updated_at": "2017-05-11 05:37:06",
+    "ip": "",
+    "faqs_count": 25
+  },
+  {
+    "id": 228,
+    "text": "toefl",
+    "created_at": "2017-05-11 05:37:22",
+    "updated_at": "2017-05-11 05:37:22",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 229,
+    "text": "nghiên cứu khoa học",
+    "created_at": "2017-05-11 05:37:35",
+    "updated_at": "2017-05-11 05:37:35",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 230,
+    "text": "haha",
+    "created_at": "2017-05-11 05:37:55",
+    "updated_at": "2017-05-11 05:37:55",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 231,
+    "text": "khóa luận",
+    "created_at": "2017-05-11 05:37:56",
+    "updated_at": "2017-05-11 05:37:56",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 232,
+    "text": "tôi đi học",
+    "created_at": "2017-05-11 05:38:03",
+    "updated_at": "2017-05-11 05:38:03",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 233,
+    "text": "học",
+    "created_at": "2017-05-11 05:38:07",
+    "updated_at": "2017-05-15 07:55:34",
+    "ip": "",
+    "faqs_count": 43
+  },
+  {
+    "id": 234,
+    "text": "dự án",
+    "created_at": "2017-05-11 05:38:43",
+    "updated_at": "2017-05-11 05:38:43",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 235,
+    "text": "Hola",
+    "created_at": "2017-05-11 05:38:45",
+    "updated_at": "2017-05-11 05:54:07",
+    "ip": "",
+    "faqs_count": 9
+  },
+  {
+    "id": 236,
+    "text": "Xin chào",
+    "created_at": "2017-05-11 05:38:58",
+    "updated_at": "2017-05-11 05:38:58",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 237,
+    "text": "jlkadjsk",
+    "created_at": "2017-05-11 05:39:33",
+    "updated_at": "2017-05-11 05:39:33",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 238,
+    "text": "clb",
+    "created_at": "2017-05-11 05:39:47",
+    "updated_at": "2017-05-11 05:39:47",
+    "ip": "",
+    "faqs_count": 2
+  },
+  {
+    "id": 239,
+    "text": "văn phòng đoàn",
+    "created_at": "2017-05-11 05:40:00",
+    "updated_at": "2017-05-11 05:40:00",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 240,
+    "text": "đoàn thanh niên",
+    "created_at": "2017-05-11 05:40:05",
+    "updated_at": "2017-05-11 05:40:05",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 241,
+    "text": "tôi là ai",
+    "created_at": "2017-05-11 05:40:07",
+    "updated_at": "2017-05-11 05:40:07",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 242,
+    "text": "địa chỉ trường",
+    "created_at": "2017-05-11 05:40:22",
+    "updated_at": "2017-05-11 05:40:22",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 243,
+    "text": "?",
+    "created_at": "2017-05-11 05:41:28",
+    "updated_at": "2017-06-04 15:32:04",
+    "ip": "",
+    "faqs_count": 93
+  },
+  {
+    "id": 244,
+    "text": "giảng đường",
+    "created_at": "2017-05-11 05:42:29",
+    "updated_at": "2017-05-11 05:42:29",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 245,
+    "text": "Các khoa",
+    "created_at": "2017-05-11 05:42:43",
+    "updated_at": "2017-05-11 05:42:43",
+    "ip": "",
+    "faqs_count": 8
+  },
+  {
+    "id": 246,
+    "text": "ngày hội việc làm",
+    "created_at": "2017-05-11 05:43:09",
+    "updated_at": "2017-05-11 05:43:09",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 247,
+    "text": "test",
+    "created_at": "2017-05-11 05:44:44",
+    "updated_at": "2017-06-04 15:31:01",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 248,
+    "text": "giờ như nào",
+    "created_at": "2017-05-11 05:44:50",
+    "updated_at": "2017-05-11 05:44:50",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 249,
+    "text": "điểm thi học kỳ",
+    "created_at": "2017-05-11 05:46:15",
+    "updated_at": "2017-05-11 05:46:15",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 250,
+    "text": "Cẩm Vân",
+    "created_at": "2017-05-11 05:46:16",
+    "updated_at": "2017-05-17 03:12:39",
+    "ip": "",
+    "faqs_count": 5
+  },
+  {
+    "id": 251,
+    "text": "ăn cơm",
+    "created_at": "2017-05-11 05:46:59",
+    "updated_at": "2017-06-04 15:32:36",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 252,
+    "text": "thi cuối kfy",
+    "created_at": "2017-05-11 05:47:08",
+    "updated_at": "2017-05-11 05:47:08",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 253,
+    "text": "thi cuối kỳ",
+    "created_at": "2017-05-11 05:47:11",
+    "updated_at": "2017-05-11 05:47:11",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 254,
+    "text": "đồ án tốt nghiệp",
+    "created_at": "2017-05-11 05:47:24",
+    "updated_at": "2017-05-11 05:47:24",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 255,
+    "text": "đơn xin học lại",
+    "created_at": "2017-05-11 05:47:35",
+    "updated_at": "2017-05-11 05:47:35",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 256,
+    "text": "lịch thi học kỳ",
+    "created_at": "2017-05-11 05:48:29",
+    "updated_at": "2017-05-25 18:24:53",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 257,
+    "text": "dfdsfd",
+    "created_at": "2017-05-11 05:48:54",
+    "updated_at": "2017-05-11 05:48:54",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 258,
+    "text": "<script>alert(\"ahihi\");</script>",
+    "created_at": "2017-05-11 05:49:33",
+    "updated_at": "2017-06-04 15:32:14",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 259,
+    "text": "phòng đào tạo",
+    "created_at": "2017-05-11 05:49:38",
+    "updated_at": "2017-05-11 05:49:38",
+    "ip": "",
+    "faqs_count": 2
+  },
+  {
+    "id": 260,
+    "text": "<script>alert(\"ahihi\")</script>",
+    "created_at": "2017-05-11 05:51:11",
+    "updated_at": "2017-06-04 15:32:17",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 261,
+    "text": "sdfhds",
+    "created_at": "2017-05-11 05:51:20",
+    "updated_at": "2017-05-11 05:51:20",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 262,
+    "text": "Câu hỏi này chỉ mang tính chất test web",
+    "created_at": "2017-05-11 05:53:58",
+    "updated_at": "2017-05-11 05:53:58",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 263,
+    "text": "vãi",
+    "created_at": "2017-05-11 06:36:02",
+    "updated_at": "2017-05-11 06:36:02",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 264,
+    "text": "làm sao",
+    "created_at": "2017-05-11 06:36:08",
+    "updated_at": "2017-05-11 06:36:08",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 265,
+    "text": "như",
+    "created_at": "2017-05-11 06:36:16",
+    "updated_at": "2017-05-11 06:36:16",
+    "ip": "",
+    "faqs_count": 27
+  },
+  {
+    "id": 266,
+    "text": "bao giờ có học bổng kì 1 năm học 2016-2017",
+    "created_at": "2017-05-11 06:38:10",
+    "updated_at": "2017-05-11 06:38:10",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 267,
+    "text": "1",
+    "created_at": "2017-05-11 06:38:18",
+    "updated_at": "2017-06-04 15:32:19",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 268,
+    "text": "Em là ai",
+    "created_at": "2017-05-11 07:01:38",
+    "updated_at": "2017-05-11 07:01:38",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 269,
+    "text": "Điểm thi học kì",
+    "created_at": "2017-05-11 07:01:47",
+    "updated_at": "2017-05-11 07:01:47",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 270,
+    "text": "lịch thikif 2",
+    "created_at": "2017-05-11 07:13:27",
+    "updated_at": "2017-05-11 07:13:27",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 271,
+    "text": "Lịch thi kì 2",
+    "created_at": "2017-05-11 07:13:34",
+    "updated_at": "2017-05-11 07:13:34",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 272,
+    "text": "lịch thi học kỳ 2016-2017",
+    "created_at": "2017-05-11 07:33:18",
+    "updated_at": "2017-05-11 07:33:18",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 273,
+    "text": "danh sách sinh viên k61",
+    "created_at": "2017-05-11 07:33:33",
+    "updated_at": "2017-05-11 07:33:33",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 274,
+    "text": "ố ồ",
+    "created_at": "2017-05-11 07:40:11",
+    "updated_at": "2017-05-11 07:40:11",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 275,
+    "text": "kí túc xá",
+    "created_at": "2017-05-11 07:40:18",
+    "updated_at": "2017-05-11 07:40:18",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 276,
+    "text": "gì vậy",
+    "created_at": "2017-05-11 07:40:24",
+    "updated_at": "2017-05-11 07:40:24",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 277,
+    "text": "sảnh G2",
+    "created_at": "2017-05-11 07:40:28",
+    "updated_at": "2017-05-11 07:40:28",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 278,
+    "text": "làm vé tháng",
+    "created_at": "2017-05-11 07:40:41",
+    "updated_at": "2017-05-11 07:40:41",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 279,
+    "text": "nộp tiền",
+    "created_at": "2017-05-11 08:02:51",
+    "updated_at": "2017-05-11 08:02:51",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 280,
+    "text": "2",
+    "created_at": "2017-05-11 09:13:26",
+    "updated_at": "2017-06-04 15:32:22",
+    "ip": "",
+    "faqs_count": 27
+  },
+  {
+    "id": 281,
+    "text": "Event lớn nhất năm của đại học công nghệ",
+    "created_at": "2017-05-11 14:03:34",
+    "updated_at": "2017-05-11 14:03:34",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 282,
+    "text": "Event",
+    "created_at": "2017-05-11 14:03:53",
+    "updated_at": "2017-05-11 14:03:53",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 283,
+    "text": "Tin tức - hoạt động",
+    "created_at": "2017-05-11 14:05:21",
+    "updated_at": "2017-05-11 14:05:21",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 284,
+    "text": "học lại",
+    "created_at": "2017-05-11 15:17:41",
+    "updated_at": "2017-05-11 15:17:41",
+    "ip": "",
+    "faqs_count": 2
+  },
+  {
+    "id": 285,
+    "text": "đoàn hội",
+    "created_at": "2017-05-11 15:46:52",
+    "updated_at": "2017-05-11 15:46:52",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 286,
+    "text": "đăng ký môn học",
+    "created_at": "2017-05-11 15:47:35",
+    "updated_at": "2017-05-11 15:51:36",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 287,
+    "text": "đăng ký bổ sung",
+    "created_at": "2017-05-11 15:48:31",
+    "updated_at": "2017-05-11 15:48:31",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 288,
+    "text": "đkmh",
+    "created_at": "2017-05-11 15:50:38",
+    "updated_at": "2017-05-11 15:50:38",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 289,
+    "text": "ahihi",
+    "created_at": "2017-05-11 16:11:40",
+    "updated_at": "2017-06-04 15:32:33",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 290,
+    "text": "giảng viên đại số",
+    "created_at": "2017-05-11 17:29:31",
+    "updated_at": "2017-05-11 17:29:31",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 291,
+    "text": "đại số",
+    "created_at": "2017-05-11 17:29:37",
+    "updated_at": "2017-05-11 17:29:37",
+    "ip": "",
+    "faqs_count": 2
+  },
+  {
+    "id": 292,
+    "text": "tes",
+    "created_at": "2017-05-11 17:43:15",
+    "updated_at": "2017-05-11 17:43:15",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 293,
+    "text": "làm sao không cần học mà vẫn đạt được học bổng",
+    "created_at": "2017-05-11 18:29:24",
+    "updated_at": "2017-05-11 18:29:24",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 294,
+    "text": "kj;",
+    "created_at": "2017-05-11 19:14:37",
+    "updated_at": "2017-05-11 19:14:37",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 295,
+    "text": "Số điện thoại anh Vũ Đình Chinh",
+    "created_at": "2017-05-11 19:24:59",
+    "updated_at": "2017-05-11 19:24:59",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 296,
+    "text": "anh Vũ Đình Chinh",
+    "created_at": "2017-05-11 19:25:07",
+    "updated_at": "2017-05-11 19:25:07",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 297,
+    "text": "Thầy Đỗ Đức Đông",
+    "created_at": "2017-05-11 19:25:22",
+    "updated_at": "2017-05-11 19:25:22",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 298,
+    "text": "Cách ôn thi",
+    "created_at": "2017-05-11 19:27:00",
+    "updated_at": "2017-05-11 19:27:00",
+    "ip": "",
+    "faqs_count": 28
+  },
+  {
+    "id": 299,
+    "text": "chuyển lớp",
+    "created_at": "2017-05-11 20:15:22",
+    "updated_at": "2017-05-15 06:20:50",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 300,
+    "text": "chuyển ngành",
+    "created_at": "2017-05-11 20:15:30",
+    "updated_at": "2017-05-15 06:20:43",
+    "ip": "",
+    "faqs_count": 2
+  },
+  {
+    "id": 301,
+    "text": "sdfafafa",
+    "created_at": "2017-05-11 21:56:01",
+    "updated_at": "2017-05-11 21:56:01",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 302,
+    "text": "Chương trình đào tạo",
+    "created_at": "2017-05-11 21:57:48",
+    "updated_at": "2017-05-24 07:16:12",
+    "ip": "",
+    "faqs_count": 7
+  },
+  {
+    "id": 303,
+    "text": "hi",
+    "created_at": "2017-05-11 22:26:40",
+    "updated_at": "2017-05-11 22:26:40",
+    "ip": "",
+    "faqs_count": 4
+  },
+  {
+    "id": 304,
+    "text": "MAT 1042",
+    "created_at": "2017-05-11 22:44:32",
+    "updated_at": "2017-05-11 22:44:32",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 305,
+    "text": "khung đào tạo chương trình",
+    "created_at": "2017-05-11 23:36:48",
+    "updated_at": "2017-05-11 23:36:48",
+    "ip": "",
+    "faqs_count": 5
+  },
+  {
+    "id": 306,
+    "text": "Mất thẻ sinh viên",
+    "created_at": "2017-05-12 02:32:17",
+    "updated_at": "2017-05-12 02:32:17",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 307,
+    "text": "pass wifi",
+    "created_at": "2017-05-12 04:05:22",
+    "updated_at": "2017-05-12 04:05:22",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 308,
+    "text": "wifi",
+    "created_at": "2017-05-12 04:05:26",
+    "updated_at": "2017-05-12 04:05:26",
+    "ip": "",
+    "faqs_count": 4
+  },
+  {
+    "id": 309,
+    "text": "công nghệ phần mềm",
+    "created_at": "2017-05-12 04:36:28",
+    "updated_at": "2017-05-12 04:36:28",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 310,
+    "text": "Xem lịch thi học kì II",
+    "created_at": "2017-05-12 05:15:51",
+    "updated_at": "2017-05-12 05:15:51",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 311,
+    "text": "Lịch thi học kì II",
+    "created_at": "2017-05-12 05:16:01",
+    "updated_at": "2017-05-27 09:31:01",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 312,
+    "text": "khóa học",
+    "created_at": "2017-05-12 05:20:58",
+    "updated_at": "2017-05-12 05:20:58",
+    "ip": "",
+    "faqs_count": 4
+  },
+  {
+    "id": 313,
+    "text": "khung chương trình k 59",
+    "created_at": "2017-05-12 05:21:23",
+    "updated_at": "2017-05-12 05:21:23",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 314,
+    "text": "khung chương trình k59",
+    "created_at": "2017-05-12 05:21:26",
+    "updated_at": "2017-05-12 05:21:26",
+    "ip": "",
+    "faqs_count": 2
+  },
+  {
+    "id": 315,
+    "text": "tra lịch thi",
+    "created_at": "2017-05-12 05:29:15",
+    "updated_at": "2017-05-12 05:29:15",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 316,
+    "text": "mẫu câu hỏi\\",
+    "created_at": "2017-05-12 06:12:34",
+    "updated_at": "2017-05-12 06:12:34",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 317,
+    "text": "mẫu câu hỏi",
+    "created_at": "2017-05-12 06:12:35",
+    "updated_at": "2017-05-12 06:12:35",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 318,
+    "text": "xin giấy báo điểm",
+    "created_at": "2017-05-12 06:12:47",
+    "updated_at": "2017-05-12 06:12:47",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 319,
+    "text": "hoãn thi",
+    "created_at": "2017-05-12 06:15:25",
+    "updated_at": "2017-05-12 06:15:25",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 320,
+    "text": "nhận giấy báo điểm",
+    "created_at": "2017-05-12 06:15:38",
+    "updated_at": "2017-05-12 06:15:38",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 321,
+    "text": "thi học kỳ",
+    "created_at": "2017-05-12 06:27:53",
+    "updated_at": "2017-05-12 06:27:53",
+    "ip": "",
+    "faqs_count": 7
+  },
+  {
+    "id": 322,
+    "text": "Đ",
+    "created_at": "2017-05-12 06:58:54",
+    "updated_at": "2017-05-12 06:58:54",
+    "ip": "",
+    "faqs_count": 65
+  },
+  {
+    "id": 323,
+    "text": "được giải quốc gia ưu tiên xét tuyển như thế nào",
+    "created_at": "2017-05-12 07:17:45",
+    "updated_at": "2017-05-12 07:17:45",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 324,
+    "text": "tuyển thẳng học sinh giỏi quốc gia",
+    "created_at": "2017-05-12 07:17:57",
+    "updated_at": "2017-05-12 07:17:57",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 325,
+    "text": "học sinh giỏi quốc gia",
+    "created_at": "2017-05-12 07:18:01",
+    "updated_at": "2017-05-12 07:18:01",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 326,
+    "text": "tra cuu danh sach thi",
+    "created_at": "2017-05-12 07:51:19",
+    "updated_at": "2017-05-12 07:51:36",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 327,
+    "text": "thầy Le Quang Hieu",
+    "created_at": "2017-05-12 15:36:43",
+    "updated_at": "2017-05-12 15:36:43",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 328,
+    "text": "Le Quang Hieu",
+    "created_at": "2017-05-12 15:36:50",
+    "updated_at": "2017-05-12 15:38:16",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 329,
+    "text": "<",
+    "created_at": "2017-05-12 17:38:51",
+    "updated_at": "2017-06-04 15:32:12",
+    "ip": "",
+    "faqs_count": 93
+  },
+  {
+    "id": 330,
+    "text": "email",
+    "created_at": "2017-05-13 02:46:49",
+    "updated_at": "2017-05-13 02:46:49",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 331,
+    "text": "thành",
+    "created_at": "2017-05-13 02:47:01",
+    "updated_at": "2017-05-13 02:47:01",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 332,
+    "text": "chuyển sang chương trình chất lượng cao",
+    "created_at": "2017-05-13 18:47:16",
+    "updated_at": "2017-05-13 18:47:16",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 333,
+    "text": "chất lượng cao",
+    "created_at": "2017-05-13 18:47:30",
+    "updated_at": "2017-05-13 18:47:30",
+    "ip": "",
+    "faqs_count": 5
+  },
+  {
+    "id": 334,
+    "text": "chuyển",
+    "created_at": "2017-05-13 18:48:07",
+    "updated_at": "2017-05-13 18:48:07",
+    "ip": "",
+    "faqs_count": 2
+  },
+  {
+    "id": 335,
+    "text": "chuyển chất lượng cao",
+    "created_at": "2017-05-13 18:48:19",
+    "updated_at": "2017-05-13 18:48:19",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 336,
+    "text": "dấu ấn K57",
+    "created_at": "2017-05-14 03:47:25",
+    "updated_at": "2017-05-14 03:47:25",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 337,
+    "text": "trườn đã có phương án tuyển sinh cho năm 2018 chưa ạ?",
+    "created_at": "2017-05-14 05:09:46",
+    "updated_at": "2017-05-14 05:09:46",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 338,
+    "text": "trường đã có phương án tuyển sinh cho năm 2018 chưa ạ?",
+    "created_at": "2017-05-14 05:09:58",
+    "updated_at": "2017-05-14 05:09:58",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 339,
+    "text": "á đù",
+    "created_at": "2017-05-14 21:30:09",
+    "updated_at": "2017-06-04 15:32:25",
+    "ip": "",
+    "faqs_count": 16
+  },
+  {
+    "id": 340,
+    "text": "Tiếp sức mùa thi",
+    "created_at": "2017-05-14 21:43:14",
+    "updated_at": "2017-05-14 21:43:14",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 341,
+    "text": "Đăng ký tiếp sức mùa thi như thế nào",
+    "created_at": "2017-05-14 21:43:32",
+    "updated_at": "2017-05-14 21:43:32",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 342,
+    "text": "Đăng ký tiếp sức mùa thi",
+    "created_at": "2017-05-14 21:46:10",
+    "updated_at": "2017-05-14 21:46:10",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 343,
+    "text": "thi ĐGNL",
+    "created_at": "2017-05-14 22:14:43",
+    "updated_at": "2017-05-14 22:14:43",
+    "ip": "",
+    "faqs_count": 4
+  },
+  {
+    "id": 344,
+    "text": "dsfa",
+    "created_at": "2017-05-15 07:54:47",
+    "updated_at": "2017-05-15 07:54:47",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 345,
+    "text": "nhập học",
+    "created_at": "2017-05-15 07:54:59",
+    "updated_at": "2017-05-15 07:54:59",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 346,
+    "text": "học nhập",
+    "created_at": "2017-05-15 07:55:19",
+    "updated_at": "2017-05-15 07:55:40",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 347,
+    "text": "hocc",
+    "created_at": "2017-05-15 07:55:45",
+    "updated_at": "2017-05-15 07:55:45",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 348,
+    "text": "điện thoại",
+    "created_at": "2017-05-16 01:07:51",
+    "updated_at": "2017-05-16 01:07:51",
+    "ip": "",
+    "faqs_count": 3
+  },
+  {
+    "id": 349,
+    "text": "mất sổ đoàn",
+    "created_at": "2017-05-16 04:45:48",
+    "updated_at": "2017-05-16 04:45:48",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 350,
+    "text": "đoàn viên",
+    "created_at": "2017-05-16 04:45:51",
+    "updated_at": "2017-05-16 04:45:51",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 351,
+    "text": "sổ đoàn",
+    "created_at": "2017-05-16 04:45:57",
+    "updated_at": "2017-05-16 04:45:57",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 352,
+    "text": "sổ",
+    "created_at": "2017-05-16 04:46:05",
+    "updated_at": "2017-05-16 04:46:05",
+    "ip": "",
+    "faqs_count": 5
+  },
+  {
+    "id": 353,
+    "text": "cho e hỏi là: khoa truyền thông $ mạng máy tính có xét điểm khối A1",
+    "created_at": "2017-05-16 05:49:14",
+    "updated_at": "2017-05-16 05:49:14",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 354,
+    "text": "cho e hỏi là: khoa truyền thông $ mạng máy tính có xét điểm khối A1 ko ạ",
+    "created_at": "2017-05-16 05:49:21",
+    "updated_at": "2017-05-16 05:49:21",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 355,
+    "text": "điểm  chuẩn",
+    "created_at": "2017-05-16 05:49:30",
+    "updated_at": "2017-05-16 05:49:30",
+    "ip": "",
+    "faqs_count": 4
+  },
+  {
+    "id": 356,
+    "text": "khối",
+    "created_at": "2017-05-16 05:50:33",
+    "updated_at": "2017-05-16 05:50:33",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 357,
+    "text": "đăng kí học",
+    "created_at": "2017-05-17 07:57:13",
+    "updated_at": "2017-05-17 07:57:13",
+    "ip": "",
+    "faqs_count": 2
+  },
+  {
+    "id": 358,
+    "text": "cấm thi",
+    "created_at": "2017-05-17 07:57:53",
+    "updated_at": "2017-05-17 07:57:53",
+    "ip": "",
+    "faqs_count": 25
+  },
+  {
+    "id": 359,
+    "text": "bùi hồng sơn",
+    "created_at": "2017-05-18 19:11:34",
+    "updated_at": "2017-05-18 19:11:34",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 360,
+    "text": "cách xem lịch thi học kỳ",
+    "created_at": "2017-05-19 05:14:36",
+    "updated_at": "2017-05-19 05:14:36",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 361,
+    "text": "xem lịch thi học kỳ",
+    "created_at": "2017-05-19 05:14:45",
+    "updated_at": "2017-05-19 05:14:45",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 362,
+    "text": "xem lịch thi",
+    "created_at": "2017-05-19 22:36:01",
+    "updated_at": "2017-05-19 22:36:01",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 363,
+    "text": "giải tích 2",
+    "created_at": "2017-05-20 07:07:54",
+    "updated_at": "2017-05-20 07:07:54",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 364,
+    "text": "đề thi",
+    "created_at": "2017-05-20 07:08:03",
+    "updated_at": "2017-05-20 07:10:54",
+    "ip": "",
+    "faqs_count": 9
+  },
+  {
+    "id": 365,
+    "text": "Link tra lịch thi",
+    "created_at": "2017-05-21 05:07:24",
+    "updated_at": "2017-05-21 05:07:24",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 366,
+    "text": "phạm thế hiện",
+    "created_at": "2017-05-21 17:00:45",
+    "updated_at": "2017-05-21 17:00:45",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 367,
+    "text": "thủ tục ra trường",
+    "created_at": "2017-05-22 08:18:57",
+    "updated_at": "2017-05-22 08:18:57",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 368,
+    "text": "thủ tục",
+    "created_at": "2017-05-22 08:19:02",
+    "updated_at": "2017-05-22 08:19:02",
+    "ip": "",
+    "faqs_count": 3
+  },
+  {
+    "id": 369,
+    "text": "danh sách liên hệ với các thầy cô",
+    "created_at": "2017-05-22 17:35:00",
+    "updated_at": "2017-05-22 17:35:00",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 370,
+    "text": "số điện thoại liên hệ các thầy cô",
+    "created_at": "2017-05-22 17:35:15",
+    "updated_at": "2017-05-22 17:35:15",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 371,
+    "text": "danh sach mon hoc",
+    "created_at": "2017-05-24 13:02:25",
+    "updated_at": "2017-05-24 13:02:25",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 372,
+    "text": "chương trình đào tạo k59",
+    "created_at": "2017-05-24 18:40:39",
+    "updated_at": "2017-05-24 18:40:39",
+    "ip": "",
+    "faqs_count": 2
+  },
+  {
+    "id": 373,
+    "text": "chuong trinh",
+    "created_at": "2017-05-24 19:24:25",
+    "updated_at": "2017-05-24 19:24:25",
+    "ip": "",
+    "faqs_count": 11
+  },
+  {
+    "id": 374,
+    "text": "chuong trinh dao tao",
+    "created_at": "2017-05-24 19:24:33",
+    "updated_at": "2017-05-24 19:24:33",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 375,
+    "text": "khung đào tạo k59",
+    "created_at": "2017-05-24 19:26:11",
+    "updated_at": "2017-05-24 19:26:11",
+    "ip": "",
+    "faqs_count": 2
+  },
+  {
+    "id": 376,
+    "text": "testxx",
+    "created_at": "2017-05-24 22:47:31",
+    "updated_at": "2017-05-24 22:47:31",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 377,
+    "text": "o",
+    "created_at": "2017-05-25 00:26:45",
+    "updated_at": "2017-05-25 00:26:45",
+    "ip": "",
+    "faqs_count": 4
+  },
+  {
+    "id": 378,
+    "text": "lan",
+    "created_at": "2017-05-25 00:37:03",
+    "updated_at": "2017-05-25 00:37:03",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 379,
+    "text": ".",
+    "created_at": "2017-05-25 00:37:10",
+    "updated_at": "2017-06-04 15:32:07",
+    "ip": "",
+    "faqs_count": 93
+  },
+  {
+    "id": 380,
+    "text": "q&a",
+    "created_at": "2017-05-25 05:22:45",
+    "updated_at": "2017-05-25 05:22:45",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 381,
+    "text": "k59",
+    "created_at": "2017-05-25 05:22:52",
+    "updated_at": "2017-05-25 05:28:29",
+    "ip": "",
+    "faqs_count": 3
+  },
+  {
+    "id": 382,
+    "text": "thêm ctmail",
+    "created_at": "2017-05-25 08:56:03",
+    "updated_at": "2017-05-25 08:56:03",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 383,
+    "text": "uetmail",
+    "created_at": "2017-05-25 08:56:07",
+    "updated_at": "2017-05-25 17:52:21",
+    "ip": "",
+    "faqs_count": 2
+  },
+  {
+    "id": 384,
+    "text": "gmail",
+    "created_at": "2017-05-25 09:09:29",
+    "updated_at": "2017-05-25 17:27:36",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 385,
+    "text": "DANH BẠ ĐIỆN THOẠI - TRƯỜNG ĐẠI HỌC CÔNG NGHỆ",
+    "created_at": "2017-05-25 14:55:54",
+    "updated_at": "2017-05-25 17:56:15",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 386,
+    "text": "click",
+    "created_at": "2017-05-25 17:57:09",
+    "updated_at": "2017-05-25 17:57:09",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 387,
+    "text": "Lịch đăng ký kỳ hè năm nay bao giờ bắt đầu ạ",
+    "created_at": "2017-05-26 18:15:29",
+    "updated_at": "2017-05-26 18:15:29",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 388,
+    "text": "đề thi phân tích thiết kế hướng đối tượng",
+    "created_at": "2017-05-26 19:29:51",
+    "updated_at": "2017-05-26 19:29:51",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 389,
+    "text": "phân tích thiết kế hướng đối tượng",
+    "created_at": "2017-05-26 19:30:01",
+    "updated_at": "2017-05-26 19:30:01",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 390,
+    "text": "Chào ad :)) giữa làm khóa luận tốt nghiệp với thi tốt nghiệp thì nên chọn cái nào ạ???",
+    "created_at": "2017-05-26 20:17:00",
+    "updated_at": "2017-05-26 20:17:00",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 391,
+    "text": "bảo hiểm y tế của trường đại học công nghệ có thể khám ở những bệnh viện nào",
+    "created_at": "2017-05-29 05:54:30",
+    "updated_at": "2017-05-29 05:54:30",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 392,
+    "text": "bảo hiểm y tế",
+    "created_at": "2017-05-29 05:54:45",
+    "updated_at": "2017-05-29 05:54:53",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 393,
+    "text": "tuyển cộng tác viên",
+    "created_at": "2017-05-29 09:24:20",
+    "updated_at": "2017-05-29 09:24:20",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 394,
+    "text": "hhhh",
+    "created_at": "2017-05-30 02:04:13",
+    "updated_at": "2017-06-04 15:31:14",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 395,
+    "text": "h",
+    "created_at": "2017-05-30 02:04:18",
+    "updated_at": "2017-06-04 15:31:11",
+    "ip": "",
+    "faqs_count": 63
+  },
+  {
+    "id": 396,
+    "text": "SG lấy tiền ở đâu mà lắm vãi cả như thwa",
+    "created_at": "2017-05-30 05:17:17",
+    "updated_at": "2017-05-30 05:17:17",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 397,
+    "text": "Anh chị cho em hỏi về cái thi chứng chỉ tin học được không ạ.",
+    "created_at": "2017-05-30 20:27:14",
+    "updated_at": "2017-05-30 20:27:14",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 398,
+    "text": "Chứng chỉ tin học",
+    "created_at": "2017-05-30 20:27:30",
+    "updated_at": "2017-05-30 20:27:40",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 399,
+    "text": "Khung chương trình đào tạo các ngành (đối với khoá K62)",
+    "created_at": "2017-06-04 10:19:50",
+    "updated_at": "2017-06-04 15:31:43",
+    "ip": "",
+    "faqs_count": 1
+  },
+  {
+    "id": 403,
+    "text": "khóa luận",
+    "created_at": "2017-06-05 11:03:01",
+    "updated_at": "2017-06-05 11:03:01",
+    "ip": "117.6.52.122",
+    "faqs_count": 1
+  },
+  {
+    "id": 404,
+    "text": "",
+    "created_at": "2017-06-05 14:22:33",
+    "updated_at": "2017-06-05 17:16:01",
+    "ip": "66.249.69.197",
+    "faqs_count": 1
+  },
+  {
+    "id": 405,
+    "text": "alo",
+    "created_at": "2017-06-05 21:39:10",
+    "updated_at": "2017-06-05 21:39:10",
+    "ip": "14.160.35.138",
+    "faqs_count": 1
+  },
+  {
+    "id": 406,
+    "text": "quy chế",
+    "created_at": "2017-06-05 21:40:18",
+    "updated_at": "2017-06-05 21:40:18",
+    "ip": "42.114.21.65",
+    "faqs_count": 1
+  },
+  {
+    "id": 407,
+    "text": "quy chế đại học công nghệ",
+    "created_at": "2017-06-05 21:40:32",
+    "updated_at": "2017-06-05 21:40:32",
+    "ip": "42.114.21.65",
+    "faqs_count": 10
+  },
+  {
+    "id": 408,
+    "text": "điểm chuẩn của trường",
+    "created_at": "2017-06-05 21:42:33",
+    "updated_at": "2017-06-05 21:42:33",
+    "ip": "14.160.35.138",
+    "faqs_count": 1
+  },
+  {
+    "id": 409,
+    "text": "k58",
+    "created_at": "2017-06-06 09:57:53",
+    "updated_at": "2017-06-06 12:01:17",
+    "ip": "117.5.141.117",
+    "faqs_count": 2
+  },
+  {
+    "id": 410,
+    "text": "k58",
+    "created_at": "2017-06-06 12:07:55",
+    "updated_at": "2017-06-06 12:07:55",
+    "ip": "183.81.67.84",
+    "faqs_count": 2
+  },
+  {
+    "id": 411,
+    "text": "k58",
+    "created_at": "2017-06-06 12:12:19",
+    "updated_at": "2017-06-06 12:12:19",
+    "ip": "116.96.83.245",
+    "faqs_count": 2
+  },
+  {
+    "id": 413,
+    "text": "Giải-đáp-thắc-mắc-xung-quanh-vấn-đề-Đăng-kí-môn-học-Điều-chỉnh-bổ-sung-môn-học",
+    "created_at": "2017-06-06 12:22:54",
+    "updated_at": "2017-06-06 12:23:29",
+    "ip": "27.72.104.246",
+    "faqs_count": 10
+  },
+  {
+    "id": 414,
+    "text": "Giải-đáp-thắc-mắc-xung-quanh-vấn-đề-Đăng-kí-môn-học-Điều-chỉnh-bổ-sung-môn-học",
+    "created_at": "2017-06-06 12:26:45",
+    "updated_at": "2017-06-06 12:26:45",
+    "ip": "42.113.201.124",
+    "faqs_count": 10
+  },
+  {
+    "id": 415,
+    "text": "Giải-đáp-thắc-mắc-xung-quanh-vấn-đề-Đăng-kí-môn-học-Điều-chỉnh-bổ-sung-môn-học",
+    "created_at": "2017-06-06 12:37:43",
+    "updated_at": "2017-06-06 12:37:43",
+    "ip": "42.112.93.112",
+    "faqs_count": 10
+  },
+  {
+    "id": 416,
+    "text": "Giải-đáp-thắc-mắc-xung-quanh-vấn-đề-Đăng-kí-môn-học-Điều-chỉnh-bổ-sung-môn-học",
+    "created_at": "2017-06-06 12:49:29",
+    "updated_at": "2017-06-06 12:49:29",
+    "ip": "113.20.118.105",
+    "faqs_count": 10
+  },
+  {
+    "id": 417,
+    "text": "học cải thiện",
+    "created_at": "2017-06-06 12:54:40",
+    "updated_at": "2017-06-06 12:54:40",
+    "ip": "113.20.118.105",
+    "faqs_count": 10
+  },
+  {
+    "id": 418,
+    "text": "Khung chuong trinh dao tao",
+    "created_at": "2017-06-06 12:56:38",
+    "updated_at": "2017-06-06 12:56:38",
+    "ip": "113.177.110.107",
+    "faqs_count": 4
+  },
+  {
+    "id": 419,
+    "text": "Giải-đáp-thắc-mắc-xung-quanh-vấn-đề-Đăng-kí-môn-học-Điều-chỉnh-bổ-sung-môn-học",
+    "created_at": "2017-06-06 13:30:23",
+    "updated_at": "2017-06-06 13:30:23",
+    "ip": "27.72.104.246",
+    "faqs_count": 10
+  },
+  {
+    "id": 420,
+    "text": "k58",
+    "created_at": "2017-06-06 14:28:56",
+    "updated_at": "2017-06-06 14:28:56",
+    "ip": "27.76.229.24",
+    "faqs_count": 2
+  },
+  {
+    "id": 421,
+    "text": "Giải-đáp-thắc-mắc-xung-quanh-vấn-đề-Đăng-kí-môn-học-Điều-chỉnh-bổ-sung-môn-học",
+    "created_at": "2017-06-06 15:21:22",
+    "updated_at": "2017-06-06 15:21:22",
+    "ip": "183.81.54.248",
+    "faqs_count": 10
+  },
+  {
+    "id": 422,
+    "text": "đăng kí học hè ở đâu",
+    "created_at": "2017-06-06 17:59:24",
+    "updated_at": "2017-06-06 17:59:24",
+    "ip": "42.112.71.161",
+    "faqs_count": 10
+  },
+  {
+    "id": 423,
+    "text": "Giải-đáp-thắc-mắc-xung-quanh-vấn-đề-Đăng-kí-môn-học-Điều-chỉnh-bổ-sung-môn-học",
+    "created_at": "2017-06-06 20:15:34",
+    "updated_at": "2017-06-06 20:15:34",
+    "ip": "118.71.197.227",
+    "faqs_count": 10
+  },
+  {
+    "id": 424,
+    "text": "Giải-đáp-thắc-mắc-xung-quanh-vấn-đề-Đăng-kí-môn-học-Điều-chỉnh-bổ-sung-môn-học",
+    "created_at": "2017-06-06 20:42:09",
+    "updated_at": "2017-06-06 20:42:09",
+    "ip": "116.107.159.188",
+    "faqs_count": 10
+  },
+  {
+    "id": 425,
+    "text": "xin hoàn thi",
+    "created_at": "2017-06-06 21:21:27",
+    "updated_at": "2017-06-06 21:21:27",
+    "ip": "42.112.81.132",
+    "faqs_count": 10
+  },
+  {
+    "id": 426,
+    "text": "thi bổ xung",
+    "created_at": "2017-06-06 21:21:56",
+    "updated_at": "2017-06-06 21:21:56",
+    "ip": "42.112.81.132",
+    "faqs_count": 10
+  },
+  {
+    "id": 427,
+    "text": "chương trình đào tạo",
+    "created_at": "2017-06-06 21:54:05",
+    "updated_at": "2017-06-06 21:54:05",
+    "ip": "183.80.103.31",
+    "faqs_count": 10
+  },
+  {
+    "id": 428,
+    "text": "chương trình đào tao",
+    "created_at": "2017-06-06 23:23:18",
+    "updated_at": "2017-06-06 23:23:24",
+    "ip": "183.81.48.202",
+    "faqs_count": 10
+  },
+  {
+    "id": 429,
+    "text": "ăn gì",
+    "created_at": "2017-06-06 23:41:45",
+    "updated_at": "2017-06-06 23:41:45",
+    "ip": "1.55.175.141",
+    "faqs_count": 8
+  },
+  {
+    "id": 430,
+    "text": "học bằng kép",
+    "created_at": "2017-06-07 00:16:01",
+    "updated_at": "2017-06-07 00:16:23",
+    "ip": "118.70.177.175",
+    "faqs_count": 10
+  },
+  {
+    "id": 431,
+    "text": "học lại nhiều có bị",
+    "created_at": "2017-06-07 00:20:06",
+    "updated_at": "2017-06-07 00:20:06",
+    "ip": "118.70.177.175",
+    "faqs_count": 10
+  },
+  {
+    "id": 432,
+    "text": "hạ bằng",
+    "created_at": "2017-06-07 00:20:32",
+    "updated_at": "2017-06-07 00:20:32",
+    "ip": "118.70.177.175",
+    "faqs_count": 1
+  },
+  {
+    "id": 433,
+    "text": "Giải-đáp-thắc-mắc-xung-quanh-vấn-đề-Đăng-kí-môn-học-Điều-chỉnh-bổ-sung-môn-học",
+    "created_at": "2017-06-07 07:00:24",
+    "updated_at": "2017-06-07 07:00:24",
+    "ip": "1.55.161.200",
+    "faqs_count": 10
+  },
+  {
+    "id": 434,
+    "text": "chương trình đào tạo",
+    "created_at": "2017-06-07 13:20:40",
+    "updated_at": "2017-06-07 13:20:40",
+    "ip": "183.80.103.31",
+    "faqs_count": 10
+  },
+  {
+    "id": 435,
+    "text": "mùa đông ấm",
+    "created_at": "2017-06-07 17:14:20",
+    "updated_at": "2017-06-07 17:14:20",
+    "ip": "112.137.129.18",
+    "faqs_count": 1
+  },
+  {
+    "id": 437,
+    "text": "điểm chuẩn ra trường uet",
+    "created_at": "2017-06-07 18:03:50",
+    "updated_at": "2017-06-07 18:03:50",
+    "ip": "183.91.4.236",
+    "faqs_count": 10
+  },
+  {
+    "id": 438,
+    "text": "điểm tiếng anh ra trường uet",
+    "created_at": "2017-06-07 18:04:06",
+    "updated_at": "2017-06-07 18:04:06",
+    "ip": "183.91.4.236",
+    "faqs_count": 10
+  },
+  {
+    "id": 439,
+    "text": "lịch mở",
+    "created_at": "2017-06-07 19:35:55",
+    "updated_at": "2017-06-07 19:35:55",
+    "ip": "183.80.103.31",
+    "faqs_count": 1
+  },
+  {
+    "id": 440,
+    "text": "phòng đào tạo",
+    "created_at": "2017-06-07 19:36:01",
+    "updated_at": "2017-06-07 19:36:01",
+    "ip": "183.80.103.31",
+    "faqs_count": 10
+  },
+  {
+    "id": 441,
+    "text": "Giải-đáp-thắc-mắc-xung-quanh-vấn-đề-Đăng-kí-môn-học-Điều-chỉnh-bổ-sung-môn-học",
+    "created_at": "2017-06-07 20:10:29",
+    "updated_at": "2017-06-07 20:10:29",
+    "ip": "180.93.18.25",
+    "faqs_count": 10
+  },
+  {
+    "id": 442,
+    "text": "Nghiên cứu khoa học",
+    "created_at": "2017-06-07 20:10:54",
+    "updated_at": "2017-06-07 20:10:54",
+    "ip": "180.93.18.25",
+    "faqs_count": 10
+  },
+  {
+    "id": 443,
+    "text": "điểm thi",
+    "created_at": "2017-06-07 22:05:00",
+    "updated_at": "2017-06-07 22:05:00",
+    "ip": "58.187.92.127",
+    "faqs_count": 10
+  }
+]
