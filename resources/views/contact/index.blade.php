@@ -47,7 +47,7 @@
                                             <i class="fa fa-upload"></i> Tải lên </a>
                                     </li>
                                     <li>
-                                        <a href="javascript:;">
+                                        <a href="{{route('manage.contact.export')}}" target="_blank">
                                             <i class="fa fa-download"></i> Tải xuống </a>
                                     </li>
                                 </ul>
@@ -241,21 +241,21 @@
     </script>
     @permission('manage-content')
         <script>
-            var bootbox_content = $('#bootbox-content');
-            var bootbox_message = bootbox_content.html();
-            bootbox_content.remove();
-            $('#upload').click(function () {
-                var uploadDialog = bootbox.dialog({
-                    title: 'Tải lên danh bạ',
-                    message: bootbox_message
-                });
-                uploadDialog.find('form').submit(function() {
-                    uploadDialog.modal('hide');
-                    bootbox.dialog({
-                        message: '<p><i class="fa fa-spin fa-spinner"></i> Đang tải lên...</p>',
-                        closeButton: false
+            $(function() {
+               var bootbox_message = getHtmlAndRemove('bootbox-content');
+                $('#upload').click(function () {
+                    var uploadDialog = bootbox.dialog({
+                        title: 'Tải lên danh bạ',
+                        message: bootbox_message
                     });
-                })
+                    uploadDialog.find('form').submit(function() {
+                        uploadDialog.modal('hide');
+                        bootbox.dialog({
+                            message: '<p><i class="fa fa-spin fa-spinner"></i> Đang tải lên...</p>',
+                            closeButton: false
+                        });
+                    })
+                });
             });
         </script>
     @endpermission

@@ -58,4 +58,9 @@ class Toastr
         $title = $this->safe($data, 'title');
         return "toastr['{$level}']('{$message}', '{$title}');";
     }
+
+    public function scriptAsync($data = [], $delay = 100) {
+        $script = $this->script($data);
+        return "window.setTimeout(function() { {$script} }, $delay)";
+    }
 }

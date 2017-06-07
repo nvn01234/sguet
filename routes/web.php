@@ -56,6 +56,8 @@ Route::post('account/change-password', 'Auth\ChangePasswordController@change')->
 Route::get('contacts', 'Web\ContactController@index')->name('contact.index');
 Route::get('contacts/index', 'Web\ContactController@manage')->name('manage.contact');
 Route::post('contacts/upload', 'Web\ContactController@upload')->name('manage.contact.upload');
+Route::get('contacts/export', 'Web\ContactController@export')->name('manage.contact.export');
+Route::get('contacts/download/{file_name}', 'Web\ContactController@download')->name('manage.contact.download');
 
 Route::get('backup', 'Web\BackupController@index')->name('manage.backup');
 Route::post('backup/run', 'Web\BackupController@backup')->name('manage.backup.run');

@@ -38,7 +38,7 @@ class ToastrProvider extends ServiceProvider
     private function bladeDirectives()
     {
         \Blade::directive('toastr', function($expression) {
-            return "<?php echo \\Toastr::script({$expression}) ?>";
+            return "<?php echo \\Toastr::scriptAsync({$expression}) ?>";
         });
     }
 
