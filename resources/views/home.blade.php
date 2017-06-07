@@ -53,9 +53,9 @@
                 </div>
                 <div class="row margin-top-20">
                     <div class="col-md-12">
-                        {{Form::open(['method' => 'get', 'id' => 'search-form'])}}
+                        {{Form::open(['method' => 'get', 'route' => 'home', 'id' => 'search-form'])}}
                         <div class="input-group input-group-lg">
-                            <input type="text" class="form-control no-boder-radius" placeholder="Nhập câu hỏi..."
+                            <input type="text" class="form-control no-boder-radius" placeholder="Nhập từ khoá, tên người, tên đơn vị..."
                                    autofocus required name="query" value="{{request('query')}}">
                             <span class="input-group-btn">
                                 <button class="btn green-soft uppercase bold no-boder-radius" type="submit">
@@ -76,6 +76,11 @@
     </div>
 @endsection
 
+@section('page-level-plugins.scripts')
+    @parent
+    {{ Html::script('metronic/global/plugins/bootstrap-tabdrop/js/bootstrap-tabdrop.js') }}
+@endsection
+
 @section('page-level-scripts')
     @parent
     <script>
@@ -88,7 +93,7 @@
                 window.history.pushState({}, '{{config('app.name')}}', '{{route('home')}}?' + $(this).serialize());
                 $.ajax({
                     method: 'get',
-                    url: '{{route('faq.search')}}',
+                    url: '{{route('home')}}',
                     data: $(this).serialize()
                 }).done(function(response) {
                     var container = $('#search-result-container');
@@ -103,8 +108,11 @@
                     toastr['error']('Đã có lỗi trong quá trình tìm kiếm. Vui lòng thử lại sau.', 'Lỗi không xác định');
                     loading.modal('hide');
                 });
-                form.find('input[name="nolog"]').remove();
             });
+
+            @if(isset($faqs))
+                App.scrollTo($('#search-result-container'), 1);
+            @endif
         });
     </script>
 @endsection

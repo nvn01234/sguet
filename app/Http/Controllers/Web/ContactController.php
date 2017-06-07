@@ -24,7 +24,7 @@ class ContactController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('permission:manage-content')->except('index');
+        $this->middleware('permission:manage-content')->except('index', 'show');
     }
 
     public function index()
@@ -179,5 +179,13 @@ class ContactController extends Controller
         $contacts = $contacts->sortBy('id')->values();
 
         return compact('contacts');
+    }
+
+    public function show($id, Request $request) {
+        $contact = Contact::findOrFail($id);
+        if ($request->ajax()) {
+            return view('contact.detail', compact('contact'));
+        }
+        return null;
     }
 }

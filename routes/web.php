@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'Web\HomeController@index')->name('home');
+Route::get('/', 'Web\SearchController@search')->name('home');
 
 Route::get('about', 'Web\HomeController@about')->name('about');
 
@@ -22,7 +22,6 @@ Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('faq/index', 'Web\FaqController@index')->name('manage.faq');
 Route::get('faq/create', 'Web\FaqController@create')->name('manage.faq.create');
 Route::post('faq/create', 'Web\FaqController@store')->name('manage.faq.store');
-Route::get('faq/search', 'Web\FaqController@search')->name('faq.search');
 Route::get('faq/{id}', 'Web\FaqController@show')->name('faq.show');
 Route::get('faq/{id}/edit', 'Web\FaqController@edit')->name('manage.faq.edit');
 Route::post('faq/{id}/edit', 'Web\FaqController@update')->name('manage.faq.update');
@@ -58,6 +57,7 @@ Route::get('contacts/index', 'Web\ContactController@manage')->name('manage.conta
 Route::post('contacts/upload', 'Web\ContactController@upload')->name('manage.contact.upload');
 Route::get('contacts/export', 'Web\ContactController@export')->name('manage.contact.export');
 Route::get('contacts/download/{file_name}', 'Web\ContactController@download')->name('manage.contact.download');
+Route::get('contacts/{id}', 'Web\ContactController@show')->name('contact.show');
 
 Route::get('backup', 'Web\BackupController@index')->name('manage.backup');
 Route::post('backup/run', 'Web\BackupController@backup')->name('manage.backup.run');

@@ -33,7 +33,9 @@ bootbox.loading = function (options) {
 bootbox.detailDialog = function(data, url, options) {
     var defaults = {
         message: 'Đang tải',
-        closeButton: true
+        closeButton: true,
+        size: 'large',
+        onEscape: true
     };
     options = $.extend({}, defaults, options || {});
     var dialog = bootbox.loading(options);

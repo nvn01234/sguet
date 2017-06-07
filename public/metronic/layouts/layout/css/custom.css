@@ -122,6 +122,11 @@
     /*background: #36c6d3;*/
 }
 
+.tab-pane .faq-content-1 .faq-section {
+    padding: 20px;
+    margin-bottom: 0;
+}
+
 @media (min-width: 992px) {
     .page-sidebar-closed .page-content-wrapper .page-content:not(.sidebar-visible),
     .page-content-wrapper .page-content:not(.sidebar-visible) {

@@ -21,13 +21,7 @@ class SearchStatisticsDataTable extends DataTable
                  * @var SearchLog $log
                  */
                 $query = e($log->text);
-                return \Html::link(route('home', ['query' => $query, 'nolog' => true]), str_limit($query, 40), ['class' => 'tooltips', 'data-original-title' => $query])->toHtml();
-            })
-            ->editColumn('user.name', function ($log) {
-                /**
-                 * @var SearchLog $log
-                 */
-                return $log->user ? $log->user->name : '';
+                return \Html::link(route('home', compact('query')), str_limit($query, 40), ['class' => 'tooltips', 'data-original-title' => $query])->toHtml();
             })
             ->editColumn('action', function($log) {
                 /**
@@ -45,7 +39,7 @@ class SearchStatisticsDataTable extends DataTable
      */
     public function query()
     {
-        $query = SearchLog::query()->withCount('results')->with('user');
+        $query = SearchLog::query();
 
         return $this->applyScopes($query);
     }
@@ -73,20 +67,19 @@ class SearchStatisticsDataTable extends DataTable
     {
         return [
             'text' => ['title' => 'Câu hỏi'],
-            'search_count' => ['title' => 'Số lần', 'searchable' => false],
-            'results_count' => ['title' => 'Số kết quả', 'searchable' => false],
+            'faqs_count' => ['title' => 'Số Q&A', 'searchable' => false],
+            'contacts_count' => ['title' => 'Số liên hệ', 'searchable' => false],
             'ip' => ['title' => 'IP'],
-            'user.name' => ['title' => 'Người dùng'],
-            'updated_at' => ['title' => 'Thời gian', 'searchable' => false],
+            'created_at' => ['title' => 'Thời gian', 'searchable' => false],
         ];
     }
 
     protected function getBuilderParameters()
     {
         return [
-            'order' => [5, 'desc'],
+            'order' => [4, 'desc'],
             'language' => [
-                'searchPlaceholder' => 'Câu hỏi/IP/Người dùng'
+                'searchPlaceholder' => 'Câu hỏi/IP'
             ]
         ];
     }

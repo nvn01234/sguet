@@ -7,9 +7,7 @@ use App\DataTables\FaqDatatable;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateFaqRequest;
 use App\Models\Faq;
-use App\Models\SearchLog;
 use App\Models\Tag;
-use Illuminate\Http\Request;
 
 class FaqController extends Controller
 {
@@ -19,7 +17,6 @@ class FaqController extends Controller
     public function __construct()
     {
         $this->middleware('permission:manage-content')->except( 'search', 'show', 'slug');
-        $this->middleware('throttle:60,1')->only('search');
     }
 
     public function index(FaqDatatable $datatable)
@@ -27,13 +24,13 @@ class FaqController extends Controller
         return $datatable->render('faq.index');
     }
 
-    public function slug($slug, Request $request, FaqController $controller)
+    public function slug($slug)
     {
         /**
          * @var Faq $faq
          */
         $faq = Faq::findBySlugOrFail($slug);
-        return redirect()->route('home', ['query' => $faq->question, 'nolog' => true]);
+        return redirect()->route('home', ['query' => $faq->question]);
     }
 
     public function show($id)
@@ -130,32 +127,5 @@ class FaqController extends Controller
             'message' => "Đã xoá $result Q&A",
         ]);
         return redirect()->back();
-    }
-
-    public function search(Request $request)
-    {
-        $query = $request->get('query', '');
-        $query = trim($query);
-        $faqs = \Elastic::searchFaqs($query);
-        if (!$request->get('nolog')) {
-            $latest = SearchLog::latest()->first();
-            if ($latest->text === $query && $latest->user_id === \Auth::id() && $latest->ip === $request->ip()) {
-                $latest->update([
-                    'search_count' => $latest->search_count + 1,
-                ]);
-                $latest->syncResults($faqs->pluck('id'));
-            } else {
-                $log = SearchLog::create([
-                    'text' => $query,
-                    'user_id' => \Auth::id(),
-                    'ip' => $request->ip(),
-                ]);
-                $log->syncResults($faqs->pluck('id'));
-            }
-        }
-        if ($request->ajax()) {
-            return view('partials.home.results', compact('faqs'));
-        }
-        return view('home', compact('faqs'));
     }
 }
