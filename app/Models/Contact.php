@@ -63,4 +63,26 @@ class Contact extends Model
             ]
         ];
     }
+
+    public function jstreeData() {
+        $text = $this->name . ($this->description ? " ($this->description)" : "");
+        return [
+            'id' => "$this->id",
+            'parent' => $this->parent_id ? "$this->parent_id" : "#",
+            'text' => $text,
+            'state' => [
+                'opened' => true,
+            ],
+            'children' => $this->children->isNotEmpty(),
+            'a_attr' => [
+                'href' => 'javascript:',
+                'data-toggle' => 'popover',
+                'data-container' => 'body',
+                'data-trigger' => 'click',
+                'data-placement' => 'top',
+                'data-content' => 'test',
+                'data-original-title' => $text
+            ]
+        ];
+    }
 }

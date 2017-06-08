@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Web;
 
+use App\Http\Controllers\Api\ContactApiController;
 use App\Http\Controllers\Controller;
 use App\Models\Contact;
 use Carbon\Carbon;
@@ -34,7 +35,7 @@ class ContactController extends Controller
 
     public function manage()
     {
-        return view('contact.index');
+        return $this->index();
     }
 
     public function upload(Request $request)
@@ -128,7 +129,7 @@ class ContactController extends Controller
         return $response;
     }
 
-    public function export(Request $request) {
+    public function export() {
         /**
          * @var LaravelExcelWriter $writter
          */
