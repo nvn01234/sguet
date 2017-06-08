@@ -22,17 +22,12 @@ class ElasticHelper
         $this->client = $builder;
     }
 
-    /**
-     * Support command
-     */
     public function reindex() {
-        $this->client->deleteByQuery([
-            'index' => config('elastic.index'),
-            'type' => 'faq',
-            'body' => []
-        ]);
-        $this->indexFaqs(Faq::all());
+        $this->reindexFaqs();
+        $this->reindexContacts();
+    }
 
+    public function reindexContacts() {
         $this->client->deleteByQuery([
             'index' => config('elastic.index'),
             'type' => 'contact',
@@ -40,6 +35,15 @@ class ElasticHelper
         ]);
         $this->indexContacts(Contact::all());
         return "done";
+    }
+
+    public function reindexFaqs() {
+        $this->client->deleteByQuery([
+            'index' => config('elastic.index'),
+            'type' => 'faq',
+            'body' => []
+        ]);
+        $this->indexFaqs(Faq::all());
     }
 
     public function count() {
@@ -137,6 +141,7 @@ class ElasticHelper
             'index' => config('elastic.index'),
             'type' => 'faq',
             'body' => [
+                'size' => Faq::count(),
                 'query' => [
                     'multi_match' => [
                         'query' => $query,
@@ -166,6 +171,7 @@ class ElasticHelper
             'index' => config('elastic.index'),
             'type' => 'contact',
             'body' => [
+                'size' => Contact::count(),
                 'query' => [
                     'multi_match' => [
                         'query' => $query,

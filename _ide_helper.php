@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.3.31 on 2017-06-07.
+ * Generated for Laravel 5.3.31 on 2017-06-08.
  *
  * @author Barry vd. Heuvel <barryvdh@gmail.com>
  * @see https://github.com/barryvdh/laravel-ide-helper
@@ -14547,6 +14547,42 @@ if (! function_exists('with')) {
 
 
     class Elastic extends \App\Helpers\ElasticHelper\ElasticHelperFacade{
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function reindex(){
+            return \App\Helpers\ElasticHelper\ElasticHelper::reindex();
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function reindexContacts(){
+            return \App\Helpers\ElasticHelper\ElasticHelper::reindexContacts();
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function reindexFaqs(){
+            return \App\Helpers\ElasticHelper\ElasticHelper::reindexFaqs();
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function count(){
+            return \App\Helpers\ElasticHelper\ElasticHelper::count();
+        }
         
         /**
          * 

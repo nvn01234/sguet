@@ -76,9 +76,6 @@ class ContactController extends Controller
      */
     private function readSheet($sheet)
     {
-        if(config('app.env') === 'production') {
-            \Elastic::deleteContacts(Contact::pluck('id'));
-        }
         Contact::query()->delete();
 
         $contacts = collect();
@@ -132,7 +129,7 @@ class ContactController extends Controller
         }
 
         if (config('app.env') === 'production') {
-            \Elastic::indexContacts(Contact::all());
+            \Elastic::reindexContacts();
         }
     }
 
