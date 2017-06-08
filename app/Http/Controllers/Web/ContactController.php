@@ -25,7 +25,7 @@ class ContactController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('permission:manage-content')->except('index', 'show');
+        $this->middleware('permission:manage-content')->except('index', 'show', 'detail');
     }
 
     public function index()
@@ -188,5 +188,9 @@ class ContactController extends Controller
             return view('contact.detail', compact('contact'));
         }
         return null;
+    }
+
+    public function detail(Request $request) {
+        return $this->show($request->get('id'), $request);
     }
 }

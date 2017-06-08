@@ -75,13 +75,7 @@ class Contact extends Model
             ],
             'children' => $this->children->isNotEmpty(),
             'a_attr' => [
-                'href' => 'javascript:',
-                'data-toggle' => 'popover',
-                'data-container' => 'body',
-                'data-trigger' => 'click',
-                'data-placement' => 'top',
-                'data-content' => 'test',
-                'data-original-title' => $text
+                'href' => 'javascript:'
             ]
         ];
     }

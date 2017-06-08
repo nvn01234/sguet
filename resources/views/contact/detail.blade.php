@@ -1,4 +1,4 @@
-<div class="row form">
+<div class="row form margin-top-20">
     <div class="col-md-12 form-body">
         <div class="row form-group">
             <label class="col-md-3 control-label"><b>Tên</b></label>

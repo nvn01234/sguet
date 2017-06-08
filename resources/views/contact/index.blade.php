@@ -24,6 +24,10 @@
 @endsection
 
 @section('page-body')
+    <div class="alert alert-info alert-dismissable">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+        <strong>Hướng dẫn: </strong> Chọn một cá nhân/đơn vị để xem thông tin chi tiết.
+    </div>
     <div class="portlet light">
         <div class="portlet-body">
             <div class="table-toolbar">
@@ -58,7 +62,7 @@
                 </div>
             </div>
             <div class="alert alert-info" id="alert-loading">
-                <i class="fa fa-spin fa-spinner"></i> Danh bạ vẫn đang tải. Vui lòng đợi tới khi tải xong.
+                <i class="fa fa-spin fa-spinner"></i> Danh bạ vẫn đang tải. Tìm kiếm hiện giờ có thể không chính xác.
             </div>
             <div id="tree" class="jstree jstree-default"></div>
         </div>
@@ -108,8 +112,9 @@
     <script>
         $(function () {
             $('#tree').on('ready.jstree', function () {
-                $('[data-toggle="popover"]').popover();
                 $('#alert-loading').slideUp();
+            }).on('select_node.jstree', function(e, data) {
+                bootbox.detailDialog({id: data.node.id}, '{{route('contact.detail')}}');
             }).jstree({
                 plugins: ["search", "wholerow"],
                 core: {
@@ -150,25 +155,6 @@
                     var v = $('#search').val();
                     $('#tree').jstree(true).search(v);
                 }, 250);
-            });
-
-            $('body').on('click', function (e) {
-                //only buttons
-                if ($(e.target).data('toggle') !== 'popover'
-                    && $(e.target).parents('.popover.in').length === 0) {
-                    $('[data-toggle="popover"]').popover('hide');
-                } else {
-                    $('[data-toggle="popover"]').not(e.target).popover("destroy");
-                    $(e.target).popover('show');
-                }
-                //buttons and icons within buttons
-                /*
-                 if ($(e.target).data('toggle') !== 'popover'
-                 && $(e.target).parents('[data-toggle="popover"]').length === 0
-                 && $(e.target).parents('.popover.in').length === 0) {
-                 $('[data-toggle="popover"]').popover('hide');
-                 }
-                 */
             });
         });
 
