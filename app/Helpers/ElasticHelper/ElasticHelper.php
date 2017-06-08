@@ -23,6 +23,38 @@ class ElasticHelper
     }
 
     /**
+     * Support command
+     */
+    public function reindex() {
+        $this->client->deleteByQuery([
+            'index' => config('elastic.index'),
+            'type' => 'faq',
+            'body' => []
+        ]);
+        $this->indexFaqs(Faq::all());
+
+        $this->client->deleteByQuery([
+            'index' => config('elastic.index'),
+            'type' => 'contact',
+            'body' => []
+        ]);
+        $this->indexContacts(Contact::all());
+        return "done";
+    }
+
+    public function count() {
+        $client = $this->client;
+        return collect(['faq', 'contact'])->map(function($type) use ($client) {
+            $response = $client->count([
+                'index' => config('elastic.index'),
+                'type' => $type,
+                'body' => []
+            ]);
+            return "$type = " . $response["count"];
+        })->implode(', ');
+    }
+
+    /**
      * @param string $type
      * @param array $body
      * @return array
