@@ -60,7 +60,7 @@ class ContactController extends Controller
                         $this->readSheet($collection);
                     }
                 });
-                \Toastr::append(['level' => 'success', 'title' => 'Tải lên danh bạ', 'message' => 'Tải lên thành công']);
+                \Toastr::append(['level' => 'success', 'title' => 'Tải lên danh bạ', 'message' => 'Tải lên hoàn tất']);
             } else {
                 \Toastr::append(['level' => 'error', 'title' => 'Tải lên danh bạ', 'message' => 'Tệp không đúng định dạng (.xls, .xlsx)']);
             }
@@ -76,8 +76,11 @@ class ContactController extends Controller
      */
     private function readSheet($sheet)
     {
-        \Elastic::deleteContacts(Contact::pluck('id'));
+        if(config('app.env') === 'production') {
+            \Elastic::deleteContacts(Contact::pluck('id'));
+        }
         Contact::query()->delete();
+
         $contacts = collect();
         $rows = $sheet
             ->filter(function ($row) {
@@ -95,27 +98,42 @@ class ContactController extends Controller
                 $stt = (string)$row->get('stt');
                 $stts = explode('.', $stt);
                 $parent_id = null;
+                $error = false;
                 if (count($stts) > 1) {
                     $key = implode('.', array_slice($stts, 0, count($stts) - 1));
-                    $parent = $contacts->get($key);
-                    $parent_id = $parent->id;
+                    if ($contacts->has($key)) {
+                        $parent = $contacts->get($key);
+                        $parent_id = $parent->id;
+                    } else {
+                        $error = true;
+                        \Toastr::append([
+                            'level' => 'warning',
+                            'title' => 'Không tìm thấy node cha',
+                            'message' => 'Dòng ' . ($index + 2)
+                        ]);
+                    }
                 }
-                $contact = Contact::create([
-                    'name' => $row->get('ten'),
-                    'description' => $row->get('chuc_vu'),
-                    'phone_cq' => $row->get('sdt_cq'),
-                    'phone_nr' => $row->get('sdt_nr'),
-                    'phone_dd' => $row->get('sdt_dd'),
-                    'fax' => $row->get('fax'),
-                    'email' => $row->get('email'),
-                    'parent_id' => $parent_id,
-                ]);
-                $contacts->put($stt, $contact);
+                if (!$error) {
+                    $contact = Contact::create([
+                        'name' => $row->get('ten'),
+                        'description' => $row->get('chuc_vu'),
+                        'phone_cq' => $row->get('sdt_cq'),
+                        'phone_nr' => $row->get('sdt_nr'),
+                        'phone_dd' => $row->get('sdt_dd'),
+                        'fax' => $row->get('fax'),
+                        'email' => $row->get('email'),
+                        'parent_id' => $parent_id,
+                    ]);
+                    $contacts->put($stt, $contact);
+                }
             } catch (\Exception $e) {
                 \Toastr::append(['level' => 'warning', 'title' => 'Có lỗi tại dòng ' . ($index + 2), 'message' => $e->getMessage()]);
             }
         }
-        \Elastic::indexContacts(Contact::all());
+
+        if (config('app.env') === 'production') {
+            \Elastic::indexContacts(Contact::all());
+        }
     }
 
     public function download($file_name) {

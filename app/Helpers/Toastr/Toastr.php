@@ -61,6 +61,6 @@ class Toastr
 
     public function scriptAsync($data = [], $delay = 100) {
         $script = $this->script($data);
-        return "window.setTimeout(function() { {$script} }, $delay)";
+        return "window.setTimeout(function() { {$script} }, $delay);";
     }
 }
