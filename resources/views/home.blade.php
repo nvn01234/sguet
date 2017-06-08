@@ -55,12 +55,18 @@
                     <div class="col-md-12">
                         {{Form::open(['method' => 'get', 'route' => 'home', 'id' => 'search-form'])}}
                         <div class="input-group input-group-lg">
-                            <input type="text" class="form-control no-boder-radius" placeholder="Nhập từ khoá, tên người, tên đơn vị..."
+                            <span class="input-group-btn">
+                                <button class="btn btn-default uppercase bold no-boder-radius tooltips" type="button" data-original-title="Mẹo" id="tricks-and-tips">
+                                    <i class="fa fa-info-circle"></i>
+                                </button>
+                            </span>
+                            <input type="text" class="form-control no-boder-radius" placeholder="Nhập câu hỏi, từ khoá, tên người, tên đơn vị..."
                                    autofocus required name="query" value="{{request('query')}}">
                             <span class="input-group-btn">
                                 <button class="btn green-soft uppercase bold no-boder-radius" type="submit">
                                     <i class="fa fa-search"></i>
                                 </button>
+
                             </span>
                         </div>
                         {{Form::close()}}
@@ -74,6 +80,10 @@
             </div>
         </div>
     </div>
+
+    <div id="tricks-and-tips-content" hidden>
+        <p>Tìm theo <b>từ khoá</b> sẽ chính xác hơn nhập cả <b>câu hỏi</b>.</p>
+    </div>
 @endsection
 
 @section('page-level-plugins.scripts')
@@ -85,9 +95,17 @@
     @parent
     <script>
         $(function () {
-            var form = $('#search-form');
+            var tnt_content = getHtmlAndRemove('tricks-and-tips-content');
+            $('#tricks-and-tips').click(function() {
+                bootbox.dialog({
+                    title: 'Mẹo để tìm kiếm chính xác hơn',
+                    message: tnt_content,
+                    closeButton: true,
+                    onEscape: true
+                });
+            });
 
-            form.submit(function (e) {
+            $('#search-form').submit(function (e) {
                 e.preventDefault();
                 var loading = bootbox.loading({message: 'Đang tìm kiếm'});
                 window.history.pushState({}, '{{config('app.name')}}', '{{route('home')}}?' + $(this).serialize());

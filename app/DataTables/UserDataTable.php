@@ -42,8 +42,8 @@ class UserDataTable extends DataTable
             ->leftJoin('role_user', 'role_user.user_id', '=', 'users.id')
             ->leftJoin('roles', 'roles.id', '=', 'role_user.role_id')
             ->groupBy('users.id')
-            ->select('users.*', \DB::raw('max(roles.level) as roles_level_max'))
-            ->having('roles_level_max', '<=', $level);
+            ->select('users.*', \DB::raw('max(roles.level) as roles_level_max'));
+//            ->having('roles_level_max', '<=', $level);
 
         return $this->applyScopes($query);
     }
