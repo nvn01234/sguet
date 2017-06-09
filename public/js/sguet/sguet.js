@@ -72,3 +72,17 @@ $.ajaxSetup({
         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
     }
 });
+
+function copyToClipboard(text) {
+    var $temp = $('<input>');
+    var modal = $('.modal-body');
+    if (modal.length > 0) {
+        modal.append($temp);
+    } else {
+        $("body").append($temp);
+    }
+    $temp.val(text).select();
+    document.execCommand("copy");
+    $temp.remove();
+    toastr['success'](text, 'Đã sao chép vào bộ đệm');
+}

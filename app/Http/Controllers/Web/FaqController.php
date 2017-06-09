@@ -30,7 +30,7 @@ class FaqController extends Controller
          * @var Faq $faq
          */
         $faq = Faq::findBySlugOrFail($slug);
-        return redirect()->route('home', ['query' => $faq->question]);
+        return view('faq.show', compact('faq'));
     }
 
     public function show($id)

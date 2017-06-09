@@ -42,7 +42,7 @@ class FaqDatatable extends DataTable
                 return view('faq.datatable_paraphrases', compact('paraphrases'))->render();
             })
             ->editColumn('action', function ($faq) {
-                return view('faq.datatable_action', compact('faq'))->render();
+                return view('partials.faq.action', compact('faq'))->render();
             })
             ->make(true);
     }

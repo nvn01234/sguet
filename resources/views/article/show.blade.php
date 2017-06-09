@@ -6,7 +6,7 @@
 @endsection
 
 @section('title', $article->title)
-@section('description', str_limit($article->title . ' - ' . trim(strip_tags($article->body)), 160))
+@section('description', str_limit($article->title . ' - ' . trim(strip_tags($article->body)), config('app.description.limit')))
 @section('page-title', $article->title)
 
 @section('page-breadcrumb')

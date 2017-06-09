@@ -37,18 +37,9 @@
                                             </h4>
                                         </div>
                                         <div id="collapse_faq_{{$faq->id}}" class="panel-collapse collapse">
-                                            @permission('manage-content')
                                             <div class="panel-footer bg-white">
-                                                <a href="{{route('manage.faq.edit', $faq->id)}}"
-                                                   class="btn btn-sm green edit-btn">
-                                                    <i class="fa fa-edit"></i>Sửa
-                                                </a>
-                                                <a href="{{route('manage.faq.delete', $faq->id)}}"
-                                                   class="btn btn-sm red delete-btn">
-                                                    <i class="fa fa-trash-o"></i> Xoá
-                                                </a>
+                                            @include('partials.faq.action')
                                             </div>
-                                            @endpermission
                                             <div class="panel-body">
                                                 {!! $faq->answer !!}
                                             </div>

@@ -59,6 +59,7 @@ Route::get('contacts/export', 'Web\ContactController@export')->name('manage.cont
 Route::get('contacts/detail', 'Web\ContactController@detail')->name('contact.detail');
 Route::get('contacts/download/{file_name}', 'Web\ContactController@download')->name('manage.contact.download');
 Route::get('contacts/{id}', 'Web\ContactController@show')->name('contact.show');
+Route::get('contacts/{slug}', 'Web\ContactController@slug')->name('contact.slug');
 
 Route::get('backup', 'Web\BackupController@index')->name('manage.backup');
 Route::post('backup/run', 'Web\BackupController@backup')->name('manage.backup.run');

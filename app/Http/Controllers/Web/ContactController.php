@@ -25,7 +25,7 @@ class ContactController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('permission:manage-content')->except('index', 'show', 'detail');
+        $this->middleware('permission:manage-content')->except('index', 'show', 'detail', 'slug');
     }
 
     public function index()
@@ -198,11 +198,19 @@ class ContactController extends Controller
     }
 
     public function show($id, Request $request) {
+        /**
+         * @var Contact $contact
+         */
         $contact = Contact::findOrFail($id);
         if ($request->ajax()) {
             return view('contact.detail', compact('contact'));
         }
-        return null;
+        return redirect()->route('contact.slug', $contact->slug);
+    }
+
+    public function slug($slug) {
+        $contact = Contact::findBySlugOrFail($slug);
+        return view('contact.show', compact('contact'));
     }
 
     public function detail(Request $request) {

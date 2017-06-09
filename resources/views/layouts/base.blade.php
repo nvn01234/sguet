@@ -16,11 +16,11 @@
     <meta name="keywords" content="{{config('app.keywords')}}"/>
     <meta name="author" content="{{config('app.author')}}"/>
     <meta name="copyright" content="{{config('app.copyright')}}"/>
-    <meta name="description" content="@yield('description', config('app.description'))">
+    <meta name="description" content="@yield('description', config('app.description.text'))">
     <meta property="og:type" content="university"/>
     <meta property="og:site_name" content="{{config('app.name')}}"/>
     <meta property="og:title" content="@yield('title', config('app.name'))"/>
-    <meta property="og:description" content="@yield('description', config('app.description'))"/>
+    <meta property="og:description" content="@yield('description', config('app.description.text'))"/>
     <meta property="og:url" content="{{Request::fullUrl()}}"/>
     <meta property="og:image" content="{{asset('img/SGUET.jpg')}}"/>
     <meta name="google-site-verification" content="L4ISmVFmVbVo6BsOYHzUJR31FcSYRFok82aW-awSwoI" />

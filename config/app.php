@@ -13,7 +13,10 @@ return [
     */
 
     'name' => 'SGUET - CLB Hỗ trợ sinh viên Trường Đại học Công nghệ',
-    'description' => 'Website chính thức của SGUET',
+    'description' => [
+        'text' => 'Website chính thức của SGUET',
+        'limit' => 160,
+    ],
     'keywords' => 'SGUET, Câu lạc bộ Hỗ trợ sinh viên',
     'author' => 'Nguyễn Văn Nhật',
     'copyright' => 'SGUET',

@@ -1,6 +1,6 @@
 <div class="hor-menu  hor-menu-light hidden-sm hidden-xs">
     <ul class="nav navbar-nav">
-        <li class="@activeroute('home')">
+        <li class="@activeroute('home', 'faq.slug', 'contact.slug')">
             <a href="{{route('home')}}" class="visible-md only-icon"> <i class="fa fa-home"></i>
                 <span class="selected"> </span>
             </a>

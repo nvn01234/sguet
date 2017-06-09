@@ -1,6 +1,6 @@
 <ul class="page-sidebar-menu  page-header-fixed visible-sm visible-xs" data-keep-expanded="false"
     data-auto-scroll="true" data-slide-speed="200">
-    <li class="nav-item start @activeroute('home')">
+    <li class="nav-item start @activeroute('home', 'faq.slug', 'contact.slug')">
         <a href="{{route('home')}}" class="nav-link nav-toggle">
             <span class="title">Trang chủ</span>
         </a>

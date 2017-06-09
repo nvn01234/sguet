@@ -41,6 +41,10 @@ class SearchStatisticsDataTable extends DataTable
     {
         $query = SearchLog::query();
 
+        if (!\Entrust::can('manage-system')) {
+            $query = $query->where('ip', 'NOT LIKE', '66.249.%.%');
+        }
+
         return $this->applyScopes($query);
     }
 

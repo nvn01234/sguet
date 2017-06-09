@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use App\Models\Article;
+use App\Models\Contact;
 use App\Models\Faq;
 use Illuminate\Console\Command;
 use Spatie\Sitemap\SitemapIndex;
@@ -51,6 +52,10 @@ class GenerateSitemap extends Command
 
         foreach (Article::all() as $article) {
             $sitemap = $sitemap->add(route('articles.slug', $article->slug));
+        }
+
+        foreach (Contact::all() as $contact) {
+            $sitemap = $sitemap->add(route('contact.slug', $contact->slug));
         }
 
         $sitemap->writeToFile(public_path('sitemap.xml'));

@@ -79,4 +79,18 @@ class Contact extends Model
             ]
         ];
     }
+
+    public function getNameWithDescription() {
+        return $this->description ? "$this->name ($this->description)" : $this->name;
+    }
+
+    public function getOgDescription() {
+        $array = [$this->getNameWithDescription()];
+        if ($this->phone_nr) $array[] = "NR: $this->phone_nr";
+        if ($this->phone_cq) $array[] = "CQ: $this->phone_cq";
+        if ($this->phone_dd) $array[] = "DĐ: $this->phone_dd";
+        if ($this->fax) $array[] = "Fax: $this->fax";
+        if ($this->email) $array[] = "Email: $this->email";
+        return implode(", ", $array);
+    }
 }
