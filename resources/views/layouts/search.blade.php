@@ -77,7 +77,8 @@
     </div>
 
     <div id="tricks-and-tips-content" hidden>
-        <p>Tìm theo <b>từ khoá</b> sẽ chính xác hơn nhập cả <b>câu hỏi</b>.</p>
+        <p>Hãy sử dụng <b>tiếng Việt có dấu</b>.</p>
+        <p><b>Tìm theo từ khoá</b> sẽ chính xác hơn nhập cả câu hỏi.</p>
     </div>
 @endsection
 
