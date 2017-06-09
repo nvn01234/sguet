@@ -14,7 +14,7 @@ class ExecController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('manage-system');
+        $this->middleware('permission:manage-system');
     }
 
     public function view() {
