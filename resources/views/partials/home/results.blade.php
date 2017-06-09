@@ -76,7 +76,7 @@
                                                 <a class="accordion-toggle" data-toggle="collapse"
                                                    data-parent="#contact-contents"
                                                    href="#collapse_contact_{{$contact->id}}">
-                                                    {{$contact->name}} {{$contact->description ? "($contact->description)" : ""}}
+                                                    {{$contact->getNameWithDescription()}}
                                                 </a>
                                             </h4>
                                         </div>

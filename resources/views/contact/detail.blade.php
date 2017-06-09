@@ -20,6 +20,14 @@
                 </div>
             </div>
         @endif
+        @if($contact->parent_id)
+            <div class="row form-group">
+                <label class="col-md-3 control-label"><b>Thuộc</b></label>
+                <div class="col-md-9">
+                    <a href="javascript:" onclick="bootbox.detailDialog({}, '{{route('contact.show', $contact->parent_id)}}')">{{$contact->parent->getNameWithDescription()}}</a>
+                </div>
+            </div>
+        @endif
         @if($contact->phone_nr)
             <div class="row form-group">
                 <label class="col-md-3 control-label"><b>SĐT nhà riêng</b></label>
@@ -65,7 +73,7 @@
                 <label class="col-md-3 control-label"><b>Các cán bộ/đơn vị</b></label>
                 <div class="col-md-9">
                     @foreach($contact->children as $child)
-                        <a href="javascript:" onclick="bootbox.detailDialog({}, '{{route('contact.show', $child->id)}}')">{{$child->name}} {{$child->description ? "($child->description)" : ""}}</a>
+                        <a href="javascript:" onclick="bootbox.detailDialog({}, '{{route('contact.show', $child->id)}}')">{{$child->getNameWithDescription()}}</a>
                         <br>
                     @endforeach
                 </div>

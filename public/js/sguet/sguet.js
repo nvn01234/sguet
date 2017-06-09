@@ -38,6 +38,7 @@ bootbox.detailDialog = function(data, url, options) {
         onEscape: true
     };
     options = $.extend({}, defaults, options || {});
+    bootbox.hideAll();
     var dialog = bootbox.loading(options);
     window.dialog = dialog;
     $.ajax({

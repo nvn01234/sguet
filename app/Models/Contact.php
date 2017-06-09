@@ -65,11 +65,10 @@ class Contact extends Model
     }
 
     public function jstreeData() {
-        $text = $this->name . ($this->description ? " ($this->description)" : "");
         return [
             'id' => "$this->id",
             'parent' => $this->parent_id ? "$this->parent_id" : "#",
-            'text' => $text,
+            'text' => $this->getNameWithDescription(),
             'state' => [
                 'opened' => true,
             ],
