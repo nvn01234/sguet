@@ -60,8 +60,13 @@ bootbox.detailDialog = function(data, url, options) {
     return dialog;
 };
 
-bootbox.ajaxConfirm = function(data, url, message) {
-    return bootbox.confirm(message || "Bạn có chắc chắn muốn thực hiện hành động này?", function(result) {
+bootbox.deleteDialog = function(data, url, options) {
+    var defaults = {
+        message: "Bạn có chắc chắn muốn xoá?",
+        callback: function() {}
+    };
+    options = $.extend({}, defaults, options);
+    return bootbox.confirm(options.message, function(result) {
         if (result) {
             var loadingDialog = bootbox.loading();
             data = $.extend({}, {_token: window.Laravel.csrfToken}, data || {});
@@ -70,11 +75,11 @@ bootbox.ajaxConfirm = function(data, url, message) {
                 url: url,
                 data: data
             }).done(function(response) {
+                options.callback(response);
                 if ('redirectTo' in response) {
                     window.location.href = response.redirectTo;
-                } else {
-                    window.location.reload();
                 }
+                loadingDialog.modal('hide');
             }).fail(function(e) {
                 console.log(e);
                 toastr['error']("Đã có lỗi gì đó xảy ra. Vui lòng thử lại sau", "Lỗi không xác định");
@@ -82,10 +87,6 @@ bootbox.ajaxConfirm = function(data, url, message) {
             })
         }
     });
-};
-
-bootbox.deleteDialog = function(data, url) {
-    return bootbox.ajaxConfirm(data, url, "Bạn có chắc chắn muốn xoá?");
 };
 
 function getHtmlAndRemove(id) {

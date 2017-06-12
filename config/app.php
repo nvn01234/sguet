@@ -179,7 +179,8 @@ return [
         Collective\Html\HtmlServiceProvider::class,
         Maatwebsite\Excel\ExcelServiceProvider::class,
         Yajra\Datatables\DatatablesServiceProvider::class,
-        Zizaco\Entrust\EntrustServiceProvider::class,
+//        Zizaco\Entrust\EntrustServiceProvider::class,
+        \App\Providers\EntrustServiceProvider::class,
         Cviebrock\EloquentSluggable\ServiceProvider::class,
         Spatie\Sitemap\SitemapServiceProvider::class,
         //

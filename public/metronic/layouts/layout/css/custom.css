@@ -127,6 +127,10 @@
     margin-bottom: 0;
 }
 
+.vakata-context li > a > i {
+    margin: 0;
+}
+
 @media (min-width: 992px) {
     .page-sidebar-closed .page-content-wrapper .page-content:not(.sidebar-visible),
     .page-content-wrapper .page-content:not(.sidebar-visible) {

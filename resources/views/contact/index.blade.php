@@ -26,7 +26,7 @@
 @section('page-body')
     <div class="alert alert-info alert-dismissable">
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
-        <strong>Hướng dẫn: </strong> Chọn một cá nhân/đơn vị để xem thông tin chi tiết.
+        <strong>Hướng dẫn: </strong> Chọn một cá nhân/đơn vị để xem thông tin chi tiết. @permission('manage-content') Chuột phải để truy cập các chức năng quản lý. @endpermission
     </div>
     <div class="portlet light">
         <div class="portlet-body">
@@ -47,6 +47,10 @@
                                 <i class="fa fa-angle-down"></i>
                             </a>
                             <ul class="dropdown-menu pull-right">
+                                <li>
+                                    <a href="{{route('manage.contact.create')}}">
+                                        <i class="fa fa-plus"></i> Thêm liên hệ </a>
+                                </li>
                                 <li>
                                     <a href="javascript:" id="upload">
                                         <i class="fa fa-upload"></i> Tải lên </a>
@@ -69,9 +73,13 @@
     </div>
 
     @permission('manage-content')
-    <div id="bootbox-content" hidden>
+    <div id="upload-dialog" hidden>
         {!! Form::open(['method' => 'post', 'route' => 'manage.contact.upload', 'class' => 'form', 'role' => 'form', 'enctype' =>"multipart/form-data"]) !!}
         <div class="form-body">
+            <div class="alert alert-info alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+                <strong>Chú ý: </strong> Nên <a href="{{route('manage.contact.export')}}" target="_blank" class="alert-link">tải về danh bạ</a> để xem cấu trúc file mẫu.
+            </div>
             <div class="form-group">
                 <div class="fileinput fileinput-new" data-provides="fileinput">
                     <div class="input-group input-large">
@@ -116,7 +124,7 @@
             }).on('select_node.jstree', function(e, data) {
                 bootbox.detailDialog({id: data.node.id}, '{{route('contact.detail')}}');
             }).jstree({
-                plugins: ["search", "wholerow"],
+                plugins: ["search", "wholerow", @permission('manage-content') "contextmenu", @endpermission],
                 core: {
                     strings: {
                         'Loading ...': '<i class="fa fa-spin fa-spinner"></i> Đang tải ...'
@@ -142,8 +150,45 @@
                 },
                 search: {
                     show_only_matches: true,
-                    close_opened_onclear: false,
+                    close_opened_onclear: false
+                },
+                @permission('manage-content')
+                contextmenu: {
+                    select_node: false,
+                    items: function (node) {
+                        var tree = $('#tree').jstree(true);
+                        return {
+                            create: {
+                                label: "Thêm cá nhân/đơn vị trực thuộc",
+                                icon: 'fa fa-plus',
+                                action: function () {
+                                    window.location = '{{route('manage.contact.create')}}?parent_id=' + node.id;
+                                }
+                            },
+                            edit: {
+                                label: "Sửa thông tin",
+                                icon: 'fa fa-edit',
+                                action: function() {
+                                    window.location = '{{route('manage.contact.edit')}}?id=' + node.id
+                                }
+                            },
+                            remove: {
+                                label: "Xoá",
+                                icon: 'fa fa-trash-o',
+                                action: function() {
+                                    bootbox.deleteDialog({id: node.id}, '{{route('manage.contact.delete')}}', {
+                                        message: "Bạn có chắc chắn muốn xoá liên hệ này và các cá nhân/đơn vị trực thuộc nó?",
+                                        callback: function() {
+                                            toastr['success']('', 'Xoá liên hệ thành công');
+                                            tree.delete_node(node);
+                                        }
+                                    })
+                                }
+                            }
+                        }
+                    }
                 }
+                @endpermission
             });
 
             var to = false;
@@ -156,17 +201,13 @@
                     $('#tree').jstree(true).search(v);
                 }, 250);
             });
-        });
 
-    </script>
-    @permission('manage-content')
-    <script>
-        $(function () {
-            var bootbox_message = getHtmlAndRemove('bootbox-content');
+            @permission('manage-content')
+            var uploadDialogHtml = $('#upload-dialog').getHtmlAndRemove();
             $('#upload').click(function () {
                 var uploadDialog = bootbox.dialog({
                     title: 'Tải lên danh bạ',
-                    message: bootbox_message
+                    message: uploadDialogHtml
                 });
                 uploadDialog.find('form').submit(function () {
                     uploadDialog.modal('hide');
@@ -176,7 +217,7 @@
                     });
                 })
             });
+            @endpermission
         });
     </script>
-    @endpermission
 @endsection

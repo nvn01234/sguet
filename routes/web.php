@@ -58,6 +58,11 @@ Route::post('contacts/upload', 'Web\ContactController@upload')->name('manage.con
 Route::get('contacts/export', 'Web\ContactController@export')->name('manage.contact.export');
 Route::get('contacts/detail', 'Web\ContactController@detail')->name('contact.detail');
 Route::get('contacts/download/{file_name}', 'Web\ContactController@download')->name('manage.contact.download');
+Route::post('contacts/delete', 'Web\ContactController@delete')->name('manage.contact.delete');
+Route::get('contacts/create', 'Web\ContactController@create')->name('manage.contact.create');
+Route::post('contacts/create', 'Web\ContactController@store')->name('manage.contact.store');
+Route::get('contacts/edit', 'Web\ContactController@edit')->name('manage.contact.edit');
+Route::post('contacts/{id}/edit', 'Web\ContactController@update')->name('manage.contact.update');
 Route::get('contacts/{id}', 'Web\ContactController@show')->name('contact.show');
 Route::get('contacts/{slug}', 'Web\ContactController@slug')->name('contact.slug');
 

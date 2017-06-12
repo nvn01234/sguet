@@ -47,4 +47,18 @@ class ContactApiController extends Controller
         $contact = Contact::findOrFail($request->get('id'));
         return response()->json($contact->jstreeData());
     }
+
+    public function search(Request $request) {
+        $query = $request->get('query');
+        if ($query) {
+            $contacts = \Elastic::searchContacts($query);
+        } else {
+            $contacts = Contact::all();
+        }
+        if ($contacts->isEmpty()) {
+            return response()->json(['status' => 'empty', 'data' => []]);
+        } else {
+            return response()->json(['status' => 'success', 'data' => $contacts]);
+        }
+    }
 }

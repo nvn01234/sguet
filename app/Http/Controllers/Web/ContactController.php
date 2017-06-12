@@ -4,6 +4,10 @@ namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Api\ContactApiController;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CreateContactRequest;
+use App\Http\Requests\DeleteContactRequest;
+use App\Http\Requests\EditContactRequest;
+use App\Http\Requests\UpdateContactRequest;
 use App\Models\Contact;
 use Carbon\Carbon;
 use File;
@@ -215,5 +219,84 @@ class ContactController extends Controller
 
     public function detail(Request $request) {
         return $this->show($request->get('id'), $request);
+    }
+
+    public function delete(DeleteContactRequest $request) {
+        Contact::destroy($request->get('id'));
+
+        if (config('app.env') === 'production') {
+            \Elastic::deleteContacts(collect([$request->get('id')]));
+        }
+
+        if ($request->ajax()) {
+            if ($request->get('redirect')) {
+                \Toastr::append([
+                    'level' => 'success',
+                    'title' => 'Xoá liên hệ thành công',
+                ]);
+                return response()->json(['redirectTo' => route('manage.contact')]);
+            } else {
+                return response()->json([]);
+            }
+        } else {
+            \Toastr::append([
+                'level' => 'success',
+                'title' => 'Xoá liên hệ thành công',
+            ]);
+            return redirect()->route('manage.contact');
+        }
+    }
+
+    public function create(Request $request) {
+        $contacts = [];
+        if ($request->has('parent_id')) {
+            $contact = Contact::find($request->get('parent_id'));
+            if ($contact) {
+                $contacts[$contact->id] = $contact->getNameWithDescription();
+            }
+        }
+        return view('contact.create', compact('contacts'));
+    }
+
+    public function store(CreateContactRequest $request) {
+        /**
+         * @var Contact $contact
+         */
+        $contact = Contact::create($request->only('name', 'description', 'parent_id', 'phone_nr', 'phone_cq', 'phone_dd', 'fax', 'email'));
+
+        if (config('app.env') === 'production') {
+            \Elastic::indexContacts(collect([$contact]));
+        }
+
+        \Toastr::append([
+            'title' => "Đã thêm liên hệ $contact->name"
+        ]);
+        return redirect()->route('manage.contact');
+    }
+
+    public function edit(EditContactRequest $request) {
+        /**
+         * @var Contact $contact
+         */
+        $contact = Contact::findOrFail($request->get('id'));
+        $contacts = $contact->parent_id ? [$contact->parent_id => $contact->parent->getNameWithDescription()] : [];
+        return view('contact.edit', compact('contacts', 'contact'));
+    }
+
+    public function update($id, CreateContactRequest $request) {
+        /**
+         * @var Contact $contact
+         */
+        $contact = Contact::findOrFail($id);
+        $contact->update($request->only('name', 'description', 'parent_id', 'phone_nr', 'phone_cq', 'phone_dd', 'fax', 'email'));
+
+        if (config('app.env') === 'production') {
+            \Elastic::indexContacts(collect([$contact]));
+        }
+
+        \Toastr::append([
+            'title' => "Đã cập nhật liên hệ $contact->name"
+        ]);
+        return redirect()->route('manage.contact');
     }
 }

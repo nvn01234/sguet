@@ -59,18 +59,20 @@
         <div class="form-actions">
             <div class="row">
                 <div class="col-md-offset-3 col-md-9">
+                    {{Form::open(['method' => 'post', 'route' => ['manage.feedback.process', $feedback->id], 'style' => 'display: inline'])}}
                     @if($feedback->status === 0)
-                        <a href="javascript:" onclick="bootbox.ajaxConfirm({status: 10}, '{!! route('manage.feedback.process', $feedback->id) !!}')"
+                        <button name="status" value="10" type="submit"
                            class="btn btn-sm blue">
                             Tiếp nhận
-                        </a>
+                        </button>
                     @endif
                     @if($feedback->status !== 100)
-                        <a href="javascript:" onclick="bootbox.ajaxConfirm({status: 100}, '{!! route('manage.feedback.process', $feedback->id) !!}')"
+                        <button name="status" value="100" type="submit"
                            class="btn btn-sm green">
                             <i class="fa fa-check"></i> Xong
-                        </a>
+                        </button>
                     @endif
+                    {{Form::close()}}
                     <a href="javascript:" class="btn btn-sm red" onclick="bootbox.deleteDialog({}, '{!! route('manage.feedback.delete', $feedback->id) !!}')">
                         <i class="fa fa-trash-o"></i> Xoá
                     </a>
