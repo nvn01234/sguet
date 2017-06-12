@@ -61,7 +61,7 @@ class FaqController extends Controller
             }
             $faq->syncTags($tags);
         }
-        if (env('APP_ENV') === 'production') {
+        if (config('app.env') === 'production') {
             \Elastic::indexFaqs(collect([$faq]));
         }
 
@@ -105,7 +105,7 @@ class FaqController extends Controller
             $faq->removeTag();
         }
 
-        if (env('APP_ENV') === 'production') {
+        if (config('app.env') === 'production') {
             \Elastic::indexFaqs(collect([$faq]));
         }
 
@@ -118,7 +118,7 @@ class FaqController extends Controller
 
     public function destroy($id)
     {
-        if (env('APP_ENV') === 'production') {
+        if (config('app.env') === 'production') {
             \Elastic::deleteFaqs(collect([$id]));
         }
         $result = Faq::destroy($id);
