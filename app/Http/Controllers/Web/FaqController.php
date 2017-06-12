@@ -6,8 +6,10 @@ namespace App\Http\Controllers\Web;
 use App\DataTables\FaqDatatable;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateFaqRequest;
+use App\Http\Requests\DeleteContentRequest;
 use App\Models\Faq;
 use App\Models\Tag;
+use Illuminate\Http\Request;
 
 class FaqController extends Controller
 {
@@ -116,16 +118,21 @@ class FaqController extends Controller
         return redirect()->route('faq.show', $faq->id);
     }
 
-    public function destroy($id)
+    public function destroy($id, DeleteContentRequest $request)
     {
         if (config('app.env') === 'production') {
             \Elastic::deleteFaqs(collect([$id]));
         }
-        $result = Faq::destroy($id);
+        Faq::destroy($id);
 
         \Toastr::append([
-            'message' => "Đã xoá $result Q&A",
+            'level' => 'success',
+            'title' => 'Xoá Q&A thành công'
         ]);
-        return redirect()->back();
+        if ($request->ajax()) {
+            return response()->json(['redirectTo' => route('manage.faq')]);
+        } else {
+            return redirect()->route('manage.faq');
+        }
     }
 }

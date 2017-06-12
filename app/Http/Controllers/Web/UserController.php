@@ -5,10 +5,12 @@ namespace App\Http\Controllers\Web;
 use App\DataTables\UserDataTable;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateUserRequest;
+use App\Http\Requests\DeleteUserRequest;
 use App\Http\Requests\UpdateUserRequest;
 use App\Models\Role;
 use App\Models\User;
 use Hash;
+use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
@@ -87,23 +89,17 @@ class UserController extends Controller
         return redirect()->route('manage.user');
     }
 
-    public function destroy($id)
+    public function destroy($id, DeleteUserRequest $request)
     {
-        /**
-         * @var User $user
-         */
-        $user = User::findOrFail($id);
-
-        $user->delete();
-        /**
-         * @var Role $role
-         */
-        $role = $user->roles()->first();
-        $role_name = $role ? $role->display_name : 'Người dùng';
+        User::destroy($id);
         \Toastr::append([
-            'title' => 'Xoá người dùng thành công',
-            'message' => 'Đã xoá ' . $role_name . ' ' . $user->name,
+            'level' => 'success',
+            'title' => 'Xoá người dùng thành công'
         ]);
-        return redirect()->route('manage.user');
+        if ($request->ajax()) {
+            return response()->json(['redirectTo' => route('manage.user')]);
+        } else {
+            return redirect()->route('manage.user');
+        }
     }
 }

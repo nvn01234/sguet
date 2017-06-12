@@ -24,10 +24,7 @@ class SearchStatisticsDataTable extends DataTable
                 return \Html::link(route('home', compact('query')), str_limit($query, 40), ['class' => 'tooltips', 'data-original-title' => $query])->toHtml();
             })
             ->editColumn('action', function($log) {
-                /**
-                 * @var SearchLog $log
-                 */
-                return \Html::link(route('manage.search_log.delete', $log->id), '<i class="fa fa-trash"></i> Xoá', ['class' => 'btn btn-sm btn-outline red'], null, false)->toHtml();
+                return view('partials.search-log.action', compact('log'))->render();
             })
             ->make(true);
     }

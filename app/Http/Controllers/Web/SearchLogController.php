@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Web;
 use App\DataTables\SearchStatisticsDataTable;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CleanupSearchLogRequest;
+use App\Http\Requests\DeleteContentRequest;
 use App\Models\SearchLog;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -23,17 +24,17 @@ class SearchLogController extends Controller
         return $dataTable->render('search_log.index');
     }
 
-    public function delete($id) {
-        /**
-         * @var SearchLog $log
-         */
-        $log = SearchLog::findOrFail($id);
-        $log->delete();
-        $text = e($log->text);
+    public function delete($id, DeleteContentRequest $request) {
+        SearchLog::destroy($id);
         \Toastr::append([
-            'message' => "Đã xoá $text"
+            'title' => "Đã chuyển 1 mục vào thùng rác"
         ]);
-        return redirect()->back();
+
+        if ($request->ajax()) {
+            return response()->json(['redirectTo' => route('manage.search_log')]);
+        } else {
+            return redirect()->route('manage.search_log');
+        }
     }
 
     public function cleanup(CleanupSearchLogRequest $request) {

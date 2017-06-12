@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Web;
 
 use App\DataTables\FeedbacksDataTable;
 use App\Http\Requests\CreateFeedbackRequest;
+use App\Http\Requests\DeleteContentRequest;
 use App\Http\Requests\FeedbackProcessRequest;
 use App\Models\Feedback;
 use App\Http\Controllers\Controller;
@@ -34,7 +35,7 @@ class FeedbackController extends Controller
         $attributes['ip'] = $request->ip();
         Feedback::create($attributes);
         \Toastr::append($this->thankMessage($request->get('type'), $request->has('email')));
-        return redirect()->back();
+        return redirect()->route('home');
     }
 
     private function thankMessage($type, $hasEmail) {
@@ -79,19 +80,23 @@ class FeedbackController extends Controller
         \Toastr::append([
             'message' => "Đã cập nhật trạng thái góp ý thành " . Feedback::STATUS[$feedback->status]
         ]);
-        return redirect()->back();
+        if ($request->ajax()) {
+            return response()->json(['redirectTo' => route('manage.feedback')], 200);
+        } else {
+            return redirect()->route('manage.feedback');
+        }
     }
 
-    public function delete($id) {
-        /**
-         * @var Feedback $feedback
-         */
-        $feedback = Feedback::findOrFail($id);
-        $feedback->delete();
+    public function delete($id, DeleteContentRequest $request) {
+        Feedback::destroy($id);
         \Toastr::append([
-            'message' => 'Đã chuyển góp ý vào thùng rác'
+            'title' => 'Đã chuyển góp ý vào thùng rác'
         ]);
-        return redirect()->back();
+        if ($request->ajax()) {
+            return response()->json(['redirectTo' => route('manage.feedback')], 200);
+        } else {
+            return redirect()->route('manage.feedback');
+        }
     }
 
     public function detail($id) {

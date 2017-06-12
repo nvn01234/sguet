@@ -18,10 +18,6 @@ class HomeController extends Controller
         return view('about');
     }
 
-    public function google_site_verification() {
-        return view('vendor.google.googleeadd1946a0bd73da');
-    }
-
     public function hong() {
         return redirect("http://hong.sguet.com");
     }

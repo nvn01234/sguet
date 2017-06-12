@@ -60,18 +60,18 @@
             <div class="row">
                 <div class="col-md-offset-3 col-md-9">
                     @if($feedback->status === 0)
-                        <a href="{!! route('manage.feedback.process', ['id' => $feedback->id, 'status' => 10]) !!}"
+                        <a href="javascript:" onclick="bootbox.ajaxConfirm({status: 10}, '{!! route('manage.feedback.process', $feedback->id) !!}')"
                            class="btn btn-sm blue">
                             Tiếp nhận
                         </a>
                     @endif
                     @if($feedback->status !== 100)
-                        <a href="{!! route('manage.feedback.process', ['id' => $feedback->id, 'status' => 100]) !!}"
+                        <a href="javascript:" onclick="bootbox.ajaxConfirm({status: 100}, '{!! route('manage.feedback.process', $feedback->id) !!}')"
                            class="btn btn-sm green">
                             <i class="fa fa-check"></i> Xong
                         </a>
                     @endif
-                    <a href="{!! route('manage.feedback.delete', $feedback->id) !!}" class="btn btn-sm red">
+                    <a href="javascript:" class="btn btn-sm red" onclick="bootbox.deleteDialog({}, '{!! route('manage.feedback.delete', $feedback->id) !!}')">
                         <i class="fa fa-trash-o"></i> Xoá
                     </a>
                 </div>

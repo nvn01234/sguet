@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateArticleRequest;
+use App\Http\Requests\DeleteContentRequest;
 use App\Models\Article;
 use App\Models\Category;
 use App\DataTables\ArticleDatatable;
@@ -118,18 +119,18 @@ class ArticleController extends Controller
         return redirect()->route('articles.show', $article->id);
     }
 
-    public function destroy($id)
+    public function destroy($id, DeleteContentRequest $request)
     {
-        /**
-         * @var Article $article
-         */
-        $article = Article::findOrFail($id);
-        $article->delete();
+        Article::destroy($id);
 
         \Toastr::append([
-            'title' => 'Xoá Tin tức - Hoạt động',
-            'message' => 'Đã xoá "' . $article->title . '"',
+            'level' => 'success',
+            'title' => 'Xoá Tin tức - Hoạt động thành công',
         ]);
-        return redirect()->route('manage.article');
+        if ($request->ajax()) {
+            return response()->json(['redirectTo' => route('manage.article')]);
+        } else {
+            return redirect()->route('manage.article');
+        }
     }
 }

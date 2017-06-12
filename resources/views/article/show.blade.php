@@ -88,7 +88,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{route('manage.article.delete', $article->id)}}">
+                                    <a href="javascript:" onclick="bootbox.deleteDialog({}, '{{route('manage.article.delete', $article->id)}}')">
                                         <i class="fa fa-trash"></i> Xoá bài
                                     </a>
                                 </li>

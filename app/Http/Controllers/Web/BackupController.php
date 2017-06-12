@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Web;
 
 use App\DataTables\BackupDataTable;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\DeleteBackupRequest;
 use File;
 use Illuminate\Http\Request;
 use Response;
@@ -53,26 +54,12 @@ class BackupController extends Controller
         return redirect()->route('manage.backup');
     }
 
-    public function delete(Request $request)
+    public function delete($file_name, DeleteBackupRequest $request)
     {
-        $validator = \Validator::make($request->all(), [
-            'file_name' => 'string|required|min:1'
-        ]);
-
-        if ($validator->fails()) {
-            return response($validator->errors(), 404);
-        }
-
-        $file_name = $request->get('file_name');
         $folder_name = config('laravel-backup.backup.name');
         $path = storage_path("app/$folder_name/$file_name");
 
         if (!File::exists($path)) {
-            \Toastr::append([
-                'level' => 'error',
-                'title' => 'Xoá tệp sao lưu thất bại',
-                'message' => "Không tìm thấy tệp $file_name",
-            ]);
             abort(404);
         }
 
@@ -82,7 +69,10 @@ class BackupController extends Controller
             'level' => 'success',
             'title' => 'Xoá tệp sao lưu thành công'
         ]);
-
-        return redirect()->route('manage.backup');
+        if ($request->ajax()) {
+            return response()->json(['redirectTo' => route('manage.backup')]);
+        } else {
+            return redirect()->route('manage.backup');
+        }
     }
 }

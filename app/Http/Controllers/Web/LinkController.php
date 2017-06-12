@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Web;
 use App\DataTables\LinksDataTable;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateLinkRequest;
+use App\Http\Requests\DeleteContentRequest;
 use App\Models\Link;
 
 class LinkController extends Controller
@@ -39,12 +40,17 @@ class LinkController extends Controller
         return redirect()->route('manage.links');
     }
 
-    public function delete($id) {
-        $int = Link::destroy($id);
+    public function delete($id, DeleteContentRequest $request) {
+        Link::destroy($id);
         \Toastr::append([
-            'message' => "Bạn vừa xoá $int đường dẫn",
+            'level' => 'success',
+            'title' => "Xoá đường dẫn thành công",
         ]);
-        return redirect()->route('manage.links');
+        if ($request->ajax()) {
+            return response()->json(['redirectTo' => route('manage.links')]);
+        } else {
+            return redirect()->route('manage.links');
+        }
     }
 
     public function create() {

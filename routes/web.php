@@ -25,7 +25,7 @@ Route::post('faq/create', 'Web\FaqController@store')->name('manage.faq.store');
 Route::get('faq/{id}', 'Web\FaqController@show')->name('faq.show');
 Route::get('faq/{id}/edit', 'Web\FaqController@edit')->name('manage.faq.edit');
 Route::post('faq/{id}/edit', 'Web\FaqController@update')->name('manage.faq.update');
-Route::get('faq/{id}/delete', 'Web\FaqController@destroy')->name('manage.faq.delete');
+Route::post('faq/{id}/delete', 'Web\FaqController@destroy')->name('manage.faq.delete');
 Route::get('faq/{slug}', 'Web\FaqController@slug')->name('faq.slug');
 
 Route::get('articles', 'Web\ArticleController@index')->name('articles');
@@ -35,11 +35,11 @@ Route::post('articles/create', 'Web\ArticleController@store')->name('manage.arti
 Route::get('articles/{id}','Web\ArticleController@show')->name('articles.show');
 Route::get('articles/{id}/edit', 'Web\ArticleController@edit')->name('manage.article.edit');
 Route::post('articles/{id}/edit', 'Web\ArticleController@update')->name('manage.article.update');
-Route::get('articles/{id}/delete', 'Web\ArticleController@destroy')->name('manage.article.delete');
+Route::post('articles/{id}/delete', 'Web\ArticleController@destroy')->name('manage.article.delete');
 Route::get('articles/{slug}', 'Web\ArticleController@slug')->name('articles.slug');
 
 Route::get('search-log', 'Web\SearchLogController@index')->name('manage.search_log');
-Route::get('search-log/{id}/delete', 'Web\SearchLogController@delete')->name('manage.search_log.delete');
+Route::post('search-log/{id}/delete', 'Web\SearchLogController@delete')->name('manage.search_log.delete');
 Route::post('search-log/cleanup', 'Web\SearchLogController@cleanup')->name('manage.search_log.cleanup');
 
 Route::get('users', 'Web\UserController@index')->name('manage.user');
@@ -47,7 +47,7 @@ Route::get('users/create', 'Web\UserController@create')->name('manage.user.creat
 Route::post('users/create', 'Web\UserController@store')->name('manage.user.store');
 Route::get('users/{id}/edit', 'Web\UserController@edit')->name('manage.user.edit');
 Route::post('users/{id}/edit', 'Web\UserController@update')->name('manage.user.update');
-Route::get('users/{id}/delete', 'Web\UserController@destroy')->name('manage.user.delete');
+Route::post('users/{id}/delete', 'Web\UserController@destroy')->name('manage.user.delete');
 
 Route::get('account/change-password', 'Auth\ChangePasswordController@show')->name('auth.password.change.show');
 Route::post('account/change-password', 'Auth\ChangePasswordController@change')->name('auth.password.change');
@@ -63,10 +63,9 @@ Route::get('contacts/{slug}', 'Web\ContactController@slug')->name('contact.slug'
 
 Route::get('backup', 'Web\BackupController@index')->name('manage.backup');
 Route::post('backup/run', 'Web\BackupController@backup')->name('manage.backup.run');
-Route::get('backup/download/{file_name}', 'Web\BackupController@download')->name('manage.backup.download');
-Route::post('backup/delete', 'Web\BackupController@delete')->name('manage.backup.delete');
+Route::get('backup/{file_name}/download', 'Web\BackupController@download')->name('manage.backup.download');
+Route::post('backup/{file_name}/delete', 'Web\BackupController@delete')->name('manage.backup.delete');
 
-Route::get('googleeadd1946a0bd73da.html', 'Web\HomeController@google_site_verification');
 Route::get('hong', 'Web\HomeController@hong');
 Route::get('hongdiemthi', 'Web\HomeController@hong');
 
@@ -76,13 +75,13 @@ Route::get('links/create', 'Web\LinkController@create')->name('manage.links.crea
 Route::post('links/create', 'Web\LinkController@store')->name('manage.links.store');
 Route::get('links/{id}/edit', 'Web\LinkController@edit')->name('manage.links.edit');
 Route::post('links/{id}/edit', 'Web\LinkController@update')->name('manage.links.update');
-Route::get('links/{id}/delete', 'Web\LinkController@delete')->name('manage.links.delete');
+Route::post('links/{id}/delete', 'Web\LinkController@delete')->name('manage.links.delete');
 
 Route::get('feedback', 'Web\FeedbackController@index')->name('manage.feedback');
 Route::get('feedback/create', 'Web\FeedbackController@create')->name('feedback.create');
 Route::post('feedback/create', 'Web\FeedbackController@store')->name('feedback.store');
-Route::get('feedback/{id}/process', 'Web\FeedbackController@process')->name('manage.feedback.process');
-Route::get('feedback/{id}/delete', 'Web\FeedbackController@delete')->name('manage.feedback.delete');
+Route::post('feedback/{id}/process', 'Web\FeedbackController@process')->name('manage.feedback.process');
+Route::post('feedback/{id}/delete', 'Web\FeedbackController@delete')->name('manage.feedback.delete');
 Route::get('feedback/{id}/detail', 'Web\FeedbackController@detail')->name('manage.feedback.detail');
 
 Route::get('command/shell', 'Web\CommandController@shell_view')->name('manage.command.shell');
