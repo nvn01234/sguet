@@ -16,6 +16,7 @@
 @endsection
 
 @section('page-title', 'Danh bạ Trường Đại học Công nghệ')
+@section('title', 'Danh bạ Trường Đại học Công nghệ')
 
 @section('page-level-plugins.styles')
     @parent

@@ -21,6 +21,7 @@
     </li>
 @endsection
 @section('page-title', 'Tin tức - Hoạt động')
+@section('title', 'Tin tức - Hoạt động | SGUET')
 
 @section('page-body')
     <div class="portlet light">

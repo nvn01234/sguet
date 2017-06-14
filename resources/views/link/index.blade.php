@@ -1,6 +1,7 @@
 @extends('layouts.datatables')
 
 @section('page-title', 'Có thể bạn sẽ cần')
+@section('title', 'Có thể bạn sẽ cần | SGUET')
 
 @section('page-breadcrumb')
     @if(Route::currentRouteNamed('manage.links'))

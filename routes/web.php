@@ -13,7 +13,7 @@
 
 Route::get('/', 'Web\SearchController@search')->name('home');
 
-Route::get('about', 'Web\HomeController@about')->name('about');
+Route::get('about', 'Web\AboutController@about')->name('about');
 
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Auth\LoginController@login');
@@ -71,9 +71,6 @@ Route::post('backup/run', 'Web\BackupController@backup')->name('manage.backup.ru
 Route::get('backup/download/{file_name}', 'Web\BackupController@download')->name('manage.backup.download');
 Route::post('backup/delete/{file_name}', 'Web\BackupController@delete')->name('manage.backup.delete');
 
-Route::get('hong', 'Web\HomeController@hong');
-Route::get('hongdiemthi', 'Web\HomeController@hong');
-
 Route::get('links', 'Web\LinkController@index')->name('links');
 Route::get('links/index', 'Web\LinkController@manage')->name('manage.links');
 Route::get('links/create', 'Web\LinkController@create')->name('manage.links.create');
@@ -93,3 +90,12 @@ Route::get('command/shell', 'Web\CommandController@shell_view')->name('manage.co
 Route::post('command/shell', 'Web\CommandController@shell_exec')->name('manage.command.shell.exec');
 Route::get('command/artisan', 'Web\CommandController@artisan_view')->name('manage.command.artisan');
 Route::post('command/artisan', 'Web\CommandController@artisan_call')->name('manage.command.artisan.call');
+
+Route::get('hong', 'Web\RedirectController@hong');
+Route::get('hongdiemthi', 'Web\RedirectController@hong');
+Route::get('UET-Q&A', 'Web\RedirectController@home');
+Route::get('tags/{tag}', 'Web\RedirectController@tag');
+Route::get('positions/{tag}', 'Web\RedirectController@tag');
+Route::get('blogs', 'Web\RedirectController@articles');
+Route::get('news/public', 'Web\RedirectController@home');
+Route::get('news/public/{any}', 'Web\RedirectController@rewrite');

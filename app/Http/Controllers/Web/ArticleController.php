@@ -32,6 +32,9 @@ class ArticleController extends Controller
                 ->paginate(12, ["*"], 'page', $page + 1);
             return view('api.article_index', compact('articles'));
         } else {
+            if ($request->all()) {
+                return redirect()->route('articles');
+            }
             $categories = Category::orderBy('id')->get();
             $articles = Article::query()
                 ->with('tags')

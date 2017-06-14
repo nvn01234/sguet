@@ -13,6 +13,8 @@
     </style>
 @endsection
 
+@section('title', 'Giới thiệu về SGUET')
+
 @section('page-breadcrumb')
     <li>
         <a href="{{route('home')}}">

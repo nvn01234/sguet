@@ -8,7 +8,7 @@ use App\Http\Controllers\Controller;
  * Class HomeController
  * @package App\Http\Controllers\Web
  */
-class HomeController extends Controller
+class AboutController extends Controller
 {
     /**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
@@ -16,9 +16,5 @@ class HomeController extends Controller
     public function about()
     {
         return view('about');
-    }
-
-    public function hong() {
-        return redirect("http://hong.sguet.com");
     }
 }

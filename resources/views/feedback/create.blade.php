@@ -1,5 +1,7 @@
 @extends('layouts.page')
 
+@section('title', 'Liên hệ SGUET')
+
 @section('page-level-styles')
     @parent
     {{ Html::style('css/sguet/cover-image.css') }}
