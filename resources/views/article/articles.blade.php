@@ -45,7 +45,7 @@
                 @endforeach
             </div>
             <div id="js-loadMore-juicy-projects" class="cbp-l-loadMore-button">
-                <a href="{!! URL::route('api.article.index') !!}"
+                <a href="{{route('articles')}}"
                    class="cbp-l-loadMore-link btn blue" rel="nofollow" id="loadMore_btn">
                     <span class="cbp-l-loadMore-defaultText">Xem thêm</span>
                     <span class="cbp-l-loadMore-loadingText">Đang tải...</span>
@@ -126,7 +126,7 @@
 
             $('#loadMore_btn').on('click', function () {
                 next_page++;
-                $('#loadMore_btn').attr('href', '{{route('api.article.index')}}?page=' + next_page);
+                $('#loadMore_btn').attr('href', '{{route('articles')}}?page=' + next_page);
             });
         });
     </script>

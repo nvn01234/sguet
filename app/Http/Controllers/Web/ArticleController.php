@@ -9,25 +9,37 @@ use App\Models\Article;
 use App\Models\Category;
 use App\DataTables\ArticleDatatable;
 use App\Models\Tag;
+use Illuminate\Http\Request;
 
 class ArticleController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('permission:manage-content')->except('index', 'show', 'slug');
+        $this->middleware('permission:manage-content')->except('index', 'indexByPage', 'show', 'slug');
     }
+
     /**
+     * @param Request $request
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function index()
+    public function index(Request $request)
     {
-        $categories = Category::orderBy('id')->get();
-        $articles = Article::query()
-            ->with('tags')
-            ->orderBy('created_at', 'desc')
-            ->take(12)
-            ->get();
-        return view('article.articles', compact('categories', 'articles'));
+        if ($request->ajax()) {
+            $page = $request->get('page', 1);
+            $articles = Article::query()
+                ->with('tags')
+                ->orderBy('created_at', 'desc')
+                ->paginate(12, ["*"], 'page', $page + 1);
+            return view('api.article_index', compact('articles'));
+        } else {
+            $categories = Category::orderBy('id')->get();
+            $articles = Article::query()
+                ->with('tags')
+                ->orderBy('created_at', 'desc')
+                ->take(12)
+                ->get();
+            return view('article.articles', compact('categories', 'articles'));
+        }
     }
 
     public function manage(ArticleDatatable $datatable)

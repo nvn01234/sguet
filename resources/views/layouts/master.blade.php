@@ -5,7 +5,7 @@
         <div class="page-header-inner ">
             <div class="page-logo">
                 <a href="{{route('home')}}">
-                    <img src="{{asset('img/SGUET.png')}}" alt="logo" class="logo-default" height="26">
+                    <img src="{{asset('img/SGUET.png')}}" alt="logo" class="logo-default" height="26"/>
                 </a>
             </div>
 

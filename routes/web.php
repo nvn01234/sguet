@@ -68,8 +68,8 @@ Route::get('contacts/{slug}', 'Web\ContactController@slug')->name('contact.slug'
 
 Route::get('backup', 'Web\BackupController@index')->name('manage.backup');
 Route::post('backup/run', 'Web\BackupController@backup')->name('manage.backup.run');
-Route::get('backup/{file_name}/download', 'Web\BackupController@download')->name('manage.backup.download');
-Route::post('backup/{file_name}/delete', 'Web\BackupController@delete')->name('manage.backup.delete');
+Route::get('backup/download/{file_name}', 'Web\BackupController@download')->name('manage.backup.download');
+Route::post('backup/delete/{file_name}', 'Web\BackupController@delete')->name('manage.backup.delete');
 
 Route::get('hong', 'Web\HomeController@hong');
 Route::get('hongdiemthi', 'Web\HomeController@hong');

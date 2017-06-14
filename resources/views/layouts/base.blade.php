@@ -8,15 +8,15 @@
 <!--[if !IE]><!-->
 <html lang="{{config('app.locale')}}">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"/>
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="csrf-token" content="{{ Crypt::encrypt(csrf_token()) }}">
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta name="csrf-token" content="{{ Crypt::encrypt(csrf_token()) }}"/>
     <meta name="keywords" content="{{config('app.keywords')}}"/>
     <meta name="author" content="{{config('app.author')}}"/>
     <meta name="copyright" content="{{config('app.copyright')}}"/>
-    <meta name="description" content="@yield('description', config('app.description.text'))">
+    <meta name="description" content="@yield('description', config('app.description.text'))"/>
     <meta property="og:type" content="university"/>
     <meta property="og:site_name" content="{{config('app.name')}}"/>
     <meta property="og:title" content="@yield('title', config('app.name'))"/>

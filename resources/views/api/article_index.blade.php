@@ -1,6 +1,6 @@
 <div class="cbp-loadMore-block{{$articles->currentPage()-1}}">
     @foreach($articles as $article)
-        @include('api.article_item', ['article' => $article])
+        @include('api.article_item')
     @endforeach
 </div>
 @if($articles->nextPageUrl())
