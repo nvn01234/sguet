@@ -25,6 +25,7 @@ class ElasticHelper
     public function reindex() {
         $this->reindexFaqs();
         $this->reindexContacts();
+        return "done";
     }
 
     public function reindexContacts() {
@@ -44,6 +45,7 @@ class ElasticHelper
             'body' => []
         ]);
         $this->indexFaqs(Faq::all());
+        return "done";
     }
 
     public function count() {

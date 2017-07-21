@@ -47,4 +47,14 @@ class CommandController extends Controller
         $response = \Artisan::output();
         return redirect()->route('manage.command.artisan')->withInput(compact('cmd', 'response', 'params'));
     }
+
+    public function generateSitemap() {
+        \Artisan::call("sitemap:generate");
+        return \Artisan::output();
+    }
+
+    public function reindexElastic() {
+        \Artisan::call("elastic", ["method" => "reindex"]);
+        return \Artisan::output();
+    }
 }

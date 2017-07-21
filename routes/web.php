@@ -86,10 +86,12 @@ Route::post('feedback/{id}/process', 'Web\FeedbackController@process')->name('ma
 Route::post('feedback/{id}/delete', 'Web\FeedbackController@delete')->name('manage.feedback.delete');
 Route::get('feedback/{id}/detail', 'Web\FeedbackController@detail')->name('manage.feedback.detail');
 
-Route::get('command/shell', 'Web\CommandController@shell_view')->name('manage.command.shell');
-Route::post('command/shell', 'Web\CommandController@shell_exec')->name('manage.command.shell.exec');
-Route::get('command/artisan', 'Web\CommandController@artisan_view')->name('manage.command.artisan');
-Route::post('command/artisan', 'Web\CommandController@artisan_call')->name('manage.command.artisan.call');
+//Route::get('command/shell', 'Web\CommandController@shell_view')->name('manage.command.shell');
+//Route::post('command/shell', 'Web\CommandController@shell_exec')->name('manage.command.shell.exec');
+//Route::get('command/artisan', 'Web\CommandController@artisan_view')->name('manage.command.artisan');
+//Route::post('command/artisan', 'Web\CommandController@artisan_call')->name('manage.command.artisan.call');
+Route::get("command/sitemap-generate", 'Web\CommandController@generateSitemap');
+Route::get("command/elastic-reindex", "Web\CommandController@reindexElastic");
 
 Route::get('hong', 'Web\RedirectController@hong');
 Route::get('hongdiemthi', 'Web\RedirectController@hong');
