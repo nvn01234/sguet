@@ -31,11 +31,17 @@ class Kernel extends HttpKernel
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
+            \PragmaRX\Firewall\Middleware\FirewallBlacklist::class,
         ],
 
         'api' => [
             'throttle:60,1',
             'bindings',
+        ],
+
+        'firewall' => [
+            \PragmaRX\Firewall\Middleware\FirewallBlacklist::class,
+            \PragmaRX\Firewall\Middleware\BlockAttacks::class,
         ],
     ];
 
@@ -57,5 +63,8 @@ class Kernel extends HttpKernel
         'permission' => \Zizaco\Entrust\Middleware\EntrustPermission::class,
         'ability' => \Zizaco\Entrust\Middleware\EntrustAbility::class,
         'rolelevel' => CheckRoleLevel::class,
+        'fw-only-whitelisted' => \PragmaRX\Firewall\Middleware\FirewallWhitelist::class,
+        'fw-block-blacklisted' => \PragmaRX\Firewall\Middleware\FirewallBlacklist::class,
+        'fw-block-attacks' => \PragmaRX\Firewall\Middleware\BlockAttacks::class,
     ];
 }

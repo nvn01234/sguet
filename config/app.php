@@ -183,6 +183,7 @@ return [
         \App\Providers\EntrustServiceProvider::class,
         Cviebrock\EloquentSluggable\ServiceProvider::class,
         Spatie\Sitemap\SitemapServiceProvider::class,
+        PragmaRX\Firewall\Vendor\Laravel\ServiceProvider::class,
         //
 
         /*
@@ -252,6 +253,7 @@ return [
         'MenuHelper' => \App\Helpers\MenuHelper\MenuHelperFacade::class,
         'Toastr' => \App\Helpers\Toastr\ToastrFacade::class,
         'Elastic' => \App\Helpers\ElasticHelper\ElasticHelperFacade::class,
+        'Firewall' => PragmaRX\Firewall\Vendor\Laravel\Facade::class,
     ],
 
 ];
