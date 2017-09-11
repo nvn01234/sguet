@@ -1,0 +1,2618 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <sitemap>
+        <loc>http://localhost:8000</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/about</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/feedback/create</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/links</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/lam-ve-thang-xe-bus-nhu-the-nao</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/xin-bang-diem-xac-nhan-la-sinh-vien-truong</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/so-dien-thoai-va-email-cua-phong-dao-tao-phong-cong-tac-sinh-vien</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/muon-muon-phong-thi-phai-lam-the-nao</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/cong-thong-tin-mon-hoc-http-bbc-vnu-edu-vn</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/cong-thong-tin-dao-tao-http-daotao-vnu-edu-vn</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/mat-the-sinh-vien</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/em-muon-xin-giay-chung-nhan-cac-hoat-dong-doan-hoi</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/truong-minh-co-nhung-clb-nao-hoat-dong-cua-nhung-clb-do-nhu-the-nao</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/tin-chi-diem-tich-luy-diem-ren-luyen-la-gi-tinh-nhu-the-nao</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/tai-khoan-dreamspark</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/ket-noi-wifi-uet-wifi-thu-vien-wifi-ky-tuc-xa-nhu-nao</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/ky-thi-danh-gia-nang-luc-tieng-anh-truong-dh-ngoai-ngu</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/mat-mat-khau-tai-khoan-ctmail-thi-phai-lam-sao</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/dieu-kien-de-duoc-hoc-bong-va-co-nhung-loai-hoc-bong-nao</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/em-muon-tim-de-thi-cac-nam-truoc</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/dang-ky-hoc-lai-hoac-hoc-cai-thien-nhu-the-nao</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/dieu-kien-bi-xu-li-hoc-vu</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/em-muon-dang-ky-bo-sung-cac-mon-ly-luan-chinh-tri</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/khi-nao-cac-clb-tuyen-thanh-vien</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/thu-vien-c1t-dhqg-ha-noi</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/danh-ba-dien-thoai-truong-dai-hoc-cong-nghe</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/lam-the-nao-de-phuc-khao-lai-bai-thi</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/ky-thi-danh-gia-trinh-do-tieng-anh-cho-tan-sinh-vien</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/tong-hop-nhung-cau-hoi-thuong-gap-danh-cho-tan-sinh-vien-k59</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/meo-check-ctmail-thong-qua-gmail</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/mot-so-van-ban-mau-bieu</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/khung-chuong-trinh-dao-tao-cac-nganh-khoa-cong-nghe-thong-tin-ap-dung-cho-k57-k58-k59</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/khung-chuong-trinh-dao-tao-cac-khoa-co-hoc-ky-thuat-va-tu-dong-hoa-dien-tu-vien-thong-vat-ly-ki-thuat-va-cong-nghe-nano-ap-dung-cho-k57-k58-k59</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/giai-dap-thac-mac-xung-quanh-van-de-dang-ki-mon-hoc-dieu-chinh-bo-sung-mon-hoc</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/li-ch-tie-p-nguo-i-ho-c-cu-a-pho-ng-da-o-ta-o-va-pho-ng-ctsv</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/meo-su-dung-extensions-cua-chrome-hay-firefox-de-check-mail</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/meo-phat-wifi-qua-laptop-ma-khong-can-dung-cac-phan-mem-ho-tro</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/tha-c-ma-c-xung-quanh-va-n-de-ho-c-phi</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/xem-diem-cac-mon-giao-duc-the-chat-nhu-the-nao</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/huong-dan-su-dung-simple-sticky-notes-tien-ich-ghi-chu-tren-windows</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/tong-hop-cac-cau-hoi-ve-tuyen-sinh-dai-hoc-nam-2015</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/len-tren-hoa-lac-roi-nha-truong-moi-xep-phong-cho-minh-hay-la-minh-co-duoc-chon-ban-o-cung-khong</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/co-can-dem-chan-len-hola-khong</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/cuoi-tuan-muon-ve-thi-lam-nhung-thu-tuc-nao</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/an-mi-tom-buoi-dem-co-bi-bat-khong</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/co-atm-khong-co-nong-lanh-khong-co-wifi-khong</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/co-nen-mang-laptop-di-khong-co-so-mat-khong-wifi-danh-lol-duoc-khong</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/co-xa-don-xa-kep-khong-cho-minh-hoi-la-o-tren-hoa-lac-co-san-cau-long-khong-a-co-cho-ban-cau-de-mua-khong-a</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/trong-tuan-co-duoc-ra-ngoai-khong-moi-toi-co-tron-ra-ngoai-choi-duoc-khong</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/nen-mang-nhung-do-nao-theo</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/len-tren-hoa-lac-roi-nha-truong-moi-xep-phong-cho-minh-hay-la-minh-co-duoc-chon-ban-o-cung-khong-1</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/co-duoc-su-dung-dien-thoai-khong-trong-luc-hoc-co-duoc-su-dung-dien-thoai-khong</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/tien-hoc-phi-va-tien-sinh-hoat-phi-dong-nhu-the-nao-ngoai-2-khoan-nay-nen-mang-them-bao-nhieu</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/cac-benh-ngoai-da-thuong-gap-can-chuan-bi-thuoc-gi</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/viec-tam-giat-nhu-nao</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/cho-minh-hoi-co-duoc-mang-dan-trong-co-duoc-choi-ko-gio-giac-ntn</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/khong-duoc-mang-theo-nhung-gi-len-hoa-lac</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/cac-hinh-phat</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/mang-bai-len-choi-co-duoc-khong</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/quan-phuc-nhu-the-nao</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/cac-hoat-dong-chinh-tren-hola-nhu-the-nao</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/co-chung-chi-roi-thi-xin-mien-hoan-nhu-the-nao</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/di-hoa-lac-hoc-xong-co-duoc-ve-que-luon-khong</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/co-tuyen-bus-nao-ve-ha-noi-khong</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/giay-to-can-chuan-bi-khi-len-hoa-lac</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/lich-sinh-hoat-tren-hoa-lac-nhu-the-nao</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/su-dung-cong-thong-tin-ho-tro-nguoi-hoc-student-vnu-edu-vn</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/co-ten-trong-2-lop-mon-hoc-thi-phai-lam-the-nao</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/sinh-vien-cac-lop-theo-chuong-trinh-chuan-co-the-dang-ky-cac-mon-hoc-cua-lop-clc-khong</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/hoc-phi-hoc-cai-thien-va-hoc-lai</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/muc-hoc-phi-hien-tai-cua-truong-la-bao-nhieu</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/cac-nganh-co-chuong-trinh-dao-tao-chat-luong-cao</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/cach-dang-ky-vao-lop-chat-luong-cao-cua-nganh-cong-nghe-thong-tin</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/truong-minh-co-to-chuc-thi-thu-khong-a</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/khi-dang-ky-xet-tuyen-em-duoc-quyen-dang-ky-may-nguyen-vong</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/thi-sinh-tu-do-em-co-phai-lam-thu-tuc-gi-khac-hay-duoc-giam-ki-thi-chung-cua-cac-em-thi-sinh-moi-thi-nam-nay-khong-a</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/hinh-thuc-xet-tuyen-cua-truong-la-gi</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/hoc-ve-chuyen-nganh-gi-thi-khi-ra-truong-lam-tester</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/con-gai-hoc-chuyen-nganh-nao-thi-nhe-nhat</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/muc-hoc-phi-hien-tai-cua-truong-la-bao-nhieu-1</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/su-dung-ket-qua-dgnl-nam-truoc-de-xet-tuyen-duoc-khong</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/truong-co-tuyen-sinh-van-bang-2-cho-sinh-vien-dang-hoc-da-tot-nghiep-dai-hoc</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/sau-khi-trung-tuyen-vao-truong-co-phai-thi-them-bai-thi-ngoai-ngu-khong</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/co-duoc-su-dung-diem-dgnl-nam-ngoai-da-trung-tuyen-nhung-khong-nhap-hoc</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/cong-nghe-thong-tin-chuan-va-cong-nghe-thong-tin-chuan-nhat-ban-khac-nhau-nhu-the-nao</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/dieu-kien-de-vao-hoc-chuong-trinh-chuan-o-truong-dai-hoc-cong-nghe-dhcn-la-gi</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/cac-dieu-kien-xet-tuyen-vao-chuong-trinh-dao-tao-clc-theo-thong-tu-23-cua-bo-giao-duc</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/chuong-trinh-chat-luong-cao-dap-ung-thong-tu-23-cua-nha-truong-thu-hoc-phi-cao-thi-diem-chuan-dau-vao-co-thap-hon-so-voi-cac-chuong-trinh-khac-khong</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/em-duoc-giai-3-qg-cuoc-thi-khoa-hoc-ky-thuat-cap-quoc-gia-do-bo-gd-dt-to-chuc-thi-duoc-tuyen-thang-nhung-khoa-nao-a</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/quy-che-tuyen-thang-hoc-sinh-dat-giai-quoc-gia-cac-mon-van-hoa-cua-truong-cu-the-nhu-the-nao-a-can-phai-chuan-bi-cac-giay-to-xet-tuyen-nhu-the-nao</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/nam-nay-em-muon-thi-vao-truong-dai-hoc-cong-nghe-thi-co-phai-thi-danh-gia-nang-luc-khong</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/doi-tuong-duoc-tuyen-thang-vao-truong-dai-hoc-cong-nghe-co-phai-lam-bai-thi-tot-nghiep-thpt-nam-2017-khong-a</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/ma-truong-ma-nganh-va-chi-tieu-trong-dang-ki-xet-tuyen-dai-hoc-2017</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/chuong-trinh-dao-tao-nganh-cong-nghe-thong-tin-dinh-huong-thi-truong-nhat-ban-nam-2017</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/chuong-trinh-dao-tao-nganh-cong-nghe-ky-thuat-xay-dung-giao-thong</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/khung-chuong-trinh-dao-tao-cac-nganh-doi-voi-khoa-k62</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/cach-tinh-diem-cua-truong-nam-nay</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/faq/xem-diem-thi</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/le-ki-niem-64-nam-ngay-truyen-thong-hoc-sinh-sinh-vien-viet-nam</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/ngay-hoi-tu-hao-sinh-vien-viet-nam</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/vo-dich-giai-bong-da-nam-danh-cho-can-bo-dhqghn</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/dai-hoi-dai-bieu-toan-quoc-hoi-sinh-vien-viet-nam-lan-thu-ix</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/giai-bong-da-lien-chi-doan-khoa-cntt-va-lien-khoa-dtvt-vlkt-cnnn-chkt-tdh</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/giai-thuong-honda-yes-2013</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/uet-don-chao-khoa-moi</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/chao-mung-dai-hoi-dai-bieu-hoi-sinh-vien-thanh-pho-ha-noi-lan-thu-vi</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/dai-hoi-dai-bieu-hoi-sinh-vien-dai-hoc-quoc-gia-ha-noi-lan-3-nhiem-ky-2013-2018</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/ky-nang-chinh-phuc-nha-tuyen-dung</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/tinh-yeu-dong-gioi</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/to-chuc-chien-dich-mua-he-thanh-nien-tinh-nguyen-nam-2013</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/go-cua-mua-thu-2013</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/doi-thi-dai-hoc-cong-nghe-tham-gia-cuoc-thi-ban-linh-tan-binh-ngay-hoi-tan-sinh-vien-2013</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/thu-moi-du-thi-robocon-2014</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/ban-linh-cong-nghe-mo-rong-2013</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/hoi-thao-2013</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/le-tot-nghiep-dai-hoc-khoa-qh-2009-i-cq-2009-2013</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/chuong-trinh-ngay-hoi-viec-lam-thanh-nien-thu-do-nam-2013</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/ngay-hoi-viec-lam-thanh-nien-thu-do-lan-thu-v</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/so-tuyen-tinh-nguyen-vien-chien-dich-tinh-nguyen-he-2013</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/giai-imagine-cup-2013-viet-nam</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/thong-bao-cuoc-thi-chon-doi-tuyen-procon-2013</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/uet-game-2013-diem-hen-cua-nhung-anh-tai</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/kiem-dinh-chat-luong-chuong-trinh-dao-tao-cu-nhan-nganh-dien-tu-vien-thong-truong-dhcn-theo-chuan-aun-qa</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/hoa-thom-danh-tang-co-20-10</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/olympic-toan-sinh-vien-toan-quoc-2013</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/sac-hong-hy-vong</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/chung-ket-ban-linh-cong-nghe-mo-rong-2013</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/cai-nhin-tong-quan-ve-uet</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/hanh-trinh-yen-bai-phan-1-bat-ngo-va-nhung-trai-nghiem-dau-tien</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/le-trao-bang-khen-cho-cac-thanh-vien-clb-ho-tro-sinh-vien</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/tinh-nguyen-he-2013-tinh-nguyen-xa</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/go-cua-mua-thu-2013-1</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/vui-hoi-trang-ram</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/dai-hoc-cong-nghe-da-tham-gia-dai-hoi-tdtt-phuong-dich-vong-hau-lan-thu-iii-nam-2013</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/chuoi-su-kien-ky-nang-chinh-phuc-nha-tuyen-dung</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/ngay-hoi-tu-van-tuyen-sinh-2013</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/hoat-dong-the-thao</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/giam-doc-dhqghn-lam-viec-voi-truong-dh-cong-nghe</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/talkshow-bao-mat-an-toan-thong-tin</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/bi-thu-doan-hoc-gioi-tai-nang</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/hoi-thao-dien-toan-dam-may-anh-huong-lon-den-nghe-nghiep</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/hoi-thao-tinh-yeu-dong-gioi</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/trien-lam-va-hoi-nghi-thuong-mai-hoa-san-pham-khoa-hoc-cong-nghe</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/cong-doan-dai-hoc-cong-nghe-tham-gia-hoi-dien-loi-ca-dang-bac-nam-2013</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/mua-dong-am-2013</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/le-ra-quan-mua-he-thanh-nien-tinh-nguyen-05-05-2013</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/hoi-thao-nang-cao-hieu-qua-cong-tac-giao-duc-cua-doan-thanh-nien-hoi-sinh-vien</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/le-ky-niem-ngay-nha-giao-viet-nam-20-11</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/hanh-trinh-vi-khat-vong-viet-2013</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/giai-thuong-honda-yes-2013-1</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/cong-trinh-nghien-cuu-quan-ly-dinh-duong-cho-cac-truong-mam-non-va-tieu-hoc-uetnutrischool</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/chuong-trinh-vnu-trong-toi</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/ngay-hoi-trao-doi-sach-lan-2-uet-2013</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/sac-hong-hy-vong-2013</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/cau-lac-bo-ho-tro-sinh-vien-sguet-tuyen-thanh-vien</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/doan-dhqghn-quyen-gop-ung-ho-dong-bao-mien-trung</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/doan-dhqghn-hoat-dong-tinh-nguyen-phuc-vu-le-quoc-tang-dai-tuong-vo-nguyen-giap</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/hoi-thao-xay-dung-lo-trinh-hoc-tap-hieu-qua</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/ki-su-hanh-trinh-phat-thuoc-mien-phi-cung-voi-doan-bac-si-khoa-y-duoc-tai-thon-minh-tan-xa-minh-tri-soc-son-ha-noi</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/nha-e3</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/thien-duong-g2</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/hop-trien-khai-cac-hoat-dong-cua-hoi-sinh-vien-va-cac-cau-lac-bo-truong-dai-hoc-cong-nghe-dhqghn</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/chien-dich-tinh-nguyen-he-2013</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/le-khai-mac-bao-ve-khoa-luan-tot-nghiep-dai-hoc-he-chinh-quy-khoa-qh-2009-i-cq</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/bo-gd-dt-khen-thuong-5-hs-doat-giai-olympic-tin-hoc-chau-a-2013</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/thu-moi-dang-ki-tham-du-ece-club</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/uet-game</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/ngay-hoi-trao-doi-sach-lan-thu-3</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/tu-van-tuyen-sinh-nam-2014</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/giao-luu-sguet-ac-guc-ulis-lsc-epu-nang-chu-nhat</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/chien-dich-g-hour-gop-suc-cung-gio-trai-dat-2014</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/ngay-hoi-viec-lam-cong-nghe</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/hoat-dong-tinh-nguyen-huong-ung-gio-trai-dat-g-hour-29-3-2014</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/nu-cuoi-han-thuc</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/tap-huan-can-bo-doan-hoi-2014</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/sac-hong-hy-vong-2014-hien-mau-toan-truong-dh-cong-nghe</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/ngay-hoi-chia-se-y-tuong-ket-noi-cong-dong</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/festival-khoa-hoc-va-cong-nghe-tre</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/an-tuong-uet-10-nam-mot-chang-duong-phat-trien</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/tuyen-tinh-nguyen-vien-chien-dich-mua-he-sinh-vien-tinh-nguyen-2014</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/tap-huan-tiep-suc-mua-thi-2014</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/le-be-giang-khoa-qh-2010-i-cq-truong-dh-cong-nghe-dhqg-ha-noi</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/tiep-suc-mua-thi-dot-1-2014</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/tiep-suc-mua-thi-2014</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/tan-sinh-vien-uet-k59-nhap-truong</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/cau-lac-bo-ho-tro-sinh-vien-sguet-tuyen-thanh-vien-1</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/tuyen-thanh-vien-sguet-nam-hoc-2014-2015</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/hop-mat-dau-nam-va-tong-ket-the-he-s2-sguet</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/dai-hoc-cong-nghe-10-nam-mot-chang-duong</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/giao-huu-bong-da-sguet-clb-nguoi-viet-tre</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/tran-giao-huu-bong-da-sguet-clb-thuyet-trinh</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/sinh-nhat-2-tuoi-sguet</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/le-ky-niem-ngay-truyen-thong-hssv</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/ho-tro-sinh-vien-nhan-phong-tai-ktx-my-dinh</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/sguet-valentines-va-lung-tung-va-trung-gau</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/ngay-hoi-tu-van-tuyen-sinh-nam-2015</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/buoi-hop-dau-nam-va-to-chuc-8-3-cho-cac-ban-nu-sguet</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/hoat-dong-tinh-nguyen-huong-ung-gio-trai-dat-g-hour-28-3-2015</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/giang-duong-van-minh</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/share-anh-van-minh-rinh-ngay-qua-tang</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/sinh-nhat-sguet-tron-3-tuoi</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/mua-dong-am-2015</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/giai-bong-da-cac-cau-lac-bo-truong-dai-hoc-cong-nghe</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/ruc-chay-san-co-uet-club-2016</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/huong-dan-ghi-ho-so-dang-ki-du-thi-thpt-quoc-gia-nam-2017</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/cuoc-thi-tu-hao-cong-nghe-2017</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/articles/ngay-hoi-viec-lam-truong-dai-hoc-cong-nghe-dai-hoc-quoc-gia-ha-noi</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/cong-vu</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ban-giam-hieu</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/hieu-truong</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/pho-hieu-truong-phu-trach-cong-tac-dao-tao-dai-hoc-ke-hoach-tai-chinh</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/pho-hieu-truong-phu-trach-co-so-vat-chat-hoat-dong-van-the</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/pho-hieu-truong-phu-trach-dao-tao-sau-dai-hoc-nghien-cuu-khoa-hoc-hop-tac-quoc-te-va-cac-du-an</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/cac-phong-chuc-nang</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/phong-hanh-chinh-quan-tri</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/phong-dao-tao-dai-hoc</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/truong-phong</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/bo-phan-dao-tao</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/bo-phan-cong-tac-sinh-vien</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/bo-phan-tiep-sinh-vien</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/phong-dtsdh-nckh</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/bo-phan-dao-tao-sdh</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/bo-phan-nckh-du-an-hop-tac-qt</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/phong-to-chuc-can-bo</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/truong-phong-1</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/bo-phan-to-chuc</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/phong-tai-vu-ke-toan</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/bo-phan-tai-vu-ke-toan</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/bo-phan-thu-quy</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/vp-chuong-trinh-hop-tac-dao-tao-qt</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/van-phong-dang-uy</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/van-phong-doan-tn-hoi-sv</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/cac-khoa-trung-tam-va-phong-thi-nghiem-truc-thuoc</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/trung-tam-may-tinh</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/trung-tam-nc-dien-tu-vien-thong</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/trung-tam-nc-va-phat-trien-cong-nghe-phan-mem</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/phong-thi-nghiem-cac-he-tich-hop-thong-minh-sis</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/phong-thi-nghiem-cong-nghe-nano</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ca-nhan</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ban-giam-hieu-1</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/pgs-ts-nguyen-viet-ha</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ts-nguyen-anh-thai</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/pgs-ts-pham-bao-son</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/cac-phong-ban-chuc-nang</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/phong-hanh-chinh-quan-tri-1</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/cu-nhan-vu-anh-dung</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/cu-nhan-le-thanh-tung</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/pham-thi-thu-hoai</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/nguyen-manh-dung</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/nguyen-danh-hoan</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/phong-dao-tao-dai-hoc-1</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ths-le-thi-phuong-thoa</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ths-duong-dinh-thieu</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/le-huy</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/nguyen-thi-thu-thao</loc>
+    
+        <lastmod>2017-07-22T12:41:42+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/pham-thi-lam</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/pham-thi-tuyet-mai</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/phong-dao-tao-sau-dai-hoc-va-nghien-cuu-khoa-hoc</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/pgs-ts-nguyen-the-hien</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ts-truong-vu-bang-giang</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ths-vu-nguyen-thuc</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/vu-anh-dung</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/nguyen-duc-quy</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/pham-nguyet-minh</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ths-duong-dinh-thieu-1</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/phong-to-chuc-can-bo-1</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ts-nguyen-dinh-viet</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/nguyen-thi-xoan</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/trinh-quang-huy</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/bui-thi-thu-huong</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/phong-tai-vu-ke-toan-1</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ts-tran-mau-danh</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/tran-thi-thu-ha</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/van-phong-lien-ket-hop-tac-dao-tao-quoc-te</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ts-dang-huu-thinh</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/van-phong-dang-uy-1</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/gs-ts-nguyen-huu-duc</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/pgs-ts-ha-quang-thuy</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/duong-thi-thanh-nhan</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/van-phong-doan-thanh-nien-hoi-sinh-vien</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ths-pham-duy-hung</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ths-vu-nguyen-thuc-1</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/bui-trung-ninh</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/bui-thi-thu-huong-1</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/van-phong-cong-doan</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ths-dao-kien-quoc</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ths-nguyen-nam-hai</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ths-chu-van-an</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/pham-thi-tuyet-mai-1</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/cac-khoa-truc-thuoc</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/khoa-cong-nghe-thong-tin</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/van-phong-khoa</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/pgs-ts-pham-bao-son-1</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/pgs-ts-truong-ninh-thuan</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/pgs-ts-le-anh-cuong</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ts-nguyen-phuong-thai</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/nguyen-thi-minh-thanh</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/vu-thi-yen</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ma-thi-chau</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/pham-thi-mai-bao</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/bo-mon-cong-nghe-phan-mem</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ts-nguyen-viet-ha</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/pgs-ts-nguyen-van-vy</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/nguyen-viet-tan</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/tran-thi-minh-chau</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ths-vu-dieu-huong</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ths-vu-quang-dung</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ths-nguyen-thi-nhat-thanh</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ts-truong-ninh-thuan</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/pgs-ts-nguyen-ngoc-binh</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ths-dao-kien-quoc-1</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/pgs-ts-nguyen-quoc-toan</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/phan-ho-viet-phuong</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/tran-thi-mai-thuong</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/to-van-khanh</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/nguyen-ngoc-bao</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/nguyen-hoang-ha</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ho-tat-thanh</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ngo-xuan-bach</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/bo-mon-khoa-hoc-may-tinh</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/pgs-ts-dinh-manh-tuong</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ts-hoang-xuan-huan</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ts-pham-hong-nguyen</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/hoang-thi-ngoc-trang</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/le-minh-khoi</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ts-pham-hong-thai</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ts-le-anh-cuong</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ts-bui-the-duy</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ths-tran-quoc-long</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/hoang-thi-diep</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ths-ma-thi-chau</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ncs-le-hai-yen</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/bo-mon-he-thong-thong-tin</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ts-nguyen-hai-chau</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ts-nguyen-ngoc-hoa</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/pgs-ts-ha-quang-thuy-1</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ths-du-phuong-hanh</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/pgs-ts-trinh-nhat-tien</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ths-le-quang-hieu</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ths-nguyen-tri-thanh</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ncs-nguyen-cam-tu</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ths-nguyen-quang-vinh</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ths-vu-ba-duy</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/le-minh</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/le-phe-do</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/le-hong-hai</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/truong-thi-thu-hien</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/nguyen-viet-cuong</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/nguyen-ha-nam</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/dang-thanh-hai</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ly-hung-son</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/do-thi-minh-viet</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/nguyen-thi-thuy-linh</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/tran-thi-oanh</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/nguyen-thu-trang</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/nguyen-thi-huong-thao</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/pham-quang-nhat-minh</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/bui-viet-ha</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/bo-mon-mang-va-truyen-thong-may-tinh</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/pgs-ts-ngut-ho-si-dam</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ts-nguyen-dai-tho</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ths-nguyen-hoang-anh</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/nguyen-van-trung</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ths-dao-minh-thu</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ths-ho-dac-phuong</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ths-ngo-le-minh</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ths-doan-minh-phuong</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ths-nguyen-minh-tri</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ts-nguyen-dinh-viet-1</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ths-nguyen-nam-hai-1</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ts-nguyen-hoai-son</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/bo-mon-cac-phuong-phap-toan-trong-cong-nghe</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/pgs-ts-do-duc-giao</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ts-dang-huu-thinh-1</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ths-nguyen-canh-hoang</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/phong-thuc-hanh-cong-nghe-thong-tin</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ts-pham-hong-thai-1</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/luong-viet-nguyen</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/nguyen-hoai-nam</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/mai-thanh-huyen</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/nguyen-duc-thien</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/nguyen-trung-quyet</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/khoa-dien-tu-vien-thong</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/van-phong-khoa-1</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/pgs-ts-truong-vu-bang-giang</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/pgs-ts-chu-duc-trinh</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ts-nguyen-nam-hoang</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/lai-thanh-huong</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/tran-hai-yen</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/bo-mon-dien-tu-va-ki-thuat-may-tinh</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/pgs-ts-tran-quang-vinh</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ths-chu-van-an-1</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/luong-dang-dinh</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ths-dang-anh-viet</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/pham-dinh-tuan</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/pgs-ts-ngo-dien-tap</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/pgs-ts-vuong-dao-vy</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ncs-phung-manh-duong</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ts-bach-gia-duong</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/bo-mon-he-thong-vien-thong</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ths-nguyen-quoc-tuan</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/bui-trung-ninh-1</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ths-pham-phi-hung</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ths-pham-thi-hong</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/bo-mon-thong-tin-vo-tuyen</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/gs-tskh-phan-anh</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ts-trinh-anh-vu</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ths-le-quang-toan</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ths-tran-thi-thuy-quynh</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ts-nguyen-linh-trung</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ts-truong-vu-bang-giang-1</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/bo-mon-xu-ly-thong-tin</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/gs-tskh-huynh-huu-tue</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ts-le-vu-ha</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ts-ho-van-sung</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/bo-mon-vi-co-dien-tu-va-vi-he-thong</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/gs-tskh-nguyen-phu-thuy</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ts-nguyen-thang-long</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/bui-thanh-tung</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ths-tran-duc-tan</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/pgs-ts-nguyen-the-hien-1</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/phong-thuc-hanh-dien-tu-vien-thong</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ths-nguyen-vinh-quang</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/pham-thi-tuyet</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/tran-thanh-hai</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ths-nguyen-thi-hong</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ths-nguyen-van-cuong</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/khoa-vat-ly-ki-thuat-va-cong-nghe-nano</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/van-phong-khoa-2</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/pgs-ts-pham-duc-thang</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ts-nguyen-phuong-hoai-nam</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ths-nguyen-thi-hanh</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/bo-mon-vat-lieu-va-linh-kien-ban-dan-nano</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/gs-ts-nguyen-nang-dinh</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ts-nguyen-phuong-hoai-nam-1</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/bo-mon-cong-nghe-quang-dien-tu</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/gs-vs-nguyen-van-hieu</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/pgs-ts-tran-thi-tam</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/pgs-ts-pham-van-hoi</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/gs-ts-nguyen-dai-hung</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/pgs-ts-nguyen-quang-liem</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/pgs-ts-le-quoc-minh</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/pgs-ts-vu-doan-mien</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/pgs-ts-pham-thu-nga</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/gs-ts-vu-xuan-quang</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/bo-mon-vat-lieu-va-linh-kien-tu-tinh-nano</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/gs-ts-nguyen-huu-duc-1</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ts-tran-mau-danh-1</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ts-do-thi-huong-giang</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ts-pham-duc-thang</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/pgs-ts-le-van-hong</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ncs-tran-thi-dung</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ncs-nguyen-thanh-nam</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ncs-bui-dinh-tu</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ncs-bui-cong-tinh</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/bo-mon-cong-nghe-hoa-hoc-nano</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/pgs-ts-nguyen-duc-nghia</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ts-nguyen-phuong-hoai-nam-2</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/bo-mon-cong-nghe-nano-sinh-hoc</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/pgs-ts-le-tran-binh</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/phong-thi-nghiem-vat-lieu-va-linh-kien-lai-nano-p204-g6</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/pgs-ts-nguyen-nang-dinh</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/pgs-ts-nguyen-thi-bao-ngoc</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ts-nguyen-phuong-hoai-nam-3</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ncs-le-ha-chi</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/phong-thi-nghiem-cong-nghe-quang-tu-p204-g6</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/pgs-ts-tran-thi-tam-1</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/khoa-co-hoc-ky-thuat-va-tu-dong-hoa</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/van-phong-khoa-3</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/gs-tskh-nguyen-dong-anh</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ts-dang-the-ba</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ts-pham-manh-thang</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/pgs-ts-bui-dinh-tri</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ts-nguyen-hoang-quan</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/bo-mon-co-dien-tu</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ts-pham-anh-tuan</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ts-pham-manh-thang-1</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/bo-mon-thuy-tin-hoc</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/gs-tskh-nguyen-van-diep</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ts-dang-the-ba-1</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ts-bui-dinh-tri</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/gs-tskh-ngo-huy-can</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/gs-tskh-duong-ngoc-hai</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ts-ha-ngoc-hien</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/pgs-ts-hoang-van-lai</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/bo-mon-chuan-doan-ky-thuat</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/gs-tskh-nguyen-cao-menh</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/gs-tskh-nguyen-tien-khiem</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ts-dao-nhu-mai</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ts-tran-duong-tri</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/bo-mon-co-hoc-ky-thuat-bien</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/gs-tskh-pham-van-ninh</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/gs-tskh-nguyen-dong-anh-1</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ts-dinh-van-manh</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/pgs-ts-ngo-huong-nhu</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/pgs-ts-do-ngoc-quynh</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/cac-trung-tam-truc-thuoc</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/trung-tam-nghien-cuu-dien-tu-vien-thong</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ts-bach-gia-duong-1</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ths-tran-cao-quyen</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/tran-thi-tuyet-nhung</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/trung-tam-nghien-cuu-va-phat-trien-cong-nghe-phan-mem</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ths-dao-kien-quoc-2</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/dang-viet-dung</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/le-xuan-thang</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/nguyen-tri-hien</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/nguyen-thi-thanh-huyen</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/dao-thanh-khiet</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/tran-thi-thanh-nga</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/nguyen-van-huy</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/nguyen-thi-chi-mai</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/phan-van-thuan</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/nguyen-huu-phu</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/nguyen-thanh-phuc</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/dinh-quang-huy</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/trung-tam-may-tinh-1</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ths-nguyen-nam-hai-2</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/hoang-to-linh</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/do-hoang-kien</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/nguyen-minh-tu</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost:8000/contacts/ths-nguyen-viet-anh</loc>
+    
+        <lastmod>2017-07-22T12:41:43+07:00</lastmod>
+    </sitemap>
+</sitemapindex>

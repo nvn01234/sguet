@@ -58,7 +58,7 @@ class GenerateSitemap extends Command
             $sitemap = $sitemap->add(route('contact.slug', $contact->slug));
         }
 
-        $sitemap->writeToFile(public_path('sitemap.xml'));
+        $sitemap->writeToFile(storage_path('sitemap.xml'));
         $this->info("done");
     }
 }
