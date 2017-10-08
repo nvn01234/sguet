@@ -97,9 +97,11 @@ class Faq extends Model
 
     public function toElasticData()
     {
-        return array_merge($this->toElasticDataTrait(), [
+        return [
+            'id' => $this->id,
+            'question' => $this->question,
             'paraphrase' => $this->paraphrases ? explode(',', $this->paraphrases) : [],
             'tags' => $this->tags->pluck('name')->toArray()
-        ]);
+        ];
     }
 }
