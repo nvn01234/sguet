@@ -73,7 +73,7 @@ class ElasticHelper
 
     public function count() {
         $client = $this->client;
-        return collect(['faq', 'contact'])->map(function($type) use ($client) {
+        return collect(['faq', 'contact', 'subject'])->map(function($type) use ($client) {
             $response = $client->count([
                 'index' => config('elastic.index'),
                 'type' => $type,
@@ -235,7 +235,7 @@ class ElasticHelper
         $response =  $this->client->search($params);
         $ids = collect($response['hits']['hits'])->pluck('_id')->toArray();
         $ids_ordered = implode(',', $ids);
-        $query = Contact::query()
+        $query = Subject::query()
             ->whereIn('id', $ids);
         if ($ids) {
             $query = $query->orderByRaw("field(id, $ids_ordered)");
