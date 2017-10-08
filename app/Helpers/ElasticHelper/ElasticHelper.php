@@ -3,10 +3,10 @@
 namespace App\Helpers\ElasticHelper;
 
 use App\Models\Contact;
+use App\Models\Document;
 use App\Models\Faq;
 use App\Models\Subject;
 use Elasticsearch\Client;
-use Illuminate\Support\Collection;
 
 class ElasticHelper
 {
@@ -71,9 +71,30 @@ class ElasticHelper
         return "done";
     }
 
+    public function indexDocuments() {
+        $documents = Document::all();
+        $body = $documents->map(function($document) {
+            /**
+             * @var Document $document
+             */
+            return [
+                [
+                    'index' => [
+                        '_index' => config('elastic.index'),
+                        '_type' => 'document',
+                        '_id' => $document->id
+                    ]
+                ],
+                $document->toElasticData()
+            ];
+        })->collapse()->toArray();
+        $this->bulk("document", $body);
+        return "done";
+    }
+
     public function count() {
         $client = $this->client;
-        return collect(['faq', 'contact', 'subject'])->map(function($type) use ($client) {
+        return collect(['faq', 'contact', 'subject', 'document'])->map(function($type) use ($client) {
             $response = $client->count([
                 'index' => config('elastic.index'),
                 'type' => $type,
