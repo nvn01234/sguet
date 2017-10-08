@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Models\Faq;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -13,9 +14,11 @@ class FaqApiController extends Controller
             $faqs = \Elastic::searchFaqs($query);
             return response()->json($faqs);
         }
+        return null;
     }
 
-    public function test() {
-        return 'ok';
+    public function show($id) {
+        $faq = Faq::findOrFail($id);
+        return response()->json($faq);
     }
 }
