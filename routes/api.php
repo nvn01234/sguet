@@ -16,5 +16,8 @@ Route::get('contacts/children', 'Api\ContactApiController@children')->name('api.
 Route::get('contacts/data', 'Api\ContactApiController@data')->name('api.contacts.data');
 Route::get('contacts/search', 'Api\ContactApiController@search')->name('api.contacts.search');
 
+Route::get('contacts/{id}', 'Api\SubjectApiController@show');
 Route::get('faqs/search', 'Api\FaqApiController@search');
 Route::get('faqs/{id}', 'Api\FaqApiController@show');
+Route::get('subjects/search', 'Api\SubjectApiController@search');
+Route::get('subjects/{id}', 'Api\SubjectApiController@show');

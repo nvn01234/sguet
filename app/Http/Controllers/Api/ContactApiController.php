@@ -61,4 +61,9 @@ class ContactApiController extends Controller
             return response()->json(['status' => 'success', 'data' => $contacts]);
         }
     }
+
+    public function show($id) {
+        $contact = Contact::findOrFail($id);
+        return response()->json($contact);
+    }
 }

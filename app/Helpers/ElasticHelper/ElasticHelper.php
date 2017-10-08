@@ -4,7 +4,9 @@ namespace App\Helpers\ElasticHelper;
 
 use App\Models\Contact;
 use App\Models\Faq;
+use App\Models\Subject;
 use Elasticsearch\Client;
+use Illuminate\Support\Collection;
 
 class ElasticHelper
 {
@@ -45,6 +47,27 @@ class ElasticHelper
             'body' => []
         ]);
         $this->indexFaqs(Faq::all());
+        return "done";
+    }
+
+    public function indexSubjects() {
+        $subjects = Subject::all();
+        $body = $subjects->map(function($subject) {
+            /**
+             * @var Subject $subject
+             */
+            return [
+                [
+                    'index' => [
+                        '_index' => config('elastic.index'),
+                        '_type' => 'subject',
+                        '_id' => $subject->id
+                    ]
+                ],
+                $subject->toElasticData()
+            ];
+        })->collapse()->toArray();
+        $this->bulk("subject", $body);
         return "done";
     }
 
@@ -178,6 +201,32 @@ class ElasticHelper
                     'multi_match' => [
                         'query' => $query,
                         'fields' => ['name^3', 'description^2', 'phone_cq', 'phone_nr', 'phone_dd', 'fax', 'email'],
+                    ],
+                ],
+                "_source" => [""]
+            ]
+        ];
+        $response =  $this->client->search($params);
+        $ids = collect($response['hits']['hits'])->pluck('_id')->toArray();
+        $ids_ordered = implode(',', $ids);
+        $query = Contact::query()
+            ->whereIn('id', $ids);
+        if ($ids) {
+            $query = $query->orderByRaw("field(id, $ids_ordered)");
+        }
+        return $query->get();
+    }
+
+    public function searchSubjects($query) {
+        $params = [
+            'index' => config('elastic.index'),
+            'type' => 'subject',
+            'body' => [
+                'size' => Subject::count(),
+                'query' => [
+                    'multi_match' => [
+                        'query' => $query,
+                        'fields' => ['code', 'name', 'name_en'],
                     ],
                 ],
                 "_source" => [""]
