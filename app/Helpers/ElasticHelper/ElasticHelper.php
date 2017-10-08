@@ -40,6 +40,10 @@ class ElasticHelper
         return $this->client->bulk($params);
     }
 
+    private function getType($class) {
+        return mb_strtolower(collect(explode('\\', $class))->last());
+    }
+
     public function count() {
         $client = $this->client;
         return collect(['faq', 'contact', 'subject', 'document'])->map(function($type) use ($client) {
@@ -60,7 +64,7 @@ class ElasticHelper
     }
 
     private function reindex($class) {
-        $type = collect(explode('\\', $class))->last();
+        $type = $this->getType($class);
         $this->client->deleteByQuery([
             'index' => config('elastic.index'),
             'type' => $type,
@@ -93,25 +97,27 @@ class ElasticHelper
      * @return string
      */
     private function index($models) {
-        $class = get_class($models[0]);
-        $type = mb_strtolower(collect(explode('\\', $class))->last());
-        $body = $models->map(function($model) use ($type) {
-            /**
-             * @var mixed $model
-             */
-            return [
-                [
-                    'index' => [
-                        '_index' => config('elastic.index'),
-                        '_type' => $type,
-                        '_id' => $model->id
-                    ]
-                ],
-                $model->toElasticData()
-            ];
-        })->collapse()->toArray();
-        $this->bulk($type, $body);
-        return "done";
+        if ($models->isNotEmpty()) {
+            $class = get_class($models[0]);
+            $type = $this->getType($class);
+            $body = $models->map(function($model) use ($type) {
+                /**
+                 * @var mixed $model
+                 */
+                return [
+                    [
+                        'index' => [
+                            '_index' => config('elastic.index'),
+                            '_type' => $type,
+                            '_id' => $model->id
+                        ]
+                    ],
+                    $model->toElasticData()
+                ];
+            })->collapse()->toArray();
+            $this->bulk($type, $body);
+            return "done";
+        }
     }
     //#endregion index
 
@@ -133,7 +139,7 @@ class ElasticHelper
     }
 
     private function simpleSearchMultiMatch($query, $class, $fields) {
-        $type = collect(explode('\\', $class))->last();
+        $type = $this->getType($class);
         $params = [
             'index' => config('elastic.index'),
             'type' => $type,
