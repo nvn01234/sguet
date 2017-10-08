@@ -17,10 +17,8 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Document extends Model
 {
+    use ElasticTrait;
+
     public $timestamps = false;
     protected $guarded = [];
-
-    public function toElasticData() {
-        return $this->toArray();
-    }
 }

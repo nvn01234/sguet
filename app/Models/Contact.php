@@ -45,6 +45,7 @@ class Contact extends Model
     use Sluggable;
     use SluggableScopeHelpers;
     use NodeTrait;
+    use ElasticTrait;
 
     protected $table = 'contacts';
     protected $guarded = [];

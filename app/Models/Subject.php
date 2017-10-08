@@ -31,10 +31,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Subject extends Model
 {
+    use ElasticTrait;
     public $timestamps = false;
     protected $guarded = [];
-
-    public function toElasticData() {
-        return $this->toArray();
-    }
 }

@@ -33,6 +33,9 @@ class Faq extends Model
 {
     use Sluggable;
     use SluggableScopeHelpers;
+    use ElasticTrait {
+        toElasticData as toElasticDataTrait;
+    }
 
     /**
      * @var array
@@ -90,5 +93,13 @@ class Faq extends Model
                 'source' => 'question'
             ]
         ];
+    }
+
+    public function toElasticData()
+    {
+        return array_merge($this->toElasticDataTrait(), [
+            'paraphrase' => $this->paraphrases ? explode(',', $this->paraphrases) : [],
+            'tags' => $this->tags->pluck('name')->toArray()
+        ]);
     }
 }
