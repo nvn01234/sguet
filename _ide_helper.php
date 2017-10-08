@@ -14553,8 +14553,17 @@ if (! function_exists('with')) {
          *
          * @static 
          */
-        public static function reindex(){
-            return \App\Helpers\ElasticHelper\ElasticHelper::reindex();
+        public static function count(){
+            return \App\Helpers\ElasticHelper\ElasticHelper::count();
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function reindexAll(){
+            return \App\Helpers\ElasticHelper\ElasticHelper::reindexAll();
         }
         
         /**
@@ -14580,8 +14589,8 @@ if (! function_exists('with')) {
          *
          * @static 
          */
-        public static function indexSubjects(){
-            return \App\Helpers\ElasticHelper\ElasticHelper::indexSubjects();
+        public static function reindexSubjects(){
+            return \App\Helpers\ElasticHelper\ElasticHelper::reindexSubjects();
         }
         
         /**
@@ -14589,37 +14598,13 @@ if (! function_exists('with')) {
          *
          * @static 
          */
-        public static function count(){
-            return \App\Helpers\ElasticHelper\ElasticHelper::count();
+        public static function reindexDocuments(){
+            return \App\Helpers\ElasticHelper\ElasticHelper::reindexDocuments();
         }
         
         /**
          * 
          *
-         * @param \Illuminate\Support\Collection $faqs
-         * @return array 
-         * @static 
-         */
-        public static function indexFaqs($faqs){
-            return \App\Helpers\ElasticHelper\ElasticHelper::indexFaqs($faqs);
-        }
-        
-        /**
-         * 
-         *
-         * @param \Illuminate\Support\Collection $contacts
-         * @return array 
-         * @static 
-         */
-        public static function indexContacts($contacts){
-            return \App\Helpers\ElasticHelper\ElasticHelper::indexContacts($contacts);
-        }
-        
-        /**
-         * 
-         *
-         * @param string $query
-         * @return \Illuminate\Database\Eloquent\Collection|static[] 
          * @static 
          */
         public static function searchFaqs($query){
@@ -14629,8 +14614,6 @@ if (! function_exists('with')) {
         /**
          * 
          *
-         * @param string $query
-         * @return \Illuminate\Database\Eloquent\Collection|static[] 
          * @static 
          */
         public static function searchContacts($query){
@@ -14644,6 +14627,15 @@ if (! function_exists('with')) {
          */
         public static function searchSubjects($query){
             return \App\Helpers\ElasticHelper\ElasticHelper::searchSubjects($query);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function searchDocuments($query){
+            return \App\Helpers\ElasticHelper\ElasticHelper::searchDocuments($query);
         }
         
         /**

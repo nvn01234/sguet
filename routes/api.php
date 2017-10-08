@@ -21,3 +21,5 @@ Route::get('faqs/search', 'Api\FaqApiController@search');
 Route::get('faqs/{id}', 'Api\FaqApiController@show');
 Route::get('subjects/search', 'Api\SubjectApiController@search');
 Route::get('subjects/{id}', 'Api\SubjectApiController@show');
+Route::get('documents/search', 'Api\DocumentApiController@search');
+Route::get('documents/{id}', 'Api\DocumentApiController@show');

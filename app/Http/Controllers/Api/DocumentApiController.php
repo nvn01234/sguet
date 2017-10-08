@@ -2,23 +2,23 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Models\Subject;
+use App\Models\Document;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class SubjectApiController extends Controller
+class DocumentApiController extends Controller
 {
     public function search(Request $request) {
         if ($request->has('query')) {
             $query = $request->get('query');
-            $subjects = \Elastic::searchSubjects($query);
-            return response()->json($subjects);
+            $documents = \Elastic::searchDocuments($query);
+            return response()->json($documents);
         }
         return null;
     }
 
     public function show($id) {
-        $subject = Subject::findOrFail($id);
-        return response()->json($subject);
+        $document = Document::findOrFail($id);
+        return response()->json($document);
     }
 }
