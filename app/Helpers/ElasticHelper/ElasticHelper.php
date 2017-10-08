@@ -66,7 +66,7 @@ class ElasticHelper
             'type' => $type,
             'body' => []
         ]);
-        $this->index(call_user_func($class, 'all'));
+        $this->index(call_user_func([$class, 'all']));
         return "done";
     }
 
