@@ -14,6 +14,7 @@ use Kalnoy\Nestedset\NodeTrait;
  * @property int $_rgt
  * @property int $parent_id
  * @property-read \Kalnoy\Nestedset\Collection|\App\Models\Department[] $children
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Human[] $humans
  * @property-read \App\Models\Department $parent
  * @method static \Illuminate\Database\Query\Builder|\App\Models\Department d()
  * @method static \Illuminate\Database\Query\Builder|\App\Models\Department whereId($value)
@@ -29,4 +30,8 @@ class Department extends Model
 
     public $timestamps = false;
     protected $guarded = [];
+
+    public function humans() {
+        return $this->belongsToMany(Human::class, 'humans_departments')->withPivot('position');
+    }
 }

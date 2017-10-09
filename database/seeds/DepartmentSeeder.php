@@ -4,7 +4,7 @@ use Illuminate\Database\Seeder;
 use App\Models\Department;
 use Illuminate\Support\Collection;
 
-class DepartmentsSeeder extends Seeder
+class DepartmentSeeder extends Seeder
 {
     /**
      * Run the database seeds.
