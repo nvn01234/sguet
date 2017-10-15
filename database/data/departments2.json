@@ -1,0 +1,251 @@
+[
+  {
+    "name": "Trường Đại học Công nghệ",
+    "children": [
+      {
+        "name": "Đảng uỷ",
+        "children": []
+      },
+      {
+        "name": "Ban Giám hiệu",
+        "children": []
+      },
+      {
+        "name": "Hội đồng Khoa học và Đào tạo",
+        "children": []
+      },
+      {
+        "name": "Khoa Công nghệ thông tin",
+        "children": [
+          {
+            "name": "Bộ môn Các Hệ thống Thông tin",
+            "children": []
+          },
+          {
+            "name": "Bộ môn Công nghệ Phần mềm",
+            "children": []
+          },
+          {
+            "name": "Bộ môn Khoa học Máy tính",
+            "children": []
+          },
+          {
+            "name": "Bộ môn Khoa học và Kỹ thuật tính toán",
+            "children": []
+          },
+          {
+            "name": "Bộ môn Mạng và Truyền thông Máy tính",
+            "children": []
+          },
+          {
+            "name": "Phòng Thí nghiệm An toàn thông tin",
+            "children": []
+          },
+          {
+            "name": "Phòng Thí nghiệm Công nghệ Tri thức",
+            "children": []
+          },
+          {
+            "name": "Phòng Thí nghiệm Hệ thống Nhúng",
+            "children": []
+          },
+          {
+            "name": "Phòng Thí nghiệm Tương tác Người – Máy",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Khoa Điện tử viễn thông",
+        "children": [
+          {
+            "name": "Bộ môn Điện tử và Kỹ thuật Máy tính",
+            "children": []
+          },
+          {
+            "name": "Bộ môn Hệ thống Viễn thông",
+            "children": []
+          },
+          {
+            "name": "Bộ môn Thông tin Vô tuyến",
+            "children": []
+          },
+          {
+            "name": "Bộ môn Vi cơ Điện tử và Vi hệ thống",
+            "children": []
+          },
+          {
+            "name": "Phòng thí nghiệm Tín hiệu và Hệ thống",
+            "children": []
+          },
+          {
+            "name": "Phòng thực hành Điện tử Viễn thông",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Khoa Vật lý kỹ thuật & Công Nghệ Nano",
+        "children": [
+          {
+            "name": "Bộ môn Công nghệ nano sinh học",
+            "children": []
+          },
+          {
+            "name": "Bộ môn Công nghệ quang tử",
+            "children": []
+          },
+          {
+            "name": "Bộ môn Vật liệu và linh kiện từ tính nano",
+            "children": [
+              {
+                "name": "Phòng thí nghiệm của Bộ môn Vật liệu và linh kiện từ tính nano",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Bộ môn Vật liệu và linh kiện bán dẫn nano",
+            "children": []
+          },
+          {
+            "name": "Phòng thí nghiệm Công nghệ quang tử",
+            "children": []
+          },
+          {
+            "name": "Phòng thí nghiệm Vật liệu và linh kiện lai nano",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Khoa Cơ học kỹ thuật & Tự động hoá",
+        "children": [
+          {
+            "name": "Hội đồng khoa học và đào tạo",
+            "children": []
+          },
+          {
+            "name": "Bộ môn Thủy Khí Công nghiệp và Môi trường",
+            "children": []
+          },
+          {
+            "name": "Bộ môn Công nghệ Biển và Môi trường",
+            "children": []
+          },
+          {
+            "name": "Bộ môn Công nghệ Hàng không vũ trụ",
+            "children": []
+          },
+          {
+            "name": "Bộ môn Công nghệ Cơ điện tử",
+            "children": []
+          },
+          {
+            "name": "Phòng thí nghiệm Công nghệ Cơ điện tử và Thủy tin học",
+            "children": []
+          },
+          {
+            "name": "Phòng thí nghiệm Vật liệu và kết cấu tiên tiến",
+            "children": []
+          },
+          {
+            "name": "Xưởng Cơ khí – Tự động hóa",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Viện Công nghệ Hàng không Vũ trụ",
+        "children": []
+      },
+      {
+        "name": "Phòng thí nghiệm Trọng điểm Hệ thống tích hợp thông minh",
+        "children": [
+          {
+            "name": "PTN Thiết kế vi mạch VLSI",
+            "children": []
+          },
+          {
+            "name": "PTN Xử lý tín hiệu",
+            "children": []
+          },
+          {
+            "name": "PTN Hệ thống và Mạng truyền dẫn thông minh",
+            "children": []
+          },
+          {
+            "name": "PTN Công nghệ tri thức và An toàn thông tin",
+            "children": []
+          },
+          {
+            "name": "PTN Hệ thống nhúng",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Phòng thí nghiệm Trọng điểm Công nghệ Micro & Nanô",
+        "children": []
+      },
+      {
+        "name": "Trung tâm Nghiên cứu Điện tử – Viễn thông",
+        "children": []
+      },
+      {
+        "name": "Trung tâm Công nghệ tích hợp liên ngành Giám sát hiện trường",
+        "children": []
+      },
+      {
+        "name": "Phòng Đào tạo",
+        "children": [
+          {
+            "name": "Văn phòng chương trình chất lượng cao",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Phòng Tổ chức Cán bộ",
+        "children": []
+      },
+      {
+        "name": "Phòng Công tác Sinh viên",
+        "children": []
+      },
+      {
+        "name": "Phòng Hành chính – Quản trị",
+        "children": [
+          {
+            "name": "Bộ phận Hành chính",
+            "children": []
+          },
+          {
+            "name": "Bộ phận Quản trị",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Phòng Kế hoạch Tài chính",
+        "children": []
+      },
+      {
+        "name": "Phòng Khoa học công nghệ & Hợp tác phát triển",
+        "children": []
+      },
+      {
+        "name": "Phòng Thanh tra & Pháp chế",
+        "children": []
+      },
+      {
+        "name": "Trung tâm Đảm bảo chất lượng",
+        "children": []
+      },
+      {
+        "name": "Trung tâm Máy tính",
+        "children": []
+      }
+    ]
+  }
+]

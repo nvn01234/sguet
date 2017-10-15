@@ -13,7 +13,7 @@ class DepartmentSeeder extends Seeder
      */
     public function run()
     {
-        $json = File::get(database_path('data/departments.json'));
+        $json = File::get(database_path('data/departments2.json'));
         $departments = json_decode($json);
 
         DB::beginTransaction();
