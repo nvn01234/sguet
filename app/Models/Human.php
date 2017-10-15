@@ -12,6 +12,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $last_name
  * @property string $academic_title
  * @property-read \Kalnoy\Nestedset\Collection|\App\Models\Department[] $departments
+ * @property-read \App\Models\Research $research
  * @method static \Illuminate\Database\Query\Builder|\App\Models\Human whereAcademicTitle($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Models\Human whereFirstName($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Models\Human whereId($value)
@@ -28,5 +29,9 @@ class Human extends Model
      */
     public function departments() {
         return $this->belongsToMany(Department::class, 'humans_departments')->withPivot('position');
+    }
+
+    public function research() {
+        return $this->hasOne(Research::class);
     }
 }

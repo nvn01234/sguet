@@ -1,0 +1,158 @@
+[
+  {
+    "name": "Trịnh Nhật Tiến",
+    "research": "1. Chữ ký số và ứng dụng (Chữ ký đồng thời, chữ ký bội, Chữ ký nhóm, Chữ ký mù,…)\n2. “Chứng minh không tiết lộ thông tin” và ứng dụng\n3. Vấn đề thanh toàn bằng Tiền “điện tử” và ứng dụng. Các tình huống xuất hiện khi dùng Tiền “điện tử” và giải pháp khắc phục.\n4. Phối hợp các Phương pháp bảo vệ thông tin (Nén tin, Mã hóa, Giấu tin) và ứng dụng.\n5. Các phương pháp Bảo vệ bản quyền tài liệu trên mạng máy tính.\n6. Các phương pháp tính toán mới và ứng dụng trong An toàn thông tin. Tính toán lưới (Grid Computing), Tính toán mềm (Soft Computing)."
+  },
+  {
+    "name": "Hà Quang Thụy",
+    "research": "Rough Sets, Data Mining (Text, Web, Social Media, Process) and Knowledge Technology"
+  },
+  {
+    "name": "Nguyễn Tuệ",
+    "research": "Cơ sở dữ liệu"
+  },
+  {
+    "name": "Lê Phê Đô",
+    "research": "- An toàn thông tin (Information Security);\n- Statistical analysis;\n- Inference for Stochastic Processes And Random fields;"
+  },
+  {
+    "name": "Nguyễn Hà Nam",
+    "research": "1. Nghiên cứu một số phương pháp trích chọn nội dung, ứng dụng trong xử lý số liệu lớn\n2. Tìm hiểu một số mô hình học máy nhằm giải quyết các bài toán ứng dụng trong việc dự đoán, dự báo.\n- Dự đoán tăng trưởng của chứng khoán ( bài toán với dữ liệu time series)\n- Quản lý rủi ro tín dụng (Financial risk management)\n3. Nghiên cứu áp dụng tính toán mềm trong việc giải quyết các bài toán phân lớp với số liệu lớn."
+  },
+  {
+    "name": "Nguyễn Ngọc Hóa",
+    "research": "Big Data Management, Information Safety/Security"
+  },
+  {
+    "name": "Nguyễn Thi Hậu",
+    "research": "genome evolution, phylogeny, tree reconciliation"
+  },
+  {
+    "name": "Đặng Thanh Hải",
+    "research": "Bioinformatics, Data Mining"
+  },
+  {
+    "name": "Nguyễn Trí Thành",
+    "research": "- Học máy, các giải thuật phân lớp, phân cụm\n- Khai phá dữ liệu text\n- Trích chọn thực thể\n- Xử lý song song"
+  },
+  {
+    "name": "Nguyễn Hải Châu",
+    "research": "High performance computing, Geographical information systems, Spatial databases"
+  },
+  {
+    "name": "Lê Anh Cường",
+    "research": "- Extraction of Equivelent linguistic Units from Comparable Corpora\n- Ensemble Learning and Its Application to Natural Language Processing"
+  },
+  {
+    "name": "Bùi Thế Duy",
+    "research": "Xử lý ảnh, Đồ họa máy tính, tương tác người máy"
+  },
+  {
+    "name": "Hoàng Xuân Huấn",
+    "research": "Machine Learning, Soft computing, Bioinformatics"
+  },
+  {
+    "name": "Phạm Hồng Thái",
+    "research": "1. Mô hình hướng thành phần của các hệ thời gian thực\n2. Kiểm chứng mô hình các hệ thời gian thực hướng thành phần\n3. Nnghiên cứu bài toán lập lịch thời gian thực."
+  },
+  {
+    "name": "Phạm Bảo Sơn",
+    "research": "Artificial Intelligence, Knowledge Acquisition, Natural Language Processing, Machine Learning, Business Intelligence."
+  },
+  {
+    "name": "Nguyễn Phương Thái",
+    "research": "- Xử lý ngôn ngữ tự nhiên\n- Học máy"
+  },
+  {
+    "name": "Lê Sỹ Vinh",
+    "research": "- Tin sinh học\n- Các hệ thống trực tuyến"
+  },
+  {
+    "name": "Nguyễn Văn Vinh",
+    "research": "- Xử lý ngôn ngữ tự nhiên\n- Học máy\n- Dịch máy, tóm tắt văn bản"
+  },
+  {
+    "name": "Hồ Sĩ Đàm",
+    "research": "- Cấu trúc dữ liệu giải thuật\n- Toán học rời rạc\n- Lập trình"
+  },
+  {
+    "name": "Nguyễn Đình Việt",
+    "research": "1. Nghiên cứu và đánh giá hiệu suất hoạt động của mạng WSN (Wireless Sensor Networks).\n2. Nghiên cứu và đánh giá hiệu suất hoạt động của mạng MANET (Mobile Adhoc Networks).\n3. Nghiên cứu sâu và hệ thống hoá các kiến thức về điều khiển lưu lượng và điều khiển khắc phục lỗi trong TCP; Nghiên cứu cơ sở lý luận về lập mô hình đánh giá hiệu năng giao thức TCP bằng mô hình giải tích (lý thuyết hàng đợi) và mô phỏng; Các cải tiến cho giao thức TCP.\n4. Nghiên cứu việc đảm bảo chất lượng dịch vụ (QoS – Quality of Service) cho truyền thông đa phương tiện trên Internet"
+  },
+  {
+    "name": "Nguyễn Đại Thọ",
+    "research": "1. Phân bố luồng thông tin đa phương tiện dựa trên kiến trúc mạng ngang hàng.\n2. Nghiên cứu các biện pháp thanh toán nganh hàng an toàn và ẩn danh.\n3. Nâng cao hiệu năng của một số hệ thống mạng ngang hàng phi cấu trúc.\n4. Đảm bảo tính nhất quán trạng thái cho các trò chơi trực tuyến đa người dùng ngang hàng.\n5. Nghiên cứu và thử nghiệm các giải pháp cho vấn đề truyền bá thông tin phân tán."
+  },
+  {
+    "name": "Nguyễn Hoài Sơn",
+    "research": "1. Peer-to-peer network protocols\n2. P2P semantic web services\n3. Overlay multicast\n4. Network mobility, service mobility\n5. Ubiquitous computing"
+  },
+  {
+    "name": "Nguyễn Văn Nam",
+    "research": "Wired and wireless networks, Cloud Computing, Big Data, Game Programming"
+  },
+  {
+    "name": "Trần Trúc Mai",
+    "research": "- WIFI, WIMAX, LTE, 3G, 4G\n- Power line networking\n- Ecommerce"
+  },
+  {
+    "name": "Nguyễn Việt Hà",
+    "research": "1. Kiểm chứng phần mềm, kiểm thử phần mềm\n2. Dự toán phần mềm\n3. Kiến trúc phần mềm\n4. Nhận dạng mẫu"
+  },
+  {
+    "name": "Trương Ninh Thuận",
+    "research": "1. Đặc tả, kiểm chứng phần mềm\n2. Phương pháp hình thức trong phát triển phần mềm\n3. Nghiên cứu về các phương pháp hướng đối tượng, hướng thành phần; ứng dụng trong việc xây dựng các hệ thống phần mềm."
+  },
+  {
+    "name": "Trương Anh Hoàng",
+    "research": "1. Phân tích, thiết kế, xây dựng các bài toán CSDL\n2. Phân tích mã nguồn, xác định/chứng minh một tính chất của chương trình khi chạy\n3. Ngôn ngữ, các phương pháp của ngôn ngữ lập trình\n4. Xây dựng ứng dụng trên nền BREW (mobile phone)"
+  },
+  {
+    "name": "Trần Thị Minh Châu",
+    "research": "1. Ứng dụng mạng/thiết bị di động\n2. Đánh giá hiệu suất mạng bằng phần mềm giả lập ns-3.\n"
+  },
+  {
+    "name": "Phạm Ngọc Hùng",
+    "research": "Software Specification and Verification, Assume-Guarantee Verification, Software Evolution, Model-based Testing and Automated Testing"
+  },
+  {
+    "name": "Đặng Đức Hạnh",
+    "research": "Software Modeling, Model-Driven Engineering, Software Verification and Validation, Formal Methods"
+  },
+  {
+    "name": "Võ Đình Hiếu",
+    "research": "- Kiến trúc hướng dịch vụ (Service-oriented architecture)\n- Kiến trúc phần mềm (Software architecture)\n- Phương pháp phát triển phần mềm (Software development methodology)\n"
+  },
+  {
+    "name": "Lê Quang Hiếu",
+    "research": "Data Mining, Web and Business Intelligence"
+  },
+  {
+    "name": "Dương Lê Minh",
+    "research": "- Wifi (IEEE 802.11), WiMAX (IEEE 802.16) , LTE (3GPP)\n- Định tuyến và các giao thức giao vận dựa trên tốc độ trong mạng Ad hoc\n- Thiết kế Cross-layer giữa tầng Giao vận và các tầng MAC/Vật lý trong mạng Ad hoc\n- QoS cho mạng không dây, Network Coding\n- Dịch vụ VoIP dựa trên giao thức SIP"
+  },
+  {
+    "name": "Nguyễn Thị Nhật Thanh",
+    "research": "Viễn thám và các ứng dụng liên quan (Remote sensing and its application)\n- Xử lý ảnh (Image Processing)"
+  },
+  {
+    "name": "Lê Thanh Hà",
+    "research": "- Image Processing\n- Video Coding\n- Computer Vision\n- Satellite Image processing"
+  },
+  {
+    "name": "Hoàng Xuân Tùng",
+    "research": "MANETs and SensorNets, Social Networks, Cloud Computing, Big Data, Multimedia Communications and Networking"
+  },
+  {
+    "name": "Nguyễn Thanh Thủy",
+    "research": "Artificial Intelligence, Soft-computing, Data and Knowledge Engineering, High Performance Computing."
+  },
+  {
+    "name": "Bùi Quang Hưng",
+    "research": "Spatial Data Infrastructure, Geographic Information Systems, Big Data, Data Mining."
+  },
+  {
+    "name": "Nguyễn Thị Huyền Châu",
+    "research": "Kiểm định thời gian thực sử dụng phương pháp xấp xỉ\nKiểm định hệ thống sử dụng phương pháp hình thức"
+  }
+]
