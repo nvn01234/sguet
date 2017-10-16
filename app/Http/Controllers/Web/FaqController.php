@@ -61,10 +61,10 @@ class FaqController extends Controller
                 $tag = Tag::firstOrCreate(['name' => $tag_name]);
                 $tags[] = $tag->id;
             }
-            $faq->syncTags($tags);
+            $faq->taggable->tags()->sync($tags);
         }
         if (config('app.env') === 'production') {
-            \Elastic::indexFaqs(collect([$faq]));
+            \Elastic::index(collect([$faq]));
         }
 
         \Toastr::append([
@@ -102,13 +102,13 @@ class FaqController extends Controller
                 $tag = Tag::firstOrCreate(['name' => $tag_name]);
                 $tags[] = $tag->id;
             }
-            $faq->syncTags($tags);
+            $faq->taggable->tags()->sync($tags);
         } else {
             $faq->removeTag();
         }
 
         if (config('app.env') === 'production') {
-            \Elastic::indexFaqs(collect([$faq]));
+            \Elastic::index(collect([$faq]));
         }
 
         \Toastr::append([

@@ -19,7 +19,9 @@ use Illuminate\Database\Eloquent\Model;
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
  * @property string $slug
+ * @property int $taggable_id
  * @property-read \App\Models\Category $category
+ * @property-read \App\Models\Taggable $taggable
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Tag[] $tags
  * @method static \Illuminate\Database\Query\Builder|\App\Models\Article findSimilarSlugs(\Illuminate\Database\Eloquent\Model $model, $attribute, $config, $slug)
  * @method static \Illuminate\Database\Query\Builder|\App\Models\Article whereBody($value)
@@ -29,6 +31,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Query\Builder|\App\Models\Article whereImageUrl($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Models\Article whereShortDescription($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Models\Article whereSlug($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Models\Article whereTaggableId($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Models\Article whereTitle($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Models\Article whereUpdatedAt($value)
  * @mixin \Eloquent
@@ -123,5 +126,22 @@ class Article extends Model
                 'source' => 'title'
             ]
         ];
+    }
+
+    public function taggable() {
+        return $this->belongsTo(Taggable::class);
+    }
+
+    public function delete()
+    {
+        $this->taggable->delete();
+        return parent::delete();
+    }
+
+    public static function create(array $attributes = [])
+    {
+        $taggable = Taggable::create();
+        $attributes['taggable_id'] = $taggable->id;
+        return parent::create($attributes);
     }
 }

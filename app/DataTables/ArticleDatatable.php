@@ -3,22 +3,12 @@
 namespace App\DataTables;
 
 use App\Models\Article;
+use App\Models\Tag;
+use App\Models\Taggable;
 use Yajra\Datatables\Services\DataTable;
 
 class ArticleDatatable extends DataTable
 {
-    private $tag_id = null;
-
-    /**
-     * @param int $tag_id
-     * @return $this
-     */
-    public function setTagId($tag_id)
-    {
-        $this->tag_id = $tag_id;
-        return $this;
-    }
-
     /**
      * Display ajax response.
      *
@@ -51,17 +41,7 @@ class ArticleDatatable extends DataTable
      */
     public function query()
     {
-        if ($this->tag_id != null) {
-            $query = Article::query()
-                ->with('category')
-                ->join('article_tag', 'article_tag.article_id', '=', 'articles.id')
-                ->where('article_tag.tag_id', '=', $this->tag_id)
-                ->groupBy('articles.id')
-                ->select('articles.*');
-        } else {
-            $query = Article::query()->with('category')->select('articles.*');
-        }
-
+        $query = Article::query()->with('category')->select('articles.*');
         return $this->applyScopes($query);
     }
 

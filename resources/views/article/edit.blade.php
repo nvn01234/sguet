@@ -141,7 +141,7 @@
                             </div>
                             <div class="blog-single-foot">
                                 <ul class="blog-post-tags">
-                                    @foreach($article->tags as $tag)
+                                    @foreach($article->taggable->tags as $tag)
                                         <li class="uppercase">
                                             <a href="javascript:;">{{$tag->name}}</a>
                                         </li>
@@ -195,7 +195,7 @@
             initTagsinput();
 
             var original_tags = $('#original_tags');
-            @foreach($article->tags as $tag)
+            @foreach($article->taggable->tags as $tag)
             original_tags.tagsinput('add', '{{$tag->name}}');
             @endforeach
 

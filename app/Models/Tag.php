@@ -14,6 +14,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $slug
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Article[] $articles
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Faq[] $faqs
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Taggable[] $taggable
  * @method static \Illuminate\Database\Query\Builder|\App\Models\Tag findSimilarSlugs(\Illuminate\Database\Eloquent\Model $model, $attribute, $config, $slug)
  * @method static \Illuminate\Database\Query\Builder|\App\Models\Tag whereId($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Models\Tag whereName($value)
@@ -107,5 +108,12 @@ class Tag extends Model
                 'source' => 'name'
             ]
         ];
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function taggable() {
+        return $this->belongsToMany(Taggable::class, 'taggable_tag');
     }
 }

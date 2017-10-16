@@ -265,7 +265,7 @@ class ContactController extends Controller
         $contact = Contact::create($request->only('name', 'description', 'parent_id', 'phone_nr', 'phone_cq', 'phone_dd', 'fax', 'email'));
 
         if (config('app.env') === 'production') {
-            \Elastic::indexContacts(collect([$contact]));
+            \Elastic::index(collect([$contact]));
         }
 
         \Toastr::append([
@@ -291,7 +291,7 @@ class ContactController extends Controller
         $contact->update($request->only('name', 'description', 'parent_id', 'phone_nr', 'phone_cq', 'phone_dd', 'fax', 'email'));
 
         if (config('app.env') === 'production') {
-            \Elastic::indexContacts(collect([$contact]));
+            \Elastic::index(collect([$contact]));
         }
 
         \Toastr::append([

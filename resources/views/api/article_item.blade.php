@@ -1,4 +1,4 @@
-<div class="cbp-item category-{{$article->category_id}} @foreach($article->tags as $tag) tag-{{$tag->id}} @endforeach">
+<div class="cbp-item category-{{$article->category_id}} @foreach($article->taggable->tags as $tag) tag-{{$tag->id}} @endforeach">
     <div class="cbp-caption">
         <div class="cbp-caption-defaultWrap">
             @if($article->image_url)

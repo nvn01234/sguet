@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.3.31 on 2017-10-08.
+ * Generated for Laravel 5.3.31 on 2017-10-16.
  *
  * @author Barry vd. Heuvel <barryvdh@gmail.com>
  * @see https://github.com/barryvdh/laravel-ide-helper
@@ -14600,6 +14600,17 @@ if (! function_exists('with')) {
          */
         public static function reindexDocuments(){
             return \App\Helpers\ElasticHelper\ElasticHelper::reindexDocuments();
+        }
+        
+        /**
+         * 
+         *
+         * @param \Illuminate\Support\Collection $models
+         * @return string|null 
+         * @static 
+         */
+        public static function index($models){
+            return \App\Helpers\ElasticHelper\ElasticHelper::index($models);
         }
         
         /**

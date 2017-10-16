@@ -45,7 +45,7 @@
                     </div>
                     <div class="blog-single-foot">
                         <ul class="blog-post-tags">
-                            @foreach($article->tags as $tag)
+                            @foreach($article->taggable->tags as $tag)
                                 <li class="uppercase">
                                     <a href="javascript:;">{{$tag->name}}</a>
                                 </li>
@@ -69,7 +69,7 @@
                     <div class="blog-single-sidebar-tags">
                         <h3 class="blog-sidebar-title uppercase">Nhãn</h3>
                         <ul class="blog-post-tags">
-                            @foreach($article->tags as $tag)
+                            @foreach($article->taggable->tags as $tag)
                                 <li class="uppercase">
                                     <a href="javascript:;">{{$tag->name}}</a>
                                 </li>

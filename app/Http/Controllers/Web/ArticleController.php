@@ -27,7 +27,7 @@ class ArticleController extends Controller
         if ($request->ajax()) {
             $page = $request->get('page', 1);
             $articles = Article::query()
-                ->with('tags')
+                ->with('taggable')
                 ->orderBy('created_at', 'desc')
                 ->paginate(12, ["*"], 'page', $page + 1);
             return view('api.article_index', compact('articles'));
@@ -37,7 +37,7 @@ class ArticleController extends Controller
             }
             $categories = Category::orderBy('id')->get();
             $articles = Article::query()
-                ->with('tags')
+                ->with('taggable')
                 ->orderBy('created_at', 'desc')
                 ->take(12)
                 ->get();
@@ -90,7 +90,7 @@ class ArticleController extends Controller
                 $tag = Tag::firstOrCreate(['name' => $tag_name]);
                 $tags[] = $tag->id;
             }
-            $article->syncTags($tags);
+            $article->taggable->tags()->sync($tags);
         }
 
         \Toastr::append([
@@ -125,7 +125,7 @@ class ArticleController extends Controller
             $tag = Tag::firstOrCreate(['name' => $tag_name]);
             $tags[] = $tag->id;
         }
-        $article->syncTags($tags);
+        $article->taggable->tags()->sync($tags);
 
         \Toastr::append([
             'title' => 'Sửa Tin tức - Hoạt động',

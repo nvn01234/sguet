@@ -95,7 +95,7 @@
             initTagsinput();
 
             var original_tags = $('#original_tags');
-            @foreach($faq->tags as $tag)
+            @foreach($faq->taggble->tags as $tag)
             original_tags.tagsinput('add', '{{$tag->name}}');
             @endforeach
         });

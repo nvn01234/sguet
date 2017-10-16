@@ -93,10 +93,10 @@ class ElasticHelper
 
     //#region index
     /**
-     * @param Collection $models
-     * @return string
+     * @param \Illuminate\Support\Collection $models
+     * @return string|null
      */
-    private function index($models) {
+    public function index($models) {
         if ($models->isNotEmpty()) {
             $class = get_class($models[0]);
             $type = $this->getType($class);
@@ -118,6 +118,7 @@ class ElasticHelper
             $this->bulk($type, $body);
             return "done";
         }
+        return null;
     }
     //#endregion index
 

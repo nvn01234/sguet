@@ -6,7 +6,6 @@ use Cviebrock\EloquentSluggable\Sluggable;
 use Cviebrock\EloquentSluggable\SluggableScopeHelpers;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
-use Laravel\Scout\Searchable;
 
 /**
  * App\Models\Faq
@@ -18,6 +17,8 @@ use Laravel\Scout\Searchable;
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
  * @property string $slug
+ * @property int $taggable_id
+ * @property-read \App\Models\Taggable $taggable
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Tag[] $tags
  * @method static \Illuminate\Database\Query\Builder|\App\Models\Faq findSimilarSlugs(\Illuminate\Database\Eloquent\Model $model, $attribute, $config, $slug)
  * @method static \Illuminate\Database\Query\Builder|\App\Models\Faq whereAnswer($value)
@@ -26,6 +27,7 @@ use Laravel\Scout\Searchable;
  * @method static \Illuminate\Database\Query\Builder|\App\Models\Faq whereParaphrases($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Models\Faq whereQuestion($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Models\Faq whereSlug($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Models\Faq whereTaggableId($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Models\Faq whereUpdatedAt($value)
  * @mixin \Eloquent
  */
@@ -101,7 +103,24 @@ class Faq extends Model
             'id' => $this->id,
             'question' => $this->question,
             'paraphrase' => $this->paraphrases ? explode(',', $this->paraphrases) : [],
-            'tags' => $this->tags->pluck('name')->toArray()
+            'tags' => $this->taggable->tags->pluck('name')->toArray()
         ];
+    }
+
+    public function taggable() {
+        return $this->belongsTo(Taggable::class);
+    }
+
+    public static function create(array $attributes = [])
+    {
+        $taggable = Taggable::create();
+        $attributes['taggable_id'] = $taggable->id;
+        return parent::create($attributes);
+    }
+
+    public function delete()
+    {
+        $this->taggable->delete();
+        return parent::delete();
     }
 }
