@@ -21,43 +21,29 @@ class SearchController extends Controller
         $this->middleware('throttle:60,1');
     }
 
-    function localSearchFaqs($query) {
-        $faqs = Faq::query()->where("question", "LIKE", $query)->orWhere("paraphrases", "LIKE", $query)->get();
-        return $faqs;
-    }
-
-    function localSearchContacts($query) {
-        $contacts = Contact::query()->where("name", "LIKE", $query)->get();
-        return $contacts;
-    }
-
     public function search(Request $request)
     {
-        if (!$request->has('query') || $request->get("query")->trim() == "") {
+        if (!$request->has('query')) {
             return view('home');
         }
 
         $query = $request->get("query")->trim();
 
-        $query_sql = collect(explode(" ", $query))->implode(" * ");
-        $faqs = $this->localSearchFaqs($query_sql);
-        $contacts = $this->localSearchContacts($query_sql);
+        $faqs = \Elastic::searchFaqs($query);
+        $contacts = \Elastic::searchContacts($query);
 
-//        $faqs = \Elastic::searchFaqs($query);
-//        $contacts = \Elastic::searchContacts($query);
-//
-//        try {
-//            if (\Auth::guest()) {
-//                SearchLog::create([
-//                    'text' => $query,
-//                    'ip' => $request->ip(),
-//                    'faqs_count' => $faqs->count(),
-//                    'contacts_count' => $contacts->count(),
-//                ]);
-//            }
-//        } catch (Exception $e) {
-//            // ignored
-//        }
+        try {
+            if (\Auth::guest()) {
+                SearchLog::create([
+                    'text' => $query,
+                    'ip' => $request->ip(),
+                    'faqs_count' => $faqs->count(),
+                    'contacts_count' => $contacts->count(),
+                ]);
+            }
+        } catch (Exception $e) {
+            // ignored
+        }
 
         if ($request->ajax()) {
             return view('partials.home.results', compact('faqs', 'contacts'));
