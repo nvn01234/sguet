@@ -18,7 +18,7 @@ class FaqController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('permission:manage-content')->except( 'search', 'show', 'slug');
+        $this->middleware('permission:manage-content')->except( 'search', 'show', 'slug', 'index');
     }
 
     public function index(FaqDatatable $datatable)

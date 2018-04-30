@@ -16,6 +16,7 @@
 @endsection
 
 @section('table-toolbar')
+    @permission('manage-content')
     <div class="table-toolbar">
         <div class="row">
             <div class="col-md-12">
@@ -28,4 +29,5 @@
             </div>
         </div>
     </div>
+    @endpermission
 @endsection
