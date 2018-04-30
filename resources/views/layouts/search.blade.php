@@ -120,10 +120,7 @@
                         $('html').html(e.responseText);
                     @endif
                     // toastr['error']('Đã có lỗi trong quá trình tìm kiếm. Vui lòng thử lại sau.', 'Lỗi không xác định');
-                    var t = toastr['error']('Máy chủ tìm kiếm hiện đang không hoạt động. Bạn vui lòng truy cập http://sguet.com/faq/index để tìm kiếm câu hỏi theo từ khoá nhé!');
-                    $(t.el).click(function() {
-                        window.location.href = 'http://sguet.com/faq/index';
-                    });
+                    toastr['error']('Máy chủ tìm kiếm hiện đang không hoạt động. Bạn vui lòng truy cập http://sguet.com/faq/index để tìm kiếm câu hỏi theo từ khoá nhé!');
                     loading.modal('hide');
                 });
             });
