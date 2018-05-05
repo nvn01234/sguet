@@ -74,6 +74,18 @@ class ElasticHelper
         return "done";
     }
 
+    private function index($class) {
+        $type = $this->getType($class);
+        $this->index(call_user_func([$class, 'all']));
+        return "done";
+    }
+
+    public function indexAll() {
+        $this->index(Faq::class);
+        $this->index(Contact::class);
+        return "done";
+    }
+
     public function reindexContacts() {
         return $this->reindex(Contact::class);
     }
