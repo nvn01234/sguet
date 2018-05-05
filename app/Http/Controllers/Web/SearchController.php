@@ -27,7 +27,7 @@ class SearchController extends Controller
             return view('home');
         }
 
-        $query = $request->get("query")->trim();
+        $query = $request->get("query");
 
         $faqs = \Elastic::searchFaqs($query);
         $contacts = \Elastic::searchContacts($query);
